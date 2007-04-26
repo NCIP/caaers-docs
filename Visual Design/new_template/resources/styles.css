@@ -2,81 +2,178 @@
 
 /* general style propertyies */
 
-body { margin: 0px 0px 0px 0px; padding: 0px; font-family: arial, verdana, sans-serif; font-size: 11px; color: #000000; background: url(../images/caBIG_footer.gif) no-repeat bottom right #F4F4F5; font-family: Arial, Helvetica, Sans-serif; font-size: 13px; color: #000000; }
+body { 
+  margin: 0; padding: 0; 
+  background: url(../images/caBIG_footer.gif) no-repeat bottom right #F4F4F5; 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 13px; 
+  color: #000000; 
+}
 
-h1 { margin: 0px 0px 12px 0px; color: #2E3257; font-weight: 600; font-size: 16px; }
+h1, h2 { 
+  margin: 0 0 12px 0; 
+  color: #2E3257; 
+  font-weight: 600; 
+  font-size: 16px; 
+}
 
-h2 { margin: 0px 0px 12px 0px; color: #2E3257; font-weight: 600; font-size: 13px; }
+h1 { font-size: 1.2em;}
+h2 { font-size: 1.0em; }
 
-.header { background: url(../images/header_BG.gif) repeat-x top; min-width: 770px; }
+#header { 
+  background: url(../images/header_BG.gif) repeat-x top; 
+  min-width: 770px; 
+}
 
-.header_R { background: url(../images/header_BG_R.gif) no-repeat top right; }
+#header .background-anchor-R { 
+  background: url(../images/header_BG_R.gif) no-repeat top right; 
+}
 
 .caAERSlogo { position: relative; vertical-align: top; }
 
 .caAERStagline { position: relative; }
 
-.login { position: absolute; top: 0px; right: 0px; padding: 6px 10px 0px 20px; font-size: .85em; }
+#login-action { 
+  position: absolute; top: 0; right: 0; 
+  padding: 6px 10px 0 20px; 
+  font-size: 0.85em; 
+}
 
-.login a { color: #FFFFFF; font-weight: bold; text-decoration: none; }
+#login-action a { color: #FFFFFF; font-weight: bold; text-decoration: none; }
 
-.login a:hover { color: #FFFF00; }
+#login-action a:hover { color: #FFFF00; }
 
 /* top-level tabs */
 
-#tabs1 { position: absolute; top: 22px; left: 131px; background: url(../images/tabs1_L1.gif) no-repeat top left; padding-left: 1px; width: 600px; font-size: .85em; }
+#sections { 
+  position: absolute; 
+  top: 22px; left: 131px; 
+  background: url(../images/tabs1_L1.gif) no-repeat top left; 
+  padding-left: 1px; 
+  width: 600px; 
+  font-size: .85em; 
+}
 
-#tabs1 .tab { float: left; background: url(../images/tabs1_BG.gif) no-repeat top right; margin: 0px; height: 22px; }
+#sections .tab { 
+  float: left; background: url(../images/tabs1_BG.gif) no-repeat top right; 
+  margin: 0; height: 22px;
+  padding: 0; 
+}
 
-#tabs1 a { background: url(../images/tabs1_L.gif) no-repeat top left; padding: 2px 20px 10px 20px; text-decoration: none; font-weight: bold; color: #333333; line-height: 18px;}
+#sections .tab.selected { 
+  background-image: url(../images/tabs1_BG_s.gif); 
+}
 
-#tabs1 .selectedtab { float: left; background: url(../images/tabs1_BG_s.gif) no-repeat top right; margin: 0px; height: 22px; }
+#sections a { 
+  background: url(../images/tabs1_L.gif) no-repeat top left; 
+  padding: 2px 20px 10px 20px; 
+  text-decoration: none; font-weight: bold; 
+  color: #333333; line-height: 18px;
+}
 
-#tabs1 .selectedtab a { background: url(../images/tabs1_L_s.gif) no-repeat top left; padding: 2px 20px 10px 20px; text-decoration: none; font-weight: bold; color: #333333; line-height: 18px;}
+#sections .tab.selected a { 
+  background: url(../images/tabs1_L_s.gif) no-repeat top left; 
+}
 
-#tabs1 a:hover { color: #002EE2; }
+#sections a:hover { color: #002EE2; }
 
 /* second-level tabs */
 
-#tabs2 { background: url(../images/tabs2_R.gif) no-repeat center left #A2A2A2; padding-right: 12px;  min-height: 18px; font-size: .85em; }
+#workflow-tabs { 
+  background: url(../images/tabs2_R.gif) no-repeat center left #A2A2A2; 
+  padding-right: 12px;  
+  min-height: 18px; font-size: .85em; 
+}
 
-#tabs2 .tab { float: left; background: url(../images/tabs2_BG.gif) no-repeat top left; margin: 0px; padding: 2px 0px 2px 0px; line-height: 14px; border-style: solid; border-width: 0px 1px 0px 0px; border-color: #000000; }
+#workflow-tabs .tab { 
+  float: left; 
+  background: url(../images/tabs2_BG.gif) no-repeat top left; 
+  margin: 0; padding: 2px 0; line-height: 14px; 
+  border: 0 solid #000;
+  border-width: 0 1px 0 0; 
+}
 
-#tabs2 a { position: relative; left: 6px; text-decoration: none; background: url(../images/tabs2_R.gif) no-repeat top right; font-weight: bold; color: #333333; padding: 0px 16px 0px 10px;}
+#workflow-tabs .tab.selected { 
+  background-image: url(../images/tabs2_BG_s.gif); 
+}
 
-#tabs2 .selectedtab { float: left; background: url(../images/tabs2_BG_s.gif) no-repeat top left; margin: 0px; padding: 2px 0px 2px 0px; line-height: 14px; border-style: solid; border-width: 0px 1px 0px 0px; border-color: #000000; }
+#workflow-tabs a { 
+  position: relative; 
+  left: 6px; 
+  text-decoration: none; 
+  background: url(../images/tabs2_R.gif) no-repeat top right; 
+  font-weight: bold; 
+  color: #333333; 
+  padding: 0 16px 0 10px;
+}
 
-#tabs2 .selectedtab a { background: url(../images/tabs2_R_s.gif) no-repeat top right; }
+#workflow-tabs .tab.selected a { 
+  background-image: url(../images/tabs2_R_s.gif); 
+}
 
 /* third-level tabs */
 
-#tabs3 { background: url(../images/tabs3_BG.gif) no-repeat top right; padding: 4px 12px 0px 0px; margin-left: 7px; height: 33px; font-size: .85em; }
+#inner-tabs { 
+  background: url(../images/tabs3_BG.gif) no-repeat top right; 
+  padding: 4px 12px 0 0; 
+  margin-left: 7px; 
+  height: 33px; 
+  font-size: .85em; 
+}
 
-#tabs3 .tab { float: left; background: url(../images/tabs3_L.gif) no-repeat top left; margin: 0px; height: 17px; }
+#inner-tabs .tab { 
+  float: left; 
+  background: url(../images/tabs3_L.gif) no-repeat top left; 
+  margin: 0; height: 17px; 
+}
 
-#tabs3 a { background: url(../images/tabs3_R.gif) no-repeat top right; padding: 2px 20px 10px 20px; text-decoration: none; font-weight: bold; color: #333333; line-height: 18px;}
+#inner-tabs .tab.selected { 
+  background-image: url(../images/tabs3_L_s.gif);
+}
 
-#tabs3 .selectedtab { float: left; background: url(../images/tabs3_L_s.gif) no-repeat top left; margin: 0px; height: 17px; }
+#inner-tabs a { 
+  background: url(../images/tabs3_R.gif) no-repeat top right; 
+  padding: 2px 20px 10px 20px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  color: #333333; line-height: 18px;
+}
 
-#tabs3 .selectedtab a { background: url(../images/tabs3_R_s.gif) no-repeat top right; padding: 2px 20px 10px 20px; text-decoration: none; font-weight: bold; color: #333333; line-height: 18px;}
+#inner-tabs .tab.selected a { 
+  background-image: url(../images/tabs3_R_s.gif); 
+}
 
-#tabs3 a:hover { color: #002EE2; }
+#inner-tabs a:hover { color: #002EE2; }
 
 /* taskbar */
 
-.taskbar { background: url(../images/taskbar_BG.gif) repeat-x top; font-weight: bold; padding: 0px 20px 0px 12px; height: 24px; font-size: .85em; }
+.taskbar { 
+  background: url(../images/taskbar_BG.gif) repeat-x top; 
+  font-weight: bold; 
+  padding: 0 20px 0 12px; 
+  height: 24px; 
+  font-size: .85em; 
+}
 
-.taskbar a { font-weight: normal; padding: 0px 0px 0px 12px; color: #002EE2; text-decoration: none; }
+.taskbar a { 
+  font-weight: normal; 
+  padding: 0 0 0 12px; color: #002EE2; 
+  text-decoration: none; 
+}
 
-.taskbar #current { font-weight: bold; }
+#current-task { font-weight: bold; }
 
-#main { background: url(../images/main_BG.gif) repeat-x top; margin: 0px 0px 0px 0px; padding: 12px 18px 20px 18px; }
+#main { background: url(../images/main_BG.gif) repeat-x top; margin: 0 0 0 0; padding: 12px 18px 20px 18px; }
 
 /* main content boxes */
 
-#summaryPane { float: left; width: 25%; margin: 0px 14px 12px 0px; background-color: #FFFFFF; vertical-align: top; }
+.pane {
+  background-color: #fff;
+}
 
-#mainPane { float: left; margin: 0px 14px 12px 0px; background-color: #FFFFFF; width: 70%; }
+#summary-pane { float: left; width: 25%; margin: 0 14px 12px 0; vertical-align: top; }
+
+#main-pane { float: left; margin: 0 14px 12px 0; width: 70%; }
 
 .boxHeader { background: url(../images/boxheader_BG.gif) repeat-x top #1972C7; }
 
@@ -84,7 +181,7 @@ h2 { margin: 0px 0px 12px 0px; color: #2E3257; font-weight: 600; font-size: 13px
 
 .boxHeader_R { background: url(../images/boxheader_BG_R.gif) no-repeat top right; }
 
-.boxHeader H2 { font-weight: 600; font-size: 13px; color: #FFFFFF; margin: 0px; padding: 6px 20px 4px 8px;}
+.boxHeader H2 { font-weight: 600; font-size: 13px; color: #FFFFFF; margin: 0; padding: 6px 20px 4px 8px;}
 
 .box_T { background: url(../images/box_T.gif) repeat-x top; }
 
@@ -102,7 +199,7 @@ h2 { margin: 0px 0px 12px 0px; color: #2E3257; font-weight: 600; font-size: 13px
 
 .box_BR { background: url(../images/box_BR.gif) no-repeat bottom right; }
 
-.boxTabs { height: 28px; margin: 0px 8px 0px 7px; }
+.boxTabs { height: 28px; margin: 0 8px 0 7px; }
 
 .boxContent { padding: 8px 24px 24px 24px; }
 

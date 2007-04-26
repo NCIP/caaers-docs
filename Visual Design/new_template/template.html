@@ -1,8 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<title>caAERS</title>
-
 <title>caAERS template</title>
 
 <link href="resources/styles.css" rel="stylesheet" type="text/css">
@@ -10,40 +8,41 @@
 </head>
 <body>
 
-<div class="header">
-<div class="header_R">
-<img src="images/caAERSlogo.gif" alt="caAERS - Cancer Adverse Event Reporting System" class="caAERSlogo">
-<img src="images/caAERS.gif" alt="caAERS - Cancer Adverse Event Reporting System" class="caAERStagline">
-<div class="login"><a href="#">Login</a></div>
-<div id="tabs1">
-<div class="selectedtab"><a href="#">Adverese Events</a></div>
-<div class="tab"><a href="#">Studies</a></div>
-<div class="tab"><a href="#">Participants</a></div>
-<div class="tab"><a href="#">Reports</a></div>
-<div class="tab"><a href="#">Administration</a></div>
+<div id="header">
+  <div class="background-anchor-R">
+    <img src="images/caAERSlogo.gif" alt="caAERS - Cancer Adverse Event Reporting System" class="caAERSlogo"> <img src="images/caAERS.gif" alt="caAERS - Cancer Adverse Event Reporting System" class="caAERStagline">
 
+    <div id="login-action">
+      <a href="#">Login</a>
+    </div>
+
+    <div id="sections">
+      <div class="tab"><a href="#">Adverse Events</a></div>
+      <div class="selected tab"><a href="#">Studies</a></div>
+      <div class="tab"><a href="#">Participants</a></div>
+      <div class="tab"><a href="#">Reports</a></div>
+      <div class="tab"><a href="#">Administration</a></div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
 <div class="taskbar">
-Tasks:
-<a href="#" id="current">Enter AE report</a>
-<a href="#">List AEs</a>
+  Tasks: <a href="#" id="current-task" name="current">Enter AE report</a> <a href="#">List AEs</a>
 </div>
 
-<div id="tabs2">
-<div class="selectedtab"><a href="#">Begin</a></div>
-<div class="tab"><a href="#">Basics</a></div>
-<div class="tab"><a href="#">Medical</a></div>
-<div class="tab"><a href="#">Labs</a></div>
-<div class="tab"><a href="#">Treatment</a></div>
-
+<div id="workflow-tabs">
+  <div class="selected tab"><a href="#">Begin</a></div>
+  <div class="tab"><a href="#">Basics</a></div>
+  <div class="tab"><a href="#">Medical</a></div>
+  <div class="tab"><a href="#">Labs</a></div>
+  <div class="tab"><a href="#">Treatment</a></div>
 </div>
+
 <div id="main">
 
 <h1>Adverse Events : Enter AE Report : Reporter</h1>
 
-<div id="summaryPane">
+<div id="summary-pane" class="pane">
 
 <!-- box header divs --><div class="boxHeader"><div class="boxHeader_L"><div class="boxHeader_R">
 
@@ -66,7 +65,7 @@ Box content
 <!-- end summaryPane --></div>
 
 
-<div id="mainPane">
+<div id="main-pane" class="pane">
 
 <!-- box header divs --><div class="boxHeader"><div class="boxHeader_L"><div class="boxHeader_R">
 
@@ -76,8 +75,8 @@ Box content
 
 <!-- box border divs --><div class="box_T"><div class="box_L"><div class="box_R"><div class="box_B"><div class="box_TL"><div class="box_TR"><div class="box_BL"><div class="box_BR">
 
-<div id="tabs3">
-<div class="selectedtab"><a href="#">Tab 1</a></div>
+<div id="inner-tabs">
+<div class="selected tab"><a href="#">Tab 1</a></div>
 <div class="tab"><a href="#">Tab 2</a></div>
 <div class="tab"><a href="#">Tab 3</a></div>
 
