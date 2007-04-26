@@ -53,24 +53,30 @@ h2 { font-size: 1.0em; }
 }
 
 #sections .tab { 
-  float: left; background: url(../images/tabs1_BG.gif) no-repeat top right; 
-  margin: 0; height: 22px;
-  padding: 0; 
+  float: left; 
+  background: url(../images/tabs1_BG.gif) no-repeat top right; 
+  margin: 0; 
 }
 
 #sections .tab.selected { 
   background-image: url(../images/tabs1_BG_s.gif); 
 }
 
-#sections a { 
+#sections .tab div {
   background: url(../images/tabs1_L.gif) no-repeat top left; 
-  padding: 2px 20px 10px 20px; 
-  text-decoration: none; font-weight: bold; 
-  color: #333333; line-height: 18px;
+  padding: 0 20px; 
+  margin: 0;
 }
 
-#sections .tab.selected a { 
-  background: url(../images/tabs1_L_s.gif) no-repeat top left; 
+#sections .tab.selected div {
+  background-image: url(../images/tabs1_L_s.gif); 
+}
+
+#sections a {
+  line-height: 18px;
+  display: block;
+  text-decoration: none; font-weight: bold; 
+  color: #333333; 
 }
 
 #sections a:hover { color: #002EE2; }
@@ -95,18 +101,25 @@ h2 { font-size: 1.0em; }
   background-image: url(../images/tabs2_BG_s.gif); 
 }
 
-#workflow-tabs a { 
+#workflow-tabs .tab div { 
   position: relative; 
   left: 6px; 
-  text-decoration: none; 
   background: url(../images/tabs2_R.gif) no-repeat top right; 
-  font-weight: bold; 
-  color: #333333; 
   padding: 0 16px 0 10px;
 }
 
-#workflow-tabs .tab.selected a { 
+#workflow-tabs .tab.selected div {
   background-image: url(../images/tabs2_R_s.gif); 
+}
+
+#workflow-tabs a {
+  text-decoration: none; 
+  font-weight: bold; 
+  color: #333333; 
+}
+
+#workflow-tabs a:hover {
+  color: #002EE2;
 }
 
 /* third-level tabs */
@@ -122,30 +135,36 @@ h2 { font-size: 1.0em; }
 #inner-tabs .tab { 
   float: left; 
   background: url(../images/tabs3_L.gif) no-repeat top left; 
-  margin: 0; height: 17px; 
+  margin: 0; 
 }
 
 #inner-tabs .tab.selected { 
   background-image: url(../images/tabs3_L_s.gif);
 }
 
-#inner-tabs a { 
+#inner-tabs .tab div { 
   background: url(../images/tabs3_R.gif) no-repeat top right; 
-  padding: 2px 20px 10px 20px; 
-  text-decoration: none; 
-  font-weight: bold; 
-  color: #333333; line-height: 18px;
+  padding: 0 20px; 
 }
 
-#inner-tabs .tab.selected a { 
+#inner-tabs .tab.selected div { 
   background-image: url(../images/tabs3_R_s.gif); 
 }
 
-#inner-tabs a:hover { color: #002EE2; }
+#inner-tabs a { 
+  line-height: 18px;
+  display: block;
+  text-decoration: none; 
+  font-weight: bold; 
+  color: #333333; 
+}
+#inner-tabs a:hover { 
+  color: #002EE2; 
+}
 
 /* taskbar */
 
-.taskbar { 
+#taskbar { 
   background: url(../images/taskbar_BG.gif) repeat-x top; 
   font-weight: bold; 
   padding: 0 20px 0 12px; 
@@ -153,7 +172,7 @@ h2 { font-size: 1.0em; }
   font-size: .85em; 
 }
 
-.taskbar a { 
+#taskbar a { 
   font-weight: normal; 
   padding: 0 0 0 12px; color: #002EE2; 
   text-decoration: none; 
