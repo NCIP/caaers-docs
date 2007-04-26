@@ -28,9 +28,7 @@ h2 { font-size: 1.0em; }
   background: url(../images/header_BG_R.gif) no-repeat top right; 
 }
 
-.caAERSlogo { position: relative; vertical-align: top; }
-
-.caAERStagline { position: relative; }
+#caAERSlogo { vertical-align: top; }
 
 #login-action { 
   position: absolute; top: 0; right: 0; 
@@ -81,10 +79,30 @@ h2 { font-size: 1.0em; }
 
 #sections a:hover { color: #002EE2; }
 
+/* taskbar */
+
+#taskbar { 
+  background: url(../images/taskbar_BG.gif) repeat-x top; 
+  font-weight: bold; 
+  padding: 0 20px 0 12px; 
+  height: 24px; 
+  font-size: .85em; 
+}
+
+#taskbar a { 
+  font-weight: normal; 
+  padding: 0 0 0 12px; 
+  color: #002EE2; 
+  text-decoration: none; 
+}
+
+#current-task { font-weight: bold; }
+
 /* second-level tabs */
 
 #workflow-tabs { 
-  background: url(../images/tabs2_R.gif) no-repeat center left #A2A2A2; 
+  background: url(../images/tabs2_R.gif) no-repeat center left;
+  background-color: #A2A2A2;
   padding-right: 12px;  
   min-height: 18px; font-size: .85em; 
 }
@@ -92,7 +110,8 @@ h2 { font-size: 1.0em; }
 #workflow-tabs .tab { 
   float: left; 
   background: url(../images/tabs2_BG.gif) no-repeat top left; 
-  margin: 0; padding: 2px 0; line-height: 14px; 
+  margin: 0; padding: 2px 0; 
+  line-height: 14px; 
   border: 0 solid #000;
   border-width: 0 1px 0 0; 
 }
@@ -110,6 +129,10 @@ h2 { font-size: 1.0em; }
 
 #workflow-tabs .tab.selected div {
   background-image: url(../images/tabs2_R_s.gif); 
+}
+
+#workflow-tabs .tab.last div {
+  background-image: none; 
 }
 
 #workflow-tabs a {
@@ -162,25 +185,12 @@ h2 { font-size: 1.0em; }
   color: #002EE2; 
 }
 
-/* taskbar */
-
-#taskbar { 
-  background: url(../images/taskbar_BG.gif) repeat-x top; 
-  font-weight: bold; 
-  padding: 0 20px 0 12px; 
-  height: 24px; 
-  font-size: .85em; 
+#main { 
+  background: url(../images/main_BG.gif) repeat-x top; 
+  margin: 0; 
+  padding: 12px 18px 20px 18px; 
+  clear: both;
 }
-
-#taskbar a { 
-  font-weight: normal; 
-  padding: 0 0 0 12px; color: #002EE2; 
-  text-decoration: none; 
-}
-
-#current-task { font-weight: bold; }
-
-#main { background: url(../images/main_BG.gif) repeat-x top; margin: 0 0 0 0; padding: 12px 18px 20px 18px; }
 
 /* main content boxes */
 
