@@ -157,8 +157,8 @@ h3, h4 { font-size: 0.9em; }
   background: url(../images/tabs3_BG.gif) no-repeat top right; 
   padding: 4px 7px 0 0; 
   margin: 0 0 0 7px; 
-  height: 18px; 
-  font-size: .85em; 
+  height: 20px; 
+  font-size: .9em; 
 }
 
 .inner-tabs .tab { 
@@ -181,7 +181,7 @@ h3, h4 { font-size: 0.9em; }
 }
 
 .inner-tabs a { 
-  line-height: 18px;
+  line-height: 20px;
   display: block;
   text-decoration: none; 
   font-weight: bold; 
@@ -246,7 +246,7 @@ h3, h4 { font-size: 0.9em; }
   min-height: 28px;
 }
 
-.box .tabbed .interior {
+.box.tabbed .interior {
   padding-top: 0px;
 }
 
@@ -260,4 +260,4 @@ h3, h4 { font-size: 0.9em; }
   padding: 4px 8px;
 }
 
-#footer { height: 65px; }
+#footer { height: 65px; clear: both; }
