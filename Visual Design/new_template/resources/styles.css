@@ -41,7 +41,7 @@ input, label, select, textarea {
   background: url(../images/header_BG_R.gif) no-repeat top right; 
 }
 
-#caAERS-logo { vertical-align: top; }
+#logo { vertical-align: top; }
 
 #login-action { 
   position: absolute; top: 0; right: 0; 
