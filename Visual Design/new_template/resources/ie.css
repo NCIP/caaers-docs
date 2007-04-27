@@ -3,3 +3,6 @@ body {
      for the browser font setting to work on IE6. */
   font-size: 80%; 
 }
+
+/* Force hasLayout */
+* html div.row, * html .autoclear { height: 1% }

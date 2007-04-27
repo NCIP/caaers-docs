@@ -1,6 +1,6 @@
 /* CSS Document */
 
-/* general style propertyies */
+/* general style properties */
 
 body { 
   margin: 0; padding: 0; 
@@ -23,6 +23,10 @@ h1 {
 }
 h2 { font-size: 1.0em; }
 h3, h4 { font-size: 0.9em; }
+
+p { margin: 0 0 1em 0; }
+
+/**** TEMPLATE ELEMENTS */
 
 #header { 
   background: url(../images/header_BG.gif) repeat-x top; 
@@ -261,3 +265,58 @@ h3, h4 { font-size: 0.9em; }
 }
 
 #footer { height: 65px; clear: both; }
+
+/**** REUSABLE PAGE ELEMENTS */
+
+.required-indicator {
+  color: #900; font-family: serif;
+}
+
+.error input {
+  border: 2px solid #c00;
+}
+.error .label {
+  color: #c00;
+}
+
+ul.errors {
+  margin: 0; padding: 0.5em 1em;
+  color: #c00;
+}
+ul.errors li {
+  margin: 0 0.8em; padding: 0;
+}
+
+/*
+    'row' is a class for label: value type rows.  The intent is
+    that eash row would contain 2-3 subdivs:  a label (float: left), an optional extra
+    (float: right), and the value (positioned naturally).  Pages which use these styles
+    should also set the width of div.label.
+ */
+div.row {
+    padding: 3px 2px 2px 2px;
+    margin-top: 1px;
+}
+/* Automatically clear after each row
+   Based on http://www.positioniseverything.net/easyclearing.html */
+div.row:after, .autoclear:after {
+    display: block ;
+    content: ' ';
+    clear: both ;
+    height: 0 ;
+    visibility: hidden ;
+}
+div.row div.label, div.row div.value {
+  line-height: 1.5em;
+}
+div.row div.label { 
+  font-weight: bold; 
+  float: left; 
+  margin-left: 0.5em; 
+  text-align: right;
+  width: 10em; /* default width; pages may override */
+}
+div.row div.value { 
+  font-weight: normal; 
+  margin-left: 11em; /* default; should be changed whenever .label width is changed */
+}
