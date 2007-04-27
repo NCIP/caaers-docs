@@ -153,41 +153,41 @@ h3, h4 { font-size: 0.9em; }
 
 /* third-level tabs */
 
-#inner-tabs { 
+.inner-tabs { 
   background: url(../images/tabs3_BG.gif) no-repeat top right; 
   padding: 4px 7px 0 0; 
   margin: 0 0 0 7px; 
-  height: 24px; 
+  height: 18px; 
   font-size: .85em; 
 }
 
-#inner-tabs .tab { 
+.inner-tabs .tab { 
   float: left; 
   background: url(../images/tabs3_L.gif) no-repeat top left; 
   margin: 0; 
 }
 
-#inner-tabs .tab.selected { 
+.inner-tabs .tab.selected { 
   background-image: url(../images/tabs3_L_s.gif);
 }
 
-#inner-tabs .tab div { 
+.inner-tabs .tab div { 
   background: url(../images/tabs3_R.gif) no-repeat top right; 
   padding: 0 20px; 
 }
 
-#inner-tabs .tab.selected div { 
+.inner-tabs .tab.selected div { 
   background-image: url(../images/tabs3_R_s.gif); 
 }
 
-#inner-tabs a { 
+.inner-tabs a { 
   line-height: 18px;
   display: block;
   text-decoration: none; 
   font-weight: bold; 
   color: #333333; 
 }
-#inner-tabs a:hover { 
+.inner-tabs a:hover { 
   color: #002EE2; 
 }
 
@@ -244,6 +244,10 @@ h3, h4 { font-size: 0.9em; }
   margin: 0 8px 0 7px;
   padding: 8px 0;
   min-height: 28px;
+}
+
+.box .tabbed .interior {
+  padding-top: 0px;
 }
 
 .content { 
