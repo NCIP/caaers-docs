@@ -1,6 +1,4 @@
-/* CSS Document */
-
-/* general style properties */
+/**** GENERAL TAG STYLE OVERRIDES */
 
 body { 
   margin: 0; padding: 0; 
@@ -39,7 +37,7 @@ input[disabled] {
   background-color: #ddc;
 }
 
-/**** TEMPLATE ELEMENTS */
+/**** COMMON TEMPLATE ELEMENTS */
 
 #header { 
   background: url(../images/header_BG.gif) repeat-x top; 
@@ -62,7 +60,9 @@ input[disabled] {
 
 #login-action a:hover { color: #FFFF00; }
 
-/* general tab styles */
+#footer { height: 65px; clear: both; }
+
+/**** COMMON TAB STYLES (shared across all three levels) */
 
 ul.tabs {
   margin: 0;
@@ -77,7 +77,7 @@ ul.tabs li {
   padding: 0;
 }
 
-/* top-level tabs */
+/**** SECTION TABS */
 
 #sections { 
   position: absolute; 
@@ -114,7 +114,7 @@ ul.tabs li {
 
 #sections a:hover { color: #002EE2; }
 
-/* taskbar */
+/**** TASKS */
 
 #taskbar { 
   background: url(../images/taskbar_BG.gif) repeat-x top; 
@@ -133,54 +133,68 @@ ul.tabs li {
 
 #current-task { font-weight: bold; }
 
-/* second-level tabs */
+/**** PAGE CONTENT BOXES */
 
-#workflow-tabs { 
-  background: url(../images/workflow-tab_R.gif) no-repeat center left;
-  background-color: #A2A2A2;
-  padding-right: 12px;  
-  min-height: 18px; font-size: .85em; 
+#main { 
+  background: url(../images/main_BG.gif) repeat-x top; 
+  margin: 0; 
+  padding: 12px 18px 20px 18px; 
+  clear: both;
 }
 
-#workflow-tabs li { 
-  background: url(../images/workflow-tab_BG.gif) no-repeat top left; 
-  padding: 2px 0; 
-  line-height: 14px; 
-  border: 0 solid #000;
-  border-right-width: 1px; 
+/* A pane is a vertical subdivision of the page.
+   Individual panes will need to have their widths specified;
+   the total should be something less than 100%. */
+.pane { 
+  background-color: #fff;
+  float: left;
+  margin: 0 14px 12px 0;
 }
 
-#workflow-tabs li.selected { 
-  background-image: url(../images/workflow-tab_BG_s.gif); 
+/* Each pane will contain one or more "boxes" */
+.box .header { 
+  background: url(../images/boxheader_BG.gif) repeat-x top #1972C7; 
+}
+.box .header h2 { 
+  color: #FFFFFF; 
+  margin: 0; 
+  padding: 6px 20px 4px 8px;
+}
+.box .header .background-L { background: url(../images/boxheader_BG_L.gif) no-repeat top left; }
+.box .header .background-R { background: url(../images/boxheader_BG_R.gif) no-repeat top right; }
+
+
+.border-T  { background: url(../images/box_T.gif)  repeat-x top; }
+.border-L  { background: url(../images/box_L.gif)  repeat-y left; }
+.border-R  { background: url(../images/box_R.gif)  repeat-y right; }
+.border-B  { background: url(../images/box_B.gif)  repeat-x bottom; }
+.border-TL { background: url(../images/box_TL.gif) no-repeat top left; }
+.border-TR { background: url(../images/box_TR.gif) no-repeat top right; }
+.border-BL { background: url(../images/box_BL.gif) no-repeat bottom left; }
+.border-BR { background: url(../images/box_BR.gif) no-repeat bottom right; }
+
+.box .interior {
+  margin: 0 8px 0 7px;
+  padding: 8px 0;
+  min-height: 28px;
 }
 
-#workflow-tabs li div { 
-  position: relative; 
-  left: 6px; 
-  background-image: none;
-  background: url(../images/workflow-tab_R.gif) no-repeat top right; 
-  padding: 0 16px 0 10px;
+.box.tabbed .interior {
+  padding-top: 0px;
 }
 
-#workflow-tabs li.selected div {
-  background-image: url(../images/workflow-tab_R_s.gif); 
+.box .content { 
+  padding: 8px;
 }
 
-#workflow-tabs li.last div {
-  background-image: none; 
+.box h3 {
+  position: relative;
+  border-top: solid 1px #000; 
+  background-color: #D7E7ED;
+  padding: 4px 8px;
 }
 
-#workflow-tabs a {
-  text-decoration: none; 
-  font-weight: bold; 
-  color: #333333; 
-}
-
-#workflow-tabs a:hover {
-  color: #002EE2;
-}
-
-/* third-level tabs */
+/**** TABS WITHIN A BOX */
 
 .inner.tabs { 
   background: url(../images/inner-tab_BG.gif) no-repeat top right; 
@@ -218,82 +232,7 @@ ul.tabs li {
   color: #002EE2; 
 }
 
-#main { 
-  background: url(../images/main_BG.gif) repeat-x top; 
-  margin: 0; 
-  padding: 12px 18px 20px 18px; 
-  clear: both;
-}
-
-/* main content boxes */
-
-.pane {
-  background-color: #fff;
-  float: left;
-  margin: 0 14px 12px 0;
-}
-
-#summary-pane { 
-  width: 25%; 
-}
-
-#summary-pane .row .label {
-  width: 35%;
-}
-
-#summary-pane .row .value {
-  margin-left: 40%;
-}
-
-#main-pane { 
-  width: 70%; 
-}
-
-.box .header { 
-  background: url(../images/boxheader_BG.gif) repeat-x top #1972C7; 
-}
-.box .header h2 { 
-  color: #FFFFFF; 
-  margin: 0; 
-  padding: 6px 20px 4px 8px;
-}
-.box .header .background-L { background: url(../images/boxheader_BG_L.gif) no-repeat top left; }
-.box .header .background-R { background: url(../images/boxheader_BG_R.gif) no-repeat top right; }
-
-
-.border-T  { background: url(../images/box_T.gif)  repeat-x top; }
-.border-L  { background: url(../images/box_L.gif)  repeat-y left; }
-.border-R  { background: url(../images/box_R.gif)  repeat-y right; }
-.border-B  { background: url(../images/box_B.gif)  repeat-x bottom; }
-.border-TL { background: url(../images/box_TL.gif) no-repeat top left; }
-.border-TR { background: url(../images/box_TR.gif) no-repeat top right; }
-.border-BL { background: url(../images/box_BL.gif) no-repeat bottom left; }
-.border-BR { background: url(../images/box_BR.gif) no-repeat bottom right; }
-
-.box .interior {
-  margin: 0 8px 0 7px;
-  padding: 8px 0;
-  min-height: 28px;
-}
-
-.box.tabbed .interior {
-  padding-top: 0px;
-}
-
-.content { 
-  padding: 8px;
-}
-
-.box h3 {
-  position: relative;
-  border-top: solid 1px #000; 
-  background-color: #D7E7ED;
-  padding: 4px 8px;
-}
-
-#footer { height: 65px; clear: both; }
-
-/**** REUSABLE PAGE ELEMENTS */
+/**** REUSABLE PAGE ELEMENTS/CLASSES */
 
 .required-indicator {
   color: #900; font-family: serif;
@@ -314,11 +253,18 @@ ul.errors li {
   margin: 0 0.8em; padding: 0;
 }
 
+/* The delete checkbox which may go in a box's h3s */
+.delete-control {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  margin: 3px 4px 0 0;
+}
+
 /*
     'row' is a class for label: value type rows.  The intent is
-    that eash row would contain 2-3 subdivs:  a label (float: left), an optional extra
-    (float: right), and the value (positioned naturally).  Pages which use these styles
-    should also set the width of div.label.
+    that each row would contain 2-3 subdivs:  a label (float: left), an optional extra
+    (float: right), and the value (positioned naturally).
  */
 div.row {
     padding: 2px;
@@ -341,54 +287,11 @@ div.row div.label {
   float: left; 
   margin-left: 0.5em; 
   text-align: right;
-  width: 10em; /* default width; pages may override */
+  /* default width; pages might override */
+  width: 10em;
 }
 div.row div.value { 
-  font-weight: normal; 
-  margin-left: 11em; /* default; should be changed whenever .label width is changed */
-}
-
-.delete-control {
-  position: absolute;
-  top: 0;
-  right: 4px;
-  margin: 3px 4px 0 0;
-}
-
-.buttons {
-  border-top: 1px solid #000;
-}
-
-.buttons a {
-  color: #eee;
-  background-color: #3876C1;
-  text-decoration: none;
-  padding: 3px;
-  margin: 3px;
-  border: 1px solid #ddd;
-  display: block;
-  float: left;
-}
-
-.buttons a:hover {
-  color: #333;
-  background-color: #5C94D5;
-}
-
-.local-buttons {
-  font-size: 0.9em;
-  float: right;
-  clear: both;
-}
-
-.flow-buttons {
-  clear: both;
-  margin-top: 8px;
-}
-
-.flow-buttons .prev {
-  float: left;
-}
-.flow-buttons .next {
-  float: right;
+  font-weight: normal;
+  /* default; should be changed whenever .label width is changed */
+  margin-left: 11em;
 }
