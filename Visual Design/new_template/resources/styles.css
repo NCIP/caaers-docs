@@ -67,29 +67,29 @@ input[disabled] {
 #sections { 
   position: absolute; 
   top: 22px; left: 131px; 
-  background: url(../images/tabs1_L1.gif) no-repeat top left; 
+  background: url(../images/section_L1.gif) no-repeat top left; 
   padding-left: 1px; 
   font-size: .85em; 
 }
 
 #sections .tab { 
   float: left; 
-  background: url(../images/tabs1_BG.gif) no-repeat top right; 
+  background: url(../images/section_BG.gif) no-repeat top right; 
   margin: 0; 
 }
 
 #sections .tab.selected { 
-  background-image: url(../images/tabs1_BG_s.gif); 
+  background-image: url(../images/section_BG_s.gif); 
 }
 
 #sections .tab div {
-  background: url(../images/tabs1_L.gif) no-repeat top left; 
+  background: url(../images/section_L.gif) no-repeat top left; 
   padding: 0 20px; 
   margin: 0;
 }
 
 #sections .tab.selected div {
-  background-image: url(../images/tabs1_L_s.gif); 
+  background-image: url(../images/section_L_s.gif); 
 }
 
 #sections a {
@@ -123,7 +123,7 @@ input[disabled] {
 /* second-level tabs */
 
 #workflow-tabs { 
-  background: url(../images/tabs2_R.gif) no-repeat center left;
+  background: url(../images/workflow-tab_R.gif) no-repeat center left;
   background-color: #A2A2A2;
   padding-right: 12px;  
   min-height: 18px; font-size: .85em; 
@@ -131,7 +131,7 @@ input[disabled] {
 
 #workflow-tabs .tab { 
   float: left; 
-  background: url(../images/tabs2_BG.gif) no-repeat top left; 
+  background: url(../images/workflow-tab_BG.gif) no-repeat top left; 
   margin: 0; padding: 2px 0; 
   line-height: 14px; 
   border: 0 solid #000;
@@ -139,19 +139,19 @@ input[disabled] {
 }
 
 #workflow-tabs .tab.selected { 
-  background-image: url(../images/tabs2_BG_s.gif); 
+  background-image: url(../images/workflow-tab_BG_s.gif); 
 }
 
 #workflow-tabs .tab div { 
   position: relative; 
   left: 6px; 
   background-image: none;
-  background: url(../images/tabs2_R.gif) no-repeat top right; 
+  background: url(../images/workflow-tab_R.gif) no-repeat top right; 
   padding: 0 16px 0 10px;
 }
 
 #workflow-tabs .tab.selected div {
-  background-image: url(../images/tabs2_R_s.gif); 
+  background-image: url(../images/workflow-tab_R_s.gif); 
 }
 
 #workflow-tabs .tab.last div {
@@ -171,7 +171,7 @@ input[disabled] {
 /* third-level tabs */
 
 .inner-tabs { 
-  background: url(../images/tabs3_BG.gif) no-repeat top right; 
+  background: url(../images/inner-tab_BG.gif) no-repeat top right; 
   padding: 4px 7px 0 0; 
   margin: 0 0 0 7px; 
   height: 20px; 
@@ -180,21 +180,21 @@ input[disabled] {
 
 .inner-tabs .tab { 
   float: left; 
-  background: url(../images/tabs3_L.gif) no-repeat top left; 
+  background: url(../images/inner-tab_L.gif) no-repeat top left; 
   margin: 0; 
 }
 
 .inner-tabs .tab.selected { 
-  background-image: url(../images/tabs3_L_s.gif);
+  background-image: url(../images/inner-tab_L_s.gif);
 }
 
 .inner-tabs .tab div { 
-  background: url(../images/tabs3_R.gif) no-repeat top right; 
+  background: url(../images/inner-tab_R.gif) no-repeat top right; 
   padding: 0 20px; 
 }
 
 .inner-tabs .tab.selected div { 
-  background-image: url(../images/tabs3_R_s.gif); 
+  background-image: url(../images/inner-tab_R_s.gif); 
 }
 
 .inner-tabs a { 
