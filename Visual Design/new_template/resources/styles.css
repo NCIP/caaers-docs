@@ -10,7 +10,7 @@ body {
   color: #000000; 
 }
 
-h1, h2, h3, h4 { 
+h1, h2, h3, h4, h5, h6 { 
   margin: 0; 
   padding: 0;
   color: #2E3257; 
@@ -226,6 +226,15 @@ input[disabled] {
 #summary-pane { 
   width: 25%; 
 }
+
+#summary-pane .row .label {
+  width: 35%;
+}
+
+#summary-pane .row .value {
+  margin-left: 40%;
+}
+
 #main-pane { 
   width: 70%; 
 }
@@ -251,12 +260,6 @@ input[disabled] {
 .border-BL { background: url(../images/box_BL.gif) no-repeat bottom left; }
 .border-BR { background: url(../images/box_BR.gif) no-repeat bottom right; }
 
-.box h3 { 
-  height: 24px;
-  margin: 0 7px;
-  font-weight: bold;
-}
-
 .box .interior {
   margin: 0 8px 0 7px;
   padding: 8px 0;
@@ -271,7 +274,7 @@ input[disabled] {
   padding: 8px;
 }
 
-.interior h4 {
+.box h3 {
   position: relative;
   border-top: solid 1px #000; 
   background-color: #D7E7ED;
