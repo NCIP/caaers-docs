@@ -62,6 +62,21 @@ input[disabled] {
 
 #login-action a:hover { color: #FFFF00; }
 
+/* general tab styles */
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+}
+
+ul.tabs li {
+  display: block;
+  list-style-type: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
 /* top-level tabs */
 
 #sections { 
@@ -72,23 +87,21 @@ input[disabled] {
   font-size: .85em; 
 }
 
-#sections .tab { 
-  float: left; 
+#sections li { 
   background: url(../images/section_BG.gif) no-repeat top right; 
-  margin: 0; 
 }
 
-#sections .tab.selected { 
+#sections li.selected { 
   background-image: url(../images/section_BG_s.gif); 
 }
 
-#sections .tab div {
+#sections li div {
   background: url(../images/section_L.gif) no-repeat top left; 
   padding: 0 20px; 
   margin: 0;
 }
 
-#sections .tab.selected div {
+#sections li.selected div {
   background-image: url(../images/section_L_s.gif); 
 }
 
@@ -129,20 +142,19 @@ input[disabled] {
   min-height: 18px; font-size: .85em; 
 }
 
-#workflow-tabs .tab { 
-  float: left; 
+#workflow-tabs li { 
   background: url(../images/workflow-tab_BG.gif) no-repeat top left; 
-  margin: 0; padding: 2px 0; 
+  padding: 2px 0; 
   line-height: 14px; 
   border: 0 solid #000;
   border-right-width: 1px; 
 }
 
-#workflow-tabs .tab.selected { 
+#workflow-tabs li.selected { 
   background-image: url(../images/workflow-tab_BG_s.gif); 
 }
 
-#workflow-tabs .tab div { 
+#workflow-tabs li div { 
   position: relative; 
   left: 6px; 
   background-image: none;
@@ -150,11 +162,11 @@ input[disabled] {
   padding: 0 16px 0 10px;
 }
 
-#workflow-tabs .tab.selected div {
+#workflow-tabs li.selected div {
   background-image: url(../images/workflow-tab_R_s.gif); 
 }
 
-#workflow-tabs .tab.last div {
+#workflow-tabs li.last div {
   background-image: none; 
 }
 
@@ -170,7 +182,7 @@ input[disabled] {
 
 /* third-level tabs */
 
-.inner-tabs { 
+.inner.tabs { 
   background: url(../images/inner-tab_BG.gif) no-repeat top right; 
   padding: 4px 7px 0 0; 
   margin: 0 0 0 7px; 
@@ -178,33 +190,31 @@ input[disabled] {
   font-size: .9em; 
 }
 
-.inner-tabs .tab { 
-  float: left; 
+.inner.tabs li { 
   background: url(../images/inner-tab_L.gif) no-repeat top left; 
-  margin: 0; 
 }
 
-.inner-tabs .tab.selected { 
+.inner.tabs li.selected { 
   background-image: url(../images/inner-tab_L_s.gif);
 }
 
-.inner-tabs .tab div { 
+.inner.tabs li div { 
   background: url(../images/inner-tab_R.gif) no-repeat top right; 
   padding: 0 20px; 
 }
 
-.inner-tabs .tab.selected div { 
+.inner.tabs li.selected div { 
   background-image: url(../images/inner-tab_R_s.gif); 
 }
 
-.inner-tabs a { 
+.inner.tabs a { 
   line-height: 20px;
   display: block;
   text-decoration: none; 
   font-weight: bold; 
   color: #333333; 
 }
-.inner-tabs a:hover { 
+.inner.tabs a:hover { 
   color: #002EE2; 
 }
 
