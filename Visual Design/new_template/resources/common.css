@@ -196,7 +196,7 @@ ul.tabs li {
 
 /**** TABS WITHIN A BOX */
 
-ul.inner.tabs { 
+.box ul.inner.tabs { /* this overspecific selector is necessary for IE */
   background: url(../images/inner-tab_BG.gif) no-repeat top right; 
   padding: 4px 7px 0 0; 
   margin: 0 0 0 7px; 
@@ -204,31 +204,31 @@ ul.inner.tabs {
   font-size: .9em; 
 }
 
-ul.inner.tabs li { 
+.box ul.inner.tabs li { 
   background: url(../images/inner-tab_L.gif) no-repeat top left; 
 }
 
-ul.inner.tabs li.selected { 
+.box ul.inner.tabs li.selected { 
   background-image: url(../images/inner-tab_L_s.gif);
 }
 
-ul.inner.tabs li div { 
+.box ul.inner.tabs li div { 
   background: url(../images/inner-tab_R.gif) no-repeat top right; 
   padding: 0 20px; 
 }
 
-ul.inner.tabs li.selected div { 
+.box ul.inner.tabs li.selected div { 
   background-image: url(../images/inner-tab_R_s.gif); 
 }
 
-ul.inner.tabs a { 
+.box ul.inner.tabs a { 
   line-height: 20px;
   display: block;
   text-decoration: none; 
   font-weight: bold; 
   color: #333333; 
 }
-ul.inner.tabs a:hover { 
+.box ul.inner.tabs a:hover { 
   color: #002EE2; 
 }
 
