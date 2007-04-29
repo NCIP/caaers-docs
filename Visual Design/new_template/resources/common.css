@@ -196,7 +196,7 @@ ul.tabs li {
 
 /**** TABS WITHIN A BOX */
 
-.inner.tabs { 
+ul.inner.tabs { 
   background: url(../images/inner-tab_BG.gif) no-repeat top right; 
   padding: 4px 7px 0 0; 
   margin: 0 0 0 7px; 
@@ -204,31 +204,31 @@ ul.tabs li {
   font-size: .9em; 
 }
 
-.inner.tabs li { 
+ul.inner.tabs li { 
   background: url(../images/inner-tab_L.gif) no-repeat top left; 
 }
 
-.inner.tabs li.selected { 
+ul.inner.tabs li.selected { 
   background-image: url(../images/inner-tab_L_s.gif);
 }
 
-.inner.tabs li div { 
+ul.inner.tabs li div { 
   background: url(../images/inner-tab_R.gif) no-repeat top right; 
   padding: 0 20px; 
 }
 
-.inner.tabs li.selected div { 
+ul.inner.tabs li.selected div { 
   background-image: url(../images/inner-tab_R_s.gif); 
 }
 
-.inner.tabs a { 
+ul.inner.tabs a { 
   line-height: 20px;
   display: block;
   text-decoration: none; 
   font-weight: bold; 
   color: #333333; 
 }
-.inner.tabs a:hover { 
+ul.inner.tabs a:hover { 
   color: #002EE2; 
 }
 
