@@ -6,3 +6,4 @@ body {
 
 /* Force hasLayout */
 * html div.row, * html .autoclear { height: 1% }
+#workflow-tabs { height: 1%; }
