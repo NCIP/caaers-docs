@@ -5,8 +5,7 @@
 /* second-level tabs */
 
 #workflow-tabs { 
-  background: url(../images/workflow-tab_R.gif) no-repeat center left;
-  background-color: #A2A2A2;
+  background: #A2A2A2 url(../images/workflow-tab_R.gif) no-repeat center left;
   padding-right: 12px;  
   min-height: 18px; font-size: .85em; 
 }
@@ -26,7 +25,6 @@
 #workflow-tabs li div { 
   position: relative; 
   left: 6px; 
-  background-image: none;
   background: url(../images/workflow-tab_R.gif) no-repeat top right; 
   padding: 0 16px 0 10px;
 }
