@@ -143,15 +143,19 @@ ul.tabs li {
 }
 
 /* A pane is a vertical subdivision of the page.
-   Individual panes will need to have their widths specified;
+   Individual panes will need to have their widths specified
+   if there's more than one in a page;
    the total should be something less than 100%. */
 .pane { 
-  background-color: #fff;
   float: left;
   margin: 0 14px 12px 0;
 }
 
 /* Each pane will contain one or more "boxes" */
+.box {
+  background-color: #fff;
+}
+
 .box .header { 
   background: url(../images/boxheader_BG.gif) repeat-x top #1972C7; 
 }
