@@ -81,9 +81,13 @@ In this case, due to an adaptation in the AE flow's controller (next section), t
 
 ### Web layer ###
 
+#### Controller ####
+
 As mentioned in the last section, the partial form is rendered using the state set up by the same controller as the entire view.  Since the same command object (loaded from the session) is available, the spring form taglib will still work.  This is important for view code reuse -- though the fields the ajax call are returning are blank, you need to use the form:form tags to get spring's binding and validation support in the main view.
 
 The AE flow controller decides which view to use based on a parameter ("subview") which is passed in only when it is invoked from the DWR facade.  This is potentially a security hole (the value of the parameter is used as the basename for the view -- i.e., it's taking outside input and interpreting it as part of the name of a file), so I'm considering alternate implementations.
+
+#### View ####
 
 The view for the field group itself is in a tagfile containing a single `chrome:division`.  This tag is used in the main view to render any groups that exist at the time the page is loaded:
 
