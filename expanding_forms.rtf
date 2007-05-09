@@ -1,0 +1,167 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
+{\fonttbl\f0\froman\fcharset77 Times-Bold;\f1\froman\fcharset77 Times-Roman;\f2\fmodern\fcharset77 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid0\'02\'05.;}{\levelnumbers\'01;}}{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid0\'02\'05.;}{\levelnumbers\'01;}}{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\vieww11480\viewh12320\viewkind0
+\deftab720
+\pard\pardeftab720\sa320\ql\qnatural
+
+\f0\b\fs48 \cf0 Handling autoexpanding forms\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 A caAERS design document.\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs36 \cf0 Problem\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 Many input forms need to support one or more groups of fields which repeat. For a concrete example, take course information in AE report flow\'d5s Treatment tab. A course may consist of several agents, each with its own dose information, etc. How do we allow the user to enter 0, 1, or several agents?\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs36 \cf0 Approaches\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 There are a few possible approaches:\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Server round trips\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 You could present the user with a submit button for the form named \'d2Add agent.\'d3 When clicked, it would submit the whole form to the server and re-render it with another set of (blank) fields for the new agent.\
+Pros: relatively simple to implement. Form is always rendered by the same code (i.e., in the JSP).\
+Cons: slow. Lots of state (all the form fields) has to be transferred up to the server and back. Do you validate it each time? Requires branching or a 
+\f2 MultiActionController
+\f1  for the server-side code.\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Lots of blank fields\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 You could provide a fixed, large number of blank groups of fields (for many agents) and let the user fill in only as many as they need. How many? \'d2More than enough.\'d3\
+Pros: \'c9 it would work. Form is always rendered by the same code.\
+Cons: takes up lots of space. Submitting a bunch of blank fields would require some pre- or post-processing in the controller to exclude the entirely blank from the partially blank. Someone will eventually need more than \'d2more than enough.\'d3 (All of the other criticisms could be addressed \'d1 e.g., you could hide and disable the blank forms until the user requests to use them \'d1 but this last one is more than enough to reject it.)\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Javascript DOM modification\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 You could write some javascript that would add another instance of the field group. You could do this by hand or by using an existing library (e.g., Scriptaculous\'d5 Builder.)\
+Pros: Quick, since it\'d5s all client side. You only submit as many fields as the user enters.\
+Cons: Form is now rendered in two places \'d1 the original JSP and the javascript implementation. Any time anything referenced in the form changes, both the JSP and the javascript have to be changed.\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Ajax HTML partial\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 You could use an asynchronous call to request the HTML for the next field group from the server.\
+Pros: Form is always rendered by the same code. No form data is submitted to the server (or acted upon) and the browser doesn\'d5t have to re-render the whole page, so it is relatively quick.\
+Cons: More complex server-side implementation (some additional server-side view code is required). Some custom javascript is required for the page (though not as much as for the previous option).\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs36 \cf0 Ajax expanding forms\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 For the AE flow, I opted for the last option \'d1 an asynchronous request from the page for just the pieces of the view that are needed to add another group of fields. The implementation has 3 parts:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ql\qnatural
+\ls1\ilvl0\cf0 {\listtext	\'a5	}Javascript to make the call and then receive the response and add it to the page. Implemented as a javascript class (
+\f2 ListEditor
+\f1 ).\
+{\listtext	\'a5	}Server-side interface to receive and respond to the javascript call. Implemented with new methods in an existing DWR facade.\
+{\listtext	\'a5	}A method for sharing the JSP rendering code between the main page view and the partial view returned by the ajax code. Implemented with a small change to the AE flow\'d5s base controller and some JSP tagfiles.\
+\pard\pardeftab720\sa240\ql\qnatural
+\cf0 Each section below elaborates on the implementation of one of these points. As an example, I\'d5ll use the treatment tab of the AE flow.\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Client side\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 The javascript for the add operation is encapsulated in a js class called 
+\f2 ListEditor
+\f1 . It has one method, 
+\f2 add
+\f1 , which starts the whole asynchronous process. It\'d5s implemented using a fairly straightforward mix of prototype (for DOM insertions) and scriptaculous (for effects). It\'d5s in 
+\f2 common.js
+\f1 .\
+Here\'d5s how the editor is created on the treatment tab:\
+\pard\pardeftab720\ql\qnatural
+
+\f2 \cf0 new ListEditor("courseAgent", createAE, "CourseAgent", \{\
+    addParameters: [aeReportId],\
+    addFirstAfter: "single-fields",\
+    addCallback: function(index) \{\
+        registerDoseModHandler(index)\
+        AE.registerCalendarPopups("courseAgent-" + index)\
+    \}\
+\})\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1 \cf0 The first three parameters are, respectively, the css class of the divs that will be added by this editor, the DWR interface bean to invoke, and the basename of the server-side editing functions. (I\'d5m considering a refactoring which would remove the third one; I\'d5ll update this doc if I apply it.) The fourth parameter is an options hash which customized the editor behavior for this page. In this case, it indicates that:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ql\qnatural
+\ls2\ilvl0\cf0 {\listtext	\'a5	}The DWR functions will be called with a single parameter, 
+\f2 aeReportId
+\f1  (if you examine treatment.jsp, you\'d5ll find that this is the ID for the current report, if any).\
+{\listtext	\'a5	}If there are no course agents in the form, the first one will be added after the element with id 
+\f2 "single-fields"
+\f1 .\
+{\listtext	\'a5	}After the response is received and it is added to the page, a callback will be called. In this case, it adds a custom event handler for the \'d2is modified?\'d3 checkbox in the new group and ensures that the calendar popups will work.\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Server-side facade\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 The DWR methods which enable this behavior are very simple. They rely on 
+\f2 WebContext#forwardToString
+\f1 , a DWR feature that lets you provide a local URL and receive back the view from that URL as a string.\
+In this case, due to an adaptation in the AE flow\'d5s controller (next section), the URL is the same as the URL the request is coming from, which DWR supplies. This means the same code can work for both the create and edit flows with no changes.\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs28 \cf0 Web layer\
+\pard\pardeftab720\sa300\ql\qnatural
+
+\fs24 \cf0 Controller\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0 \cf0 As mentioned in the last section, the partial form is rendered using the state set up by the same controller as the entire view. Since the same command object (loaded from the session) is available, the spring form taglib will still work. This is important for view code reuse \'d1 though the fields the ajax call are returning are blank, you need to use the form:form tags to get spring\'d5s binding and validation support in the main view.\
+The AE flow controller decides which view to use based on a parameter (\'d2subview\'d3) which is passed in only when it is invoked from the DWR facade. This is potentially a security hole (the value of the parameter is used as the basename for the view \'d1 i.e., it\'d5s taking outside input and interpreting it as part of the name of a file), so I\'d5m considering alternate implementations.\
+\pard\pardeftab720\sa300\ql\qnatural
+
+\f0\b \cf0 View\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0 \cf0 The view for the field group itself is in a tagfile containing a single 
+\f2 chrome:division
+\f1 . This tag is used in the main view to render any groups that exist at the time the page is loaded:\
+\pard\pardeftab720\ql\qnatural
+
+\f2 \cf0 <c:forEach items="$\{command.aeReport.treatmentInformation.courseAgents\}" varStatus="status">\
+    <ae:oneCourseAgent index="$\{status.index\}"/>\
+</c:forEach>\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1 \cf0 The partial view is a very thin wrapper around the tag file (this is an example of an entire partial\'d5s JSP):\
+\pard\pardeftab720\ql\qnatural
+
+\f2 \cf0 <%@taglib prefix="tags" tagdir="/WEB-INF/tags"%>\
+<%@taglib prefix="ae" tagdir="/WEB-INF/tags/ae"%>\
+<tags:noform>\
+    <ae:oneCourseAgent index="$\{param.index\}" style="display: none"/>\
+</tags:noform>\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1 \cf0 (
+\f2 tags:noform
+\f1  is a tagfile which simulates the side effects of a spring 
+\f2 form:form
+\f1  tag, but without actually wrapping its contents in an HTML 
+\f2 <form>
+\f1 .)\
+\pard\pardeftab720\sa280\ql\qnatural
+
+\f0\b\fs36 \cf0 Summary\
+\pard\pardeftab720\sa240\ql\qnatural
+
+\f1\b0\fs24 \cf0 It takes a little bit of initial setup, but the ajax solution for expanding forms works pretty well. It\'d5s a recurring requirement all over the application and this solution will cut down on duplicated code, both on the framework side and each time it is used.\
+}
