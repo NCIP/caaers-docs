@@ -178,15 +178,17 @@
         
         <div class="content buttons autoclear">
           <div class="local-buttons">
-            <a href="#">Add vivamus</a>
+            <input type="button" value="Add vivamus">
           </div>
           <div class="flow-buttons">
+            <!-- these need to be submit buttons (i.e., not anchors) for javascript/onSubmit reasons -->
             <span class="prev">
-              <a href="#">&laquo; Previous</a>
+              <input type="submit" value="&laquo; Previous">
             </span>
             <span class="next">
-              <a href="#">Save</a>
-              <a href="#">Save &amp; Continue &raquo;</a>
+              <input type="reset" value="Revert">
+              <input type="submit" value="Save">
+              <input type="submit" value="Save &amp; Continue &raquo;">
             </span>
           </div>
         </div>
