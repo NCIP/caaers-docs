@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<studies>
+    <study>
+        <shortTitle>Ph 4, DB, MC, Rand, Cross-over study to compare Multihance vs Omniscan in MRI of
+            the brain</shortTitle>
+        <longTitle>Phase IV, Double-Blind, Multi-Center, Randomized, Cross-Over Study to Compare
+            0.10 mmol/kg of Multihance with 0.10 mmol/kg of Omniscan in Magnetic Resonance Imaging
+            (MRI) of the Brain</longTitle>
+        <phaseCode>4</phaseCode>
+        <primarySponsorCode>Bracco</primarySponsorCode>
+        <identifiers>
+
+            <identifier>
+                <type>Local Identifier</type>
+                <value>99B06</value>
+                <source>WFU</source>
+                <primaryIndicator>No</primaryIndicator>
+            </identifier>
+
+            <identifier>
+                <type>Protocol Authority Identifier</type>
+                <value>99B06</value>
+                <source>Bracco</source>
+                <primaryIndicator>Yes</primaryIndicator>
+            </identifier>
+        </identifiers>
+        <studySites>
+            <studySite>
+                <site>
+                    <name>default</name>
+                </site>
+            </studySite>
+        </studySites>
+    </study>
+    <study>
+        <shortTitle>Ph 2 study of the anti-CD20 antibody, SGn-30, in comb w/gem, vinorelbine and peg
+            lipo dox (GVD) for re</shortTitle>
+        <longTitle>Phase II Study of the Anti-CD30 Antibody, SGN-30 in Combination with Gemcitabine,
+            Vinorelbine, and Pegylated Liposomal Doxorubicin (GVD) for Patients with Relapsed
+            Refractory Hodgkin Lymphoma</longTitle>
+        <description>Hodgkins Lymphoma,CALGB</description>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <phaseCode>2</phaseCode>
+        <primarySponsorCode>CALGB</primarySponsorCode>
+        <identifiers>
+            <identifier>
+                <type>Local Identifier</type>
+                <value>50502</value>
+                <source>WFU</source>
+                <primaryIndicator>No</primaryIndicator>
+            </identifier>
+            <identifier>
+                <type>Protocol Authority Identifier</type>
+                <value>50502</value>
+                <source>CALGB</source>
+                <primaryIndicator>Yes</primaryIndicator>
+            </identifier>
+        </identifiers>
+        <studySites>
+            <studySite>
+                <site>
+                    <name>default</name>
+                </site>
+            </studySite>
+        </studySites>
+    </study>
+    <study>
+
+        <shortTitle>Ph 4, DB, MC, Rand, Cross-over study to compare Multihance vs Omniscan in MRI of
+            the brain</shortTitle>
+        <longTitle>Phase IV, Double-Blind, Multi-Center, Randomized, Cross-Over Study to Compare
+            0.10 mmol/kg of Multihance with 0.10 mmol/kg of Omniscan in Magnetic Resonance Imaging
+            (MRI) of the Brain</longTitle>
+        <description>Brain and Nervous System,INDUSTRY</description>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <phaseCode>4</phaseCode>
+        <primarySponsorCode>Bracco</primarySponsorCode>
+        <identifiers>
+
+            <identifier>
+                <type>Local Identifier</type>
+                <value>99B06</value>
+                <source>WFU</source>
+                <primaryIndicator>No</primaryIndicator>
+            </identifier>
+
+            <identifier>
+                <type>Protocol Authority Identifier</type>
+                <value>99B06</value>
+                <source>Bracco</source>
+                <primaryIndicator>Yes</primaryIndicator>
+            </identifier>
+        </identifiers>
+        <studySites>
+            <studySite>
+                <site>
+                    <name>default</name>
+                </site>
+            </studySite>
+        </studySites>
+    </study>
+    <study>
+        <shortTitle>Ph 1/2 study of hypo-frac stereotactic body RT for st 1/2 NSCLC within the
+            central lung reg and the</shortTitle>
+        <longTitle>A Phase I/II Study of Hypofractionated Stereotactic Body Radiotherapy for Stage
+            I/II Non-Small Cell Lung Cancer with the Central Lung Region and the Prognostic Impact
+            of FDG Positron Emission Tomography</longTitle>
+        <description>Lung,CCCWFU</description>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <phaseCode>1/2</phaseCode>
+        <primarySponsorCode>CCCWFU</primarySponsorCode>
+        <identifiers>
+
+            <identifier>
+                <type>Protocol Authority Identifier</type>
+                <value>62206</value>
+                <source>WFU</source>
+                <primaryIndicator>Yes</primaryIndicator>
+            </identifier>
+        </identifiers>
+        <studySites>
+            <studySite>
+                <site>
+                    <name>default</name>
+                </site>
+            </studySite>
+        </studySites>
+    </study>
+</studies>

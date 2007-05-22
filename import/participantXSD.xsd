@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="participants">
+        <xs:annotation>
+            <xs:documentation> The top level (typically root) element. Allows the definition of
+                default values for all nested bean definitions. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="participant"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="participant" type="participant"/>
+    <xs:complexType name="participant">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+
+                <xs:sequence>
+                    <xs:element type="xs:string" name="firstName" minOccurs="1" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="lastName" maxOccurs="1" minOccurs="1"/>
+                    <xs:element type="xs:string" name="maidenName" maxOccurs="1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="middleName" maxOccurs="1" minOccurs="0"/>
+                    <xs:element type="xs:date" name="dateOfBirth" maxOccurs="1" minOccurs="1" nillable="true" />
+                    <xs:element type="xs:string" name="gender" maxOccurs="1" minOccurs="0" />
+                    <xs:element type="xs:string" name="race" maxOccurs="1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="ethnicity" maxOccurs="1" minOccurs="0" />
+
+                    <xs:element name="assignments" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="assignment" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="study" type="study"/>
+    <xs:complexType name="study">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+
+                <xs:sequence>
+                    <xs:element type="xs:string" name="shortTitle" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="longTitle"  minOccurs="0"  maxOccurs="1"/>
+                    <xs:element name="identifiers" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="identifier" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="assignment" type="assignment"/>
+    <xs:complexType name="assignment">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element name="dateOfEnrollment" type="xs:date" minOccurs="0"/>
+                    <xs:element ref="studySite" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="studySite" type="studySite"/>
+    <xs:complexType name="studySite">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element ref="study" minOccurs="0"/>
+                    <xs:element ref="site" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="site" type="site"/>
+    <xs:complexType name="site">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element name="studySites" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="studySite" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" minOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="identifier"/>
+    <xs:complexType name="identifier">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:attribute name="primaryIndicator" type="xs:boolean"/>
+                <xs:attribute name="source" type="xs:string"/>
+                <xs:attribute name="type" type="xs:string"/>
+                <xs:attribute name="value" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DomainObject">
+        <xs:attribute name="id" type="xs:integer"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="MutableDomainObject">
+        <xs:complexContent>
+            <xs:extension base="DomainObject">
+                <xs:attribute name="version" type="xs:integer"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+
+
+
+
+</xs:schema>
