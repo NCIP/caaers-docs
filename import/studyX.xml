@@ -9,18 +9,19 @@
             (MRI) of the Brain</longTitle>
         <phaseCode>4</phaseCode>
         <primarySponsorCode>Bracco</primarySponsorCode>
+        <ctcVersion><name>2</name></ctcVersion>
         <identifiers>
 
             <identifier>
                 <type>Local Identifier</type>
-                <value>99B06</value>
-                <source>WFU</source>
+                <value>99B061</value>
+                <source>WFUe</source>
                 <primaryIndicator>No</primaryIndicator>
             </identifier>
 
             <identifier>
                 <type>Protocol Authority Identifier</type>
-                <value>99B06</value>
+                <value>99B063</value>
                 <source>Bracco</source>
                 <primaryIndicator>Yes</primaryIndicator>
             </identifier>
@@ -33,6 +34,7 @@
             </studySite>
         </studySites>
     </study>
+    <!-- 
     <study>
         <shortTitle>Ph 2 study of the anti-CD20 antibody, SGn-30, in comb w/gem, vinorelbine and peg
             lipo dox (GVD) for re</shortTitle>
@@ -127,4 +129,5 @@
             </studySite>
         </studySites>
     </study>
+    -->
 </studies>

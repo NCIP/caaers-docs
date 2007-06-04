@@ -55,7 +55,8 @@
                     <xs:element type="xs:string" name="phaseCode" maxOccurs="1" minOccurs="0"
                         nillable="true"/>
                     <xs:element type="xs:string" name="primarySponsorCode" maxOccurs="1"
-                        minOccurs="0" nillable="true"/>
+                    minOccurs="0" nillable="true"/>
+                    <xs:element ref="ctcVersion" minOccurs="1" maxOccurs="1"/> 
                     <xs:element type="xs:string" name="status" maxOccurs="1" minOccurs="0"
                         nillable="true"/>
                     <xs:element type="xs:integer" name="targetAccrualNumber" maxOccurs="1"
@@ -88,7 +89,7 @@
                     <xs:element name="studyDiseases" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
-                                <xs:element ref="studyDisease" maxOccurs="unbounded"/>
+                                <xs:element ref="ctepStudyDiseases" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -175,8 +176,8 @@
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:element name="studyDisease" type="studyDisease"/>
-    <xs:complexType name="studyDisease">
+    <xs:element name="ctepStudyDiseases" type="ctepStudyDiseases"/>
+    <xs:complexType name="ctepStudyDiseases">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
 
@@ -227,7 +228,7 @@
                     <xs:element name="studyDiseases" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
-                                <xs:element ref="studyDisease" maxOccurs="unbounded"/>
+                                <xs:element ref="ctepStudyDiseases" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -244,6 +245,15 @@
                 <xs:attribute name="source" type="xs:string"/>
                 <xs:attribute name="type" type="xs:string"/>
                 <xs:attribute name="value" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="ctcVersion"/>
+    <xs:complexType name="ctcVersion">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:attribute name="name" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
