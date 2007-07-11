@@ -29,6 +29,14 @@
                     <xs:element type="xs:string" name="gender" maxOccurs="1" minOccurs="0" />
                     <xs:element type="xs:string" name="race" maxOccurs="1" minOccurs="0"/>
                     <xs:element type="xs:string" name="ethnicity" maxOccurs="1" minOccurs="0" />
+                    
+                    <xs:element name="identifiers" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="identifier"  minOccurs="1" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
 
                     <xs:element name="assignments" minOccurs="0">
                         <xs:complexType>
@@ -49,8 +57,10 @@
             <xs:extension base="MutableDomainObject">
 
                 <xs:sequence>
+                    <!--
                     <xs:element type="xs:string" name="shortTitle" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="longTitle"  minOccurs="0"  maxOccurs="1"/>
+                    -->
                     <xs:element name="identifiers" minOccurs="1">
                         <xs:complexType>
                             <xs:sequence>
