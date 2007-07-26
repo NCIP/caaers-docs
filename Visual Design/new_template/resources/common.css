@@ -114,13 +114,14 @@ ul.tabs li {
 }
 
 #sections a {
-  line-height: 18px;
   display: block;
+  line-height: 20px;
   text-decoration: none; font-weight: bold; 
-  color: #333333; 
+  color: #333333;
 }
 
-#sections a:hover { color: #002EE2; }
+#sections a:hover { color: #efe; }
+#sections li.selected a:hover { color: #339; }
 
 /**** TASKS */
 
