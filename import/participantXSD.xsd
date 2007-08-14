@@ -33,7 +33,8 @@
                     <xs:element name="identifiers" minOccurs="1">
                         <xs:complexType>
                             <xs:sequence>
-                                <xs:element ref="identifier"  minOccurs="1" maxOccurs="unbounded"/>
+                                <xs:element ref="organizationAssignedIdentifier"  minOccurs="1" maxOccurs="unbounded"/>
+                                <xs:element ref="systemAssignedIdentifier"  minOccurs="0" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -114,15 +115,49 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    
+    <xs:element name="organization" type="organization"/>
+    <xs:complexType name="organization">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element name="name" type="organizationType" minOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
+    <xs:element name="organizationAssignedIdentifier"/>
+    <xs:complexType name="organizationAssignedIdentifier">
+        <xs:complexContent>
+            <xs:extension base="identifier">
+                <xs:sequence>
+                    <xs:element ref="organization"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="systemAssignedIdentifier"/>
+    <xs:complexType name="systemAssignedIdentifier">
+        <xs:complexContent>
+            <xs:extension base="identifier">
+                <xs:sequence>
+                    <xs:element name="systemName" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
     <xs:element name="identifier"/>
     <xs:complexType name="identifier">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-                <xs:attribute name="primaryIndicator" type="xs:boolean"/>
-                <xs:attribute name="source" type="xs:string"/>
-                <xs:attribute name="type" type="xs:string"/>
-                <xs:attribute name="value" type="xs:string"/>
+                <xs:sequence>
+                    <xs:element name="primaryIndicator" type="xs:boolean"  />
+                    <xs:element name="type" type="participantIdentifierType"/>
+                    <xs:element name="value" type="xs:string"/>
+                </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -140,6 +175,22 @@
         </xs:complexContent>
     </xs:complexType>
 
+
+    <xs:simpleType name="participantIdentifierType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="Protocol Authority Identifier| Co-ordinating Center Identifier|Site Identifier|Site IRB Identifier|ClinicalTrials.gov Identifier|Grid Identifier|C3D Identifier"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="organizationType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="default|National Cancer Institute|Wake Forest Comprehensive Cancer Center|Duke University Comprehensive Cancer Center|Division of Cancer Prevention|Cancer Therapy Evaluation Program"
+            />
+        </xs:restriction>
+    </xs:simpleType>
 
 
 

@@ -12,13 +12,20 @@
         <ethnicity>Unknown</ethnicity>
         
         <identifiers>
-            <identifier>
-                <type>Local Identifier</type>
-                <value>13213</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
+            <organizationAssignedIdentifier>
+                <type>Site Identifier</type>
+                <value>awwq</value>
+                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
                 <primaryIndicator>true</primaryIndicator>
-            </identifier>
-        </identifiers>  
+            </organizationAssignedIdentifier>
+            <systemAssignedIdentifier>
+                <type>Site Identifier</type>
+                <value>99asdsadsaaB1wzw</value>
+                <systemName>Yarois</systemName>
+                <primaryIndicator>false</primaryIndicator>
+            </systemAssignedIdentifier>  
+        </identifiers>
+        
         <assignments>
             <assignment>
                 <studySite>
@@ -44,93 +51,4 @@
             </assignment>
         </assignments>
     </participant>
-    
-    <participant>
-        <firstName>Mark</firstName>
-        <lastName>Johnson</lastName>
-        <maidenName></maidenName>
-        <middleName></middleName>
-        <dateOfBirth>2007-04-15</dateOfBirth>
-        <gender>Unknown</gender>
-        <race>Unknown</race>
-        <ethnicity>Unknown</ethnicity>
-        
-        <identifiers>
-            <identifier>
-                <type>Local Identifier</type>
-                <value>13213</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>true</primaryIndicator>
-            </identifier>
-        </identifiers>  
-        <assignments>
-            <assignment>
-                <studySite>
-                    <study>
-                        <identifiers>
-                            <identifier>
-                                <value>99B061ee</value>
-                            </identifier>
-                        </identifiers>
-                    </study>
-                </studySite>
-            </assignment>
-            <assignment>
-                <studySite>
-                    <study>
-                        <identifiers>
-                            <identifier>
-                                <value>99B061gg</value>
-                            </identifier>
-                        </identifiers>
-                    </study>
-                </studySite>
-            </assignment>
-        </assignments>
-    </participant>
-    
-    <participant>
-        <firstName>Patrick</firstName>
-        <lastName>Young</lastName>
-        <maidenName></maidenName>
-        <middleName></middleName>
-        <dateOfBirth>2007-04-15</dateOfBirth>
-        <gender>Unknown</gender>
-        <race>Unknown</race>
-        <ethnicity>Unknown</ethnicity>
-        
-        <identifiers>
-            <identifier>
-                <type>Local Identifier</type>
-                <value>13213</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>true</primaryIndicator>
-            </identifier>
-        </identifiers>  
-        <assignments>
-            <assignment>
-                <studySite>
-                    <study>
-                        <identifiers>
-                            <identifier>
-                                <value>99B061ii</value>
-                            </identifier>
-                        </identifiers>
-                    </study>
-                </studySite>
-            </assignment>
-            <assignment>
-                <studySite>
-                    <study>
-                        <identifiers>
-                            <identifier>
-                                <value>99B061aa</value>
-                            </identifier>
-                        </identifiers>
-                    </study>
-                </studySite>
-            </assignment>
-        </assignments>
-    </participant>
-    
 </participants>

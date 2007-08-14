@@ -2,223 +2,40 @@
  <!-- An example STUDY with all the required fields -->
 <studies>
     <study>
-        <shortTitle>Ph 4, DB, MC, Rand, Cross-over study to compare Multihance vs Omniscan in MRI of
-            the brain</shortTitle>
-        <longTitle>Phase IV, Double-Blind, Multi-Center, Randomized, Cross-Over Study to Compare
-            0.10 mmol/kg of Multihance with 0.10 mmol/kg of Omniscan in Magnetic Resonance Imaging
-            (MRI) of the Brain</longTitle>
+        
+        <shortTitle>The Study of Ctem Cell Research</shortTitle>
+        <longTitle>Ctem Cell is ok i guess</longTitle>
         <phaseCode>Phase I Trial</phaseCode>
-        <ctcVersion><name>2</name></ctcVersion>
+        <terminology><ctcVersion><name>10</name></ctcVersion></terminology>
+        
         <identifiers>
-            <identifier>
+            <organizationAssignedIdentifier>
                 <type>Site Identifier</type>
-                <value>99B061aa</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>false</primaryIndicator>
-            </identifier>
-
-            <identifier>
-                <type>Protocol Authority Identifier</type>
-                <value>99B063bb</value>
-                <source>National Cancer Institute</source>
+                <value>99B1resazw</value>
+                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
                 <primaryIndicator>true</primaryIndicator>
-            </identifier>
-            
+            </organizationAssignedIdentifier>
+            <systemAssignedIdentifier>
+                <type>Site Identifier</type>
+                <value>99saaB1wzw</value>
+               <systemName>Yarois</systemName>
+                <primaryIndicator>false</primaryIndicator>
+            </systemAssignedIdentifier>  
         </identifiers>
         
         <studyOrganizations>
             <studyFundingSponsor>
                 <organization>
-                    <name>default</name>
+                    <name>Cancer Therapy Evaluation Program</name>
                 </organization>
             </studyFundingSponsor>
             <studySite>
                 <organization>
-                    <name>default</name>
+                    <name>Cancer Therapy Evaluation Program</name>
                 </organization>
-            </studySite>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-        </studyOrganizations>
-    </study>
-   
-    <study>
-        <shortTitle>Ext Study Eval the long-term safety of ICA-17043 w/ or w/out hydroxyurea in subjects w/sickle-cell d</shortTitle>
-        <longTitle>An Open-Label Extension Study Evaluating the Long-Term Safety of ICA-17043 with or without Hydroxyurea Therapy in Subjects with Sickle-Cell Disease</longTitle>
-        <description>Hematologic,IND_HEMONC</description>
-        <phaseCode>Phase I Trial</phaseCode>
-        <ctcVersion><name>2</name></ctcVersion>
-        
-        <identifiers>
-            <identifier>
-                <type>Site Identifier</type>
-                <value>99B061cc</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>false</primaryIndicator>
-            </identifier>
-            
-            <identifier>
-                <type>Protocol Authority Identifier</type>
-                <value>99B063dd</value>
-                <source>National Cancer Institute</source>
-                <primaryIndicator>true</primaryIndicator>
-            </identifier>
-            
-        </identifiers>
-        
-        <studyOrganizations>
-            <studyFundingSponsor>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studyFundingSponsor>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-        </studyOrganizations>
-       
-    </study>
-    
-    <study>
-        <shortTitle>Rand Ph 2 trial of rit vs lenal vs rit+lenal in rec follicular NHL after relapse from a rit-containi</shortTitle>
-        <longTitle>A Randomized Phase II Trial of Rituximab vs Lenalidomide vs Rituximab + Lenalidomide in Recurrent Follicular Non-Hodgkin Lymphoma (NHL) After Relapse from a Rituximab-Containing Combination Regimen</longTitle>
-        <description>Non-Hodgkins Lymphoma,CALGB</description>
-        <phaseCode>Phase II Trial</phaseCode>
-        <ctcVersion><name>3</name></ctcVersion>
-        
-        <identifiers>
-            <identifier>
-                <type>Site Identifier</type>
-                <value>99B061ee</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>false</primaryIndicator>
-            </identifier>
-            
-            <identifier>
-                <type>Protocol Authority Identifier</type>
-                <value>99B063ff</value>
-                <source>National Cancer Institute</source>
-                <primaryIndicator>true</primaryIndicator>
-            </identifier>
-            
-        </identifiers>
-        
-        <studyOrganizations>
-            <studyFundingSponsor>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studyFundingSponsor>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-        </studyOrganizations>
-    </study>
-    
-    <study>
-        <shortTitle>Rand, DB, Plac-Cont trial to eval palifermin in the red of acute graft vs host dx in sub w/hem malig</shortTitle>
-        <longTitle>A Randomized, Double-Blind, Placebo-Controlled Trial to Evaluate Palifermin (rHuKGF) in the Reduction of Acute Graft Versus Host Disease in Subjects with Hematologic Malignancies Undergoing Allogeneic Marrow/PBPC Transplantation</longTitle>      
-        <description>Hematologic,IND_HEMONC</description>
-        <phaseCode>Phase II Trial</phaseCode>
-        <ctcVersion><name>3</name></ctcVersion>
-        
-        <identifiers>
-            <identifier>
-                <type>Site Identifier</type>
-                <value>99B061gg</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>false</primaryIndicator>
-            </identifier>
-            
-            <identifier>
-                <type>Protocol Authority Identifier</type>
-                <value>99B063hh</value>
-                <source>National Cancer Institute</source>
-                <primaryIndicator>true</primaryIndicator>
-            </identifier>
-            
-        </identifiers>
-        
-        <studyOrganizations>
-            <studyFundingSponsor>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studyFundingSponsor>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
+                <roleCode>Coordinating Site</roleCode>
             </studySite>
         </studyOrganizations>
         
     </study>
-    
-    
-    <study>
-        <shortTitle>Ph 2 study of maint therapy w/decitabine following stan ind and cytogenetic risk-adapted intensificati</shortTitle>
-        <longTitle>Phase II Study of Maintenance Therapy with Decitabine Following Standard Induction and Cytogenetic Risk-Adapted Intensification in Previously Untreated Patients with AML less than 60 Years</longTitle>        <description>Hematologic,IND_HEMONC</description>
-        <phaseCode>Phase II Trial</phaseCode>
-        <ctcVersion><name>2</name></ctcVersion>
-        
-        <identifiers>
-            <identifier>
-                <type>Site Identifier</type>
-                <value>99B061ii</value>
-                <source>Wake Forest Comprehensive Cancer Center</source>
-                <primaryIndicator>false</primaryIndicator>
-            </identifier>
-            
-            <identifier>
-                <type>Protocol Authority Identifier</type>
-                <value>99B063jj</value>
-                <source>National Cancer Institute</source>
-                <primaryIndicator>true</primaryIndicator>
-            </identifier>
-            
-        </identifiers>
-        
-        <studyOrganizations>
-            <studyFundingSponsor>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studyFundingSponsor>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-            <studySite>
-                <organization>
-                    <name>default</name>
-                </organization>
-            </studySite>
-        </studyOrganizations>
-        
-    </study>
-    
-   
 </studies>

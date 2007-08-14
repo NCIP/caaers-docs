@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    
-    
+
+
     <xs:element name="studies">
         <xs:annotation>
             <xs:documentation> The top level (typically root) element. Allows the definition of
@@ -15,12 +15,12 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:complexType name="DomainObject">
         <xs:attribute name="id" type="xs:integer"/>
     </xs:complexType>
-    
-    
+
+
     <xs:complexType name="MutableDomainObject">
         <xs:complexContent>
             <xs:extension base="DomainObject">
@@ -28,12 +28,12 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:element name="study" type="study"/>
     <xs:complexType name="study">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-                
+
                 <xs:sequence>
                     <xs:element type="xs:string" name="shortTitle" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="xs:string" name="longTitle" maxOccurs="1" minOccurs="1"
@@ -54,30 +54,33 @@
                         nillable="true"/>
                     <xs:element type="studyPhaseType" name="phaseCode" maxOccurs="1" minOccurs="0"
                         nillable="true"/>
-                    <xs:element ref="ctcVersion" minOccurs="1" maxOccurs="1"/> 
+                    <xs:element ref="terminology" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="xs:string" name="status" maxOccurs="1" minOccurs="0"
                         nillable="true"/>
                     <xs:element type="xs:integer" name="targetAccrualNumber" maxOccurs="1"
-                    minOccurs="0" nillable="true"/>
-                    
+                        minOccurs="0" nillable="true"/>
+
                     <xs:element name="identifiers" minOccurs="1">
                         <xs:complexType>
                             <xs:sequence>
-                                <xs:element ref="identifier"  minOccurs="1" maxOccurs="unbounded"/>
+                                <xs:element ref="organizationAssignedIdentifier" minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                                <xs:element ref="systemAssignedIdentifier" minOccurs="0"
+                                    maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    
+
                     <xs:element name="studyOrganizations" minOccurs="0">
                         <xs:complexType>
-                           
+
                             <xs:sequence>
                                 <xs:element ref="studyFundingSponsor" maxOccurs="1"/>
                                 <xs:element ref="studySite" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    
+
                     <xs:element name="studyAgents" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
@@ -85,7 +88,7 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    
+
                     <xs:element name="studyDiseases" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
@@ -93,7 +96,7 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    
+
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -103,7 +106,7 @@
     <xs:complexType name="studyFundingSponsor">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-                
+
                 <xs:sequence>
                     <xs:element ref="organization"/>
                     <xs:element ref="study" minOccurs="0"/>
@@ -117,33 +120,28 @@
     <xs:complexType name="studySite">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-
                 <xs:sequence>
-                    <xs:element name="endDate" type="xs:date" minOccurs="0"/>
-                    <xs:element name="irbApprovalDate" type="xs:date" minOccurs="0"/>
-                    <xs:element name="roleCode" type="xs:string" minOccurs="0"/>
-                    <xs:element name="startDate" type="xs:date" minOccurs="0"/>
-                    <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
                     <xs:element ref="organization"/>
                     <xs:element ref="study" minOccurs="0"/>
+                    <xs:element name="roleCode" type="roleCodeType" minOccurs="1"/>
+                    <xs:element name="irbApprovalDate" type="xs:date" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
-	 <xs:element name="organization" type="organization"/>
+    <xs:element name="organization" type="organization"/>
     <xs:complexType name="organization">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-                
                 <xs:sequence>
-                    <xs:element name="name" type="xs:string" minOccurs="1"/>
+                    <xs:element name="name" type="organizationType" minOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
-<!-- 
+    <!-- 
     <xs:element name="site" type="site"/>
     <xs:complexType name="site">
         <xs:complexContent>
@@ -186,7 +184,7 @@
     <xs:complexType name="agent">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-                
+
                 <xs:sequence>
                     <xs:element name="name" type="xs:string" minOccurs="1"/>
                     <xs:element name="description" type="xs:string"/>
@@ -198,12 +196,12 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    
+
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:element name="ctepStudyDiseases" type="ctepStudyDiseases"/>
     <xs:complexType name="ctepStudyDiseases">
         <xs:complexContent>
@@ -243,7 +241,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:element name="diseaseTerm"/>
     <xs:complexType name="diseaseTerm">
         <xs:complexContent>
@@ -264,14 +262,35 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
+    <xs:element name="organizationAssignedIdentifier"/>
+    <xs:complexType name="organizationAssignedIdentifier">
+        <xs:complexContent>
+            <xs:extension base="identifier">
+                <xs:sequence>
+                    <xs:element ref="organization"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="systemAssignedIdentifier"/>
+    <xs:complexType name="systemAssignedIdentifier">
+        <xs:complexContent>
+            <xs:extension base="identifier">
+                <xs:sequence>
+                    <xs:element name="systemName" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:element name="identifier"/>
     <xs:complexType name="identifier">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
-                    <xs:element name="primaryIndicator" type="xs:boolean"  />
-                    <xs:element  type="studyCtcVersion" name="source" nillable="false"/>
+                    <xs:element name="primaryIndicator" type="xs:boolean"/>
                     <xs:element name="type" type="studyIdentifierType"/>
                     <xs:element name="value" type="xs:string"/>
                 </xs:sequence>
@@ -279,7 +298,7 @@
         </xs:complexContent>
     </xs:complexType>
 
-<!-- 
+    <!-- 
     <xs:element name="identifier"/>
     <xs:complexType name="identifier">
         <xs:complexContent>
@@ -292,7 +311,15 @@
         </xs:complexContent>
     </xs:complexType>
 -->
-    
+
+    <xs:element name="terminology"/>
+    <xs:complexType name="terminology">
+        <xs:sequence>
+            <xs:element ref="ctcVersion" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="meddraVersion" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:element name="ctcVersion"/>
     <xs:complexType name="ctcVersion">
         <xs:complexContent>
@@ -301,7 +328,16 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
+    <xs:element name="meddraVersion"/>
+    <xs:complexType name="meddraVersion">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:attribute name="name" type="studyMeddraVersion"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:element name="Participation" type="Participation"/>
     <xs:complexType name="Participation">
         <xs:sequence>
@@ -309,42 +345,70 @@
             <xs:element name="endDate" type="xs:date" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <!-- FIXED Types  -->
-    <xs:simpleType  name="studySponsorType">
-            <xs:restriction base="xs:string">
-                    <xs:pattern value="National Cancer Institute|Pfizer|Proctor &amp; Gamble|GLAXO|US Biosciences|MGI Pharma Inc"></xs:pattern>
-            </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType  name="studyPhaseType">
+    <xs:simpleType name="studySponsorType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="Phase I Trial|Phase i/II Trial|Phase II Trial|Phase III Trial|Phase IV Trial|Phase 0 Trial|Pilot"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType  name="studyCtcVersion">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="2|3"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType  name="studyIdentifierType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="Protocol Authority Identifier| Co-ordinating Center Identifier|Site Identifier|Site IRB Identifier|ClinicalTrials.gov Identifier|Grid Identifier|C3D Identifier"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType  name="studyAssigningAuthorityType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="default|National Cancer Institute| Wake Forest Comprehensive Cancer Center|Duke University Comprehensive Cancer Center"></xs:pattern>
+            <xs:pattern
+                value="National Cancer Institute|Pfizer|Proctor &amp; Gamble|GLAXO|US Biosciences|MGI Pharma Inc"
+            />
         </xs:restriction>
     </xs:simpleType>
 
-    
+    <xs:simpleType name="studyPhaseType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="Phase I Trial|Phase i/II Trial|Phase II Trial|Phase III Trial|Phase IV Trial|Phase 0 Trial|Pilot"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="studyCtcVersion">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="2|3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="studyMeddraVersion">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="studyIdentifierType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="Protocol Authority Identifier| Co-ordinating Center Identifier|Site Identifier|Site IRB Identifier|ClinicalTrials.gov Identifier|Grid Identifier|C3D Identifier"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="studyAssigningAuthorityType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="default|National Cancer Institute| Wake Forest Comprehensive Cancer Center|Duke University Comprehensive Cancer Center"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="organizationType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="default|National Cancer Institute|Wake Forest Comprehensive Cancer Center|Duke University Comprehensive Cancer Center|Division of Cancer Prevention|Cancer Therapy Evaluation Program"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="roleCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="Affiliate Site|Coordinating Site"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 
 
-  
-    
+
+
+
+
 </xs:schema>
