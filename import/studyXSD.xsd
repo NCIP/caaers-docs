@@ -123,7 +123,6 @@
                 <xs:sequence>
                     <xs:element ref="organization"/>
                     <xs:element ref="study" minOccurs="0"/>
-                    <xs:element name="roleCode" type="roleCodeType" minOccurs="1"/>
                     <xs:element name="irbApprovalDate" type="xs:date" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
@@ -398,13 +397,6 @@
             />
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:simpleType name="roleCodeType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="Affiliate Site|Coordinating Site"/>
-        </xs:restriction>
-    </xs:simpleType>
-
 
 
 
