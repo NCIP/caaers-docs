@@ -14,13 +14,13 @@
         <identifiers>
             <organizationAssignedIdentifier>
                 <type>Site Identifier</type>
-                <value>awwq</value>
+                <value>aw541wq</value>
                 <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
                 <primaryIndicator>true</primaryIndicator>
             </organizationAssignedIdentifier>
             <systemAssignedIdentifier>
                 <type>Site Identifier</type>
-                <value>99asdsadsaaB1wzw</value>
+                <value>99asdsadewsaaB1wzw</value>
                 <systemName>Yarois</systemName>
                 <primaryIndicator>false</primaryIndicator>
             </systemAssignedIdentifier>  
@@ -32,23 +32,12 @@
                     <study>
                         <identifiers>
                             <identifier>
-                                <value>99B061aa</value>
+                                <value>agtroee18sa896</value>
                             </identifier>
                         </identifiers>
                     </study>
                 </studySite>
             </assignment>
-            <assignment>
-                <studySite>
-                    <study>
-                        <identifiers>
-                            <identifier>
-                                <value>99B061cc</value>
-                            </identifier>
-                        </identifiers>
-                    </study>
-                </studySite>
-            </assignment>
-        </assignments>
+          </assignments>
     </participant>
 </participants>

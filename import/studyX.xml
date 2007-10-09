@@ -8,6 +8,7 @@
         <phaseCode>Phase I Trial</phaseCode>
         <terminology><ctcVersion><name>3</name></ctcVersion></terminology>
         
+        <multiInstitutionIndicator>false</multiInstitutionIndicator>
         <identifiers>
             <organizationAssignedIdentifier>
                 <type>Site Identifier</type>
