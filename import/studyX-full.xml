@@ -3,8 +3,8 @@
 <studies>
     <study>
         
-        <shortTitle>Zimbra :: the best emai cleint ever i say ever</shortTitle>
-        <longTitle>Zimbra :: the best emai cleint ever i say ever!!!</longTitle>
+        <shortTitle>The study of human genes</shortTitle>
+        <longTitle>The study of human genes</longTitle>
         <precis>Example Text for Precis</precis>
         <description>This is the description</description>
         <phaseCode>Phase I Trial</phaseCode>
@@ -52,8 +52,8 @@
                         <statusCode>Active</statusCode>
                         <siteInvestigator>
                             <investigator>
-                                <firstName>Krikor</firstName>
-                                <lastName>Krumlian</lastName>
+                                <firstName>FirstName</firstName>
+                                <lastName>LastName</lastName>
                             </investigator>
                         </siteInvestigator>
                     </studyInvestigator>
@@ -63,8 +63,8 @@
                         <roleCode>Site Investigator</roleCode>
                         <statusCode>Active</statusCode>
                         <researchStaff>
-                            <firstName>Manny</firstName>
-                            <lastName>Ramirez</lastName>
+                            <firstName>FirstName</firstName>
+                            <lastName>LastName</lastName>
                         </researchStaff>
                     </studyPersonnel>
                 </studyPersonnels>
@@ -79,8 +79,8 @@
                             <statusCode>Active</statusCode>
                         <siteInvestigator>
                                 <investigator>
-                                    <firstName>Krikor</firstName>
-                                    <lastName>Krumlian</lastName>
+                                    <firstName>FirstName</firstName>
+                                    <lastName>LastName</lastName>
                                 </investigator>
                         </siteInvestigator>
                         </studyInvestigator>
@@ -90,8 +90,8 @@
                             <roleCode>Site Investigator</roleCode>
                             <statusCode>Active</statusCode>
                             <researchStaff>
-                                <firstName>Manny</firstName>
-                                <lastName>Ramirez</lastName>
+                                <firstName>FirstName</firstName>
+                                <lastName>LastName</lastName>
                             </researchStaff>
                         </studyPersonnel>
                 </studyPersonnels>

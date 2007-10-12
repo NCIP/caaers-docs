@@ -243,7 +243,7 @@
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
-                    <xs:element name="name" type="organizationType" minOccurs="1"/>
+                    <xs:element name="name" type="xs:string" minOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -514,15 +514,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="organizationType">
-        <xs:restriction base="xs:string">
-            <xs:pattern
-                value="default|National Cancer Institute|Wake Forest Comprehensive Cancer Center|Duke University Comprehensive Cancer Center|Division of Cancer Prevention|Cancer Therapy Evaluation Program"
-            />
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="roleCodeType">
+       <xs:simpleType name="roleCodeType">
         <xs:restriction base="xs:string">
             <xs:pattern
                 value="Site Principle Investigator|Site Investigator|Principal Investigor"

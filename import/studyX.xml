@@ -3,23 +3,34 @@
 <studies>
     <study>
         
-        <shortTitle>The Study of Ctem Cell Research</shortTitle>
-        <longTitle>Ctem Cell is ok i guess</longTitle>
+        <shortTitle>The Study of Barak Obama IV</shortTitle>
+        <longTitle>He is so sweet</longTitle>
         <phaseCode>Phase I Trial</phaseCode>
         <terminology><ctcVersion><name>3</name></ctcVersion></terminology>
         
-        <multiInstitutionIndicator>false</multiInstitutionIndicator>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <organizationAssignedIdentifier>
+            <value>f111</value>
+            <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+        </organizationAssignedIdentifier>
+        
         <identifiers>
+            <!--  This identifier is for Funding sponsor  study identifier -->
+            <organizationAssignedIdentifier>
+                <type>Sponsor Identifier</type>
+                <value>f222</value>
+                <organization><name>Cancer Therapy Evaluation Program</name></organization>
+            </organizationAssignedIdentifier>
             <organizationAssignedIdentifier>
                 <type>Site Identifier</type>
-                <value>99B1resazw</value>
+                <value>f333</value>
                 <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
                 <primaryIndicator>true</primaryIndicator>
             </organizationAssignedIdentifier>
             <systemAssignedIdentifier>
                 <type>Site Identifier</type>
-                <value>99saaB1wzw</value>
-               <systemName>Yarois</systemName>
+                <value>f444</value>
+                <systemName>Yarois</systemName>
                 <primaryIndicator>false</primaryIndicator>
             </systemAssignedIdentifier>  
         </identifiers>
