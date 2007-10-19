@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- An example STUDY with all  fields -->
+<studies>
+    <study>
+        
+        <shortTitle>The study of human genes</shortTitle>
+        <longTitle>The study of human genes</longTitle>
+        <precis>Example Text for Precis</precis>
+        <description>This is the description</description>
+        <phaseCode>Phase I Trial</phaseCode>
+        <terminology><ctcVersion><name>3</name></ctcVersion></terminology>
+        
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <organizationAssignedIdentifier>
+            <value>uytrwsswq898</value>
+            <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+        </organizationAssignedIdentifier>
+        
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>true</deviceTherapyType>
+        <radiationTherapyType>false</radiationTherapyType>
+        
+        <identifiers>
+            <!--  This identifier is for Funding sponsor  study identifier -->
+            <organizationAssignedIdentifier>
+                <type>Sponsor Identifier</type>
+                <value>agtroee18sa896</value>
+                <organization><name>Cancer Therapy Evaluation Program</name></organization>
+            </organizationAssignedIdentifier>
+            <organizationAssignedIdentifier>
+                <type>Site Identifier</type>
+                <value>edeuwwiqqa</value>
+                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+                <primaryIndicator>true</primaryIndicator>
+            </organizationAssignedIdentifier>
+            <systemAssignedIdentifier>
+                <type>Site Identifier</type>
+                <value>kriruupokds</value>
+               <systemName>Yarois</systemName>
+                <primaryIndicator>false</primaryIndicator>
+            </systemAssignedIdentifier>  
+        </identifiers>
+        
+        <studyOrganizations>
+            <studyFundingSponsor>
+                <organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                </organization>
+                <studyInvestigators>
+                    <studyInvestigator>
+                        <roleCode>Site Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <siteInvestigator>
+                            <investigator>
+                                <firstName>FirstName</firstName>
+                                <lastName>LastName</lastName>
+                            </investigator>
+                        </siteInvestigator>
+                    </studyInvestigator>
+                </studyInvestigators>
+                <studyPersonnels>
+                    <studyPersonnel>
+                        <roleCode>Site Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <researchStaff>
+                            <firstName>FirstName</firstName>
+                            <lastName>LastName</lastName>
+                        </researchStaff>
+                    </studyPersonnel>
+                </studyPersonnels>
+            </studyFundingSponsor>
+            <studySite>
+                <organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                </organization>
+                <studyInvestigators>
+                        <studyInvestigator>
+                            <roleCode>Site Investigator</roleCode>
+                            <statusCode>Active</statusCode>
+                        <siteInvestigator>
+                                <investigator>
+                                    <firstName>FirstName</firstName>
+                                    <lastName>LastName</lastName>
+                                </investigator>
+                        </siteInvestigator>
+                        </studyInvestigator>
+                </studyInvestigators>
+                <studyPersonnels>
+                        <studyPersonnel>
+                            <roleCode>Site Investigator</roleCode>
+                            <statusCode>Active</statusCode>
+                            <researchStaff>
+                                <firstName>FirstName</firstName>
+                                <lastName>LastName</lastName>
+                            </researchStaff>
+                        </studyPersonnel>
+                </studyPersonnels>
+            </studySite>
+        </studyOrganizations>
+        
+        <treatmentAssignments>
+                <treatmentAssignment>
+                        <code>1234</code>
+                        <doseLevelOrder>121</doseLevelOrder>
+                        <description>Hello World</description>
+                </treatmentAssignment>
+        </treatmentAssignments>
+        
+        <studyAgents>
+                <studyAgent>
+                        <agent>
+                              <name>Hello</name>
+                              <nscNumber>1234</nscNumber>
+                        </agent>
+                        <otherAgent>Yahoo is the name of the game</otherAgent>
+                </studyAgent>
+        </studyAgents>
+        
+        <ctepStudyDiseases>
+                <ctepStudyDisease>
+                        <diseaseTerm>
+                                <term>Chondrosarcoma</term>
+                        </diseaseTerm>
+                        <leadDisease>false</leadDisease>
+                </ctepStudyDisease>
+        </ctepStudyDiseases>
+        
+        <meddraStudyDiseases>
+            <meddraStudyDisease>
+               <meddraCode>1233212</meddraCode>
+        </meddraStudyDisease>
+        </meddraStudyDiseases>
+       
+        
+    </study>
+</studies>

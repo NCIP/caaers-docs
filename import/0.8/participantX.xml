@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<participants>
+    <participant>
+        <firstName>ron</firstName>
+        <lastName>arnold</lastName>
+        <maidenName></maidenName>
+        <middleName></middleName>
+        <dateOfBirth>2007-04-15</dateOfBirth>
+        <gender>Unknown</gender>
+        <race>Unknown</race>
+        <ethnicity>Unknown</ethnicity>
+        
+        <identifiers>
+            <organizationAssignedIdentifier>
+                <type>Medical Record Number</type>
+                <value>yt5ujhde64</value>
+                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+                <primaryIndicator>true</primaryIndicator>
+            </organizationAssignedIdentifier>
+            <systemAssignedIdentifier>
+                <type>Medical Record Number</type>
+                <value>iu09triytg876</value>
+                <systemName>Yarois</systemName>
+                <primaryIndicator>false</primaryIndicator>
+            </systemAssignedIdentifier>  
+        </identifiers>
+        
+        <assignments>
+            <assignment>
+                <studySite>
+                    <study>
+                        <identifiers>
+                            <identifier>
+                                <value>identifiervaluehere</value>
+                            </identifier>
+                        </identifiers>
+                    </study>
+                </studySite>
+            </assignment>
+          </assignments>
+    </participant>
+</participants>
