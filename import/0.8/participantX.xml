@@ -2,8 +2,8 @@
 
 <participants>
     <participant>
-        <firstName>ron</firstName>
-        <lastName>arnold</lastName>
+        <firstName>georgio</firstName>
+        <lastName>armani</lastName>
         <maidenName></maidenName>
         <middleName></middleName>
         <dateOfBirth>2007-04-15</dateOfBirth>
@@ -15,7 +15,7 @@
             <organizationAssignedIdentifier>
                 <type>Medical Record Number</type>
                 <value>yt5ujhde64</value>
-                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+                <organization><name>Cancer Therapy Evaluation Program</name></organization>
                 <primaryIndicator>true</primaryIndicator>
             </organizationAssignedIdentifier>
             <systemAssignedIdentifier>
@@ -32,10 +32,13 @@
                     <study>
                         <identifiers>
                             <identifier>
-                                <value>identifiervaluehere</value>
+                                <value>0105-L</value>
                             </identifier>
                         </identifiers>
                     </study>
+                    <organization>
+                        <name>Wake Forest Comprehensive Cancer Center</name>
+                    </organization>
                 </studySite>
             </assignment>
           </assignments>

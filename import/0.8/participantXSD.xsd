@@ -92,36 +92,18 @@
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
                     <xs:element ref="study" minOccurs="0"/>
-                    <xs:element ref="site" minOccurs="0"/>
+                    <xs:element ref="organization" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="site" type="site"/>
-    <xs:complexType name="site">
-        <xs:complexContent>
-            <xs:extension base="MutableDomainObject">
-                <xs:sequence>
-                    <xs:element name="studySites" minOccurs="0">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element ref="studySite" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                        </xs:complexType>
-                    </xs:element>
-                    <xs:element name="name" type="xs:string" minOccurs="1"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-    
     <xs:element name="organization" type="organization"/>
     <xs:complexType name="organization">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
-                    <xs:element name="name" type="organizationType" minOccurs="1"/>
+                    <xs:element name="name" type="xs:string" minOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

@@ -15,7 +15,7 @@
 			<!-- Funding sponsor study identifier this should be included, reflects the Funding sponsor study identifier on the Details Tab  -->
 			<organizationAssignedIdentifier>
 				<type>Sponsor Identifier</type>
-				<value>0094-L</value>
+				<value>0103-L</value>
 				<organization>
 					<name>Cancer Therapy Evaluation Program</name>
 				</organization>
@@ -23,7 +23,7 @@
 			</organizationAssignedIdentifier>
 			<!-- Coordinating center study identifier this should be included, reflects the Coordinating center study identifier on the Details Tab  -->
 			<organizationAssignedIdentifier>
-				<value>0094-L</value>
+				<value>0103-L</value>
 				<type>Coordinating Center Identifier</type>
 				<organization>
 					<name>Wake Forest Comprehensive Cancer Center</name>
@@ -33,7 +33,7 @@
 			<!-- This is optional as you have already specified identifiers -->
 			<organizationAssignedIdentifier>
 				<type>Site Identifier</type>
-				<value>0094-L</value>
+				<value>0103-L</value>
 				<organization>
 					<name>Wake Forest Comprehensive Cancer Center</name>
 				</organization>
@@ -42,12 +42,134 @@
 			<!-- This is optional as you have already specified identifiers -->
 			<systemAssignedIdentifier>
 				<type>Site Identifier</type>
-				<value>0094-L</value>
+				<value>0103-L</value>
 				<systemName>OWQRIS</systemName>
 				<primaryIndicator>false</primaryIndicator>
 			</systemAssignedIdentifier>
 		</identifiers>
 
+		<studyOrganizations>
+			<studyFundingSponsor>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+			</studyFundingSponsor>
+			<studySite>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+			</studySite>
+		</studyOrganizations>
+	</study>
+	<study>
+		<shortTitle>Ph abdomen s</shortTitle>
+		<longTitle>A Phase II Evaluation of abdomen s</longTitle>
+		<phaseCode>Phase II Trial</phaseCode>
+		<status>Temporarily Closed to Accrual &amp; Treatment</status>
+		<terminology>
+			<ctcVersion>
+				<name>3</name>
+			</ctcVersion>
+		</terminology>
+		<multiInstitutionIndicator>false</multiInstitutionIndicator>
+		<identifiers>
+			<!-- Funding sponsor study identifier this should be included, reflects the Funding sponsor study identifier on the Details Tab  -->
+			<organizationAssignedIdentifier>
+				<type>Sponsor Identifier</type>
+				<value>0104-L</value>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+				<primaryIndicator>false</primaryIndicator>
+			</organizationAssignedIdentifier>
+			<!-- Coordinating center study identifier this should be included, reflects the Coordinating center study identifier on the Details Tab  -->
+			<organizationAssignedIdentifier>
+				<value>0104-L</value>
+				<type>Coordinating Center Identifier</type>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+				<primaryIndicator>false</primaryIndicator>
+			</organizationAssignedIdentifier>
+			<!-- This is optional as you have already specified identifiers -->
+			<organizationAssignedIdentifier>
+				<type>Site Identifier</type>
+				<value>0104-L</value>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+				<primaryIndicator>true</primaryIndicator>
+			</organizationAssignedIdentifier>
+			<!-- This is optional as you have already specified identifiers -->
+			<systemAssignedIdentifier>
+				<type>Site Identifier</type>
+				<value>0104-L</value>
+				<systemName>OWQRIS</systemName>
+				<primaryIndicator>false</primaryIndicator>
+			</systemAssignedIdentifier>
+		</identifiers>
+		
+		<studyOrganizations>
+			<studyFundingSponsor>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+			</studyFundingSponsor>
+			<studySite>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+			</studySite>
+		</studyOrganizations>
+	</study>
+	<study>
+		<shortTitle>Ph abdomen s</shortTitle>
+		<longTitle>A Phase II Evaluation of abdomen s</longTitle>
+		<phaseCode>Phase II Trial</phaseCode>
+		<status>Temporarily Closed to Accrual &amp; Treatment</status>
+		<terminology>
+			<ctcVersion>
+				<name>3</name>
+			</ctcVersion>
+		</terminology>
+		<multiInstitutionIndicator>false</multiInstitutionIndicator>
+		<identifiers>
+			<!-- Funding sponsor study identifier this should be included, reflects the Funding sponsor study identifier on the Details Tab  -->
+			<organizationAssignedIdentifier>
+				<type>Sponsor Identifier</type>
+				<value>0105-L</value>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+				<primaryIndicator>false</primaryIndicator>
+			</organizationAssignedIdentifier>
+			<!-- Coordinating center study identifier this should be included, reflects the Coordinating center study identifier on the Details Tab  -->
+			<organizationAssignedIdentifier>
+				<value>0105-L</value>
+				<type>Coordinating Center Identifier</type>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+				<primaryIndicator>false</primaryIndicator>
+			</organizationAssignedIdentifier>
+			<!-- This is optional as you have already specified identifiers -->
+			<organizationAssignedIdentifier>
+				<type>Site Identifier</type>
+				<value>0105-L</value>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+				<primaryIndicator>true</primaryIndicator>
+			</organizationAssignedIdentifier>
+			<!-- This is optional as you have already specified identifiers -->
+			<systemAssignedIdentifier>
+				<type>Site Identifier</type>
+				<value>0105-L</value>
+				<systemName>OWQRIS</systemName>
+				<primaryIndicator>false</primaryIndicator>
+			</systemAssignedIdentifier>
+		</identifiers>
+		
 		<studyOrganizations>
 			<studyFundingSponsor>
 				<organization>
