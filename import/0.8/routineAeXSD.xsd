@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="routineAdverseEvents">
+        <xs:annotation>
+            <xs:documentation> The top level (typically root) element. Allows the definition of
+                default values for all nested bean definitions. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="routineAdverseEvent"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="routineAdverseEvent" type="routineAdverseEvent"/>
+    <xs:complexType name="routineAdverseEvent">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+
+                <xs:sequence>
+                    <xs:element type="statusType" name="status" maxOccurs="1" minOccurs="1"
+                    nillable="false"/>
+                    <xs:element ref="treatmentAssignment" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="assignment" maxOccurs="1"/>
+                    <xs:element type="xs:date" name="startDate" maxOccurs="1" minOccurs="1"
+                        nillable="true"/>
+                    <xs:element type="xs:date" name="endDate" maxOccurs="1" minOccurs="1"
+                        nillable="true"/>
+
+                    <xs:element name="adverseEvents" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="adverseEvent" minOccurs="1" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="study" type="study"/>
+    <xs:complexType name="study">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+
+                <xs:sequence>
+                    <xs:element name="identifiers" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="identifier" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="participant" type="participant"/>
+    <xs:complexType name="participant">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+
+                <xs:sequence>
+                    <xs:element name="identifiers" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="identifier" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="adverseEvent" type="adverseEvent"/>
+    <xs:complexType name="adverseEvent">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+
+                <xs:sequence>
+                    <xs:element ref="adverseEventCtcTerm" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="adverseEventMeddraLowLevelTerm" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="detailsForOther" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="gradeType" name="grade" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="hospitalizationType" name="hospitalization" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="xs:boolean" name="expected" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="attributionType" name="attributionSummary" maxOccurs="1"
+                        minOccurs="0" nillable="true"/>
+                    <xs:element type="xs:string" name="comments" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="xs:date" name="startDate" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="xs:date" name="endDate" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                  </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:element name="adverseEventCtcTerm" type="adverseEventCtcTerm"/>
+    <xs:complexType name="adverseEventCtcTerm">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element ref="ctcTerm" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="ctcTerm" type="ctcTerm"/>
+    <xs:complexType name="ctcTerm">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="term" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                    <xs:element type="xs:string" name="ctepCode" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="adverseEventMeddraLowLevelTerm" type="adverseEventMeddraLowLevelTerm"/>
+    <xs:complexType name="adverseEventMeddraLowLevelTerm">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element ref="lowLevelTerm" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="lowLevelTerm" type="lowLevelTerm"/>
+    <xs:complexType name="lowLevelTerm">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="meddraCode" maxOccurs="1" minOccurs="0"
+                        nillable="true"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="treatmentAssignment" type="treatmentAssignment"/>
+    <xs:complexType name="treatmentAssignment">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="code" maxOccurs="1" minOccurs="1"
+                        nillable="true"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:element name="assignment" type="assignment"/>
+    <xs:complexType name="assignment">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element name="dateOfEnrollment" type="xs:date" minOccurs="0"/>
+                    <xs:element ref="studySite" minOccurs="0"/>
+                    <xs:element ref="participant" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="studySite" type="studySite"/>
+    <xs:complexType name="studySite">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element ref="study" minOccurs="0"/>
+                    <xs:element ref="organization" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="organization" type="organization"/>
+    <xs:complexType name="organization">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="identifier"/>
+    <xs:complexType name="identifier">
+        <xs:complexContent>
+            <xs:extension base="MutableDomainObject">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DomainObject">
+        <xs:attribute name="id" type="xs:integer"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="MutableDomainObject">
+        <xs:complexContent>
+            <xs:extension base="DomainObject">
+                <xs:attribute name="version" type="xs:integer"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:simpleType name="gradeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="NORMAL|MILD|MODERATE|SEVERE|LIFE_THREATENING|DEATH"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="hospitalizationType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="NONE|HOSPITALIZATION|PROLONGED_HOSPITALIZATION"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="attributionType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="UNRELATED|UNLIKELY|POSSIBLE|PROBABLE|DEFINITE"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="statusType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="CURRENT|LEGACY"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+
+</xs:schema>

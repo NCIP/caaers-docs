@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routineAdverseEvents>
+    <routineAdverseEvent>
+        <status>CURRENT</status>
+        <assignment>
+            <studySite>
+                <study><identifiers><identifier><value>0105-L</value></identifier></identifiers> </study>
+                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+               <!-- <organization><name>Cancer Therapy Evaluation Program</name></organization>-->
+            </studySite>
+            <participant><identifiers><identifier><value>ss2233</value></identifier></identifiers></participant>
+        </assignment>
+        <startDate>2007-04-16</startDate>
+        <endDate>2007-05-16</endDate>
+        <adverseEvents>
+            <adverseEvent>
+                <adverseEventCtcTerm><ctcTerm><ctepCode>10040400</ctepCode></ctcTerm></adverseEventCtcTerm>
+                <grade>MODERATE</grade>
+                <hospitalization>HOSPITALIZATION</hospitalization>
+                <expected>false</expected>
+                <attributionSummary>POSSIBLE</attributionSummary>
+            </adverseEvent>
+        </adverseEvents>
+        </routineAdverseEvent>
+</routineAdverseEvents>
