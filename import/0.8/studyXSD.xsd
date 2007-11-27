@@ -44,6 +44,7 @@
                     <xs:element type="studyPhaseType" name="phaseCode" maxOccurs="1" minOccurs="1" nillable="true"/>
                     <xs:element type="statusType" name="status" maxOccurs="1" minOccurs="1" nillable="true"/>
                     <xs:element ref="terminology" minOccurs="1" maxOccurs="1"/>
+                    <xs:element ref="diseaseTerminology" minOccurs="1" maxOccurs="1"/>
                     
                     <xs:element type="xs:boolean" name="multiInstitutionIndicator"  minOccurs="1" maxOccurs="1" nillable="false"/>
                     
@@ -435,6 +436,14 @@
     </xs:complexType>
 -->
 
+
+    <xs:element name="diseaseTerminology"/>
+    <xs:complexType name="diseaseTerminology">
+        <xs:sequence>
+            <xs:element type="diseaseCodeType" name="diseaseCodeTerm" maxOccurs="1" minOccurs="1" nillable="false"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:element name="terminology"/>
     <xs:complexType name="terminology">
         <xs:sequence>
@@ -539,6 +548,14 @@
         <xs:restriction base="xs:string">
             <xs:pattern
                 value="Active|Inactive"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="diseaseCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="CTEP|MedDRA"
             />
         </xs:restriction>
     </xs:simpleType>
