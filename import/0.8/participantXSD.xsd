@@ -36,7 +36,7 @@
                         </xs:complexType>
                     </xs:element>
 
-                    <xs:element name="assignments" minOccurs="0">
+                    <xs:element name="assignments" minOccurs="1">
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element ref="assignment" maxOccurs="unbounded"/>
