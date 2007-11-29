@@ -15,8 +15,8 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="routineAdverseEvent" type="routineAdverseEvent"/>
-    <xs:complexType name="routineAdverseEvent">
+    <xs:element name="routineAdverseEvent" type="routineAdverseEventType"/>
+    <xs:complexType name="routineAdverseEventType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
 
@@ -43,8 +43,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="study" type="study"/>
-    <xs:complexType name="study">
+    <xs:element name="study" type="studyType"/>
+    <xs:complexType name="studyType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
 
@@ -61,8 +61,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="participant" type="participant"/>
-    <xs:complexType name="participant">
+    <xs:element name="participant" type="participantType"/>
+    <xs:complexType name="participantType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
 
@@ -79,8 +79,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="adverseEvent" type="adverseEvent"/>
-    <xs:complexType name="adverseEvent">
+    <xs:element name="adverseEvent" type="adverseEventType"/>
+    <xs:complexType name="adverseEventType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
 
@@ -109,8 +109,8 @@
     </xs:complexType>
 
 
-    <xs:element name="adverseEventCtcTerm" type="adverseEventCtcTerm"/>
-    <xs:complexType name="adverseEventCtcTerm">
+    <xs:element name="adverseEventCtcTerm" type="adverseEventCtcTermType"/>
+    <xs:complexType name="adverseEventCtcTermType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -120,8 +120,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="ctcTerm" type="ctcTerm"/>
-    <xs:complexType name="ctcTerm">
+    <xs:element name="ctcTerm" type="ctcTermType"/>
+    <xs:complexType name="ctcTermType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -134,8 +134,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="adverseEventMeddraLowLevelTerm" type="adverseEventMeddraLowLevelTerm"/>
-    <xs:complexType name="adverseEventMeddraLowLevelTerm">
+    <xs:element name="adverseEventMeddraLowLevelTerm" type="adverseEventMeddraLowLevelTermType"/>
+    <xs:complexType name="adverseEventMeddraLowLevelTermType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -145,8 +145,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="lowLevelTerm" type="lowLevelTerm"/>
-    <xs:complexType name="lowLevelTerm">
+    <xs:element name="lowLevelTerm" type="lowLevelTermType"/>
+    <xs:complexType name="lowLevelTermType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -157,8 +157,8 @@
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:element name="treatmentAssignment" type="treatmentAssignment"/>
-    <xs:complexType name="treatmentAssignment">
+    <xs:element name="treatmentAssignment" type="treatmentAssignmentType"/>
+    <xs:complexType name="treatmentAssignmentType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -170,8 +170,8 @@
     </xs:complexType>
 
 
-    <xs:element name="assignment" type="assignment"/>
-    <xs:complexType name="assignment">
+    <xs:element name="assignment" type="assignmentType"/>
+    <xs:complexType name="assignmentType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -183,8 +183,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="studySite" type="studySite"/>
-    <xs:complexType name="studySite">
+    <xs:element name="studySite" type="studySiteType"/>
+    <xs:complexType name="studySiteType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -195,8 +195,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="organization" type="organization"/>
-    <xs:complexType name="organization">
+    <xs:element name="organization" type="organizationType"/>
+    <xs:complexType name="organizationType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -206,8 +206,8 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="identifier"/>
-    <xs:complexType name="identifier">
+    <xs:element name="identifier" type="identifierType"/>
+    <xs:complexType name="identifierType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
@@ -230,41 +230,42 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <!-- Types -->
 
     <xs:simpleType name="gradeType">
         <xs:restriction base="xs:string">
-            <xs:pattern
-                value="NORMAL|MILD|MODERATE|SEVERE|LIFE_THREATENING|DEATH"
-            />
+            <xs:enumeration value="NORMAL"/>
+            <xs:enumeration value="MILD"/>
+            <xs:enumeration value="MODERATE"/>
+            <xs:enumeration value="SEVERE"/>
+            <xs:enumeration value="LIFE_THREATENING"/>
+            <xs:enumeration value="DEATH"/>
         </xs:restriction>
-    </xs:simpleType>
+    </xs:simpleType> 
 
     <xs:simpleType name="hospitalizationType">
         <xs:restriction base="xs:string">
-            <xs:pattern
-                value="NONE|HOSPITALIZATION|PROLONGED_HOSPITALIZATION"
-            />
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="HOSPITALIZATION"/>
+            <xs:enumeration value="PROLONGED_HOSPITALIZATION"/>
         </xs:restriction>
-    </xs:simpleType>
+    </xs:simpleType> 
     
     <xs:simpleType name="attributionType">
         <xs:restriction base="xs:string">
-            <xs:pattern
-                value="UNRELATED|UNLIKELY|POSSIBLE|PROBABLE|DEFINITE"
-            />
+            <xs:enumeration value="UNRELATED"/>
+            <xs:enumeration value="UNLIKELY"/>
+            <xs:enumeration value="POSSIBLE"/>
+            <xs:enumeration value="PROBABLE"/>
+            <xs:enumeration value="DEFINITE"/>
         </xs:restriction>
-    </xs:simpleType>
+    </xs:simpleType> 
     
     <xs:simpleType name="statusType">
         <xs:restriction base="xs:string">
-            <xs:pattern
-                value="CURRENT|LEGACY"
-            />
+            <xs:enumeration value="CURRENT"/>
+            <xs:enumeration value="LEGACY"/>
         </xs:restriction>
-    </xs:simpleType>
-
-
-
-
-
+    </xs:simpleType> 
+  
 </xs:schema>
