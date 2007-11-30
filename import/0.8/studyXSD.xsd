@@ -522,9 +522,8 @@
     
     <xs:simpleType name="diseaseCodeType">
         <xs:restriction base="xs:string">
-            <xs:pattern
-                value="CTEP|MedDRA"
-            />
+            <xs:enumeration value="CTEP"/>
+            <xs:enumeration value="MedDRA"/>
         </xs:restriction>
     </xs:simpleType>
     

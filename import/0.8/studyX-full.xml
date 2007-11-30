@@ -8,13 +8,11 @@
         <precis>Example Text for Precis</precis>
         <description>This is the description</description>
         <phaseCode>Phase I Trial</phaseCode>
+        <status>Temporarily Closed to Accrual &amp; Treatment</status>
         <terminology><ctcVersion><name>3</name></ctcVersion></terminology>
+        <diseaseTerminology><diseaseCodeTerm>CTEP</diseaseCodeTerm></diseaseTerminology>
         
-        <multiInstitutionIndicator>true</multiInstitutionIndicator>
-        <organizationAssignedIdentifier>
-            <value>uytrwsswq898</value>
-            <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
-        </organizationAssignedIdentifier>
+        <multiInstitutionIndicator>false</multiInstitutionIndicator>
         
         <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
         <deviceTherapyType>true</deviceTherapyType>
@@ -25,19 +23,20 @@
             <organizationAssignedIdentifier>
                 <type>Sponsor Identifier</type>
                 <value>agtroee18sa896</value>
+                <primaryIndicator>false</primaryIndicator>
                 <organization><name>Cancer Therapy Evaluation Program</name></organization>
             </organizationAssignedIdentifier>
             <organizationAssignedIdentifier>
                 <type>Site Identifier</type>
                 <value>edeuwwiqqa</value>
+                <primaryIndicator>false</primaryIndicator>
                 <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
-                <primaryIndicator>true</primaryIndicator>
             </organizationAssignedIdentifier>
             <systemAssignedIdentifier>
                 <type>Site Identifier</type>
                 <value>kriruupokds</value>
-               <systemName>Yarois</systemName>
                 <primaryIndicator>false</primaryIndicator>
+                <systemName>Yarois</systemName>
             </systemAssignedIdentifier>  
         </identifiers>
         
@@ -110,9 +109,7 @@
                 <studyAgent>
                         <agent>
                               <name>Hello</name>
-                              <nscNumber>1234</nscNumber>
                         </agent>
-                        <otherAgent>Yahoo is the name of the game</otherAgent>
                 </studyAgent>
         </studyAgents>
         

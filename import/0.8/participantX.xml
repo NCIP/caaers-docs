@@ -2,8 +2,8 @@
 
 <participants>
     <participant>
-        <firstName>giorgio</firstName>
-        <lastName>armani</lastName>
+        <firstName>K</firstName>
+        <lastName>W</lastName>
         <maidenName></maidenName>
         <middleName></middleName>
         <dateOfBirth>2007-04-15</dateOfBirth>
@@ -13,14 +13,14 @@
         
         <identifiers>
             <organizationAssignedIdentifier>
-                <type>Medical Record Number</type>
-                <value>yt5ujhde64</value>
+                <type>MRN</type>
+                <value>mrn001</value>
                 <primaryIndicator>true</primaryIndicator>
                 <organization><name>Cancer Therapy Evaluation Program</name></organization>
             </organizationAssignedIdentifier>
             <systemAssignedIdentifier>
-                <type>Medical Record Number</type>
-                <value>iu09triytg876</value>
+                <type>MRN</type>
+                <value>mrn001</value>
                 <primaryIndicator>false</primaryIndicator>
                 <systemName>Yarois</systemName>
             </systemAssignedIdentifier>  
@@ -32,7 +32,7 @@
                     <study>
                         <identifiers>
                             <identifier>
-                                <value>0105-L</value>
+                                <value>kk39</value>
                             </identifier>
                         </identifiers>
                     </study>

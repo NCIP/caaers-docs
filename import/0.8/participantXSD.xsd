@@ -71,8 +71,7 @@
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
-                    <xs:element name="dateOfEnrollment" type="xs:date" minOccurs="0"/>
-                    <xs:element ref="studySite" minOccurs="0"/>
+                    <xs:element ref="studySite"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

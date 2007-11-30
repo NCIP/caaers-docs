@@ -2,10 +2,10 @@
 <studies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="studyXSD.xsd">
 	<study>
-		<shortTitle>Ph brain testing funtion</shortTitle>
-		<longTitle>A Phase II Evaluation of brain function</longTitle>
+		<shortTitle>Pancreatic Cancer Study ph 5</shortTitle>
+		<longTitle>Pancreatic Cancer Study ph 5</longTitle>
 		<phaseCode>Phase II Trial</phaseCode>
-		<status>Temporarily Closed to Accrual &amp; Treatment</status>
+		<status>Active - Trial is open to accrual</status>
 		<terminology><ctcVersion><name>3</name></ctcVersion></terminology>
 		<diseaseTerminology><diseaseCodeTerm>CTEP</diseaseCodeTerm></diseaseTerminology>
 		<multiInstitutionIndicator>false</multiInstitutionIndicator>
@@ -13,7 +13,7 @@
 			<!-- Funding sponsor study identifier this should be included, reflects the Funding sponsor study identifier on the Details Tab  -->
 			<organizationAssignedIdentifier>
 				<type>Sponsor Identifier</type>
-				<value>kk35</value>
+				<value>si001</value>
 				<primaryIndicator>false</primaryIndicator>
 				<organization>
 					<name>Cancer Therapy Evaluation Program</name>
@@ -22,28 +22,12 @@
 			<!-- Coordinating center study identifier this should be included, reflects the Coordinating center study identifier on the Details Tab  -->
 			<organizationAssignedIdentifier>
 				<type>Coordinating Center Identifier</type>
-				<value>kk35</value>
-				<primaryIndicator>false</primaryIndicator>
+				<value>si001</value>
+				<primaryIndicator>true</primaryIndicator>
 				<organization>
 					<name>Wake Forest Comprehensive Cancer Center</name>
 				</organization>
 			</organizationAssignedIdentifier>
-			<!-- This is optional as you have already specified identifiers -->
-			<organizationAssignedIdentifier>
-				<type>Site Identifier</type>
-				<value>kk35</value>
-				<primaryIndicator>false</primaryIndicator>
-				<organization>
-					<name>Wake Forest Comprehensive Cancer Center</name>
-				</organization>
-			</organizationAssignedIdentifier>
-			<!-- This is optional as you have already specified identifiers -->
-			<systemAssignedIdentifier>
-				<type>Site Identifier</type>
-				<value>kk35</value>
-				<primaryIndicator>false</primaryIndicator>
-				<systemName>OWQRIS</systemName>
-			</systemAssignedIdentifier>
 		</identifiers>
 
 		<studyOrganizations>
