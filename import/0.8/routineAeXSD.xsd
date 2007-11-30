@@ -3,7 +3,7 @@
 
     <xs:element name="routineAdverseEvents">
         <xs:annotation>
-            <xs:documentation> The top level (typically root) element. Allows the definition of
+            <xs:documentation> The top level root element. Allows the definition of
                 default values for all nested bean definitions. </xs:documentation>
         </xs:annotation>
         <xs:complexType>
@@ -33,7 +33,7 @@
                     <xs:element name="adverseEvents" minOccurs="1">
                         <xs:complexType>
                             <xs:sequence>
-                                <xs:element ref="adverseEvent" minOccurs="1" maxOccurs="unbounded"/>
+                                <xs:element name="adverseEvent" type="adverseEventType" minOccurs="1" maxOccurs="unbounded"/>
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -83,12 +83,11 @@
     <xs:complexType name="adverseEventType">
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
-
                 <xs:sequence>
-                    <xs:element ref="adverseEventCtcTerm" minOccurs="0" maxOccurs="1"/>
-                    <xs:element ref="adverseEventMeddraLowLevelTerm" minOccurs="0" maxOccurs="1"/>
-                    <xs:element type="xs:string" name="detailsForOther" maxOccurs="1" minOccurs="0"
-                        nillable="true"/>
+                    <xs:choice>
+                        <xs:group ref="ctcGroup"/>
+                        <xs:element ref="adverseEventMeddraLowLevelTerm"/>
+                    </xs:choice>
                     <xs:element type="gradeType" name="grade" maxOccurs="1" minOccurs="0"
                         nillable="true"/>
                     <xs:element type="hospitalizationType" name="hospitalization" maxOccurs="1" minOccurs="0"
@@ -107,6 +106,13 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    
+    <xs:group name="ctcGroup">
+        <xs:sequence>
+            <xs:element ref="adverseEventCtcTerm"/>
+            <xs:element type="xs:string" name="detailsForOther" maxOccurs="1" minOccurs="0" nillable="true"/>
+        </xs:sequence>
+    </xs:group>
 
 
     <xs:element name="adverseEventCtcTerm" type="adverseEventCtcTermType"/>
@@ -114,7 +120,7 @@
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
-                    <xs:element ref="ctcTerm" minOccurs="0"/>
+                    <xs:element ref="ctcTerm"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -125,10 +131,10 @@
         <xs:complexContent>
             <xs:extension base="MutableDomainObject">
                 <xs:sequence>
-                    <xs:element type="xs:string" name="term" maxOccurs="1" minOccurs="0"
-                        nillable="true"/>
-                    <xs:element type="xs:string" name="ctepCode" maxOccurs="1" minOccurs="0"
-                        nillable="true"/>
+                    <xs:choice>
+                    <xs:element type="xs:string" name="term"/>
+                    <xs:element type="xs:string" name="ctepCode"/>
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

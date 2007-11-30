@@ -159,9 +159,14 @@
     </xs:complexType>
     
     <xs:simpleType name="participantIdentifierType">
+        <xs:annotation>
+            <xs:documentation>
+                Medical Record Number - MRN, Cooperative Group Identifier - CC 
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Medical Record Number"/>
-            <xs:enumeration value="Cooperative Group Identifier"/>
+            <xs:enumeration value="MRN"/>
+            <xs:enumeration value="CC"/>
             <xs:enumeration value="Other"/>
         </xs:restriction>
     </xs:simpleType>
