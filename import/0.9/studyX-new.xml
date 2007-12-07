@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studies>
+	<study>
+		<shortTitle>Pancreatic Cancer Study ph 5</shortTitle>
+		<longTitle>Pancreatic Cancer Study ph 5</longTitle>
+		<phaseCode>Phase II Trial</phaseCode>
+		<status>Active - Trial is open to accrual</status>
+		<multiInstitutionIndicator>false</multiInstitutionIndicator>
+		<terminology><ctcVersion><name>3</name></ctcVersion></terminology>
+		<diseaseTerminology><diseaseCodeTerm>CTEP</diseaseCodeTerm></diseaseTerminology>
+		
+		<!-- Funding Sponsor -->
+		<fundingSponsor>
+			<organizationAssignedIdentifier>
+				<value>le007</value>
+			</organizationAssignedIdentifier>
+			<studyFundingSponsor>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+			</studyFundingSponsor>
+		</fundingSponsor>
+		<!-- Coordinating Center -->
+		<coordinatingCenter>
+			<organizationAssignedIdentifier>
+				<value>le 007</value>
+			</organizationAssignedIdentifier>
+			<studyCoordinatingCenter>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+			</studyCoordinatingCenter>
+		</coordinatingCenter>
+		
+		<studyOrganizations>
+			<studySite>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+				<studyInvestigators>
+					<studyInvestigator>
+						<roleCode>Site Investigator</roleCode>
+						<statusCode>Active</statusCode>
+						<siteInvestigator>
+							<investigator>
+								<firstName>Karl yeger</firstName>
+								<lastName>Pavano</lastName>
+							</investigator>
+						</siteInvestigator>
+					</studyInvestigator>
+				</studyInvestigators>
+			</studySite>
+		</studyOrganizations>
+		
+	</study>
+</studies>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routineAdverseEvents>
+    <routineAdverseEvent>
+        <status>LEGACY</status>
+        <assignment>
+            <studySite>
+                <study><identifiers><identifier><value>ww1222</value></identifier></identifiers> </study>
+                <organization><name>Cancer Therapy Evaluation Program</name></organization>
+            </studySite>
+            <participant><identifiers><identifier><value>w3qe</value></identifier></identifiers></participant>
+        </assignment>
+        <startDate>2007-04-15</startDate>
+        <endDate>2007-05-15</endDate>
+        <adverseEvents>
+            <adverseEvent>
+                <adverseEventMeddraLowLevelTerm><lowLevelTerm><meddraCode>10000015</meddraCode></lowLevelTerm></adverseEventMeddraLowLevelTerm>
+                <grade>MODERATE</grade>
+                <expected>false</expected>
+                <attributionSummary>POSSIBLE</attributionSummary>
+            </adverseEvent>
+          </adverseEvents>
+        
+      </routineAdverseEvent>
+</routineAdverseEvents>

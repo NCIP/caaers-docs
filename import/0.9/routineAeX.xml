@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routineAdverseEventCollections>
+    <routineAdverseEventCollection>
+        <status>LEGACY</status>
+        <assignment>
+            <studySite>
+                <study><identifiers><identifier><value>si001</value></identifier></identifiers> </study>
+                <organization><name>Wake Forest Comprehensive Cancer Center</name></organization>
+            </studySite>
+            <participant><identifiers><identifier><value>mrn001</value></identifier></identifiers></participant>
+        </assignment>
+        <startDate>2004-06-23</startDate>
+        <endDate>2004-07-27</endDate>
+        <adverseEvents>
+            <adverseEvent>
+                <adverseEventCtcTerm><ctcTerm><ctepCode>10040400</ctepCode></ctcTerm></adverseEventCtcTerm>
+                <grade>SEVERE</grade>
+                <hospitalization>HOSPITALIZATION</hospitalization>
+                <expected>false</expected>
+                <attributionSummary>POSSIBLE</attributionSummary>
+            </adverseEvent>
+        </adverseEvents>
+    </routineAdverseEventCollection>    
+</routineAdverseEventCollections>
