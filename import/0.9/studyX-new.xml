@@ -12,7 +12,7 @@
 		<!-- Funding Sponsor -->
 		<fundingSponsor>
 			<organizationAssignedIdentifier>
-				<value>le007</value>
+				<value>le032</value>
 			</organizationAssignedIdentifier>
 			<studyFundingSponsor>
 				<organization>
@@ -23,7 +23,7 @@
 		<!-- Coordinating Center -->
 		<coordinatingCenter>
 			<organizationAssignedIdentifier>
-				<value>le 007</value>
+				<value>le032</value>
 			</organizationAssignedIdentifier>
 			<studyCoordinatingCenter>
 				<organization>
@@ -43,7 +43,7 @@
 						<statusCode>Active</statusCode>
 						<siteInvestigator>
 							<investigator>
-								<firstName>Karl yeger</firstName>
+								<firstName>Karl</firstName>
 								<lastName>Pavano</lastName>
 							</investigator>
 						</siteInvestigator>
@@ -51,6 +51,25 @@
 				</studyInvestigators>
 			</studySite>
 		</studyOrganizations>
+		
+		<identifiers>
+			<organizationAssignedIdentifier>
+				<type>Sponsor Identifier</type>
+				<value>le032</value>
+				<primaryIndicator>false</primaryIndicator>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+			</organizationAssignedIdentifier>
+			<organizationAssignedIdentifier>
+				<type>Coordinating Center Identifier</type>
+				<value>le032</value>
+				<primaryIndicator>false</primaryIndicator>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+			</organizationAssignedIdentifier>
+		</identifiers>
 		
 	</study>
 </studies>
