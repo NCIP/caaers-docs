@@ -6,6 +6,7 @@
 		<phaseCode>Phase II Trial</phaseCode>
 		<status>Active - Trial is open to accrual</status>
 		<multiInstitutionIndicator>false</multiInstitutionIndicator>
+		<adeersReporting>true</adeersReporting>
 		<terminology><ctcVersion><name>3</name></ctcVersion></terminology>
 		<diseaseTerminology><diseaseCodeTerm>CTEP</diseaseCodeTerm></diseaseTerminology>
 		
@@ -18,7 +19,7 @@
 		<!-- Funding Sponsor -->
 		<fundingSponsor>
 			<organizationAssignedIdentifier>
-				<value>le048</value>
+				<value>le049</value>
 			</organizationAssignedIdentifier>
 			<studyFundingSponsor>
 				<organization>
@@ -29,7 +30,7 @@
 		<!-- Coordinating Center -->
 		<coordinatingCenter>
 			<organizationAssignedIdentifier>
-				<value>le048</value>
+				<value>le049</value>
 			</organizationAssignedIdentifier>
 			<studyCoordinatingCenter>
 				<organization>
@@ -82,7 +83,7 @@
 		<identifiers>
 			<organizationAssignedIdentifier>
 				<type>Protocol Authority Identifier</type>
-				<value>le048</value>
+				<value>le049</value>
 				<primaryIndicator>false</primaryIndicator>
 				<organization>
 					<name>Cancer Therapy Evaluation Program</name>
@@ -90,7 +91,7 @@
 			</organizationAssignedIdentifier>
 			<organizationAssignedIdentifier>
 				<type>Coordinating Center Identifier</type>
-				<value>le048</value>
+				<value>le049</value>
 				<primaryIndicator>false</primaryIndicator>
 				<organization>
 					<name>Wake Forest Comprehensive Cancer Center</name>
