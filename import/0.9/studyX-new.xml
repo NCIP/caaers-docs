@@ -19,7 +19,7 @@
 		<!-- Funding Sponsor -->
 		<fundingSponsor>
 			<organizationAssignedIdentifier>
-				<value>le049</value>
+				<value>le055</value>
 			</organizationAssignedIdentifier>
 			<studyFundingSponsor>
 				<organization>
@@ -30,7 +30,7 @@
 		<!-- Coordinating Center -->
 		<coordinatingCenter>
 			<organizationAssignedIdentifier>
-				<value>le049</value>
+				<value>le055</value>
 			</organizationAssignedIdentifier>
 			<studyCoordinatingCenter>
 				<organization>
@@ -83,7 +83,7 @@
 		<identifiers>
 			<organizationAssignedIdentifier>
 				<type>Protocol Authority Identifier</type>
-				<value>le049</value>
+				<value>le055</value>
 				<primaryIndicator>false</primaryIndicator>
 				<organization>
 					<name>Cancer Therapy Evaluation Program</name>
@@ -91,7 +91,7 @@
 			</organizationAssignedIdentifier>
 			<organizationAssignedIdentifier>
 				<type>Coordinating Center Identifier</type>
-				<value>le049</value>
+				<value>le055</value>
 				<primaryIndicator>false</primaryIndicator>
 				<organization>
 					<name>Wake Forest Comprehensive Cancer Center</name>
@@ -121,7 +121,7 @@
 				<studyAgentINDAssociations>
 					<studyAgentINDAssociation>
 						<investigationalNewDrug>
-							<indNumber>111</indNumber>
+							<indNumber>222</indNumber>
 						</investigationalNewDrug>
 					</studyAgentINDAssociation>
 				</studyAgentINDAssociations>
