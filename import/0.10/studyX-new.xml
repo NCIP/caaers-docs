@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studies>
+	<study>
+		<shortTitle>kkctcVersion3WithAdeersReporting</shortTitle>
+		<longTitle>kkctcVersion3WithAdeersReporting Pancreatic Cancer Study ph 5</longTitle>
+		<phaseCode>Phase II Trial</phaseCode>
+		<status>Active - Trial is open to accrual</status>
+		<multiInstitutionIndicator>false</multiInstitutionIndicator>
+		<adeersReporting>true</adeersReporting>
+		<aeTerminology><ctcVersion><name>3</name></ctcVersion></aeTerminology>
+		<diseaseTerminology><diseaseCodeTerm>CTEP</diseaseCodeTerm></diseaseTerminology>
+		
+		<drugAdministrationTherapyType>false</drugAdministrationTherapyType>
+		<deviceTherapyType>false</deviceTherapyType>
+		<radiationTherapyType>false</radiationTherapyType>
+		<surgeryTherapyType>true</surgeryTherapyType>
+		<behavioralTherapyType>true</behavioralTherapyType>
+		
+		<!-- Funding Sponsor -->
+		<fundingSponsor>
+			<organizationAssignedIdentifier>
+				<value>le056</value>
+			</organizationAssignedIdentifier>
+			<studyFundingSponsor>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+			</studyFundingSponsor>
+		</fundingSponsor>
+		<!-- Coordinating Center -->
+		<coordinatingCenter>
+			<organizationAssignedIdentifier>
+				<value>le056</value>
+			</organizationAssignedIdentifier>
+			<studyCoordinatingCenter>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+			</studyCoordinatingCenter>
+		</coordinatingCenter>
+		
+		<studyOrganizations>
+			<studySite>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+				<studyInvestigators>
+					<studyInvestigator>
+						<roleCode>Site Investigator</roleCode>
+						<statusCode>Active</statusCode>
+						<siteInvestigator>
+							<investigator>
+								<firstName>Babik	</firstName>
+								<lastName>Roma</lastName>
+							</investigator>
+						</siteInvestigator>
+					</studyInvestigator>
+					<studyInvestigator>
+						<roleCode>Site Investigator</roleCode>
+						<statusCode>Active</statusCode>
+						<siteInvestigator>
+							<investigator>
+								<firstName>Karl</firstName>
+								<lastName>Pavano</lastName>
+							</investigator>
+						</siteInvestigator>
+					</studyInvestigator>
+				</studyInvestigators>
+				<studyPersonnels>
+					<studyPersonnel>
+						<roleCode>Participant Coordinator</roleCode>
+						<statusCode>Active</statusCode>
+						<researchStaff>
+							<firstName>Baron</firstName>
+							<lastName>Davis</lastName>
+						</researchStaff>
+					</studyPersonnel>
+				</studyPersonnels>
+			</studySite>
+		</studyOrganizations>
+		
+		
+		<identifiers>
+			<organizationAssignedIdentifier>
+				<type>Protocol Authority Identifier</type>
+				<value>le056</value>
+				<primaryIndicator>false</primaryIndicator>
+				<organization>
+					<name>Cancer Therapy Evaluation Program</name>
+				</organization>
+			</organizationAssignedIdentifier>
+			<organizationAssignedIdentifier>
+				<type>Coordinating Center Identifier</type>
+				<value>le056</value>
+				<primaryIndicator>false</primaryIndicator>
+				<organization>
+					<name>Wake Forest Comprehensive Cancer Center</name>
+				</organization>
+			</organizationAssignedIdentifier>
+		</identifiers>
+		
+		
+		<treatmentAssignments>
+			<treatmentAssignment>
+				<code>theCode</code>
+				<description>description</description>
+			</treatmentAssignment>
+			<treatmentAssignment>
+				<code>theCode2</code>
+				<description>description2</description>
+			</treatmentAssignment>
+		</treatmentAssignments>
+		
+		<studyAgents>
+			<studyAgent>
+				<agent>
+					<name>1-Aminocyclopentane</name>
+				</agent>
+				<indType>OTHER</indType>
+				<partOfLeadIND>false</partOfLeadIND>
+				<studyAgentINDAssociations>
+					<studyAgentINDAssociation>
+						<investigationalNewDrug>
+							<indNumber>222</indNumber>
+						</investigationalNewDrug>
+					</studyAgentINDAssociation>
+				</studyAgentINDAssociations>
+			</studyAgent>	
+		</studyAgents>
+		
+		<ctepStudyDiseases>
+			<ctepStudyDisease>
+				<diseaseTerm>
+					<term>Chondrosarcoma</term>
+				</diseaseTerm>
+				<leadDisease>false</leadDisease>
+			</ctepStudyDisease>
+			<ctepStudyDisease>
+				<diseaseTerm>
+					<meddraCode>10023290</meddraCode>
+				</diseaseTerm>
+				<leadDisease>true</leadDisease>
+			</ctepStudyDisease>
+		</ctepStudyDiseases>
+		
+		
+		
+	</study>
+</studies>
