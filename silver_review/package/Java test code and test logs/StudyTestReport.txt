@@ -1,0 +1,91 @@
++---------- Auto generated report based on data retrieved from the caAERS database. ----------+
+
+
++---------- INPUT QUERY. ----------+
+Get all Studies 
+
+
++------------Objects Involed . -------+
+Study , StudyAgent, TreatmentAssignment, CtepStudyDisease, CtepStudyDisease, StudySite, Organization
+
+
+--- Retrieving  and looping thru Studies ---
+--- Total number of Studies # 2
+
+
+--- Study # 1 Details---
+Study Short Title: BAY 43-9006
+Study Long Title: A Phase 2 Study of BAY 43-9006 for Patients with Imatinib-Resistant Malignant Gastrointestinal Stromal Tumor
+Study Phase code: Phase II Trial
+Study Status: Active - Trial is open to accrual
+Study Terminology Version: CTCAE v3.0
+Primary Sponsor: Cancer Therapy Evaluation Program
+
+
+--- Study Agent(s)
+ Agent name: BAY 43-9006 tosylate (BAY 54-9085; sorafenib tosylate)
+ IND type: CTEP IND
+
+
+--- Treatment Assignment(s)
+ Code: TAC1
+ Description: (Cycle=28 days)
+BAY 43-9006: 400mg PO BID
+
+
+--- Disease(s) 
+ Disease Name: Gastrointestinal stromal tumor
+ Is lead disease ? : true
+
+
+--- Study Sites(s) 
+ Organization Name: Mayo Clinic Rochester
+ Description : null
+ NCI Identifier : MN026
+
+
+
+
+--- Study # 2 Details---
+Study Short Title: RTOG-0330
+Study Long Title: A Pilot Phase II Study of Pre-Operative Radiation Therapy and Thalidomide (IND 48832; NSC 66847) for Low Grade Primary Soft Tissue
+Sarcoma or Pre-Operative MAID/Thalidomide/Radiation Therapy for High/Intermediate Grade Primary Soft Tissue Sarcoma of the Extremity
+Study Phase code: Phase II Trial
+Study Status: Active - Trial is open to accrual
+Study Terminology Version: CTCAE v3.0
+Primary Sponsor: Cancer Therapy Evaluation Program
+
+
+--- Study Agent(s)
+ Agent name: Mesna
+ IND type: CTEP IND
+ Agent name: Dacarbazine
+ IND type: NA
+
+
+--- Treatment Assignment(s)
+ Code: COHANEG
+ Description: Cohort A, (negative margins post surgery):
+Thalidomide 200-400 mg/day PO QD, starting 2 weeks post-op x12
+months.
+ Code: COHAPOS
+ Description: Cohort A, (positive margins post surgery):
+EBRT 16 Gy in 8 fractions, starting 2 weeks post-op.
+Thalidomide 200-400 mg/day PO QD, starting 2 weeks post-op x12
+months.
+
+
+--- Disease(s) 
+ Disease Name: Non-Rhabdo. soft tissue sarcoma
+ Is lead disease ? : true
+
+
+--- Study Sites(s) 
+ Organization Name: Radiation Therapy Oncology Group
+ Description : 1818 Market Street Philadelphia PA USA 19103-3604
+ NCI Identifier : RTOG
+ Organization Name: Mayo Clinic Rochester
+ Description : null
+ NCI Identifier : MN026
+
+
