@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routineAdverseEventCollections>
+    <routineAdverseEventCollection>
+        <status>CURRENT</status>
+        <assignment>
+            <studySite>
+                <study>
+                    <identifiers>
+                        <identifier>
+                            <value>g11123</value>
+                        <type>Coordinating Center Identifier</type>
+                        </identifier>
+                    </identifiers>
+                </study>
+                <organization><name>Cancer Therapy Evaluation Program</name></organization>
+            </studySite>
+            <participant><identifiers><identifier><value>d11</value></identifier></identifiers></participant>
+        </assignment>
+        <startDate>2004-06-23</startDate>
+        <endDate>2004-06-24</endDate>
+        <adverseEvents>
+            <adverseEvent>
+                <!--<adverseEventMeddraLowLevelTerm><lowLevelTerm><meddraCode>10032</meddraCode></lowLevelTerm></adverseEventMeddraLowLevelTerm>-->
+                <adverseEventCtcTerm><ctcTerm><ctepCode>10028813</ctepCode></ctcTerm></adverseEventCtcTerm>
+                <grade>SEVERE</grade>
+                <hospitalization>HOSPITALIZATION</hospitalization>
+                <expected>false</expected>
+                <attributionSummary>POSSIBLE</attributionSummary>
+            </adverseEvent>
+            <adverseEvent>
+                <adverseEventCtcTerm><ctcTerm><ctepCode>10028813x</ctepCode></ctcTerm></adverseEventCtcTerm>
+                <grade>SEVERE</grade>
+                <hospitalization>HOSPITALIZATION</hospitalization>
+                <expected>false</expected>
+                <attributionSummary>POSSIBLE</attributionSummary>
+            </adverseEvent>
+            <adverseEvent>
+                <adverseEventCtcTerm><ctcTerm><ctepCode>10028813</ctepCode></ctcTerm></adverseEventCtcTerm>
+                <grade>SEVERE</grade>
+                <hospitalization>HOSPITALIZATION</hospitalization>
+                <expected>false</expected>
+                <attributionSummary>POSSIBLE</attributionSummary>
+            </adverseEvent>
+        </adverseEvents>
+    </routineAdverseEventCollection>    
+</routineAdverseEventCollections>

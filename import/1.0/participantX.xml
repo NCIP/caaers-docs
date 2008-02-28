@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<participants>
+    <participant>
+        <firstName>Richard-1</firstName>
+        <lastName>Herd-1</lastName>
+        <maidenName></maidenName>
+        <middleName></middleName>
+        <birthDate>2001-01-01</birthDate>
+        <gender>Unknown</gender>
+        <race>Unknown</race>
+        <ethnicity>Unknown</ethnicity>
+        <identifiers>
+            <organizationAssignedIdentifier>
+                <type>MRN</type>
+                <value>barboza12</value>
+                <primaryIndicator>true</primaryIndicator>
+                <organization><name>Mayo Clinic Hospital</name></organization>
+            </organizationAssignedIdentifier>
+            <systemAssignedIdentifier>
+                <type>MRN</type>
+                <value>barboza13</value>
+                <primaryIndicator>true</primaryIndicator>
+                <systemName>Yarois</systemName>
+            </systemAssignedIdentifier>  
+        </identifiers>
+        <assignments>
+            <assignment>
+                <studySite>
+                    <study>
+                        <identifiers>
+                            <identifier>
+                                <type>Coordinating Center Identifier</type>
+                                <value>N027D55</value>
+                            </identifier>
+                        </identifiers>
+                    </study>
+                    <organization>
+                        <name>Cancer Therapy Evaluation Program</name>
+                    </organization>
+                </studySite>
+            </assignment>
+        </assignments>
+    </participant>
+</participants>
