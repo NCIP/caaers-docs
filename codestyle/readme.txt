@@ -1,0 +1,1 @@
+The caAERS_Code_Conventions.xml, contains formating style(for caAERS) which can be used in eclipse formater plugin. 
