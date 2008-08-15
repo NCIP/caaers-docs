@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head><title>caAERS || Expedited Report Summary</title>
+
+
+
+	
+
+
+
+
+
+
+    
+    
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/debug.css">
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/common.css">
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/fields.css"><!--[if IE]>
+
+<link rel="stylesheet" type="text/css" href="/caaers/css/ie.css"/>
+<![endif]-->
+
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/calendar-blue.css">
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/common-search.css">
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/hoverhelp.css">
+
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/tigra-menu_002.htm">
+
+<link rel="stylesheet" type="text/css" href="mockup1_files/side-bar.css">
+
+
+
+
+<script type="text/javascript" src="mockup1_files/calendar_002.js"></script><script type="text/javascript" src="mockup1_files/calendar.js"></script><script type="text/javascript" src="mockup1_files/calendar-en.js"></script><script type="text/javascript" src="mockup1_files/calendar-setup.js"></script>
+
+<script type="text/javascript" src="mockup1_files/prototype.js"></script>
+
+<script type="text/javascript" src="mockup1_files/effects.js"></script>
+
+<script type="text/javascript" src="mockup1_files/common.js"></script>
+
+<script type="text/javascript" src="mockup1_files/validation.js"></script>
+
+<script type="text/javascript" src="mockup1_files/commons-validation.js"></script>
+
+
+<script type="text/javascript" src="mockup1_files/tigra-menu.htm"></script>
+
+<script type="text/javascript" src="mockup1_files/tigra-menu_tpl.htm"></script>
+
+<script type="text/javascript" src="mockup1_files/side-bar.js"></script>
+
+
+<script type="text/javascript" src="mockup1_files/ccts-hotlinks.js"></script>
+<script type="text/javascript">
+  CCTS.appShortName = 'caaers'
+</script>
+
+
+    
+<link rel="stylesheet" type="text/css" href="mockup1_files/tabbedflow.css">
+    
+<script type="text/javascript" src="mockup1_files/tabbedflow.js"></script>
+    <style type="text/css">
+        input.autocomplete {
+            width: 75%;
+            font-style: normal;
+            background-color: #CCE6FF;
+        }
+
+        input.pending-search {
+            width: 75%;
+            color: gray;
+            font-style: italic;
+            background-color: #CCE6FF;
+        }
+
+    </style>
+    
+    
+
+<script type="text/javascript" src="mockup1_files/effects.js"></script>
+
+<script type="text/javascript" src="mockup1_files/builder.js"></script>
+
+<script type="text/javascript" src="mockup1_files/controls.js"></script>
+
+<script type="text/javascript" src="mockup1_files/dragdrop.js"></script>
+
+<script type="text/javascript" src="mockup1_files/slider.js"></script>
+
+<script type="text/javascript" src="mockup1_files/common-scriptaculous.js"></script>
+    
+<script type="text/javascript" src="mockup1_files/engine.js"></script>
+<script type="text/javascript" src="mockup1_files/util.js"></script>
+<script type="text/javascript" src="mockup1_files/createAE.txt"></script>
+
+    <script type="text/javascript">
+        var participantAutocompleterProps = {
+            basename: "participant",
+            populator: function(autocompleter, text) {
+                createAE.matchParticipants(text, $('study').value, function(values) {
+                    autocompleter.setChoices(values)
+                })
+            },
+            valueSelector: function(obj) {
+            	var primaryIdentifier = obj.primaryIdentifierValue == null ? "" : 
+            							 " ( " + obj.primaryIdentifierValue + " ) ";
+                return obj.fullName + primaryIdentifier
+            }
+        }
+
+        var studyAutocompleterProps = {
+            basename: "study",
+            populator: function(autocompleter, text) {
+                createAE.matchStudies(text, $('participant').value, false,function(values) {
+                    autocompleter.setChoices(values)
+                })
+            },
+            valueSelector: function(obj) {
+            	var primaryIdentifier = obj.primaryIdentifierValue == null ? "" : 
+            							 " ( " + obj.primaryIdentifierValue + " ) ";
+                return obj.shortTitle + primaryIdentifier
+            }
+        }
+
+        function acPostSelect(mode, selectedChoice) {
+            Element.update(mode.basename + "-selected-name", mode.valueSelector(selectedChoice))
+            $(mode.basename).value = selectedChoice.id;
+            $(mode.basename + '-selected').show()
+            new Effect.Highlight(mode.basename + "-selected")
+        }
+
+        function updateSelectedDisplay(mode) {
+            if ($(mode.basename).value) {
+                Element.update(mode.basename + "-selected-name", $(mode.basename + "-input").value)
+                $(mode.basename + '-selected').show()
+            }
+        }
+
+        function acCreate(mode) {
+            new Autocompleter.DWR(mode.basename + "-input", mode.basename + "-choices",
+                mode.populator, {
+                valueSelector: mode.valueSelector,
+                afterUpdateElement: function(inputElement, selectedElement, selectedChoice) {
+                    acPostSelect(mode, selectedChoice)
+                },
+                indicator: mode.basename + "-indicator"
+            })
+            Event.observe(mode.basename + "-clear", "click", function() {
+                $(mode.basename + "-selected").hide()
+                $(mode.basename).value = ""
+                $(mode.basename + "-input").value = ""
+            })
+        }
+
+        Event.observe(window, "load", function() {
+            acCreate(participantAutocompleterProps)
+            acCreate(studyAutocompleterProps)
+            updateSelectedDisplay(participantAutocompleterProps)
+            updateSelectedDisplay(studyAutocompleterProps)
+            initSearchField()
+        })
+    </script><link href="mockup1_files/highlighter.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+<!--
+.style2 {color: #FF0000}
+.style5 {color: #339900}
+.style6 {color: #999999}
+-->
+    </style>
+    </head><body>
+<div id="all">
+
+
+
+<div id="header">
+
+    <div class="background-R">
+
+        <a href="https://localhost:8443/caaers/pages/task" id="logo">caAERS</a>
+
+        <div id="login-action">
+          <a href="https://localhost:8443/caaers/j_acegi_logout">Log out</a>
+        </div>
+
+        <ul id="sections" class="tabs">
+        
+            
+            <li class="selected">
+			      
+                <a id="firstlevelnav_listAdverseEventsController" href="https://localhost:8443/caaers/pages/ae/list">Adverse Events</a>			</li>
+            
+        
+            
+            <li class="">
+			      
+                <a id="firstlevelnav_searchStudyController" href="https://localhost:8443/caaers/pages/study/search">Studies</a>			</li>
+            
+        
+            
+            <li class="">
+			      
+                <a id="firstlevelnav_createParticipantController" href="https://localhost:8443/caaers/pages/participant/create">Subjects</a>			</li>
+            
+        
+            
+            <li class="">
+			      
+                <a id="firstlevelnav_createRuleController" href="https://localhost:8443/caaers/pages/rule/create">Rules</a>			</li>
+            
+        
+            
+            <li class="">
+			      
+                <a id="firstlevelnav_configurationController" href="https://localhost:8443/caaers/pages/admin/configure">Administration</a>			</li>
+            
+        
+            
+            <li class="">
+			      
+                <a id="firstlevelnav_studyController" href="https://localhost:8443/caaers/pages/search/study">Advanced Search</a>			</li>
+        </ul>
+
+<div id="taskbar">
+            
+                
+                    
+                    	 <a class="" id="secondlevelnav_listAdverseEventsController" href="https://localhost:8443/caaers/pages/ae/list"><img src="mockup1_files/listAdverseEventsController_icon.png">Manage reports</a> 
+                    
+                
+                    
+                    	 <a class="selected" id="secondlevelnav_captureAdverseEventController" href="https://localhost:8443/caaers/pages/ae/captureRoutine"><img src="mockup1_files/captureAdverseEventController_icon.png">Enter AEs</a> 
+                    
+                
+            
+        </div>
+    </div>
+</div>
+<!-- end header -->
+
+<div class="tabpane">
+    
+
+
+
+
+<ul id="thirdlevelnav">
+
+    <li><a href="#">Begin</a></li>
+    <li><a href="#">Adverse events</a></li> 
+    <li><a href="#">Review &amp; Report</a></li>
+
+    <li><a href="#">Personnel Details
+      </a>
+      <hr />
+    </li>
+ <li><a href="expedited_report _summary.htm">Expedited Report Summary</a></li>
+      <li><a href="adverse_event _details.htm">Adverse Event Details</a></li>
+      <li><a href="study_interventions.htm">Study Interventions</a></li>
+      <li><a href="patient_details.htm">Patient Details</a></li>
+    <li><a href="#">Additional Information</a></li>
+    <li><a href="#">Attribution</a></li>
+</ul>
+
+
+    
+
+
+
+<div id="main"><!-- TODO: Summary should be disabled for Overview Pages, need a better logic than this -->
+        
+		<!-- AE summary  -->
+		
+		<!-- AE summary  -->
+		
+        <div id="main-no-summary-pane" class="pane">
+          <form id="command" class="standard autoclear" method="post" action="/caaers/pages/ae/captureRoutine">
+          <div class="autoclear">
+                
+
+
+
+
+
+
+
+
+<div class="box" id="participant-entry">
+
+    <!-- header -->
+    <div class="header"><div class="background-L"><div class="background-R">
+      <h2>Expedited Report Summary</h2>
+      <div class="hr">
+    
+      </div>
+    </div></div>
+    <!-- end header -->
+
+    <!-- inner border -->
+    <div class="border-T"><div class="border-L"><div class="border-R"><div class="border-B"><div class="border-TL"><div class="border-TR"><div class="border-BL"><div class="border-BR">
+        <div class="interior">
+            <div class="content">
+                <table border="0" cellpadding="3">
+        <tr>
+       	 <td><strong>Subject</strong></td>
+       	 <td>Name</td>
+        </tr>
+        <tr>
+       	 <td><strong>Study</strong></td>
+       	 <td>Long title</td>
+         </tr>
+        </table>
+                <p>The expedited report contains multiple sections. Once all sections are marked completed or not applicable, the expedited report is ready to be submitted.  Click on a section or subsection to go to it and enter the information.                </p>
+                <p><input id="flow-next" value="View Reporting Period AEs" type="submit"></p>
+                <table cellpadding="0" cellspacing="0">
+                  <col width="64" />
+                  <col width="139" />
+                  <col width="143" />
+                  <col width="39" />
+                  <col width="105" />
+                  <col width="92" span="2" />
+                  <tr height="17">
+                    <td width="137" height="17"></td>
+                    <td width="149">&nbsp;</td>
+                    <td width="67"><strong>Report:</strong></td>
+                    <td width="104"><strong>24-hr</strong></td>
+                    <td width="101"><strong>5-Day</strong></td>
+                    <td width="98"><strong>IRB</strong></td>
+                  </tr>
+                  <tr height="18">
+                    <td height="19">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr height="18">
+                    <td height="19">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Status:</td>
+                    <td>Status:</td>
+                    <td>Status:</td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="18">
+                    <td height="18" bgcolor="#E5ECFF"><a href="#">AE Details</a></td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="37" colspan="6"><hr noshade="noshade" /></td>
+                    </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#E5ECFF"><a href="#">Study Interventions</a></td>
+                    <td bgcolor="#E5ECFF">Agent Info</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Radiation</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style6">Not Applicable</span></td>
+                    <td><span class="style6">Not Applicable</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">Surgery</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF"><span class="style6">Not Applicable</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style6">Not Applicable</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Devices</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style6">Not Applicable</span></td>
+                    <td><span class="style6">Not Applicable</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">Other Causes</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                  </tr>
+                  <tr height="18">
+                    <td height="37" colspan="6"><hr noshade="noshade" /></td>
+                    </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#E5ECFF"><a href="#">Patient Details</a></td>
+                    <td bgcolor="#E5ECFF">General</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Disease Information</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style5">Completed</span></td>
+                    <td><span class="style5">Completed</span></td>
+                    <td><span class="style5">Completed</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#E5ECFF">&nbsp;</td>
+                    <td colspan="2" bgcolor="#E5ECFF">Metastatic Disease Sites</td>
+                    <td bgcolor="#E5ECFF"><span class="style5">Completed</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style5">Completed</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style5">Completed</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Pre-existing Conditions</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style5">Completed</span></td>
+                    <td><span class="style5">Completed</span></td>
+                    <td><span class="style5">Completed</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">Prior Therapies</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF"><span class="style5">Completed</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style5">Completed</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style5">Completed</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>ConMeds</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style5">Completed</span></td>
+                    <td><span class="style5">Completed</span></td>
+                    <td><span class="style5">Completed</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="18">
+                    <td height="36" colspan="6" bgcolor="#fff"><hr noshade="noshade" /></td>
+                    </tr>
+                  <tr height="17">
+                    <td height="17" bgcolor="#E5ECFF"><a href="#">Additional Information</a></td>
+                    <td bgcolor="#E5ECFF">Labs</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17" bgcolor="#fff">&nbsp;</td>
+                    <td bgcolor="#fff">Attachments</td>
+                    <td bgcolor="#fff">&nbsp;</td>
+                    <td bgcolor="#fff">&nbsp;</td>
+                    <td bgcolor="#fff">&nbsp;</td>
+                    <td bgcolor="#fff">&nbsp;</td>
+                  </tr>
+                  <tr height="18">
+                    <td height="36" colspan="6"><hr noshade="noshade" /></td>
+                    </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17"><a href="#">Personnel Details</a></td>
+                    <td>Reporter</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style2">Incomplete</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Submitter</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style2">Incomplete</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Attending Physician</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style2"></span></td>
+                    <td><span class="style2"></span></td>
+                    <td><span class="style2"></span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>Physician/Investigator</td>
+                    <td>&nbsp;</td>
+                    <td><span class="style2">Incomplete</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                    <td><span class="style2">Incomplete</span></td>
+                  </tr>
+                  <tr bgcolor="#E5ECFF" height="18">
+                    <td height="36" colspan="6" bgcolor="#fff"><span class="style2"></span><span class="style2"></span>
+                      <hr noshade="noshade" />                      <span class="style2"></span></td>
+                    </tr>
+                  <tr height="18">
+                    <td height="18" bgcolor="#E5ECFF"><a href="#">Attribution</a></td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF">&nbsp;</td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2">Incomplete</span></td>
+                    <td bgcolor="#E5ECFF"><span class="style2"></span></td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17"><strong>Report    Status:</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Ready to Submit</td>
+                    <td>In-progress</td>
+                    <td>Not-started</td>
+                  </tr>
+                  <tr height="17">
+                    <td height="17">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><input id="flow-next" value="Submit" type="submit"></td>
+                    <td><input id="flow-next" value="Submit" type="submit"></td>
+                    <td><input id="flow-next" value="Submit" type="submit"></td>
+                  </tr>
+                </table>
+                </div>
+        </div>
+    </div></div></div></div></div></div></div></div>
+    <!-- end inner border -->
+</div>
+<!-- end box -->
+<div class="content buttons autoclear">
+  <div class="flow-buttons"></div>
+</div>
+
+                
+            
+        
+        </div>
+    
+</div>
+</form></div>
+
+
+<form action="#" id="sso-form" target="_blank" method="post">
+    <input name="gridProxy" value="" type="hidden">
+</form>
+
+
+<div id="build-name">caAERS v. 1.3</div>
+
+</div>
+</div></div></body></html>

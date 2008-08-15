@@ -1,0 +1,637 @@
+/**** GENERAL TAG STYLE OVERRIDES */
+
+body {
+  margin: 0; padding: 0 0 35px 0;
+  background: url(../images/blue/bg.jpg) repeat-y center #314993;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align:center
+}
+
+#thirdlevelnav{
+	width: 200px;
+	margin-bottom: 100%;
+	float: left;
+	clear: none;
+	margin-top: 140px;
+	list-style-position:inside;
+	background-color: #e5ecff;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	line-height: 20px;
+}
+
+.tabpane{}
+
+.hr{
+	background-color: #999999;
+	height: 1px;
+	margin-right: 4px;
+	margin-left: 15px;
+}
+
+a {outline:none;}
+a img{
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	vertical-align: middle;
+}
+
+#all {
+width:980px;
+margin:0px auto;
+text-align:left;
+background: #FFF;
+position:relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  color: #2E3257;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+h2 { font-size: 1.0em; }
+h3, h4 { font-size: 0.9em; }
+
+p { margin: 1em 0; }
+
+/**** COMMON TEMPLATE ELEMENTS */
+
+#header {
+	width: 100%;
+	position: absolute;
+	height: 100px;
+	background-image: url(../images/blue/header_bg.jpg);
+	background-position: top;
+}
+
+#header .background-R {
+  background: url(../images/chrome/header_BG_R.gif) no-repeat top right;
+}
+
+a#logo {
+	background-image: url(../images/blue/caAERSlogo.png);
+	height: 100px;
+	width: 242px;
+	position:absolute;
+	text-indent: -9999px;
+}
+a#logo:link {
+background-position: 0px
+}
+
+a#logo:hover {
+background-position: 0px -100px;
+}
+
+a#logo:active {
+background-position: 0px -200px;
+}
+
+#login-action {
+	background-image: url(../images/blue/logout_tab.png);
+	position: absolute;
+	height: 31px;
+	width: 148px;
+	top: 0px;
+	right: -9px;
+	padding-top: 2px;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+}
+
+#login-action a {
+	color: #333366;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 0.85em;
+}
+
+#login-action a:hover {
+	text-decoration: underline;
+}
+
+/***
+The following are the rules for 1st level navigation tabs:
+firstlevelnav_listAdverseEventsController: Adverse Events
+firstlevelnav_searchStudyController: Studies
+3. Subjects
+4. Rules
+5. Administration
+6. Advanced Search
+
+*/
+
+a#firstlevelnav_listAdverseEventsController {
+	background-image: url(../images/blue/adverseEvents_btn.png);
+	height: 45px;
+	width: 148px;
+	text-indent: -9999px;
+	float: left;
+}
+a#firstlevelnav_listAdverseEventsController:link{background-position:0px;}
+a#firstlevelnav_listAdverseEventsController:hover{background-position:0px -45px;}
+a#firstlevelnav_listAdverseEventsController:active{background-position:0px -90px;}
+.selected a#firstlevelnav_listAdverseEventsController {background-image: url(../images/blue/adverseEvents_btn_selected.png);}
+
+a#firstlevelnav_searchStudyController {
+	background-image: url(../images/blue/studies_btn.png);
+	height: 45px;
+	width: 148px;
+	text-indent: -9999px;
+	float: left;
+}
+a#firstlevelnav_searchStudyController:link{background-position:0px;}
+a#firstlevelnav_searchStudyController:hover{background-position:0px -45px;}
+a#firstlevelnav_searchStudyController:active{background-position:0px -90px;}
+
+.selected a#firstlevelnav_searchStudyController {background-image: url(../images/blue/studies_btn_selected.png);}
+
+a#firstlevelnav_createParticipantController {
+	background-image: url(../images/blue/subjects_btn.png);
+	height: 45px;
+	width: 148px;
+	text-indent: -9999px;
+	float: left;
+}
+a#firstlevelnav_createParticipantController:link{background-position:0px;}
+a#firstlevelnav_createParticipantController:hover{background-position:0px -45px;}
+a#firstlevelnav_createParticipantController:active{background-position:0px -90px;}
+.selected a#firstlevelnav_createParticipantController {background-image: url(../images/blue/subjects_btn_selected.png);}
+
+a#firstlevelnav_createRuleController {
+	background-image: url(../images/blue/rules_btn.png);
+	height: 45px;
+	width: 148px;
+	text-indent: -9999px;
+	float: left;
+}
+a#firstlevelnav_createRuleController:link{background-position:0px;}
+a#firstlevelnav_createRuleController:hover{background-position:0px -45px;}
+a#firstlevelnav_createRuleController:active{background-position:0px -90px;}
+.selected a#firstlevelnav_createRuleController {background-image: url(../images/blue/rules_btn_selected.png);}
+
+a#firstlevelnav_studyController {
+	background-image: url(../images/blue/advancedSearch_btn.png);
+	height: 45px;
+	width: 148px;
+	text-indent: -9999px;
+	float: left;
+}
+a#firstlevelnav_studyController:link{background-position:0px;}
+a#firstlevelnav_studyController:hover{background-position:0px -45px;}
+a#firstlevelnav_studyController:active{background-position:0px -90px;}
+.selected a#firstlevelnav_studyController {background-image: url(../images/blue/advancedSearch_btn_selected.png);}
+
+
+#sso-form { display: none }
+
+#build-name {
+    color: #666;
+    font-size: 85%;
+    padding: 3px;
+    position: absolute;
+    bottom: 0px;
+    clear: both;
+}
+
+/**** COMMON TAB STYLES (shared across all three levels) */
+
+ul.tabs {
+  margin: 0;
+  padding: 0px;
+}
+
+ul.tabs li {
+  display: block;
+
+
+  margin: 0;
+  padding: 0;
+}
+
+/**** SECTION TABS */
+
+#sections {
+  position: absolute;
+  top: 53px; left: 236px;
+}
+
+
+/*
+#sections li.selected {
+  background-image: url(../images/chrome/section_BG_s.gif);
+}
+
+
+
+#sections a {
+  line-height: 20px;
+  display: block;
+  text-decoration: none; font-weight: bold;
+  color: #333333;
+}
+
+#sections a:hover { color: #efe; }
+#sections li.selected a:hover { color: #339; }
+*/
+/**** TASKS */
+
+#taskbar {
+	background: url(../images/blue/taskbar_BG.png) repeat-x top;
+	height: 51px;
+	width: 970px;
+	font-size: 12pt;
+	position: absolute;
+	top: 98px;
+	padding-left: 10px;
+	color: #FFFFFF;
+	vertical-align: middle;
+	z-index: -0;
+
+}
+
+#taskbar a {
+	color:#FFF;
+	text-decoration: none;
+	height: 43px;
+	width: 232px;
+	float:left;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+#taskbar a:hover {
+  color:#ffe9a5;
+}
+
+#taskbar a.selected{
+	background-image: url(../images/blue/secondlevelnav_selected.jpg);
+	background-repeat: no-repeat;
+
+}
+
+
+/**** PAGE CONTENT BOXES */
+
+#main {
+	float: right;
+	padding-top: 12px;
+	padding-right: 10px;
+
+
+	clear: none;
+	margin-top: 140px;
+	width: 740px;
+}
+
+#flash-message {
+  border: 1px solid #999;
+  border-width: 1px 0;
+  text-align: center;
+  background-color: #ccc;
+  margin: 1em auto;
+  width: 75%;
+  padding: 0.5em;
+}
+
+#flash-message.info {
+  border-color: #390;
+  background-color: #aea;
+}
+
+#flash-message.error {
+  border-color: #930;
+  background-color: #ea9;
+}
+
+/* A pane is a vertical subdivision of the page.
+   Individual panes will need to have their widths specified
+   if there's more than one in a page;
+   the total should be something less than 100%. */
+.pane {
+  float: left;
+  margin: 0 14px 12px 0;
+}
+
+/* Each pane will contain one or more "boxes" */
+.box {
+	background-color: #fff;
+	margin-bottom: 50px;
+	background-image: url(../images/blue/box_bg.jpg);
+	background-repeat: repeat-x;
+}
+.box .header {
+}
+.box .header h2 {
+	color: #333366;
+	margin: 0;
+	padding: 6px 20px 4px 8px;
+	font-size: 13pt;
+	font-weight: 900;
+	text-transform: capitalize;
+}
+.box .header .background-L { background: url(../images/blue/box_header_bg_l.jpg) no-repeat top left; }
+.box .header .background-R { background: url(../images/blue/box_header_bg_r.jpg) no-repeat top right; }
+
+
+.border-T  {  }
+.border-L  { background: url(../images/blue/box_l.png)  repeat-y left; }
+.border-R  { background: url(../images/blue/box_r.png)  repeat-y right; }
+.border-B  { background: url(../images/blue/box_bottom.png)  repeat-x bottom; }
+.border-TL {}
+.border-TR { }
+.border-BL { background: url(../images/blue/box_bl.png) no-repeat bottom left; }
+.border-BR { background: url(../images/blue/box_br.png) no-repeat bottom right; }
+
+.box .interior {
+  margin: 0 8px 0 7px;
+  padding: 8px 0;
+  min-height: 28px;
+}
+
+.box.tabbed .interior {
+  padding-top: 0;
+}
+
+.box .content {
+  padding: 8px;
+}
+
+.box h3 {
+	position: relative;
+	border-bottom: solid 1px #000;
+	padding: 4px 8px;
+	font-size: 11pt;
+}
+
+/**** TABS WITHIN A BOX */
+
+.box ul.inner.tabs { /* this overspecific selector is necessary for IE */
+  background: url(../images/chrome/inner-tab_BG.gif) no-repeat top right;
+  padding: 4px 7px 0 0;
+  margin: 0 0 0 7px;
+  height: 20px;
+  font-size: .9em;
+}
+
+.box ul.inner.tabs li {
+  background: url(../images/chrome/inner-tab_L.gif) no-repeat top left;
+}
+
+.box ul.inner.tabs li.selected {
+  background-image: url(../images/chrome/inner-tab_L_s.gif);
+}
+
+.box ul.inner.tabs li div {
+  background: url(../images/chrome/inner-tab_R.gif) no-repeat top right;
+  padding: 0 20px;
+}
+
+.box ul.inner.tabs li.selected div {
+  background-image: url(../images/chrome/inner-tab_R_s.gif); 
+}
+
+.box ul.inner.tabs a {
+  line-height: 20px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333333;
+}
+.box ul.inner.tabs a:hover {
+  color: #002EE2;
+}
+
+/* two boxes with the additional class "paired" are displayed side-by-side */
+.box.paired {
+    float: left;
+    width: 45%;
+    margin: 1em;
+}
+
+.division {
+    clear: both;
+}
+
+/**** REUSABLE PAGE ELEMENTS/CLASSES */
+
+.required-indicator {
+  color: #a00; font-family: serif;
+}
+
+.required-for-submit {
+  color: #0a0; font-family: serif;
+  font-weight: bold;
+}
+
+span.phone-number{
+	 font-style: italic;
+}
+.error input {
+  border-color: #c03;
+}
+.error .label {
+  color: #c03;
+}
+
+.errors {
+	color: #c03;
+}
+
+div.errors  {
+  color: #c03;
+   font-size:11pt;
+   width: 800px;
+   border: 1px solid #c03;
+   margin: 40px;
+   padding: 0 0em 0.2em 1em;
+}
+ul.errors {
+	color: #c03;
+    margin: 0; padding: 0 1em 0.2em 1em;
+}
+ul.errors li {
+  margin: 0 0.8em; padding: 0;
+  list-style-image: url('../images/redexclamation.gif'); 
+}
+
+/* The delete checkbox which may go in a box's h3s */
+
+
+div.div-list-controls {
+	position: absolute;
+	right:0;
+}
+
+a.list-control {
+    text-decoration: none;
+    color: #222;
+  	top: 0;
+}
+a.delete-control {
+  	font-size: 1.4em;
+  	font-weight: bold;
+  	padding: 0 2px;
+}
+a.min-max-control {
+	padding: 0 2px;
+}
+a.move-up-control {
+	font-size: 1.2em;
+}
+a.move-down-control {
+	font-size: 1.2em;
+}
+a.list-control:hover {
+    background-color: #222;
+    color: #eee;
+}
+
+
+div.first-item a.move-up-control {
+    visibility: hidden;
+}
+
+div.last-item a.move-down-control {
+    visibility: hidden;
+}
+
+span.list-controls {
+    padding: 0 4px;
+}
+
+/*
+    'row' is a class for label: value type rows.  The intent is
+    that each row would contain 2-3 subdivs:  a label (float: left), an optional extra
+    (float: right), and the value (positioned naturally).
+ */
+div.row {
+    padding: 2px;
+    margin: 1px 0;
+}
+/* Automatically clear after each row
+   Based on http://www.positioniseverything.net/easyclearing.html */
+div.row:after, .autoclear:after {
+    display: block ;
+    content: ' ';
+    clear: both ;
+    height: 0 ;
+    visibility: hidden ;
+}
+div.row div.label, div.row div.value {
+  line-height: 1.5em;
+}
+div.row div.label {
+  font-weight: bold;
+  float: left;
+  margin-left: 0.5em;
+  text-align: right;
+  /* default width; pages might override */
+  width: 10em;
+}
+div.row div.value {
+  font-weight: normal;
+  /* default; should be changed whenever .label width is changed */
+  margin-left: 11em;
+  /* In Mac the Help (?) button is wrapping */
+  white-space:nowrap;
+}
+
+img.indicator {
+    visibility: hidden;
+}
+
+/*
+  Left and right panels
+*/
+.rightpanel {
+    float:right;
+    width:48%;
+    margin: 0 14px 14px 0;
+    padding: 5px;
+}
+
+.leftpanel {
+    float: left;
+    width:48%;
+    margin: 0 5px 5px -2em;
+    padding: 5px;
+}
+/*
+  Styles for Table Data 
+*/
+table.tablecontent {
+    border-collapse: collapse;
+
+    border-width: 1px; 
+
+    border-style: solid;
+
+    border-color: #ddd;
+}
+
+.tablecontent td, .tablecontent th {
+    padding: 0.2em;
+    border: 1px solid #999;
+}
+
+
+.tablecontent .tableHeader th, .tablecontent .even td , .tablecontent .odd td {
+
+    text-align: left;
+
+    border: 0px none;
+
+}
+
+
+
+
+.tablecontent th {
+    text-align: left;
+    border-color: #444 #999;
+    background-color: #A2A2A2;
+}
+
+.tablecontent td {
+    border-color: #888 #ddd;
+    background-color: #fff;
+}
+.tablecontent .highlight td {
+
+	background-color: #F5F5F5;
+
+}
+
+
+a.help {
+    display: block;
+    float: right;
+    color: #fff;
+}
+a.help img {
+    border: none;
+}
+
+
+.dueOn {
+    color: #cc0033;
+    text-align: center;
+}
+        
+.submittedOn {
+    color: #66cc33;
+    text-align: center;
+}

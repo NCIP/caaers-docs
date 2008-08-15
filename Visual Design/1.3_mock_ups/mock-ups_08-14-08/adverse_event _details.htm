@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>caAERS || Adverse Event Details</title>
+<link rel="stylesheet" type="text/css" href="mockup1_files/debug.css">
+<link rel="stylesheet" type="text/css" href="mockup1_files/common.css">
+<link rel="stylesheet" type="text/css" href="mockup1_files/fields.css">
+<!--[if IE]>
+
+<link rel="stylesheet" type="text/css" href="/caaers/css/ie.css"/>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="mockup1_files/calendar-blue.css">
+<link rel="stylesheet" type="text/css" href="mockup1_files/common-search.css">
+<link rel="stylesheet" type="text/css" href="mockup1_files/hoverhelp.css">
+<link rel="stylesheet" type="text/css" href="mockup1_files/tigra-menu_002.htm">
+<link rel="stylesheet" type="text/css" href="mockup1_files/side-bar.css">
+<script type="text/javascript" src="mockup1_files/calendar_002.js"></script>
+<script type="text/javascript" src="mockup1_files/calendar.js"></script>
+<script type="text/javascript" src="mockup1_files/calendar-en.js"></script>
+<script type="text/javascript" src="mockup1_files/calendar-setup.js"></script>
+<script type="text/javascript" src="mockup1_files/prototype.js"></script>
+<script type="text/javascript" src="mockup1_files/effects.js"></script>
+<script type="text/javascript" src="mockup1_files/common.js"></script>
+<script type="text/javascript" src="mockup1_files/validation.js"></script>
+<script type="text/javascript" src="mockup1_files/commons-validation.js"></script>
+<script type="text/javascript" src="mockup1_files/tigra-menu.htm"></script>
+<script type="text/javascript" src="mockup1_files/tigra-menu_tpl.htm"></script>
+<script type="text/javascript" src="mockup1_files/side-bar.js"></script>
+<script type="text/javascript" src="mockup1_files/ccts-hotlinks.js"></script>
+<script type="text/javascript">
+  CCTS.appShortName = 'caaers'
+</script>
+<link rel="stylesheet" type="text/css" href="mockup1_files/tabbedflow.css">
+<script type="text/javascript" src="mockup1_files/tabbedflow.js"></script>
+<style type="text/css">
+input.autocomplete {
+	width: 75%;
+	font-style: normal;
+	background-color: #CCE6FF;
+}
+input.pending-search {
+	width: 75%;
+	color: gray;
+	font-style: italic;
+	background-color: #CCE6FF;
+}
+</style>
+<script type="text/javascript" src="mockup1_files/effects.js"></script>
+<script type="text/javascript" src="mockup1_files/builder.js"></script>
+<script type="text/javascript" src="mockup1_files/controls.js"></script>
+<script type="text/javascript" src="mockup1_files/dragdrop.js"></script>
+<script type="text/javascript" src="mockup1_files/slider.js"></script>
+<script type="text/javascript" src="mockup1_files/common-scriptaculous.js"></script>
+<script type="text/javascript" src="mockup1_files/engine.js"></script>
+<script type="text/javascript" src="mockup1_files/util.js"></script>
+<script type="text/javascript" src="mockup1_files/createAE.txt"></script>
+<script type="text/javascript">
+        var participantAutocompleterProps = {
+            basename: "participant",
+            populator: function(autocompleter, text) {
+                createAE.matchParticipants(text, $('study').value, function(values) {
+                    autocompleter.setChoices(values)
+                })
+            },
+            valueSelector: function(obj) {
+            	var primaryIdentifier = obj.primaryIdentifierValue == null ? "" : 
+            							 " ( " + obj.primaryIdentifierValue + " ) ";
+                return obj.fullName + primaryIdentifier
+            }
+        }
+
+        var studyAutocompleterProps = {
+            basename: "study",
+            populator: function(autocompleter, text) {
+                createAE.matchStudies(text, $('participant').value, false,function(values) {
+                    autocompleter.setChoices(values)
+                })
+            },
+            valueSelector: function(obj) {
+            	var primaryIdentifier = obj.primaryIdentifierValue == null ? "" : 
+            							 " ( " + obj.primaryIdentifierValue + " ) ";
+                return obj.shortTitle + primaryIdentifier
+            }
+        }
+
+        function acPostSelect(mode, selectedChoice) {
+            Element.update(mode.basename + "-selected-name", mode.valueSelector(selectedChoice))
+            $(mode.basename).value = selectedChoice.id;
+            $(mode.basename + '-selected').show()
+            new Effect.Highlight(mode.basename + "-selected")
+        }
+
+        function updateSelectedDisplay(mode) {
+            if ($(mode.basename).value) {
+                Element.update(mode.basename + "-selected-name", $(mode.basename + "-input").value)
+                $(mode.basename + '-selected').show()
+            }
+        }
+
+        function acCreate(mode) {
+            new Autocompleter.DWR(mode.basename + "-input", mode.basename + "-choices",
+                mode.populator, {
+                valueSelector: mode.valueSelector,
+                afterUpdateElement: function(inputElement, selectedElement, selectedChoice) {
+                    acPostSelect(mode, selectedChoice)
+                },
+                indicator: mode.basename + "-indicator"
+            })
+            Event.observe(mode.basename + "-clear", "click", function() {
+                $(mode.basename + "-selected").hide()
+                $(mode.basename).value = ""
+                $(mode.basename + "-input").value = ""
+            })
+        }
+
+        Event.observe(window, "load", function() {
+            acCreate(participantAutocompleterProps)
+            acCreate(studyAutocompleterProps)
+            updateSelectedDisplay(participantAutocompleterProps)
+            updateSelectedDisplay(studyAutocompleterProps)
+            initSearchField()
+        })
+    </script>
+<link href="mockup1_files/highlighter.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="all">
+  <div id="header">
+    <div class="background-R"> <a href="https://localhost:8443/caaers/pages/task" id="logo">caAERS</a>
+      <div id="login-action"> <a href="https://localhost:8443/caaers/j_acegi_logout">Log out</a> </div>
+      <ul id="sections" class="tabs">
+        <li class="selected"> <a id="firstlevelnav_listAdverseEventsController" href="https://localhost:8443/caaers/pages/ae/list">Adverse Events</a> </li>
+        <li class=""> <a id="firstlevelnav_searchStudyController" href="https://localhost:8443/caaers/pages/study/search">Studies</a> </li>
+        <li class=""> <a id="firstlevelnav_createParticipantController" href="https://localhost:8443/caaers/pages/participant/create">Subjects</a> </li>
+        <li class=""> <a id="firstlevelnav_createRuleController" href="https://localhost:8443/caaers/pages/rule/create">Rules</a> </li>
+        <li class=""> <a id="firstlevelnav_configurationController" href="https://localhost:8443/caaers/pages/admin/configure">Administration</a> </li>
+        <li class=""> <a id="firstlevelnav_studyController" href="https://localhost:8443/caaers/pages/search/study">Advanced Search</a> </li>
+      </ul>
+      <div id="taskbar"> <a class="" id="secondlevelnav_listAdverseEventsController" href="https://localhost:8443/caaers/pages/ae/list"><img src="mockup1_files/listAdverseEventsController_icon.png">Manage reports</a> <a class="selected" id="secondlevelnav_captureAdverseEventController" href="https://localhost:8443/caaers/pages/ae/captureRoutine"><img src="mockup1_files/captureAdverseEventController_icon.png">Enter AEs</a> </div>
+    </div>
+  </div>
+  <!-- end header -->
+  <div class="tabpane">
+    <ul id="thirdlevelnav">
+      <li><a href="#">Begin</a></li>
+      <li><a href="#">Adverse events</a></li>
+      <li><a href="#">Review &amp; Report</a></li>
+      <li><a href="#">Personnel Details </a>
+        <hr />
+      </li>
+  <li><a href="expedited_report _summary.htm">Expedited Report Summary</a></li>
+      <li><a href="adverse_event _details.htm">Adverse Event Details</a></li>
+      <li><a href="study_interventions.htm">Study Interventions</a></li>
+      <li><a href="patient_details.htm">Patient Details</a></li>
+      <li><a href="#">Additional Information</a></li>
+      <li><a href="#">Attribution</a></li>
+    </ul>
+    <div id="main">
+      <!-- TODO: Summary should be disabled for Overview Pages, need a better logic than this -->
+      <!-- AE summary  -->
+      <!-- AE summary  -->
+      <div id="main-no-summary-pane" class="pane">
+        <form id="command" class="standard autoclear" method="post" action="/caaers/pages/ae/captureRoutine">
+          <div class="autoclear">
+          <div class="box" id="participant-entry">
+            <!-- header -->
+            <div class="header">
+              <div class="background-L">
+                <div class="background-R">
+                  <h2>Adverse Event Course &amp; Details</h2>
+                  <div class="hr"> </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- inner border -->
+              <div class="border-T">
+                <div class="border-L">
+                  <div class="border-R">
+                    <div class="border-B">
+                      <div class="border-TL">
+                        <div class="border-TR">
+                          <div class="border-BL">
+                            <div class="border-BR">
+                              <div class="interior">
+                                <div class="content">
+                                  <table border="0" cellpadding="3">
+                                    <tr>
+                                      <td><strong>Subject</strong></td>
+                                      <td>Name</td>
+                                    </tr>
+                                    <tr>
+                                      <td><strong>Study</strong></td>
+                                      <td>Long title</td>
+                                    </tr>
+                                  </table>
+                                  <p>&nbsp;</p>
+                                  <h3>Include Adverse Events in Reports</h3>
+                                  <table border="1" cellpadding="0" cellspacing="0" bordercolor="#666666">
+                                    <col width="81" />
+                                    <col width="117" />
+                                    <col width="144" span="2" />
+                                    <tr height="29">
+                                      <td width="18">&nbsp;</td>
+                                      <td width="214" height="29"><strong>Reporting Period AEs&nbsp;</strong></td>
+                                      <td width="312"><strong>Grade</strong></td>
+                                      <td width="68"><strong>Select</strong></td>
+                                      <td width="81"><strong>Primary?</strong></td>
+                                    </tr>
+                                    <tr height="18">
+                                      <td bgcolor="#e5ecff"><div align="center"><img src="images/tri_open.png" alt="Collapse" width="12" height="12" /></div></td>
+                                      <td height="18" bgcolor="#e5ecff">Term a</td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                      <td bgcolor="#e5ecff"><div align="center">
+                                        <input type="checkbox">
+                                      </div></td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                    </tr>
+                                    <tr height="17">
+                                      <td height="17" colspan="5"><div align="center">
+                                        <table width="89%" border="0" align="right" cellpadding="3">
+                                          <tr height="17">
+                                              <td width="60%">Verbatim</td>
+                                              <td width="40%">test</td>
+                                            </tr>
+                                          <tr height="17">
+                                              <td>Other - MedDRA</td>
+                                              <td>&nbsp;</td>
+                                            </tr>
+                                          <tr height="17">
+                                              <td>Attribution</td>
+                                              <td>unlikely</td>
+                                            </tr>
+                                          <tr height="49">
+                                              <td>Hospitalization    or Prolongation of Hospitalization?</td>
+                                              <td>no</td>
+                                            </tr>
+                                          <tr height="51">
+                                              <td height="22">Serious Indicator</td>
+                                              <td>&nbsp;</td>
+                                            </tr>
+                                          <tr height="18">
+                                              <td height="20">Expected?</td>
+                                              <td>no</td>
+                                            </tr>
+                                                                              </table>
+                                      </div></td>
+                                    </tr>
+                                    <tr height="17">
+                                      <td bgcolor="#e5ecff"><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="17" bgcolor="#e5ecff">term b</td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                      <td bgcolor="#e5ecff"><div align="center">
+                                        <input type="checkbox">
+                                      </div></td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                    </tr>
+                                    <tr height="17">
+                                      <td><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="17">term c</td>
+                                      <td>&nbsp;</td>
+                                      <td><div align="center">
+                                        <input type="checkbox">
+                                      </div></td>
+                                      <td>&nbsp;</td>
+                                    </tr>
+                                    <tr height="17">
+                                      <td bgcolor="#e5ecff"><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="17" bgcolor="#e5ecff">term d</td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                      <td bgcolor="#e5ecff"><div align="center">
+                                        <input type="checkbox">
+                                      </div></td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                    </tr>
+                                    <tr height="17">
+                                      <td><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="17">term e</td>
+                                      <td>&nbsp;</td>
+                                      <td><div align="center">
+                                        <input type="checkbox">
+                                      </div></td>
+                                      <td>&nbsp;</td>
+                                    </tr>
+                                    <tr height="36">
+                                      <td bgcolor="#e5ecff"><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="18" bgcolor="#e5ecff">term f</td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                      <td bgcolor="#e5ecff"><div align="center">
+                                        <input type="checkbox">
+                                      </div></td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                    </tr>
+                                    <tr height="30">
+                                      <td><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="18">term x</td>
+                                      <td>&nbsp;</td>
+                                      <td><div align="center">
+                                        <input type="checkbox" checked="checked">
+                                      </div></td>
+                                      <td><div align="center">&radic;</div></td>
+                                    </tr>
+                                    <tr height="17">
+                                      <td bgcolor="#e5ecff"><div align="center"><img src="images/tri_closed.png" alt="Expand" width="12" height="12" /></div></td>
+                                      <td height="17" bgcolor="#e5ecff">term y</td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                      <td bgcolor="#e5ecff"><div align="center">
+                                        <input type="checkbox" checked="checked">
+                                      </div></td>
+                                      <td bgcolor="#e5ecff">&nbsp;</td>
+                                    </tr>
+                                  </table>
+                                  <p>&nbsp;</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end inner border -->
+            </div>
+            <!-- end box -->
+            <div class="box" id="participant-entry">
+              <!-- header -->
+              <div class="header">
+                <div class="background-L">
+                  <div class="background-R">
+                    <h2>Primary Adverse Event Details</h2>
+                    <div class="hr"> </div>
+                  </div>
+                </div>
+                <!-- end header -->
+                <!-- inner border -->
+                <div class="border-T">
+                  <div class="border-L">
+                    <div class="border-R">
+                      <div class="border-B">
+                        <div class="border-TL">
+                          <div class="border-TR">
+                            <div class="border-BL">
+                              <div class="border-BR">
+                                <div class="interior">
+                                  <div class="content">
+                                    <table cellspacing="0" cellpadding="0">
+                                      <col width="146" />
+                                      <col width="81" />
+                                      <tr height="37">
+                                        <td width="235" height="22"><strong>Primary    AE</strong></td>
+                                        <td width="258"><strong>term x</strong></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17"><strong>Patient Status</strong></td>
+                                        <td><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="25">
+                                        <td height="26"><strong>Description of event</strong></td>
+                                        <td><textarea cols="30" rows="3" wrap="virtual"></textarea></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17"><strong>Time of Event</strong></td>
+                                        <td><input size="6"type="text" /><select>
+                                            <option value ="am">am</option>
+                                            <option value ="pm">pm</option>
+                                          </select></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17"><strong>Location of event</strong></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17"><strong>Was    Blind Broken?</strong></td>
+                                        <td><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="34">
+                                        <td height="34"><strong>Course #    on which AE(s) occurred</strong></td>
+                                        <td><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                      <tr height="19">
+                                        <td height="19"><strong>Start date of that course</strong></td>
+                                        <td><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                    </table>
+                                    <table cellspacing="0" cellpadding="0">
+                                      <col width="144" span="2" />
+                                      <tr height="37">
+                                        <td width="235" height="23">Date AE    Started</td>
+                                        <td width="259"><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">Date of Recovery/Death</td>
+                                        <td><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="25">
+                                        <td height="25">Description of treatment</td>
+                                        <td><textarea cols="30" rows="3" wrap="virtual"></textarea></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">Time of    treatment</td>
+                                        <td><input size="6"type="text" /><select>
+                                            <option value ="am">am</option>
+                                            <option value ="pm">pm</option>
+                                        </select></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">Autopsy performed?</td>
+                                        <td><select>
+                                            <option value ="no">No</option>
+                                            <option value ="yes">Yes</option>
+                                        </select></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17">Cause    of Death</td>
+                                        <td><textarea cols="30" rows="3" wrap="virtual"></textarea></td>
+                                      </tr>
+                                      <tr height="17">
+                                        <td height="17"></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr height="34">
+                                        <td height="34">Total #    of Courses to date</td>
+                                        <td><input type="text" value="" size="20" /></td>
+                                      </tr>
+                                    </table>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end inner border -->
+              </div>
+              <!-- end box -->
+              <div class="content buttons autoclear">
+                <div class="flow-buttons">
+                  <div align="right">
+                    <input value="Back" type="submit">
+                    <input id="flow-next" value="Save & Continue" type="submit">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <form action="#" id="sso-form" target="_blank" method="post">
+        <input name="gridProxy" value="" type="hidden">
+      </form>
+      <div id="build-name">caAERS v. 1.3</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

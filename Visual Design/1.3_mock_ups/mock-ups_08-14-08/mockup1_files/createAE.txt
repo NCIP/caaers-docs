@@ -1,0 +1,241 @@
+
+// Provide a default path to dwr.engine
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+dwr.engine._defaultPath = '/caaers/dwr';
+
+if (createAE == null) var createAE = {};
+createAE._path = '/caaers/dwr';
+createAE.matchAnatomicSite = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchAnatomicSite', p0, callback);
+}
+createAE.getAnatomicSiteById = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getAnatomicSiteById', p0, callback);
+}
+createAE.buildAnatomicSiteTable = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'buildAnatomicSiteTable', p0, p1, false, callback);
+}
+createAE.matchPriorTherapies = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchPriorTherapies', p0, callback);
+}
+createAE.matchPreExistingConds = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchPreExistingConds', p0, callback);
+}
+createAE.matchLowLevelTermsByCode = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchLowLevelTermsByCode', p0, p1, callback);
+}
+createAE.matchChemoAgents = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchChemoAgents', p0, callback);
+}
+createAE.getChemoAgentById = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getChemoAgentById', p0, callback);
+}
+createAE.buildChemoAgentsTable = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'buildChemoAgentsTable', p0, p1, false, callback);
+}
+createAE.matchInterventionSites = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchInterventionSites', p0, callback);
+}
+createAE.matchAgents = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchAgents', p0, callback);
+}
+createAE.getDiseaseFromStudyDisease = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getDiseaseFromStudyDisease', p0, callback);
+}
+createAE.getResearchStaff = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getResearchStaff', p0, callback);
+}
+createAE.matchParticipants = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchParticipants', p0, p1, callback);
+}
+createAE.matchStudies = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchStudies', p0, p1, p2, callback);
+}
+createAE.matchTerms = function(p0, p1, p2, p3, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchTerms', p0, p1, p2, p3, callback);
+}
+createAE.getTermsByCategory = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getTermsByCategory', p0, callback);
+}
+createAE.getTermByTermId = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getTermByTermId', p0, callback);
+}
+createAE.buildTermsTableByCategory = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'buildTermsTableByCategory', p0, p1, p2, false, callback);
+}
+createAE.getTermGrades = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getTermGrades', p0, callback);
+}
+createAE.matchLabTerms = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchLabTerms', p0, p1, callback);
+}
+createAE.getLabTermById = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getLabTermById', p0, callback);
+}
+createAE.buildLabTermsTable = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'buildLabTermsTable', p0, p1, p2, false, callback);
+}
+createAE.getLabTermsByCategory = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getLabTermsByCategory', p0, callback);
+}
+createAE.getLabCategories = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getLabCategories', callback);
+}
+createAE.matchLabTestNames = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchLabTestNames', p0, callback);
+}
+createAE.matchTreatmentAssignment = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'matchTreatmentAssignment', p0, p1, callback);
+}
+createAE.pushAdverseEventToStudyCalendar = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'pushAdverseEventToStudyCalendar', p0, callback);
+}
+createAE.pushRoutineAdverseEventToStudyCalendar = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'pushRoutineAdverseEventToStudyCalendar', p0, callback);
+}
+createAE.withdrawReportVersion = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'withdrawReportVersion', p0, p1, callback);
+}
+createAE.addFormSection = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'addFormSection', p0, p1, p2, callback);
+}
+createAE.addRoutineAeMeddra = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'addRoutineAeMeddra', p0, p1, callback);
+}
+createAE.addPriorTherapy = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'addPriorTherapy', p0, p1, callback);
+}
+createAE.addPriorTherapyAgent = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'addPriorTherapyAgent', p0, p1, p2, callback);
+}
+createAE.calculateBodySurfaceArea = function(p0, p1, p2, p3, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'calculateBodySurfaceArea', p0, p1, p2, p3, callback);
+}
+createAE.reorder = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'reorder', p0, p1, p2, callback);
+}
+createAE.cascaeDeleteToAttributions = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'cascaeDeleteToAttributions', p0, p1, callback);
+}
+createAE.deleteAttribution = function(p0, p1, p2, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'deleteAttribution', p0, p1, p2, callback);
+}
+createAE.dismissLab = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'dismissLab', p0, callback);
+}
+createAE.refreshReportingPeriodAndGetDetails = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'refreshReportingPeriodAndGetDetails', p0, p1, callback);
+}
+createAE.addObservedAE = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'addObservedAE', p0, callback);
+}
+createAE.deleteAdverseEvent = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'deleteAdverseEvent', p0, callback);
+}
+createAE.setStudyDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setStudyDao', p0, callback);
+}
+createAE.setParticipantDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setParticipantDao', p0, callback);
+}
+createAE.setCtcDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setCtcDao', p0, callback);
+}
+createAE.setCtcTermDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setCtcTermDao', p0, callback);
+}
+createAE.setAeReportDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setAeReportDao', p0, callback);
+}
+createAE.setResearchStaffDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setResearchStaffDao', p0, callback);
+}
+createAE.setInteroperationService = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setInteroperationService', p0, callback);
+}
+createAE.setAnatomicSiteDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setAnatomicSiteDao', p0, callback);
+}
+createAE.setPriorTherapyDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setPriorTherapyDao', p0, callback);
+}
+createAE.setCtcCategoryDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setCtcCategoryDao', p0, callback);
+}
+createAE.setLowLevelTermDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setLowLevelTermDao', p0, callback);
+}
+createAE.setPreExistingConditionDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setPreExistingConditionDao', p0, callback);
+}
+createAE.setAgentDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setAgentDao', p0, callback);
+}
+createAE.setExpeditedReportTree = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setExpeditedReportTree', p0, callback);
+}
+createAE.getConfigurationProperty = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getConfigurationProperty', callback);
+}
+createAE.setConfigurationProperty = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setConfigurationProperty', p0, callback);
+}
+createAE.getTreatmentAssignmentDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getTreatmentAssignmentDao', callback);
+}
+createAE.setTreatmentAssignmentDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setTreatmentAssignmentDao', p0, callback);
+}
+createAE.setReportRepository = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setReportRepository', p0, callback);
+}
+createAE.setRoutineAdverseEventReportDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setRoutineAdverseEventReportDao', p0, callback);
+}
+createAE.getLabCategoryDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getLabCategoryDao', callback);
+}
+createAE.setLabCategoryDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setLabCategoryDao', p0, callback);
+}
+createAE.getLabTermDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getLabTermDao', callback);
+}
+createAE.setLabTermDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setLabTermDao', p0, callback);
+}
+createAE.getChemoAgentDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getChemoAgentDao', callback);
+}
+createAE.setChemoAgentDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setChemoAgentDao', p0, callback);
+}
+createAE.getInterventionSiteDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getInterventionSiteDao', callback);
+}
+createAE.setInterventionSiteDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setInterventionSiteDao', p0, callback);
+}
+createAE.getCtepStudyDiseaseDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getCtepStudyDiseaseDao', callback);
+}
+createAE.setCtepStudyDiseaseDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setCtepStudyDiseaseDao', p0, callback);
+}
+createAE.getReportingPeriodDao = function(callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getReportingPeriodDao', callback);
+}
+createAE.setReportingPeriodDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setReportingPeriodDao', p0, callback);
+}
+createAE.setLabLoadDao = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'setLabLoadDao', p0, callback);
+}
+createAE.remove = function(p0, p1, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'remove', p0, p1, callback);
+}
+createAE.getCategories = function(p0, callback) {
+  dwr.engine._execute(createAE._path, 'createAE', 'getCategories', p0, callback);
+}
