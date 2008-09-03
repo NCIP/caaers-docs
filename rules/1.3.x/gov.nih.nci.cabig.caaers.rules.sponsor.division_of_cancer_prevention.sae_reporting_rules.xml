@@ -1,3 +1,243 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ruleSet xmlns="http://caaers.cabig.nci.nih.gov/rules/brxml"><id>f68df124-1a46-42c3-8a19-10325bc00bb4</id><name>gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules</name><description>SAE Reporting Rules</description><subject>Sponsor rules||Division of Cancer Prevention</subject><coverage>Enabled</coverage><import>gov.nih.nci.cabig.caaers.domain.*</import><rule id="aa7197da-a32c-41e2-aacc-77c0083aa0c4"><condition><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study"><field-constraint grammer-prefix=" AdEERS Reporting " grammer-postfix="" field-name="adeersReporting" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>false</value><readable-value>No </readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(study,null,'adeersReporting','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study"><field-constraint grammer-prefix=" Study " grammer-postfix="" field-name="phaseCode" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>Phase I Trial</value><value>Phase I/II Trial</value><value>Phase II Trial</value><readable-value>Phase II Trial,Phase I/II Trial,Phase I Trial,</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(study,null,'phaseCode','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.ExpeditedAdverseEventReport" identifier="aeReport" display-uri="Expedited Adverse Event Report"><field-constraint grammer-prefix=" Outcome Identifier " grammer-postfix="" field-name="outcomeIdentifier" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>1</value><value>2</value><value>3</value><value>4</value><value>5</value><value>6</value><value>7</value><readable-value>required intervention to prevent permanent impairment/damage (Devices) ,other serious (important medical events) ,congenital anomaly/birth defect,disability or permanent damage,hospitalization - intial or prolonged ,life-threatening,death,</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(aeReport,'gov.nih.nci.cabig.caaers.domain.OutcomeType','code','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.rules.objectgraph.FactResolver" identifier="factResolver"><field-constraint><literal-restriction/></field-constraint></column><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="studySDO"><field-constraint field-name="primarySponsorCode"><literal-restriction evaluator="=="><value>Division of Cancer Prevention</value></literal-restriction></field-constraint><expression>factResolver.assertFact(studySDO,"gov.nih.nci.cabig.caaers.domain.Organization","name","Division of Cancer Prevention","==")</expression></column></condition><action>48-Hour SAE Report to NCI Medical Monitor and CCSA</action><readableAction>48-Hour SAE Report to NCI Medical Monitor and CCSA</readableAction><metaData packageName="gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules" name="Rule-1" description="Setting Description since its mandatory by JBoss Repository config" checkinComment="Initial Version"><category><path>CAAERS_BASE/SPONSOR/division_of_cancer_prevention</path><metaData name="sae_reporting_rules"/></category></metaData><readableRule><line>IF</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; AdEERS Reporting is  'No ' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Study is  'Phase II Trial'  or 'Phase I/II Trial'  or 'Phase I Trial' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Outcome Identifier is  'required intervention to prevent permanent impairment/damage (Devices) '  or 'other serious (important medical events) '  or 'congenital anomaly/birth defect'  or 'disability or permanent damage'  or 'hospitalization - intial or prolonged '  or 'life-threatening'  or 'death' </line></readableRule></rule><rule id="1362e207-5c4e-4e3d-9b4f-7881f728d618"><condition><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study"><field-constraint grammer-prefix=" AdEERS Reporting " grammer-postfix="" field-name="adeersReporting" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>true</value><readable-value>Yes </readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(study,null,'adeersReporting','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study"><field-constraint grammer-prefix=" Study " grammer-postfix="" field-name="phaseCode" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>Phase I Trial</value><value>Phase I/II Trial</value><value>Phase II Trial</value><readable-value>Phase II Trial,Phase I/II Trial,Phase I Trial,</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(study,null,'phaseCode','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event"><field-constraint grammer-prefix=" Severity " grammer-postfix="" field-name="grade" display-uri="undefined"><literal-restriction evaluator="&gt;=" display-uri="is greater than or equal to "><value>4</value><readable-value>Grade 4</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.Grade','code','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event"><field-constraint grammer-prefix=" Adverse Event " grammer-postfix="expected " field-name="expectedness" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>false</value><readable-value>is not </readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(adverseEvent,null,'expectedness','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event"><field-constraint grammer-prefix=" Attribution " grammer-postfix="" field-name="attributionSummary" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>POSSIBLE</value><value>PROBABLE</value><value>DEFINITE</value><readable-value>Definite,Probable,Possible,</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.Attribution','name','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.rules.objectgraph.FactResolver" identifier="factResolver"><field-constraint><literal-restriction/></field-constraint></column><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="studySDO"><field-constraint field-name="primarySponsorCode"><literal-restriction evaluator="=="><value>Division of Cancer Prevention</value></literal-restriction></field-constraint><expression>factResolver.assertFact(studySDO,"gov.nih.nci.cabig.caaers.domain.Organization","name","Division of Cancer Prevention","==")</expression></column></condition><action>10-Day Report Submission to AdEERS</action><readableAction>10-Day Report Submission to AdEERS</readableAction><metaData packageName="gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules" name="Rule-2" description="Setting Description since its mandatory by JBoss Repository config" checkinComment="Initial Version"><category><path>CAAERS_BASE/SPONSOR/division_of_cancer_prevention</path><metaData name="sae_reporting_rules"/></category></metaData><readableRule><line>IF</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; AdEERS Reporting is  'Yes ' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Study is  'Phase II Trial'  or 'Phase I/II Trial'  or 'Phase I Trial' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Severity is greater than or equal to  'Grade 4' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Adverse Event is  'is not ' expected </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Attribution is  'Definite'  or 'Probable'  or 'Possible' </line></readableRule></rule><rule id="4eb2f231-b043-4c6b-a14f-01ed50e97437"><condition><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study"><field-constraint grammer-prefix=" AdEERS Reporting " grammer-postfix="" field-name="adeersReporting" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>false</value><readable-value>No </readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(study,null,'adeersReporting','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study"><field-constraint grammer-prefix=" Study " grammer-postfix="" field-name="phaseCode" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>Phase I Trial</value><value>Phase I/II Trial</value><value>Phase II Trial</value><readable-value>Phase II Trial,Phase I/II Trial,Phase I Trial,</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(study,null,'phaseCode','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event"><field-constraint grammer-prefix=" Severity " grammer-postfix="" field-name="grade" display-uri="undefined"><literal-restriction evaluator="==" display-uri="is "><value>5</value><readable-value>Grade 5</readable-value></literal-restriction></field-constraint><expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.Grade','code','runTimeValue','runTimeOperator')</expression></column><column object-type="gov.nih.nci.cabig.caaers.rules.objectgraph.FactResolver" identifier="factResolver"><field-constraint><literal-restriction/></field-constraint></column><column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="studySDO"><field-constraint field-name="primarySponsorCode"><literal-restriction evaluator="=="><value>Division of Cancer Prevention</value></literal-restriction></field-constraint><expression>factResolver.assertFact(studySDO,"gov.nih.nci.cabig.caaers.domain.Organization","name","Division of Cancer Prevention","==")</expression></column></condition><action>48-Hour SAE Report to NCI Medical Monitor and CCSA</action><readableAction>48-Hour SAE Report to NCI Medical Monitor and CCSA</readableAction><metaData packageName="gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules" name="Rule-3" description="Setting Description since its mandatory by JBoss Repository config" checkinComment="Initial Version"><category><path>CAAERS_BASE/SPONSOR/division_of_cancer_prevention</path><metaData name="sae_reporting_rules"/></category></metaData><readableRule><line>IF</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; AdEERS Reporting is  'No ' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Study is  'Phase II Trial'  or 'Phase I/II Trial'  or 'Phase I Trial' </line><line>AND</line><line>	 &amp;nbsp;&amp;nbsp;&amp;nbsp; Severity is  'Grade 5' </line></readableRule></rule></ruleSet>
 
+<ruleSet xmlns="http://caaers.cabig.nci.nih.gov/rules/brxml">
+	<id>f68df124-1a46-42c3-8a19-10325bc00bb4</id>
+	<name>gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules</name>
+	<description>SAE Reporting Rules</description>
+	<subject>Sponsor rules||Division of Cancer Prevention</subject>
+	<coverage>Enabled</coverage>
+	<import>gov.nih.nci.cabig.caaers.domain.*</import>
+	<rule id="aa7197da-a32c-41e2-aacc-77c0083aa0c4">
+		<condition>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study">
+				<field-constraint grammer-prefix="AdEERS Reporting" grammer-postfix="" field-name="adeersReporting" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>false</value>
+						<readable-value>No</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(study,null,'adeersReporting','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study">
+				<field-constraint grammer-prefix="Study" grammer-postfix="" field-name="phaseCode" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>Phase I Trial</value>
+						<value>Phase I/II Trial</value>
+						<value>Phase II Trial</value>
+						<readable-value>Phase II Trial,Phase I/II Trial,Phase I Trial,</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(study,null,'phaseCode','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<!--
+			<column object-type="gov.nih.nci.cabig.caaers.domain.ExpeditedAdverseEventReport" identifier="aeReport" display-uri="Expedited Adverse Event Report">
+				<field-constraint grammer-prefix="Outcome Identifier" grammer-postfix="" field-name="outcomeIdentifier" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+						<value>7</value>
+						<readable-value>required intervention to prevent permanent impairment/damage (Devices) ,other serious (important medical events) ,congenital anomaly/birth defect,disability or permanent damage,hospitalization - intial or prolonged ,life-threatening,death,</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(aeReport,'gov.nih.nci.cabig.caaers.domain.OutcomeType','code','runTimeValue','runTimeOperator')</expression>
+			</column>
+			-->
+			<column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event">
+				<field-constraint grammer-prefix="Outcome Identifier" grammer-postfix="" field-name="outcomeIdentifier" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+						<value>7</value>
+						<readable-value>required intervention to prevent permanent impairment/damage (Devices) ,other serious (important medical events) ,congenital anomaly/birth defect,disability or permanent damage,hospitalization - intial or prolonged ,life-threatening,death,</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.OutcomeType','code','runTimeValue','runTimeOperator')</expression>
+			</column>			
+			<column object-type="gov.nih.nci.cabig.caaers.rules.objectgraph.FactResolver" identifier="factResolver">
+				<field-constraint>
+					<literal-restriction/>
+				</field-constraint>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="studySDO">
+				<field-constraint field-name="primarySponsorCode">
+					<literal-restriction evaluator="==">
+						<value>Division of Cancer Prevention</value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(studySDO,"gov.nih.nci.cabig.caaers.domain.Organization","name","Division of Cancer Prevention","==")</expression>
+			</column>
+		</condition>
+		<action>48-Hour SAE Report to NCI Medical Monitor and CCSA</action>
+		<readableAction>48-Hour SAE Report to NCI Medical Monitor and CCSA</readableAction>
+		<metaData packageName="gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules" name="Rule-1" description="Setting Description since its mandatory by JBoss Repository config" checkinComment="Initial Version">
+			<category>
+				<path>CAAERS_BASE/SPONSOR/division_of_cancer_prevention</path>
+				<metaData name="sae_reporting_rules"/>
+			</category>
+		</metaData>
+		<readableRule>
+			<line>IF</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; AdEERS Reporting is 'No '</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Study is 'Phase II Trial' or 'Phase I/II Trial' or 'Phase I Trial'</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Outcome Identifier is 'required intervention to prevent permanent impairment/damage (Devices) ' or 'other serious (important medical events) ' or 'congenital anomaly/birth defect' or 'disability or permanent damage' or 'hospitalization - intial or prolonged ' or 'life-threatening' or 'death'</line>
+		</readableRule>
+	</rule>
+	<rule id="1362e207-5c4e-4e3d-9b4f-7881f728d618">
+		<condition>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study">
+				<field-constraint grammer-prefix="AdEERS Reporting" grammer-postfix="" field-name="adeersReporting" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>true</value>
+						<readable-value>Yes</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(study,null,'adeersReporting','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study">
+				<field-constraint grammer-prefix="Study" grammer-postfix="" field-name="phaseCode" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>Phase I Trial</value>
+						<value>Phase I/II Trial</value>
+						<value>Phase II Trial</value>
+						<readable-value>Phase II Trial,Phase I/II Trial,Phase I Trial,</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(study,null,'phaseCode','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event">
+				<field-constraint grammer-prefix="Severity" grammer-postfix="" field-name="grade" display-uri="undefined">
+					<literal-restriction evaluator="&gt;=" display-uri="is greater than or equal to">
+						<value>4</value>
+						<readable-value>Grade 4</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.Grade','code','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event">
+				<field-constraint grammer-prefix="Adverse Event" grammer-postfix="expected" field-name="expectedness" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>false</value>
+						<readable-value>is not</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(adverseEvent,null,'expectedness','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event">
+				<field-constraint grammer-prefix="Attribution" grammer-postfix="" field-name="attributionSummary" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>POSSIBLE</value>
+						<value>PROBABLE</value>
+						<value>DEFINITE</value>
+						<readable-value>Definite,Probable,Possible,</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.Attribution','name','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.rules.objectgraph.FactResolver" identifier="factResolver">
+				<field-constraint>
+					<literal-restriction/>
+				</field-constraint>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="studySDO">
+				<field-constraint field-name="primarySponsorCode">
+					<literal-restriction evaluator="==">
+						<value>Division of Cancer Prevention</value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(studySDO,"gov.nih.nci.cabig.caaers.domain.Organization","name","Division of Cancer Prevention","==")</expression>
+			</column>
+		</condition>
+		<action>10-Day Report Submission to AdEERS</action>
+		<readableAction>10-Day Report Submission to AdEERS</readableAction>
+		<metaData packageName="gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules" name="Rule-2" description="Setting Description since its mandatory by JBoss Repository config" checkinComment="Initial Version">
+			<category>
+				<path>CAAERS_BASE/SPONSOR/division_of_cancer_prevention</path>
+				<metaData name="sae_reporting_rules"/>
+			</category>
+		</metaData>
+		<readableRule>
+			<line>IF</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; AdEERS Reporting is 'Yes '</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Study is 'Phase II Trial' or 'Phase I/II Trial' or 'Phase I Trial'</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Severity is greater than or equal to 'Grade 4'</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Adverse Event is 'is not ' expected</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Attribution is 'Definite' or 'Probable' or 'Possible'</line>
+		</readableRule>
+	</rule>
+	<rule id="4eb2f231-b043-4c6b-a14f-01ed50e97437">
+		<condition>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study">
+				<field-constraint grammer-prefix="AdEERS Reporting" grammer-postfix="" field-name="adeersReporting" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>false</value>
+						<readable-value>No</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(study,null,'adeersReporting','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="study" display-uri="Study">
+				<field-constraint grammer-prefix="Study" grammer-postfix="" field-name="phaseCode" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>Phase I Trial</value>
+						<value>Phase I/II Trial</value>
+						<value>Phase II Trial</value>
+						<readable-value>Phase II Trial,Phase I/II Trial,Phase I Trial,</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(study,null,'phaseCode','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.AdverseEvent" identifier="adverseEvent" display-uri="Adverse Event">
+				<field-constraint grammer-prefix="Severity" grammer-postfix="" field-name="grade" display-uri="undefined">
+					<literal-restriction evaluator="==" display-uri="is">
+						<value>5</value>
+						<readable-value>Grade 5</readable-value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(adverseEvent,'gov.nih.nci.cabig.caaers.domain.Grade','code','runTimeValue','runTimeOperator')</expression>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.rules.objectgraph.FactResolver" identifier="factResolver">
+				<field-constraint>
+					<literal-restriction/>
+				</field-constraint>
+			</column>
+			<column object-type="gov.nih.nci.cabig.caaers.domain.Study" identifier="studySDO">
+				<field-constraint field-name="primarySponsorCode">
+					<literal-restriction evaluator="==">
+						<value>Division of Cancer Prevention</value>
+					</literal-restriction>
+				</field-constraint>
+				<expression>factResolver.assertFact(studySDO,"gov.nih.nci.cabig.caaers.domain.Organization","name","Division of Cancer Prevention","==")</expression>
+			</column>
+		</condition>
+		<action>48-Hour SAE Report to NCI Medical Monitor and CCSA</action>
+		<readableAction>48-Hour SAE Report to NCI Medical Monitor and CCSA</readableAction>
+		<metaData packageName="gov.nih.nci.cabig.caaers.rules.sponsor.division_of_cancer_prevention.sae_reporting_rules" name="Rule-3" description="Setting Description since its mandatory by JBoss Repository config" checkinComment="Initial Version">
+			<category>
+				<path>CAAERS_BASE/SPONSOR/division_of_cancer_prevention</path>
+				<metaData name="sae_reporting_rules"/>
+			</category>
+		</metaData>
+		<readableRule>
+			<line>IF</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; AdEERS Reporting is 'No '</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Study is 'Phase II Trial' or 'Phase I/II Trial' or 'Phase I Trial'</line>
+			<line>AND</line>
+			<line>&amp;nbsp;&amp;nbsp;&amp;nbsp; Severity is 'Grade 5'</line>
+		</readableRule>
+	</rule>
+</ruleSet>
