@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:staff xmlns:ns3="http://schema.integration.caaers.cabig.nci.nih.gov/researchstaff" xmlns:ns2="http://schema.integration.caaers.cabig.nci.nih.gov/common">
+    <ns3:researchStaff>
+        <firstName>RS_John_1</firstName>
+        <lastName>RS_Doe_1</lastName>
+        <middleName>S_1</middleName>
+        <emailAddress>rsjohn@rsdoe.com</emailAddress>
+        <faxNumber>1231234321</faxNumber>
+        <nciIdentifier>RSUI_1</nciIdentifier>
+        <phoneNumber>545446544</phoneNumber>
+        <ns2:organizationRef>
+            <nciInstituteCode>DCP</nciInstituteCode>
+        </ns2:organizationRef>
+    </ns3:researchStaff>
+    <ns3:researchStaff>
+        <firstName>RS_John_2</firstName>
+        <lastName>RS_Doe_2</lastName>
+        <middleName>S_2</middleName>
+        <emailAddress>rsjohn@rsdoe.com</emailAddress>
+        <faxNumber>1231234321</faxNumber>
+        <nciIdentifier>RSUI_2</nciIdentifier>
+        <phoneNumber>545446544</phoneNumber>
+        <ns2:organizationRef>
+            <nciInstituteCode>DCP</nciInstituteCode>
+        </ns2:organizationRef>
+    </ns3:researchStaff>
+</ns3:staff>
+

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:studies xmlns:ns2="http://webservice.caaers.cabig.nci.nih.gov">
+    <ns2:study>
+        <shortTitle>Web Study_1</shortTitle>
+        <longTitle>Web Long Study_1</longTitle>
+        <precis>Precis_1</precis>
+        <description>Created via UI Import Study_1</description>
+        <phaseCode>Phase I Trial</phaseCode>
+        <status>Active - Trial is open to accrual</status>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <adeersReporting>true</adeersReporting>
+        <ns2:aeTerminology>
+            <ns2:ctcVersion>
+                <name>3</name>
+            </ns2:ctcVersion>
+        </ns2:aeTerminology>
+        <ns2:diseaseTerminology>
+            <diseaseCodeTerm>CTEP</diseaseCodeTerm>
+        </ns2:diseaseTerminology>
+        <design>BLIND</design>
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>true</deviceTherapyType>
+        <radiationTherapyType>true</radiationTherapyType>
+        <surgeryTherapyType>true</surgeryTherapyType>
+        <behavioralTherapyType>true</behavioralTherapyType>
+        <fundingSponsor>
+            <organizationAssignedIdentifier>
+                <value>CTEPUI_1</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyFundingSponsor>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyFundingSponsor>
+        </fundingSponsor>
+        <coordinatingCenter>
+            <organizationAssignedIdentifier>
+                <value>WFCCCUI_1</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyCoordinatingCenter>
+                <ns2:organization>
+                    <name>Wake Forest Comprehensive Cancer Center</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyCoordinatingCenter>
+        </coordinatingCenter>
+        <studyOrganizations>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+                <studyInvestigators>
+                    <ns2:studyInvestigator>
+                        <roleCode>Site Principal Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>Joseph</firstName>
+                                <lastName>Colgan</lastName>
+                                <nciIdentifier></nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                    <ns2:studyInvestigator>
+                        <roleCode>Site Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>Joseph</firstName>
+                                <lastName>Colgan</lastName>
+                                <nciIdentifier></nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                </studyInvestigators>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>Participant Coordinator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:researchStaff>
+                            <firstName>Mike</firstName>
+                            <lastName>Conway</lastName>
+                            <nciIdentifier></nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Duke University Comprehensive Cancer Center</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>Participant Coordinator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:researchStaff>
+                            <firstName>Allan</firstName>
+                            <lastName>Border</lastName>
+                            <nciIdentifier></nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+        </studyOrganizations>
+        <identifiers/>
+        <treatmentAssignments>
+            <ns2:treatmentAssignment>
+                <code>The Code 1</code>
+                <doseLevelOrder>1</doseLevelOrder>
+                <description>Description 1</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>The Code 2</code>
+                <doseLevelOrder>2</doseLevelOrder>
+                <description>Description 2</description>
+            </ns2:treatmentAssignment>
+        </treatmentAssignments>
+        <studyAgents>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>1-Aminocyclopentane</name>
+                </ns2:agent>
+                <indType>OTHER</indType>
+                <partOfLeadIND>false</partOfLeadIND>
+                <studyAgentINDAssociations>
+                    <ns2:studyAgentINDAssociation>
+                        <ns2:investigationalNewDrug>
+                            <indNumber>222</indNumber>
+                        </ns2:investigationalNewDrug>
+                    </ns2:studyAgentINDAssociation>
+                </studyAgentINDAssociations>
+            </ns2:studyAgent>
+        </studyAgents>
+        <ctepStudyDiseases>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Chondrosarcoma</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Medulloblastoma</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+        </ctepStudyDiseases>
+    </ns2:study>
+    <ns2:study>
+        <shortTitle>Web Study_2</shortTitle>
+        <longTitle>Web Long Study_2</longTitle>
+        <precis>Precis_2</precis>
+        <description>Created via UI Import Study_2</description>
+        <phaseCode>Phase I Trial</phaseCode>
+        <status>Active - Trial is open to accrual</status>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <adeersReporting>true</adeersReporting>
+        <ns2:aeTerminology>
+            <ns2:ctcVersion>
+                <name>3</name>
+            </ns2:ctcVersion>
+        </ns2:aeTerminology>
+        <ns2:diseaseTerminology>
+            <diseaseCodeTerm>CTEP</diseaseCodeTerm>
+        </ns2:diseaseTerminology>
+        <design>BLIND</design>
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>true</deviceTherapyType>
+        <radiationTherapyType>true</radiationTherapyType>
+        <surgeryTherapyType>true</surgeryTherapyType>
+        <behavioralTherapyType>true</behavioralTherapyType>
+        <fundingSponsor>
+            <organizationAssignedIdentifier>
+                <value>CTEPUI_2</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyFundingSponsor>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyFundingSponsor>
+        </fundingSponsor>
+        <coordinatingCenter>
+            <organizationAssignedIdentifier>
+                <value>WFCCCUI_2</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyCoordinatingCenter>
+                <ns2:organization>
+                    <name>Wake Forest Comprehensive Cancer Center</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyCoordinatingCenter>
+        </coordinatingCenter>
+        <studyOrganizations>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+                <studyInvestigators>
+                    <ns2:studyInvestigator>
+                        <roleCode>Site Principal Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>Joseph</firstName>
+                                <lastName>Colgan</lastName>
+                                <nciIdentifier></nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                    <ns2:studyInvestigator>
+                        <roleCode>Site Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>Joseph</firstName>
+                                <lastName>Colgan</lastName>
+                                <nciIdentifier></nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                </studyInvestigators>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>Participant Coordinator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:researchStaff>
+                            <firstName>Mike</firstName>
+                            <lastName>Conway</lastName>
+                            <nciIdentifier></nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Duke University Comprehensive Cancer Center</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>Participant Coordinator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:researchStaff>
+                            <firstName>Allan</firstName>
+                            <lastName>Border</lastName>
+                            <nciIdentifier></nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+        </studyOrganizations>
+        <identifiers/>
+        <treatmentAssignments>
+            <ns2:treatmentAssignment>
+                <code>The Code 1</code>
+                <doseLevelOrder>1</doseLevelOrder>
+                <description>Description 1</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>The Code 2</code>
+                <doseLevelOrder>2</doseLevelOrder>
+                <description>Description 2</description>
+            </ns2:treatmentAssignment>
+        </treatmentAssignments>
+        <studyAgents>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>1-Aminocyclopentane</name>
+                </ns2:agent>
+                <indType>OTHER</indType>
+                <partOfLeadIND>false</partOfLeadIND>
+                <studyAgentINDAssociations>
+                    <ns2:studyAgentINDAssociation>
+                        <ns2:investigationalNewDrug>
+                            <indNumber>222</indNumber>
+                        </ns2:investigationalNewDrug>
+                    </ns2:studyAgentINDAssociation>
+                </studyAgentINDAssociations>
+            </ns2:studyAgent>
+        </studyAgents>
+        <ctepStudyDiseases>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Chondrosarcoma</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Medulloblastoma</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+        </ctepStudyDiseases>
+    </ns2:study>
+    <ns2:study>
+        <shortTitle>Web Study_3</shortTitle>
+        <longTitle>Web Long Study_3</longTitle>
+        <precis>Precis_3</precis>
+        <description>Created via UI Import Study_3</description>
+        <phaseCode>Phase I Trial</phaseCode>
+        <status>Active - Trial is open to accrual</status>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <adeersReporting>true</adeersReporting>
+        <ns2:aeTerminology>
+            <ns2:ctcVersion>
+                <name>3</name>
+            </ns2:ctcVersion>
+        </ns2:aeTerminology>
+        <ns2:diseaseTerminology>
+            <diseaseCodeTerm>CTEP</diseaseCodeTerm>
+        </ns2:diseaseTerminology>
+        <design>BLIND</design>
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>true</deviceTherapyType>
+        <radiationTherapyType>true</radiationTherapyType>
+        <surgeryTherapyType>true</surgeryTherapyType>
+        <behavioralTherapyType>true</behavioralTherapyType>
+        <fundingSponsor>
+            <organizationAssignedIdentifier>
+                <value>CTEPUI_3</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyFundingSponsor>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyFundingSponsor>
+        </fundingSponsor>
+        <coordinatingCenter>
+            <organizationAssignedIdentifier>
+                <value>WFCCCUI_3</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyCoordinatingCenter>
+                <ns2:organization>
+                    <name>Wake Forest Comprehensive Cancer Center</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyCoordinatingCenter>
+        </coordinatingCenter>
+        <studyOrganizations>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+                <studyInvestigators>
+                    <ns2:studyInvestigator>
+                        <roleCode>Site Principal Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>Joseph</firstName>
+                                <lastName>Colgan</lastName>
+                                <nciIdentifier></nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                    <ns2:studyInvestigator>
+                        <roleCode>Site Investigator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>Joseph</firstName>
+                                <lastName>Colgan</lastName>
+                                <nciIdentifier></nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                </studyInvestigators>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>Participant Coordinator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:researchStaff>
+                            <firstName>Mike</firstName>
+                            <lastName>Conway</lastName>
+                            <nciIdentifier></nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Duke University Comprehensive Cancer Center</name>
+                    <nciInstituteCode></nciInstituteCode>
+                </ns2:organization>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>Participant Coordinator</roleCode>
+                        <statusCode>Active</statusCode>
+                        <ns2:researchStaff>
+                            <firstName>Allan</firstName>
+                            <lastName>Border</lastName>
+                            <nciIdentifier></nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+        </studyOrganizations>
+        <identifiers/>
+        <treatmentAssignments>
+            <ns2:treatmentAssignment>
+                <code>The Code 1</code>
+                <doseLevelOrder>1</doseLevelOrder>
+                <description>Description 1</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>The Code 2</code>
+                <doseLevelOrder>2</doseLevelOrder>
+                <description>Description 2</description>
+            </ns2:treatmentAssignment>
+        </treatmentAssignments>
+        <studyAgents>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>1-Aminocyclopentane</name>
+                </ns2:agent>
+                <indType>OTHER</indType>
+                <partOfLeadIND>false</partOfLeadIND>
+                <studyAgentINDAssociations>
+                    <ns2:studyAgentINDAssociation>
+                        <ns2:investigationalNewDrug>
+                            <indNumber>222</indNumber>
+                        </ns2:investigationalNewDrug>
+                    </ns2:studyAgentINDAssociation>
+                </studyAgentINDAssociations>
+            </ns2:studyAgent>
+        </studyAgents>
+        <ctepStudyDiseases>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Chondrosarcoma</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Medulloblastoma</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+        </ctepStudyDiseases>
+    </ns2:study>
+</ns2:studies>
+
