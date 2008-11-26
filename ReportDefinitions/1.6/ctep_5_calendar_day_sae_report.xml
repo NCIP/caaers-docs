@@ -12,7 +12,7 @@
         </organization>
         <attributionRequired>true</attributionRequired>
         <expedited>true</expedited>
-        <expectedDisplayDueDate>Expected Due Date 11/04/08</expectedDisplayDueDate>
+        <expectedDisplayDueDate>Expected Due Date 12/01/08</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
         <deliveryDefinition>
             <format>PDF</format>
@@ -37,6 +37,38 @@
             <userName>ADEERSBETA</userName>
             <password>testadeers1#</password>
         </deliveryDefinition>
+        <mandatoryField>
+            <fieldPath>adverseEvents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].grade</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].adverseEventCtcTerm</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].adverseEventCtcTerm.term</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].detailsForOther</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].startDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].endDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].attributionSummary</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].hospitalization</fieldPath>
             <mandatory>OPTIONAL</mandatory>
@@ -582,38 +614,6 @@
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>adverseEvents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].grade</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].adverseEventCtcTerm</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].adverseEventCtcTerm.term</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].detailsForOther</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].startDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].endDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].attributionSummary</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -679,13 +679,11 @@ Subject Id: ${patientId}
 Study Short Title: ${study.shortTitle}
 Study primary Identifier: ${study.primaryIdentifier.value}
 
-To access caAERS, see https://sbdev1000.semanticbits.com:8031/caaers/public/login.
-
 Thank you,
 caAERS Notification System"</body>
                 <contentType>text/html</contentType>
             </bodyContent>
-            <subject>5 Calendar Day Report for ${patientId} on  ${study.primaryIdentifier.value} initiated in caAERS [Oracle QA]</subject>
+            <subject>5 Calendar Day Report for ${patientId} on  ${study.primaryIdentifier.value} initiated in caAERS</subject>
         </plannedNotificaiton>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>

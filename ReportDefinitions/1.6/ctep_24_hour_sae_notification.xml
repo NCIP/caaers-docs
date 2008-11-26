@@ -12,7 +12,7 @@
         </organization>
         <attributionRequired>false</attributionRequired>
         <expedited>false</expedited>
-        <expectedDisplayDueDate>Expected Due Date 10/31/08</expectedDisplayDueDate>
+        <expectedDisplayDueDate>Expected Due Date 11/27/08</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
         <deliveryDefinition>
             <format>PDF</format>
@@ -679,7 +679,7 @@ study.shortTitle: ${study.shortTitle}
 study.primaryIdentifier.value: ${study.primaryIdentifier.value}"</body>
                 <contentType>text/html</contentType>
             </bodyContent>
-            <subject>CTEP 24 Hour SAE Notification has been created in caaers [ORACLE QA]</subject>
+            <subject>CTEP 24 Hour SAE Notification has been created in caaers</subject>
         </plannedNotificaiton>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>

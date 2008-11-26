@@ -12,7 +12,7 @@
         </organization>
         <attributionRequired>true</attributionRequired>
         <expedited>true</expedited>
-        <expectedDisplayDueDate>Expected Due Date 11/09/08</expectedDisplayDueDate>
+        <expectedDisplayDueDate>Expected Due Date 12/06/08</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
         <deliveryDefinition>
             <format>PDF</format>
@@ -44,6 +44,30 @@
             <userName>ADEERSBETA</userName>
             <password>testadeers1#</password>
         </deliveryDefinition>
+        <mandatoryField>
+            <fieldPath>labs[].nadir</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
@@ -513,30 +537,6 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>labs[].nadir</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>labs[].site</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -691,13 +691,30 @@ Subject Id: ${patientId}
 Study Short Title: ${study.shortTitle}
 Study Primary Identifier: ${study.primaryIdentifier.value}
 
-To access caAERS, see https://sbdev1000.semanticbits.com:8031/caaers/public/login.
+
+Thank you,
+caAERS Notification System"${patientId}**********************************************************************************
+"**********************************************************************************
+This is a system generated email. Please do not respond to this email. 
+**********************************************************************************
+
+A 10 Calendar report has been initiated in caAERS.
+
+
+The 10 Calendar Day report must be completed and sent to CTEP, NCI within 10 Calendar Days of knowledge of the AE. This report is accessible in caAERS via the 'Manage Reports' pathway.
+
+To retrieve the report enter the exact combination of the Study and Subject. It is very important to save this information for every report created. Print this page and keep it as a reference. 
+
+Subject Id: ${patientId}
+Study Short Title: ${study.shortTitle}
+Study Primary Identifier: ${study.primaryIdentifier.value}
+
 
 Thank you,
 caAERS Notification System"</body>
                 <contentType>text/html</contentType>
             </bodyContent>
-            <subject>10 Calendar Day Report for ${patientId} on  ${study.primaryIdentifier.value} initiated in caAERS [Oracle QA]</subject>
+            <subject>10 Calendar Day Report for ${patientId} on  ${study.primaryIdentifier.value} initiated in caAERS</subject>
         </plannedNotificaiton>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>
