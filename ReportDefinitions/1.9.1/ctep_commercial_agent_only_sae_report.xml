@@ -11,6 +11,7 @@
             <nciInstituteCode>CTEP</nciInstituteCode>
         </organization>
         <attributionRequired>true</attributionRequired>
+        <physicianSignOff>false</physicianSignOff>
         <expedited>true</expedited>
         <expectedDisplayDueDate>Due in 10 days</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
@@ -44,6 +45,90 @@
             <endPointType>email</endPointType>
             <endPoint>REP</endPoint>
         </deliveryDefinition>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.autopsyReport</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.pathologyReport</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.consults</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.progressNotes</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.dischargeSummary</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.radiologyReports</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.flowCharts</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.labReports</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.irbReport</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.obaForm</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.other</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.otherInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>

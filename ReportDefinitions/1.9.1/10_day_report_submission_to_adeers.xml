@@ -11,6 +11,7 @@
             <nciInstituteCode>DCP</nciInstituteCode>
         </organization>
         <attributionRequired>true</attributionRequired>
+        <physicianSignOff>false</physicianSignOff>
         <expedited>true</expedited>
         <expectedDisplayDueDate>Due in 10 days</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
@@ -272,18 +273,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation.courseAgents[].comments</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose.amount</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose.units</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -653,6 +642,18 @@
         <mandatoryField>
             <fieldPath>radiationInterventions[].daysElapsed</fieldPath>
             <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <plannedNotificaiton>
             <indexOnTimeScale>0</indexOnTimeScale>

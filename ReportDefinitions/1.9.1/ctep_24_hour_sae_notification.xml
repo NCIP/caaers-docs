@@ -11,6 +11,7 @@
             <nciInstituteCode>CTEP</nciInstituteCode>
         </organization>
         <attributionRequired>false</attributionRequired>
+        <physicianSignOff>false</physicianSignOff>
         <expedited>false</expedited>
         <expectedDisplayDueDate>Due in 24 hours</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
@@ -139,18 +140,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation.courseAgents[].comments</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose.amount</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose.units</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -660,6 +649,22 @@
         <mandatoryField>
             <fieldPath>responseDescription.studyDrugInterrupted</fieldPath>
             <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>

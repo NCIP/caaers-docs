@@ -11,6 +11,7 @@
             <nciInstituteCode>DCP</nciInstituteCode>
         </organization>
         <attributionRequired>false</attributionRequired>
+        <physicianSignOff>false</physicianSignOff>
         <expedited>true</expedited>
         <expectedDisplayDueDate>Due in 48 hours</expectedDisplayDueDate>
         <reportFormat>DCPSAEFORM</reportFormat>
@@ -454,18 +455,6 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose.amount</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].modifiedDose.units</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>labs[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -643,6 +632,18 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>diseaseHistory.metastaticDiseaseSites[].codedSite</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <plannedNotificaiton>

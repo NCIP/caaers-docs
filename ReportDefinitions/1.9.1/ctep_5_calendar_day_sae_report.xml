@@ -11,6 +11,7 @@
             <nciInstituteCode>CTEP</nciInstituteCode>
         </organization>
         <attributionRequired>true</attributionRequired>
+        <physicianSignOff>false</physicianSignOff>
         <expedited>true</expedited>
         <expectedDisplayDueDate>Due in 5 days</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
@@ -666,7 +667,31 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
