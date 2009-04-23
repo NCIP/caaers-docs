@@ -46,6 +46,18 @@
             <endPoint>REP</endPoint>
         </deliveryDefinition>
         <mandatoryField>
+            <fieldPath>reporter</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>participantHistory</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -138,10 +150,6 @@
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>labs[].baseline</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -168,6 +176,10 @@
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>otherCauses[].text</fieldPath>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>reporter.contactMechanisms[fax]</fieldPath>
@@ -231,10 +243,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>concomitantMedications[].endDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>participantHistory</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -308,10 +316,6 @@
         <mandatoryField>
             <fieldPath>physician.address.street</fieldPath>
             <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>physician.address.city</fieldPath>
@@ -622,10 +626,6 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>otherCauses[].text</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>adverseEvents[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -747,7 +747,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>NA</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
@@ -756,6 +756,18 @@
         <mandatoryField>
             <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
             <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
