@@ -1,0 +1,146 @@
+
+***** Gather external references for later resolution *****
+***** Deleting existing packages from model *****
+Importing Model from XMI
+***** Root Package: Model *****
+Add Classifier Role: gov
+***** Append Package: gov *****
+Add Classifier Role: nih
+***** Append Package: nih *****
+Add Classifier Role: nci
+***** Append Package: nci *****
+Add Classifier Role: cabig
+***** Append Package: cabig *****
+Add Classifier Role: caaers
+***** Append Package: caaers *****
+Add Classifier Role: domain
+***** Append Package: domain *****
+Add Classifier: RoutineAdverseEventReport
+Add Classifier: RadiationAdministration
+Add Classifier: Outcome
+Add Classifier: RadiationAttribution
+Add Classifier: Participant
+Add Classifier: AbstractAdverseEventTerm
+Add Classifier: MeddraStudyDisease
+Add Classifier: TreatmentInformation
+Add Classifier: OutcomeType
+Add Classifier: DiseaseTerminology
+Add Classifier: DeviceAttribution
+Add Classifier: CtcTerm
+Add Classifier: StudyAgent
+Add Classifier: Amendment
+Add Classifier: StudyInvestigator
+Add Classifier: ContactMechanismType
+Add Classifier: StudyPersonnel
+Add Classifier: DiseaseTerm
+Add Classifier: LowLevelTerm
+Add Classifier: Physician
+Add Classifier: Study
+Add Classifier: ReportPerson
+Add Classifier: StudyCoordinatingCenter
+Add Classifier: Reporter
+Add Classifier: InvestigationalNewDrug
+Add Classifier: AdverseEventMeddraLowLevelTerm
+Add Classifier: ParticipantHistory
+Add Classifier: OtherCause
+Add Classifier: Investigator
+Add Classifier: CtepStudyDisease
+Add Classifier: PreExistingCondition
+Add Classifier: ResearchStaff
+Add Classifier: DeviceOperator
+Add Classifier: Identifier
+Add Classifier: Ctc
+Add Classifier: DiseaseAttribution
+Add Classifier: Grade
+Add Classifier: StudyOrganization
+Add Classifier: AdverseEventResponseDescription
+Add Classifier: INDHolder
+Add Classifier: StudySite
+Add Classifier: DiseaseHistory
+Add Classifier: CourseAgent
+Add Classifier: OrganizationHeldIND
+Add Classifier: Meddra
+Add Classifier: PriorTherapy
+Add Classifier: AdverseEventAttribution
+Add Classifier: Person
+Add Classifier: TreatmentAssignment
+Add Classifier: AnatomicSite
+Add Classifier: DiseaseCategory
+Add Classifier: AdverseEvent
+Add Classifier: CtcGrade
+Add Classifier: AeTerminology
+Add Classifier: SiteInvestigator
+Add Classifier: Lab
+Add Classifier: StudyFundingSponsor
+Add Classifier: ExpeditedAdverseEventReport
+Add Classifier: PostAdverseEventStatus
+Add Classifier: SAEReportPreExistingCondition
+Add Classifier: SAEReportPriorTherapy
+Add Classifier: CourseDate
+Add Classifier: AdverseEventCtcTerm
+Add Classifier: MetastaticDiseaseSite
+Add Classifier: LabValue
+Add Classifier: SurgeryAttribution
+Add Classifier: AbstractStudyDisease
+Add Classifier: PersonContact
+Add Classifier: SurgeryIntervention
+Add Classifier: Participation
+Add Classifier: ConcomitantMedicationAttribution
+Add Classifier: Availability
+Add Classifier: OtherCauseAttribution
+Add Classifier: StudyParticipantAssignment
+Add Classifier: InvestigatorHeldIND
+Add Classifier: ConcomitantMedication
+Add Classifier: CtcCategory
+Add Classifier: PriorTherapyAgent
+Add Classifier: RadiationIntervention
+Add Classifier: OrganizationAssignedIdentifier
+Add Classifier: StudyTherapy
+Add Classifier: SystemAssignedIdentifier
+Add Classifier: Agent
+Add Classifier: AdditionalInformation
+Add Classifier: CourseAgentAttribution
+Add Classifier: Therapy
+Add Classifier: Organization
+Add Classifier: MedicalDevice
+Add Classifier Role: report
+Add Classifier Role: meddra
+***** Append Package: meddra *****
+Add Classifier: HighLevelTerm
+Add Classifier: AbstractMeddraDomain
+Add Classifier: LowLevelTerm
+Add Classifier: SystemOrganClass
+Add Classifier: HighLevelGroupTerm
+Add Classifier: PreferredTerm
+***** Append Package: report *****
+Add Classifier: DeliveryStatus
+Add Classifier: 
+Add Classifier: Recipient
+Add Classifier: ReportDeliveryDefinition
+Add Classifier: ReportDefinition
+Add Classifier: ReportStatus
+Add Classifier: TimeScaleUnit
+Add Classifier: FormatType
+Add Classifier: NotificationBodyContent
+Add Classifier: ContactMechanismBasedRecipient
+Add Classifier: PlannedNotification
+Add Classifier: Report
+Add Classifier: RoleBasedRecipient
+Add Classifier: ReportDelivery
+Add Classifier: ScheduledNotification
+Add Classifier: ReportVersion
+Add Classifier: PlannedEmailNotification
+Add Classifier: ReportMandatoryFieldDefinition
+Add Classifier: ScheduledEmailNotification
+***** Resolving Classifiers *****
+***** Resolving Ownerss *****
+***** Resolve Package Links *****
+***** Add Extensions ******
+***** Add Diagrams *****
+***** Resolving DiagramIDs *****
+***** Resolving Association Classes *****
+***** Resolving Parameter Types *****
+***** Resolving Attribute Types *****
+***** Resolving Note links *****
+***** Fixup external references *****
+Import Complete!
