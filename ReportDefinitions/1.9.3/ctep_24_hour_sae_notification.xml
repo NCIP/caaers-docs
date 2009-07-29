@@ -12,10 +12,11 @@
         </organization>
         <attributionRequired>false</attributionRequired>
         <physicianSignOff>false</physicianSignOff>
-        <reportType>
-        	<code>RT_EXPEDITED</code>
-			<configType>REPORT_TYPE</configType>
-        </reportType>
+        <group>
+        	<code>RT_AdEERS</code>
+			<configType>REPORT_GROUP</configType>
+        </group>
+		<reportType>NOTIFICATION</reportType>
         <expectedDisplayDueDate>Due in 24 hours</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
         <deliveryDefinition>
