@@ -11,12 +11,12 @@
             <nciInstituteCode>CTEP</nciInstituteCode>
         </organization>
         <attributionRequired>true</attributionRequired>
-        <physicianSignOff>true</physicianSignOff>
+        <physicianSignOff>false</physicianSignOff>
         <group>
-        	<code>RT_AdEERS</code>
-			<configType>REPORT_GROUP</configType>
+            <code>RT_AdEERS</code>
+            <configType>REPORT_GROUP</configType>
         </group>
-		<reportType>REPORT</reportType>
+        <reportType>REPORT</reportType>
         <expectedDisplayDueDate>Due in 10 days</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
         <deliveryDefinition>
@@ -49,18 +49,6 @@
             <endPointType>email</endPointType>
             <endPoint>REP</endPoint>
         </deliveryDefinition>
-        <mandatoryField>
-            <fieldPath>reporter</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>participantHistory</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
@@ -150,8 +138,20 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>radiationInterventions[].adjustment</fieldPath>
             <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>labs[].baseline</fieldPath>
@@ -180,10 +180,6 @@
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>otherCauses[].text</fieldPath>
-            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>reporter.contactMechanisms[fax]</fieldPath>
@@ -250,6 +246,10 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>participantHistory</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>participantHistory.height</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -294,10 +294,6 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>diseaseHistory.ctepStudyDisease</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>diseaseHistory.codedPrimaryDiseaseSite</fieldPath>
             <mandatory>NA</mandatory>
         </mandatoryField>
@@ -320,6 +316,10 @@
         <mandatoryField>
             <fieldPath>physician.address.street</fieldPath>
             <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>physician.address.city</fieldPath>
@@ -626,6 +626,10 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>otherCauses[].text</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>adverseEvents[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -743,7 +747,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
-            <mandatory>NA</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
@@ -752,22 +756,6 @@
         <mandatoryField>
             <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
             <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
@@ -783,6 +771,10 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <plannedNotificaiton>

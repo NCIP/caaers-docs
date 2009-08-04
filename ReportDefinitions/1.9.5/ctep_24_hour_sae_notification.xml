@@ -724,7 +724,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>responseDescription.primaryTreatmentApproximateTime.hourString</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>NA</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
@@ -765,6 +765,10 @@
         <mandatoryField>
             <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
             <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
