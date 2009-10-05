@@ -31,7 +31,7 @@
             <entityName>AE Coordinator</entityName>
             <entityType>3</entityType>
             <endPointType>email</endPointType>
-            <endPoint>AEC</endPoint>
+            <endPoint>caaers_ae_cd</endPoint>
         </deliveryDefinition>
         <deliveryDefinition>
             <format>XML</format>

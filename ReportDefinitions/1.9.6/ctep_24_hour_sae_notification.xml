@@ -21,13 +21,6 @@
         <reportFormat>ADEERSPDF</reportFormat>
         <deliveryDefinition>
             <format>PDF</format>
-            <entityName>karthik iyer</entityName>
-            <entityType>2</entityType>
-            <endPointType>email</endPointType>
-            <endPoint>karthik.iyer@semanticbits.com</endPoint>
-        </deliveryDefinition>
-        <deliveryDefinition>
-            <format>PDF</format>
             <entityName>reporter</entityName>
             <entityType>3</entityType>
             <endPointType>email</endPointType>
