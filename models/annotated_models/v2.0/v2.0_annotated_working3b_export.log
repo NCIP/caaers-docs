@@ -1,0 +1,253 @@
+Exporting package to 'C:\Users\pbaumgar\Docs\models\annotated_models\v2.0\v2.0_annotated_working3b.xmi'
+Retrieving data for export: packages
+Retrieving data for export: diagram elements
+Retrieving data for export: links
+Retrieving data for export: constraints
+Retrieving data for export: attribute tagged values
+Retrieving data for export: operation tagged values
+Retrieving data for export: operation parameter tagged values
+Retrieving data for export: connector tagged values
+Completed data retrieval
+Pre-processing export tree...
+Completed pre-processing
+***** Processing package: Model *****
+Element:0: gov
+***** Processing package: gov *****
+Element:1: nih
+***** Processing package: nih *****
+Element:2: nci
+***** Processing package: nci *****
+Element:3: cabig
+***** Processing package: cabig *****
+Element:4: caaers
+***** Processing package: caaers *****
+Element:5: domain
+***** Processing package: domain *****
+Element:6: AbstractExpectedAE
+Element:7: RoutineAdverseEventReport
+Element:8: Outcome
+Element:9: RadiationAttribution
+Element:10: RemoteResearchStaff
+Element:11: Participant
+Element:12: report
+Element:13: workflow
+Element:14: SiteResearchStaffRole
+Element:15: AbstractAdverseEventTerm
+Element:16: ChemoAgent
+Element:17: CtcGrade
+Element:18: 
+Element:19: MeddraStudyDisease
+Element:20: TreatmentInformation
+Element:21: DiseaseTerminology
+Element:22: Submitter
+Element:23: DeviceAttribution
+Element:24: CtcTerm
+Element:25: StudyAgent
+Element:26: Amendment
+Element:27: StudyInvestigator
+Element:28: StudyPersonnel
+Element:29: DiseaseTerm
+Element:30: LowLevelTerm
+Element:31: Physician
+Element:32: Study
+Element:33: ReportPerson
+Element:34: Arm
+Element:35: StudyCoordinatingCenter
+Element:36: Condition
+Element:37: LowLevelTerm_child
+Element:38: Reporter
+Element:39: InvestigationalNewDrug
+Element:40: AdverseEventMeddraLowLevelTerm
+Element:41: RemoteInvestigator
+Element:42: ParticipantHistory
+Element:43: OtherCause
+Element:44: Investigator
+Element:45: CtepStudyDisease
+Element:46: PreExistingCondition
+Element:47: ResearchStaff
+Element:48: Identifier
+Element:49: LocalInvestigator
+Element:50: Ctc
+Element:51: DiseaseAttribution
+Element:52: StudyParticipantPriorTherapy
+Element:53: LocalOrganization
+Element:54: RemoteOrganization
+Element:55: StudyOrganization
+Element:56: AdverseEventResponseDescription
+Element:57: INDHolder
+Element:58: StudySite
+Element:59: DiseaseHistory
+Element:60: CourseAgent
+Element:61: OrganizationHeldIND
+Element:62: MeddraVersion
+Element:63: StudyCondition
+Element:64: PriorTherapy
+Element:65: AdverseEventAttribution
+Element:66: Person
+Element:67: StudyParticipantPreExistingCondition
+Element:68: TreatmentAssignment
+Element:69: AnatomicSite
+Element:70: Value Domains
+Element:71: DiseaseCategory
+Element:72: StudyParticipantDiseaseHistory
+Element:73: AdverseEvent
+Element:74: SolicitedAdverseEvent
+Element:75: AETerminology
+Element:76: ParticipantIdentifier
+Element:77: SiteInvestigator
+Element:78: Lab
+Element:79: StudyFundingSponsor
+Element:80: ExpectedAECtcTerm
+Element:81: ExpeditedAdverseEventReport
+Element:82: RemoteStudy
+Element:83: SAEReportPreExistingCondition
+Element:84: SAEReportPriorTherapy
+Element:85: CourseDate
+Element:86: AdverseEventCtcTerm
+Element:87: MetastaticDiseaseSite
+Element:88: LabValue
+Element:89: SurgeryAttribution
+Element:90: DiseaseSite
+Element:91: ExpectedAEMeddraLowLevelTerm
+Element:92: AbstractStudyDisease
+Element:93: PersonContact
+Element:94: meddra
+Element:95: SurgeryIntervention
+Element:96: ConcomitantMedicationAttribution
+Element:97: SiteResearchStaff
+Element:98: OtherCauseAttribution
+Element:99: FundingSponsor
+Element:100: TimeValue
+Element:101: StudyParticipantAssignment
+Element:102: InvestigatorHeldIND
+Element:103: ConcomitantMedication
+Element:104: CtcCategory
+Element:105: PriorTherapyAgent
+Element:106: StudyParticipantConcomitantMedication
+Element:107: RadiationIntervention
+Element:108: User
+Element:109: Epoch
+Element:110: OrganizationAssignedIdentifier
+Element:111: StudyTherapy
+Element:112: SystemAssignedIdentifier
+Element:113: LocalResearchStaff
+Element:114: Agent
+Element:115: AdditionalInformation
+Element:116: LocalStudy
+Element:117: security
+Element:118: CourseAgentAttribution
+Element:119: Address
+Element:120: Therapy
+Element:121: AdverseEventReportingPeriod
+Element:122: Organization
+Element:123: MedicalDevice
+Element:124: StudyParticipantPriorTherapyAgent
+Diagram: caAERS
+Diagram: Identifier
+Diagram: Study
+Diagram: People and Orgs
+Diagram: SAE Report
+Diagram: AE-Phase2
+Diagram: ResearchStaff
+Diagram: COPPA
+***** Processing package: meddra *****
+Element:125: HighLevelTerm
+Element:126: AbstractMeddraDomain
+Element:127: LowLevelTerm
+Element:128: SystemOrganClass
+Element:129: HighLevelGroupTerm
+Element:130: MeddraVersion
+Element:131: PreferredTerm
+Diagram: meddra
+***** Processing package: report *****
+Element:132: 
+Element:133: ConfigProperty
+Element:134: Recipient
+Element:135: NotificationAttachment
+Element:136: ReportDeliveryDefinition
+Element:137: ReportTracking
+Element:138: ReportDefinition
+Element:139: NotificationBodyContent
+Element:140: ContactMechanismBasedRecipient
+Element:141: ReportedAdverseEvent
+Element:142: PlannedNotification
+Element:143: Report
+Element:144: RoleBasedRecipient
+Element:145: ReportDelivery
+Element:146: ScheduledNotification
+Element:147: ReportTrackingStatus
+Element:148: ReportVersion
+Element:149: PlannedEmailNotification
+Element:150: ReportMandatoryFieldDefinition
+Element:151: ScheduledEmailNotification
+Diagram: report-domain-model
+Diagram: report-domain-new-style
+***** Processing package: security *****
+Element:152: passwordpolicy
+***** Processing package: passwordpolicy *****
+Element:153: CombinationPolicy
+Element:154: PasswordPolicy
+Element:155: LoginPolicy
+Element:156: PasswordCreationPolicy
+Diagram: passwordpolicy
+***** Processing package: Value Domains *****
+Element:157: DeliveryStatus
+Element:158: RadiationAdministration
+Element:159: StatusCode
+Element:160: StudyStatus
+Element:161: PersonRole
+Element:162: Location
+Element:163: Attribution
+Element:164: ReviewStatus
+Element:165: Dose
+Element:166: OutcomeType
+Element:167: Hospitalization
+Element:168: DiseaseCodeTerm
+Element:169: ReportFormatType
+Element:170: Grade
+Element:171: RadiationDosageUnit
+Element:172: LoadStatus
+Element:173: RadiationInterventionAdjustment
+Element:174: LabName
+Element:175: DeviceOperator
+Element:176: ReportStatus
+Element:177: Measure
+Element:178: TimeScaleUnit
+Element:179: ReportFormat
+Element:180: Term
+Element:181: StudyTherapyType
+Element:182: ExpeditedReportSection
+Element:183: ConfigType
+Element:184: DateValue
+Element:185: DelayUnits
+Element:186: PersonRoleType
+Element:187: LabUnits
+Element:188: PostAdverseEventStatus
+Element:189: StudyInvestigatorRoleCode
+Element:190: EmailDeliveryStatus
+Element:191: INDType
+Element:192: Availability
+Element:193: DeliveryStatus
+Element:194: Mandatory
+Element:195: ResearchStaffRoleCode
+Element:196: Design
+Element:197: ReportType
+Element:198: AgentAdjustment
+Element:199: StudyPhaseCode
+***** Processing package: workflow *****
+Element:200: TransitionOwner
+Element:201: TaskConfig
+Element:202: Assignee
+Element:203: PersonAssignee
+Element:204: ReportingPeriodReviewComment
+Element:205: ReportReviewComment
+Element:206: RoleAssignee
+Element:207: RoleTransitionOwner
+Element:208: TransitionConfig
+Element:209: PersonTransitionOwner
+Element:210: WorkflowConfig
+Element:211: WorkflowAware
+Element:212: ReviewComment
+Diagram: workflow
+Formatting output XML...please wait
+XMI Document Export Complete!
