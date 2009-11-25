@@ -2,7 +2,7 @@
 <ns2:ReportDefinitions xmlns:ns2="http://reportdefinition.caaers.cabig.nci.nih.gov">
     <ns2:reportDefinition>
         <name>CTEP 24 Hour SAE Notification</name>
-        <label>NCI AdEERS 24 Hour SAE Notification</label>
+        <label>CTEP 24 Hour Notification</label>
         <amendable>false</amendable>
         <duration>24</duration>
         <timeScaleUnit>HOUR</timeScaleUnit>
@@ -19,19 +19,13 @@
         <reportType>NOTIFICATION</reportType>
         <expectedDisplayDueDate>Due in 24 hours</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
+        <workflowEnabled>false</workflowEnabled>
         <deliveryDefinition>
             <format>PDF</format>
-            <entityName>karthik iyer</entityName>
-            <entityType>2</entityType>
-            <endPointType>email</endPointType>
-            <endPoint>karthik.iyer@semanticbits.com</endPoint>
-        </deliveryDefinition>
-        <deliveryDefinition>
-            <format>PDF</format>
-            <entityName>reporter</entityName>
+            <entityName>Submitter</entityName>
             <entityType>3</entityType>
             <endPointType>email</endPointType>
-            <endPoint>REP</endPoint>
+            <endPoint>SUB</endPoint>
         </deliveryDefinition>
         <deliveryDefinition>
             <format>XML</format>
@@ -49,186 +43,13 @@
             <endPointType>email</endPointType>
             <endPoint>PI</endPoint>
         </deliveryDefinition>
-        <mandatoryField>
-            <fieldPath>responseDescription.eventReappear</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.treatmentAssignment</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.treatmentAssignmentDescription</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.firstCourseDate</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.number</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.totalCourses</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].studyAgent</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].formulation</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].lotNumber</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].dose.amount</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].dose.units</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].lastAdministeredDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].administrationDelayAmount</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].administrationDelayUnits</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].comments</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].site</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>diseaseHistory.metastaticDiseaseSites[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].labDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].infectiousAgent</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>otherCauses[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>otherCauses[].text</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].priorTherapy</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].other</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].startDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].endDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].priorTherapyAgents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].priorTherapyAgents[].chemoAgent</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPreExistingConditions[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPreExistingConditions[].preExistingCondition</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>concomitantMedications[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
+        <deliveryDefinition>
+            <format>PDF</format>
+            <entityName>Treating Physician</entityName>
+            <entityType>3</entityType>
+            <endPointType>email</endPointType>
+            <endPoint>PHY</endPoint>
+        </deliveryDefinition>
         <mandatoryField>
             <fieldPath>concomitantMedications[].agentName</fieldPath>
             <mandatory>MANDATORY</mandatory>
@@ -391,7 +212,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
@@ -643,11 +464,11 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].brandName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].commonName</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].deviceType</fieldPath>
@@ -691,7 +512,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].deviceOperator</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].otherDeviceOperator</fieldPath>
@@ -739,7 +560,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>responseDescription.presentStatus</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>responseDescription.recoveryDate</fieldPath>
@@ -747,7 +568,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>responseDescription.retreated</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>responseDescription.blindBroken</fieldPath>
@@ -781,18 +602,575 @@
             <fieldPath>responseDescription.eventAbate</fieldPath>
             <mandatory>NA</mandatory>
         </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].startDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].startDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].startDate.day</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].endDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].endDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].endDate.day</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].startDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].startDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].startDate.day</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].endDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].endDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].endDate.day</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.diagnosisDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.diagnosisDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.diagnosisDate.day</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.eventReappear</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.treatmentAssignment</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.firstCourseDate</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse.number</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.totalCourses</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].studyAgent</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].formulation</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].lotNumber</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].dose.amount</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].dose.units</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].lastAdministeredDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].administrationDelayAmount</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].administrationDelayUnits</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].comments</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].baseline</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].baseline.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].baseline.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].site</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.metastaticDiseaseSites[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].labDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].infectiousAgent</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>otherCauses[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>otherCauses[].text</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].priorTherapy</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].other</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].startDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].endDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].priorTherapyAgents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].priorTherapyAgents[].chemoAgent</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPreExistingConditions[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPreExistingConditions[].preExistingCondition</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
         <plannedNotificaiton>
             <indexOnTimeScale>0</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
             <bodyContent>
-                <body>"details:
-patientId: ${patientId}
-reportURL: ${reportURL}
-study.shortTitle: ${study.shortTitle}
-study.primaryIdentifier.value: ${study.primaryIdentifier.value}"</body>
+                <body>*******************************************************
+This is a system generated email - do not respond
+*******************************************************
+
+A CTEP SAE Notification has been initiated in caAERS.  The details of this notification are below.
+
+Details:
+Subject ID: ${patientId}
+Study Title: ${study.shortTitle}
+Study IDe: ${study.primaryIdentifier.value}
+Link to the report: ${reportURL}</body>
                 <contentType>text/html</contentType>
             </bodyContent>
-            <subject>CTEP 24 Hour SAE Notification has been created in sb demo</subject>
+            <subject>CTEP 24 Hour SAE Notification has been initiated in caAERS</subject>
+        </plannedNotificaiton>
+        <plannedNotificaiton>
+            <indexOnTimeScale>1</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <bodyContent>
+                <body>hour one</body>
+                <contentType>text/html</contentType>
+            </bodyContent>
+            <subject>hour1</subject>
+        </plannedNotificaiton>
+        <plannedNotificaiton>
+            <indexOnTimeScale>2</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <bodyContent>
+                <body>Hour two</body>
+                <contentType>text/html</contentType>
+            </bodyContent>
+            <subject>Hour2</subject>
+        </plannedNotificaiton>
+        <plannedNotificaiton>
+            <indexOnTimeScale>3</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <bodyContent>
+                <body>hour3</body>
+                <contentType>text/html</contentType>
+            </bodyContent>
+            <subject>Hour3</subject>
+        </plannedNotificaiton>
+        <plannedNotificaiton>
+            <indexOnTimeScale>4</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <bodyContent>
+                <body>Hour4</body>
+                <contentType>text/html</contentType>
+            </bodyContent>
+            <subject>Hour4</subject>
+        </plannedNotificaiton>
+        <plannedNotificaiton>
+            <indexOnTimeScale>5</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <bodyContent>
+                <body>hour 5</body>
+                <contentType>text/html</contentType>
+            </bodyContent>
+            <subject>Hour5</subject>
+        </plannedNotificaiton>
+        <plannedNotificaiton>
+            <indexOnTimeScale>6</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <recipients>
+                <type>CONTACT</type>
+                <value>ram.seethiraju@semanticbits.com</value>
+            </recipients>
+            <bodyContent>
+                <body>hour66</body>
+                <contentType>text/html</contentType>
+            </bodyContent>
+            <subject>hour6</subject>
         </plannedNotificaiton>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>
-

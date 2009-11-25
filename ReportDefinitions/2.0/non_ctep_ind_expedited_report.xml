@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ReportDefinitions xmlns:ns2="http://reportdefinition.caaers.cabig.nci.nih.gov">
     <ns2:reportDefinition>
-        <name>CTEP 5 Calendar Day SAE Report</name>
-        <label>CTEP Expedited Report</label>
+        <name>Non-CTEP IND Expedited Report</name>
+        <label>Non-CTEP IND Expedited Report</label>
         <amendable>true</amendable>
-        <duration>5</duration>
+        <duration>10</duration>
         <timeScaleUnit>DAY</timeScaleUnit>
         <organization>
             <name>Cancer Therapy Evaluation Program</name>
@@ -17,12 +17,25 @@
             <configType>REPORT_GROUP</configType>
         </group>
         <reportType>REPORT</reportType>
-        <expectedDisplayDueDate>Due in 5 days</expectedDisplayDueDate>
+        <expectedDisplayDueDate>Due in 10 days</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
-        <parent>
-            <name>CTEP 24 Hour SAE Notification</name>
-        </parent>
         <workflowEnabled>false</workflowEnabled>
+        <deliveryDefinition>
+            <format>XML</format>
+            <entityName>AdEERS Staging System</entityName>
+            <entityType>1</entityType>
+            <endPointType>url</endPointType>
+            <endPoint>https://capps-ctep.nci.nih.gov/adeersws10gbeta/services/AEReportXMLService</endPoint>
+            <userName>ADEERSBETA</userName>
+            <password>testadeers1#</password>
+        </deliveryDefinition>
+        <deliveryDefinition>
+            <format>PDF</format>
+            <entityName>Submitter</entityName>
+            <entityType>3</entityType>
+            <endPointType>email</endPointType>
+            <endPoint>SUB</endPoint>
+        </deliveryDefinition>
         <deliveryDefinition>
             <format>PDF</format>
             <entityName>PI</entityName>
@@ -37,68 +50,360 @@
             <endPointType>email</endPointType>
             <endPoint>PHY</endPoint>
         </deliveryDefinition>
-        <deliveryDefinition>
-            <format>PDF</format>
-            <entityName>Submitter</entityName>
-            <entityType>3</entityType>
-            <endPointType>email</endPointType>
-            <endPoint>SUB</endPoint>
-        </deliveryDefinition>
-        <deliveryDefinition>
-            <format>XML</format>
-            <entityName>AdEERS</entityName>
-            <entityType>1</entityType>
-            <endPointType>url</endPointType>
-            <endPoint>https://capps-ctep.nci.nih.gov/adeersws10gbeta/services/AEReportXMLService</endPoint>
-            <userName>ADEERSBETA</userName>
-            <password>testadeers1#</password>
-        </deliveryDefinition>
         <mandatoryField>
-            <fieldPath>adverseEvents[].startDate</fieldPath>
+            <fieldPath>medicalDevices[].modelNumber</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>adverseEvents[].expected</fieldPath>
+            <fieldPath>medicalDevices[].lotNumber</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>physician</fieldPath>
+            <fieldPath>medicalDevices[].catalogNumber</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>labs[].units</fieldPath>
+            <fieldPath>medicalDevices[].expirationDate</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>physician.lastName</fieldPath>
+            <fieldPath>medicalDevices[].serialNumber</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].otherNumber</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].deviceOperator</fieldPath>
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter.title</fieldPath>
+            <fieldPath>medicalDevices[].otherDeviceOperator</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].implantedDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].explantedDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].deviceReprocessed</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].reprocessorName</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].reprocessorAddress</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].evaluationAvailability</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].returnedDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.eventDescription</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].eventApproximateTime.hourString</fieldPath>
             <mandatory>NA</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>radiationInterventions[].adjustment</fieldPath>
+            <fieldPath>responseDescription.primaryTreatmentApproximateTime.hourString</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>radiationInterventions[]</fieldPath>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>labs[]</fieldPath>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>diseaseHistory</fieldPath>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter</fieldPath>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>responseDescription</fieldPath>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.dateRemovedFromProtocol</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.presentStatus</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.recoveryDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.retreated</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.blindBroken</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.studyDrugInterrupted</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.reducedDose</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.reducedDate</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.daysNotGiven</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.autopsyPerformed</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.causeOfDeath</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.eventAbate</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.eventReappear</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.treatmentAssignment</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.firstCourseDate</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse.number</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.totalCourses</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].studyAgent</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].formulation</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].lotNumber</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].dose</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].dose.amount</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].dose.units</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].lastAdministeredDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].administrationDelayAmount</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].administrationDelayUnits</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].comments</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].recovery.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].site</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].labDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>otherCauses[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -106,8 +411,296 @@
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>adverseEvents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].grade</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].adverseEventCtcTerm</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].adverseEventCtcTerm.term</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].detailsForOther</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].startDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].endDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].attributionSummary</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].hospitalization</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].expected</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].eventLocation</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].outcomes</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].comments</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.title</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.firstName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.middleName</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.lastName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.contactMechanisms[e-mail]</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.contactMechanisms[phone]</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address.street</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address.city</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address.state</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address.zip</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.title</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.firstName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.middleName</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.lastName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].infectiousAgent</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.autopsyReport</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.pathologyReport</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.consults</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.progressNotes</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.dischargeSummary</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.radiologyReports</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.flowCharts</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.labReports</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.irbReport</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.obaForm</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.other</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.otherInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].startDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>saeReportPriorTherapies[].startDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].baseline</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].units</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>participantHistory.weight.quantity</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.address</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.contactMechanisms[fax]</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.diagnosisDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.contactMechanisms[fax]</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>saeReportPriorTherapies[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].labTerm</fieldPath>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>saeReportPriorTherapies[].priorTherapy</fieldPath>
@@ -174,16 +767,24 @@
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>labs[].baseline.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>participantHistory.height.unit</fieldPath>
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>participantHistory.weight</fieldPath>
+            <fieldPath>labs[].baseline.value</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>participantHistory.weight.quantity</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <fieldPath>participantHistory.weight</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>participantHistory.weight.unit</fieldPath>
@@ -194,7 +795,7 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
+            <fieldPath>diseaseHistory</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -202,119 +803,15 @@
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>diseaseHistory.diagnosisDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>diseaseHistory.metastaticDiseaseSites[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].adverseEventCtcTerm</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].adverseEventCtcTerm.term</fieldPath>
+            <fieldPath>diseaseHistory.metastaticDiseaseSites[].codedSite</fieldPath>
             <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].detailsForOther</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].endDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].attributionSummary</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].hospitalization</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].eventLocation</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].outcomes</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].comments</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.firstName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.middleName</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.lastName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].labTerm</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.contactMechanisms[e-mail]</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.contactMechanisms[phone]</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.contactMechanisms[fax]</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.address</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.address.street</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.address.city</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.address.state</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.address.zip</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.title</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.firstName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.middleName</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -326,500 +823,12 @@
             <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>physician.contactMechanisms[fax]</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.address</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>physician.address.street</fieldPath>
             <mandatory>NA</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>physician.address.city</fieldPath>
             <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.address.state</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.address.zip</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].administration</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].dosage</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].dosageUnit</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].lastTreatmentDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].fractionNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].daysElapsed</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>surgeryInterventions[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>surgeryInterventions[].interventionSite</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>surgeryInterventions[].interventionDate</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].brandName</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].commonName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].deviceType</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].manufacturerName</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].manufacturerCity</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].manufacturerState</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].modelNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].lotNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].catalogNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].expirationDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].serialNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].otherNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].deviceOperator</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].otherDeviceOperator</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].implantedDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].explantedDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].deviceReprocessed</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].reprocessorName</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].reprocessorAddress</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].evaluationAvailability</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>medicalDevices[].returnedDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.eventDescription</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.dateRemovedFromProtocol</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.presentStatus</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.recoveryDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.retreated</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.blindBroken</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.studyDrugInterrupted</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.reducedDose</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.reducedDate</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.daysNotGiven</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.autopsyPerformed</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.causeOfDeath</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.eventAbate</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.eventReappear</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.treatmentAssignment</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.firstCourseDate</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.number</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.totalCourses</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].studyAgent</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].formulation</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].lotNumber</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].dose</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].dose.amount</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].dose.units</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].lastAdministeredDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].administrationDelayAmount</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].administrationDelayUnits</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].comments</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].recovery.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].site</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].labDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].infectiousAgent</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>otherCauses[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].grade</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>diseaseHistory.metastaticDiseaseSites[].codedSite</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.investigationalAgentAdministered</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].agentAdjustment</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.autopsyReport</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.pathologyReport</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.consults</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.progressNotes</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.dischargeSummary</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.radiologyReports</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.flowCharts</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.labReports</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.irbReport</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.obaForm</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.other</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.otherInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].eventApproximateTime.hourString</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.primaryTreatmentApproximateTime.hourString</fieldPath>
-            <mandatory>NA</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].startDate.year</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>saeReportPriorTherapies[].startDate.month</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>saeReportPriorTherapies[].startDate.day</fieldPath>
@@ -831,6 +840,10 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>saeReportPriorTherapies[].endDate.month</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -894,23 +907,83 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
+            <fieldPath>physician.address.state</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.address.zip</fieldPath>
+            <mandatory>NA</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>radiationInterventions[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
+            <fieldPath>radiationInterventions[].administration</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>radiationInterventions[].dosage</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>radiationInterventions[].dosageUnit</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
+            <fieldPath>radiationInterventions[].lastTreatmentDate</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
+            <fieldPath>radiationInterventions[].fractionNumber</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation</fieldPath>
+            <fieldPath>radiationInterventions[].daysElapsed</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>radiationInterventions[].adjustment</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>surgeryInterventions[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>surgeryInterventions[].interventionSite</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>surgeryInterventions[].interventionDate</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].brandName</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].commonName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].deviceType</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].manufacturerName</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].manufacturerCity</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].manufacturerState</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <plannedNotificaiton>
@@ -920,26 +993,23 @@
                 <value>REP</value>
             </recipients>
             <bodyContent>
-                <body>"**********************************************************************************
+                <body>**********************************************************************************
+"**********************************************************************************
 This is a system generated email. Please do not respond to this email. 
 **********************************************************************************
 
-A 5 Calendar report has been initiated in caAERS.
-
-
-The 5 Calendar Day report must be completed and sent to CTEP, NCI within 5 Calendar Days of knowledge of the AE. 
+An expedited adverse event report has been initiated in caAERS for the following study and subject.
 
 Subject Id: ${patientId}
-Study Title: ${study.shortTitle}
-Study Identifier: ${study.primaryIdentifier.value}
-Link to the report: ${reportURL}
-
+Study Short Title: ${study.shortTitle}
+Study Primary Identifier: ${study.primaryIdentifier.value}
+Link to Report: ${reportURL}
 
 Thank you,
 caAERS Notification System</body>
                 <contentType>text/html</contentType>
             </bodyContent>
-            <subject>CTEP Expedited AE Report initiated in caAERS</subject>
+            <subject>A CTEP Expedited Adverse Event Report has been initiated in caAERS</subject>
         </plannedNotificaiton>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>

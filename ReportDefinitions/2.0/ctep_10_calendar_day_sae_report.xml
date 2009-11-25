@@ -2,7 +2,7 @@
 <ns2:ReportDefinitions xmlns:ns2="http://reportdefinition.caaers.cabig.nci.nih.gov">
     <ns2:reportDefinition>
         <name>CTEP 10 Calendar Day SAE Report</name>
-        <label>NCI AdEERS Report</label>
+        <label>CTEP Expedited Report</label>
         <amendable>true</amendable>
         <duration>10</duration>
         <timeScaleUnit>DAY</timeScaleUnit>
@@ -19,19 +19,13 @@
         <reportType>REPORT</reportType>
         <expectedDisplayDueDate>Due in 10 days</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
+        <workflowEnabled>false</workflowEnabled>
         <deliveryDefinition>
             <format>PDF</format>
             <entityName>PI</entityName>
             <entityType>3</entityType>
             <endPointType>email</endPointType>
             <endPoint>PI</endPoint>
-        </deliveryDefinition>
-        <deliveryDefinition>
-            <format>PDF</format>
-            <entityName>AE Coordinator</entityName>
-            <entityType>3</entityType>
-            <endPointType>email</endPointType>
-            <endPoint>AEC</endPoint>
         </deliveryDefinition>
         <deliveryDefinition>
             <format>XML</format>
@@ -44,15 +38,18 @@
         </deliveryDefinition>
         <deliveryDefinition>
             <format>PDF</format>
-            <entityName>Reporter</entityName>
+            <entityName>Submitter</entityName>
             <entityType>3</entityType>
             <endPointType>email</endPointType>
-            <endPoint>REP</endPoint>
+            <endPoint>SUB</endPoint>
         </deliveryDefinition>
-        <mandatoryField>
-            <fieldPath>labs[].nadir</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
+        <deliveryDefinition>
+            <format>PDF</format>
+            <entityName>Physician</entityName>
+            <entityType>3</entityType>
+            <endPointType>email</endPointType>
+            <endPoint>PHY</endPoint>
+        </deliveryDefinition>
         <mandatoryField>
             <fieldPath>labs[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
@@ -83,6 +80,10 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>diseaseHistory.diagnosisDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -251,23 +252,23 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>radiationInterventions[].dosageUnit</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>radiationInterventions[].lastTreatmentDate</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>radiationInterventions[].fractionNumber</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>radiationInterventions[].daysElapsed</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>radiationInterventions[].adjustment</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>surgeryInterventions[]</fieldPath>
@@ -291,7 +292,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].commonName</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].deviceType</fieldPath>
@@ -335,7 +336,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].deviceOperator</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>medicalDevices[].otherDeviceOperator</fieldPath>
@@ -479,7 +480,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <mandatory>MANDATORY</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
@@ -866,6 +867,22 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>saeReportPriorTherapies[].startDate.year</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -886,6 +903,14 @@
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>concomitantMedications[].startDate.day</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>concomitantMedications[].endDate.year</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>saeReportPriorTherapies[].endDate.day</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
@@ -895,14 +920,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>concomitantMedications[].startDate.month</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>concomitantMedications[].startDate.day</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>concomitantMedications[].endDate.year</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
@@ -933,8 +950,52 @@
             <fieldPath>treatmentInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+        </mandatoryField>
         <plannedNotificaiton>
             <indexOnTimeScale>0</indexOnTimeScale>
+            <recipients>
+                <type>ROLE</type>
+                <value>REP</value>
+            </recipients>
             <bodyContent>
                 <body>**********************************************************************************
 "**********************************************************************************
@@ -944,22 +1005,18 @@ This is a system generated email. Please do not respond to this email.
 A 10 Calendar report has been initiated in caAERS.
 
 
-The 10 Calendar Day report must be completed and sent to CTEP, NCI within 10 Calendar Days of knowledge of the AE. This report is accessible in caAERS via the 'Manage Reports' pathway.
-
-To retrieve the report enter the exact combination of the Study and Subject. It is very important to save this information for every report created. Print this page and keep it as a reference. 
+The 10 Calendar Day report must be completed and sent to CTEP, NCI within 10 Calendar Days of knowledge of the AE. 
 
 Subject Id: ${patientId}
 Study Short Title: ${study.shortTitle}
 Study Primary Identifier: ${study.primaryIdentifier.value}
-
-To access caAERS, see https://demo.semanticbits.com/caaers/public/login.
+Link to Report: ${reportURL}
 
 Thank you,
-caAERS Notification System"</body>
+caAERS Notification System</body>
                 <contentType>text/html</contentType>
             </bodyContent>
-            <subject>10 Calendar Day Report for ${patientId} on  ${study.primaryIdentifier.value} initiated in caAERS</subject>
+            <subject>A CTEP Expedited AE Report has been initiated in caAERS</subject>
         </plannedNotificaiton>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>
-
