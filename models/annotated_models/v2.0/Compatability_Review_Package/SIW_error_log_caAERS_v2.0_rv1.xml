@@ -1,0 +1,268 @@
+<File name="v2.0_annotated.xmi">
+  <Package name="Classes">
+    <ValidationWarning>GME Namespace is missing</ValidationWarning>
+  </Package>
+  <Package name="Classes">
+    <ValidationWarning>GME Namespace is missing</ValidationWarning>
+  </Package>
+  <Package name="Classes">
+    <ValidationWarning>GME Namespace is missing</ValidationWarning>
+  </Package>
+  <Package name="Classes">
+    <ValidationWarning>GME Namespace is missing</ValidationWarning>
+  </Package>
+  <Package name="Classes">
+    <ValidationWarning>GME Namespace is missing</ValidationWarning>
+  </Package>
+  <Package name="Value Domains">
+    <ValueDomain name="DeliveryStatus">
+      <ValidationWarning>Value Domain DeliveryStatus has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="RadiationAdministration">
+      <ValidationWarning>Value Domain RadiationAdministration has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="StatusCode">
+      <ValidationWarning>Value Domain StatusCode has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="PersonRole">
+      <ValidationWarning>Value Domain PersonRole has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Location">
+      <ValidationWarning>Local Value Domain Location is not associated with any attribute in this model</ValidationWarning>
+      <ValidationWarning>Value Domain Location has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Attribution">
+      <ValidationWarning>Value Domain Attribution Scale has no concept</ValidationWarning>
+      <ValueMeaning name="PROBABLE">
+        <ValidationWarning>Value Meaning PROBABLE has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="ReviewStatus">
+      <ValidationWarning>Value Domain ReviewStatus has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="OutcomeType">
+      <ValidationWarning>Value Domain OutcomeType has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Hospitalization">
+      <ValidationWarning>Value Domain Hospitalization has no concept</ValidationWarning>
+      <ValidationWarning>Local Value Domain Hospitalization is not associated with any attribute in this model</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="DiseaseCodeTerm">
+      <ValidationWarning>Value Domain DiseaseCodeTerm has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="ReportFormatType">
+      <ValidationWarning>Value Domain ReportFormatType has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Grade">
+      <ValidationWarning>Value Domain Adverse Event Severity Grade already exists with different set of permissible values</ValidationWarning>
+      <ValidationWarning>Value Domain Adverse Event Severity Grade has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="LoadStatus">
+      <ValidationWarning>Value Domain LoadStatus has no concept</ValidationWarning>
+      <ValueMeaning name="INPROGRESS">
+        <ValidationWarning>Value Meaning INPROGRESS has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="DeviceOperator">
+      <ValidationWarning>Value Domain DeviceOperator has no concept</ValidationWarning>
+      <ValidationWarning>Local Value Domain DeviceOperator is not associated with any attribute in this model</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="ReportStatus">
+      <ValidationWarning>Value Domain ReportStatus has no concept</ValidationWarning>
+      <ValueMeaning name="COMPLETED">
+        <ValidationWarning>Value Meaning COMPLETED has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="PENDING">
+        <ValidationWarning>Value Meaning PENDING has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="INPROCESS">
+        <ValidationWarning>Value Meaning INPROCESS has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="FAILED">
+        <ValidationWarning>Value Meaning FAILED has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="WITHDRAWN">
+        <ValidationWarning>Value Meaning WITHDRAWN has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="REPLACED">
+        <ValidationWarning>Value Meaning REPLACED has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="Measure">
+      <ValidationWarning>Value Domain Measure has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="TimeScaleUnit">
+      <ValidationWarning>Value Domain TimeScaleUnit has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="ReportFormat">
+      <ValidationWarning>Value Domain ReportFormat has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Term">
+      <ValidationWarning>Local Value Domain Term is not associated with any attribute in this model</ValidationWarning>
+      <ValidationWarning>Value Domain Term has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="StudyTherapyType">
+      <ValidationWarning>Local Value Domain StudyTherapyType is not associated with any attribute in this model</ValidationWarning>
+      <ValidationWarning>Value Domain StudyTherapyType has no concept</ValidationWarning>
+      <ValueMeaning name="DRUG_ADMINISTRATION">
+        <ValidationWarning>Value Meaning DRUG_ADMINISTRATION has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="RADIATION">
+        <ValidationWarning>Value Meaning RADIATION has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="DEVICE">
+        <ValidationWarning>Value Meaning DEVICE has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="SURGERY">
+        <ValidationWarning>Value Meaning SURGERY has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="BEHAVIORAL">
+        <ValidationWarning>Value Meaning BEHAVIORAL has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="ExpeditedReportSection">
+      <ValidationWarning>Value Domain ExpeditedReportSection has no concept</ValidationWarning>
+      <ValidationWarning>Local Value Domain ExpeditedReportSection is not associated with any attribute in this model</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="ConfigPropertyType">
+      <ValidationWarning>Value Domain ConfigPropertyType has no concept</ValidationWarning>
+      <ValueMeaning name="REPORT_GROUP">
+        <ValidationWarning>Value Meaning REPORT_GROUP has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="INVESTIGATOR_ROLE_TYPE">
+        <ValidationWarning>Value Meaning INVESTIGATOR_ROLE_TYPE has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="RESEARCH_STAFF_ROLE_TYPE">
+        <ValidationWarning>Value Meaning RESEARCH_STAFF_ROLE_TYPE has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="REPORT_ROLE_TYPE">
+        <ValidationWarning>Value Meaning REPORT_ROLE_TYPE has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="DateValue">
+      <ValidationWarning>Value Domain DateValue has no concept</ValidationWarning>
+      <ValueMeaning name="day">
+        <ValidationWarning>Value Meaning day has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="month">
+        <ValidationWarning>Value Meaning month has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="year">
+        <ValidationWarning>Value Meaning year has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="DelayUnits">
+      <ValidationWarning>Value Domain DelayUnits has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="NotificationBodyContent">
+      <ValidationWarning>Value Domain NotificationBodyContent has no concept</ValidationWarning>
+      <ValueMeaning name="encodingType">
+        <ValidationWarning>Value Meaning encodingType has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="content">
+        <ValidationWarning>Value Meaning content has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="PostAdverseEventStatus">
+      <ValidationWarning>Value Domain PostAdverseEventStatus has no concept</ValidationWarning>
+      <ValueMeaning name="RECOVERING">
+        <ValidationWarning>Value Meaning RECOVERING has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="StudyInvestigatorRoleCode">
+      <ValidationWarning>Value Domain StudyInvestigatorRoleCode has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="EmailDeliveryStatus">
+      <ValidationWarning>Local Value Domain EmailDeliveryStatus is not associated with any attribute in this model</ValidationWarning>
+      <ValidationWarning>Value Domain EmailDeliveryStatus has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="INDType">
+      <ValidationWarning>Value Domain INDType has no concept</ValidationWarning>
+      <ValidationWarning>Local Value Domain INDType is not associated with any attribute in this model</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Availability">
+      <ValidationWarning>Value Domain Availability has no concept</ValidationWarning>
+      <ValidationWarning>Local Value Domain Availability is not associated with any attribute in this model</ValidationWarning>
+      <ValueMeaning name="RETURNED">
+        <ValidationWarning>Value Meaning RETURNED has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="TimeValue">
+      <ValidationWarning>Value Domain TimeValue has no concept</ValidationWarning>
+      <ValueMeaning name="minute">
+        <ValidationWarning>Value Meaning minute has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="hour">
+        <ValidationWarning>Value Meaning hour has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="Mandatory">
+      <ValidationWarning>Local Value Domain Mandatory is not associated with any attribute in this model</ValidationWarning>
+      <ValidationWarning>Value Domain Mandatory has no concept</ValidationWarning>
+      <ValueMeaning name="MANDATORY">
+        <ValidationWarning>Value Meaning MANDATORY has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="ResearchStaffRoleCode">
+      <ValidationWarning>Value Domain ResearchStaffRoleCode has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="Design">
+      <ValidationWarning>Value Domain Design has no concept</ValidationWarning>
+      <ValidationWarning>Local Value Domain Design is not associated with any attribute in this model</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="ReportTrackingStatus">
+      <ValidationWarning>Value Domain ReportTrackingStatus has no concept</ValidationWarning>
+      <ValueMeaning name="status">
+        <ValidationWarning>Value Meaning status has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="statusMessage">
+        <ValidationWarning>Value Meaning statusMessage has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="recordedTime">
+        <ValidationWarning>Value Meaning recordedTime has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+    <ValueDomain name="ReportType">
+      <ValidationWarning>Local Value Domain ReportType is not associated with any attribute in this model</ValidationWarning>
+      <ValidationWarning>Value Domain ReportType has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="AgentAdjustment">
+      <ValidationWarning>Value Domain AgentAdjustment has no concept</ValidationWarning>
+    </ValueDomain>
+    <ValueDomain name="StudyPhaseCode">
+      <ValidationWarning>Value Domain StudyPhaseCode has no concept</ValidationWarning>
+      <ValueMeaning name="Phase_0">
+        <ValidationWarning>Value Meaning Phase_0 has no concept</ValidationWarning>
+      </ValueMeaning>
+      <ValueMeaning name="Pilot">
+        <ValidationWarning>Value Meaning Pilot has no concept</ValidationWarning>
+      </ValueMeaning>
+    </ValueDomain>
+  </Package>
+  <Package name="Associations">
+    <Association name="dose(0..1)">
+      <ValidationWarning>Class Course Protocol Agent has more than one association with Class Model.gov.nih.nci.cabig.caaers.domain.Dose. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="totalDoseAdministeredThisCourse(0..1)">
+      <ValidationWarning>Class Course Protocol Agent has more than one association with Class Model.gov.nih.nci.cabig.caaers.domain.Dose. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="modifiedDose(0..1)">
+      <ValidationWarning>Class Course Protocol Agent has more than one association with Class Model.gov.nih.nci.cabig.caaers.domain.Dose. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="otherTerm(0..1)">
+      <ValidationWarning>Class Model.gov.nih.nci.cabig.caaers.domain.SolicitedAdverseEvent has more than one association with Class Meddra Low Level Term. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="meddraTerm(0..1)">
+      <ValidationWarning>Class Model.gov.nih.nci.cabig.caaers.domain.SolicitedAdverseEvent has more than one association with Class Meddra Low Level Term. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="baselLine(1)">
+      <ValidationWarning>Class Test has more than one association with Class Laboratory Procedure Value. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="recovery(1)">
+      <ValidationWarning>Class Test has more than one association with Class Laboratory Procedure Value. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+    <Association name="nadir(1)">
+      <ValidationWarning>Class Test has more than one association with Class Laboratory Procedure Value. Please consider adding semantics to these associations.</ValidationWarning>
+    </Association>
+  </Package>
+</File>
