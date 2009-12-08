@@ -175,7 +175,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>diseaseHistory.diagnosisDate</fieldPath>
-            <mandatory>NA</mandatory>
+            <mandatory>OPTIONAL</mandatory>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>treatmentInformation</fieldPath>
