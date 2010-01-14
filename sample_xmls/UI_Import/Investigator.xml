@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:investigator xmlns:p="http://schema.integration.caaers.cabig.nci.nih.gov/investigator" xmlns:p1="http://schema.integration.caaers.cabig.nci.nih.gov/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.integration.caaers.cabig.nci.nih.gov/investigator Investigator.xsd ">
+  <firstName>firstName</firstName>
+  <lastName>lastName</lastName>
+  <middleName>middleName</middleName>
+  <emailAddress>emailAddress</emailAddress>
+  <faxNumber>faxNumber</faxNumber>
+  <nciIdentifier>nciIdentifier</nciIdentifier>
+  <phoneNumber>phoneNumber</phoneNumber>
+  <allowedToLogin>true</allowedToLogin>
+  <loginId>loginId</loginId>
+  <p:siteInvestigator>
+    <emailAddress>emailAddress</emailAddress>
+    <statusCode>ACT</statusCode>
+    <p1:organizationRef>
+      <nciInstituteCode>nciInstituteCode</nciInstituteCode>
+    </p1:organizationRef>
+    <startDate>2001-01-01</startDate>
+    <endDate>2001-01-01</endDate>
+  </p:siteInvestigator>
+</p:investigator>
