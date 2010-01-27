@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:staff xmlns:p="http://schema.integration.caaers.cabig.nci.nih.gov/researchstaff" xmlns:p1="http://schema.integration.caaers.cabig.nci.nih.gov/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.integration.caaers.cabig.nci.nih.gov/researchstaff ResearchStaff.xsd ">
   <p:researchStaff>
-    <firstName>firstName</firstName>
-    <lastName>lastName</lastName>
-    <middleName>middleName</middleName>
-    <emailAddress>emailAddress</emailAddress>
-    <faxNumber>faxNumber</faxNumber>
-    <nciIdentifier>nciIdentifier</nciIdentifier>
-    <phoneNumber>phoneNumber</phoneNumber>
-    <loginId>loginId</loginId>
-    <street>street</street>
-    <city>city</city>
-    <state>state</state>
-    <zip>zip</zip>
+    <firstName>Somke</firstName>
+    <lastName>Tester2</lastName>
+    <middleName>J</middleName>
+    <emailAddress>someone@kk.somewhere.com</emailAddress>
+    <faxNumber>4444444444</faxNumber>
+    <nciIdentifier>SMOKE_RS_1</nciIdentifier>
+    <phoneNumber>5555555555</phoneNumber>
+    <loginId>SMOKE_RS_1</loginId>
+    <street>somewhere</street>
+    <city>somecity</city>
+    <state>VA</state>
+    <zip>30202</zip>
     <siteResearchStaffs>
       <p:siteResearchStaff>
-        <emailAddress>emailAddress</emailAddress>
-        <phoneNumber>phoneNumber</phoneNumber>
-        <faxNumber>faxNumber</faxNumber>
-        <street>street</street>
-        <city>city</city>
-        <state>state</state>
-        <zip>zip</zip>
+        <emailAddress>biju.joseph@semanticbits.com</emailAddress>
+        <phoneNumber>3333333333</phoneNumber>
+        <faxNumber>3333333333</faxNumber>
+        <street>somewhere</street>
+        <city>somecity</city>
+        <state>VA</state>
+        <zip>30101</zip>
         <p1:organizationRef>
-          <nciInstituteCode>nciInstituteCode</nciInstituteCode>
+          <nciInstituteCode>MN026</nciInstituteCode>
         </p1:organizationRef>
         <siteResearchStaffRoles>
           <p:siteResearchStaffRole>
             <role>caaers_participant_cd</role>
-            <startDate>2001-01-01</startDate>
-            <endDate>2001-01-01</endDate>
+            <startDate>2010-01-26</startDate>
+            <endDate>2011-01-01</endDate>
           </p:siteResearchStaffRole>
         </siteResearchStaffRoles>
         <associateAllStudies>true</associateAllStudies>
