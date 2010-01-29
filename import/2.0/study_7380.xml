@@ -25,13 +25,7 @@
 		<geneticTherapyType>false</geneticTherapyType>
 		<dietarySupplementTherapyType>false</dietarySupplementTherapyType>
 		<otherTherapyType>false</otherTherapyType>
-		<reportTypeCaaersXML>true</reportTypeCaaersXML>
-		<reportTypeAdeersPDF>true</reportTypeAdeersPDF>
-		<reportTypeMedwatchPDF>true</reportTypeMedwatchPDF>
-		<reportTypeDCPSAEForm>false</reportTypeDCPSAEForm>
-		<reportTypeCIOMSForm>false</reportTypeCIOMSForm>
-		<reportTypeCIOMSAEForm>false</reportTypeCIOMSAEForm>
-		<fundingSponsor>
+				<fundingSponsor>
 			<organizationAssignedIdentifier>
 				<value>7380</value>
 			</organizationAssignedIdentifier>
