@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:studies xmlns:ns2="http://webservice.caaers.cabig.nci.nih.gov">
+    <ns2:study>
+        <shortTitle>A Phase I Study of CCI-779 and Temozolomide in Combination with Radiation Therapy in Glioblastoma Multiforme</shortTitle>
+        <longTitle>A Phase I Study of CCI-779 and Temozolomide in Combination with Radiation Therapy in Glioblastoma Multiforme</longTitle>
+        <description>A Phase I Study of CCI-779 and Temozolomide in Combination with Radiation Therapy in Glioblastoma Multiformexxxx</description>
+        <phaseCode>Phase I Trial</phaseCode>
+        <status>Active - Trial is open to accrual</status>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <adeersReporting>true</adeersReporting>
+        <otherMeddra>MedDRA v9</otherMeddra>
+        <ns2:aeTerminology>
+            <ns2:ctcVersion>
+                <name>3</name>
+            </ns2:ctcVersion>
+        </ns2:aeTerminology>
+        <ns2:diseaseTerminology>
+            <diseaseCodeTerm>CTEP</diseaseCodeTerm>
+        </ns2:diseaseTerminology>
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>true</deviceTherapyType>
+        <radiationTherapyType>true</radiationTherapyType>
+        <surgeryTherapyType>false</surgeryTherapyType>
+        <behavioralTherapyType>false</behavioralTherapyType>
+        <biologicalTherapyType>false</biologicalTherapyType>
+        <geneticTherapyType>false</geneticTherapyType>
+        <dietarySupplementTherapyType>false</dietarySupplementTherapyType>
+        <otherTherapyType>false</otherTherapyType>
+        <reportTypeCaaersXML>true</reportTypeCaaersXML>
+        <reportTypeAdeersPDF>true</reportTypeAdeersPDF>
+        <reportTypeMedwatchPDF>false</reportTypeMedwatchPDF>
+        <reportTypeDCPSAEForm>false</reportTypeDCPSAEForm>
+        <reportTypeCIOMSForm>false</reportTypeCIOMSForm>
+        <reportTypeCIOMSAEForm>false</reportTypeCIOMSAEForm>
+        <fundingSponsor>
+            <organizationAssignedIdentifier>
+                <value>N027D</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyFundingSponsor>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode>CTEP</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyFundingSponsor>
+        </fundingSponsor>
+        <coordinatingCenter>
+            <organizationAssignedIdentifier>
+                <value>N027D</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyCoordinatingCenter>
+				<ns2:organization>
+					<name>Kenyatta National Hospital</name>
+					<nciInstituteCode>100001</nciInstituteCode>
+				</ns2:organization>
+			</ns2:studyCoordinatingCenter>
+        </coordinatingCenter>
+      <studyOrganizations>
+			<ns2:studySite>
+				<ns2:organization>
+					<name>Karnataka Cancer Therapy and Research Institute</name>
+					<nciInstituteCode>37007</nciInstituteCode>
+				</ns2:organization>
+				<studyInvestigators>
+					<ns2:studyInvestigator>
+						<roleCode>SI</roleCode>
+						<startDate>2010-01-01</startDate>
+						<ns2:siteInvestigator>
+							<ns2:investigator>
+								<firstName>John</firstName>
+								<lastName>inv1</lastName>
+								<nciIdentifier>inv-5876-v1</nciIdentifier>
+							</ns2:investigator>
+						</ns2:siteInvestigator>
+					</ns2:studyInvestigator>
+				</studyInvestigators>
+				<studyPersonnels>
+					<ns2:studyPersonnel>
+						<roleCode>caaers_participant_cd</roleCode>
+						<startDate>2009-08-31</startDate>
+						<endDate>2011-02-01</endDate>
+						<ns2:researchStaff>
+							<firstName>robert</firstName>
+							<lastName>rs1</lastName>
+							<nciIdentifier>rs-5876-v1</nciIdentifier>
+						</ns2:researchStaff>
+					</ns2:studyPersonnel>
+					<ns2:studyPersonnel>
+						<roleCode>caaers_ae_cd</roleCode>
+						<startDate>2009-08-31</startDate>
+						<ns2:researchStaff>
+							<firstName>robert</firstName>
+							<lastName>rs1</lastName>
+							<nciIdentifier>rs-5876-v1</nciIdentifier>
+						</ns2:researchStaff>
+					</ns2:studyPersonnel>
+				</studyPersonnels>
+			</ns2:studySite>
+		</studyOrganizations>
+        <identifiers/>
+        <treatmentAssignments>
+            <ns2:treatmentAssignment>
+                <code>A0</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks:    CCI-779:  25mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment     Cycle = 28 days     (Max = 6 cycles) CCI-779:</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A0 A</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks:    CCI-779:  25mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment     Cycle = 28 days     (Max = 6 cycles) TMZ:  200m</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A1</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks: CCI-779:  50mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT   Adjuvant Treatment      Cycle = 28 days:     (Max = 6 cycles) CCI-779:</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A-1</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks: CCI-779:  15mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment:      Cycle = 28 days:     (Max = 6 cycles) TMZ:  200m</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A1 A</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks: CCI-779:  50mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment      Cycle = 28 days:     (Max = 6 cycles) TMZ:  200mg</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A2</code>
+                <description>Concomitant Treatment:      Cycle = 6 weeks: CCI-779:  75mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment:     Cycle = 28 days, max 6 cycles CCI-779:  75mg/wk</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A-2</code>
+                <description>Concomitant Treatment Cycle = 6 weeks: CCI-779:  15mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  60mg/m2 PO QD with RT  Adjuvant Treatment       Cycle = 28 days     (Max = 6 cycles) TMZ:  200mg/m2 P</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A2 A</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks: CCI-779:  75mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment Cycle = 28 days:     (Max = 6 cycles) TMZ:  200mg/m2 P</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A3</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks: CCI-779:  125mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment Cycle = 28 days:     (Max = 6 cycles) TMZ:  200mg/m2</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A4</code>
+                <description>Concomitant Treatment      Cycle = 6 weeks: CCI-779:  175mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:  75mg/m2 PO QD with RT  Adjuvant Treatment      Cycle = 28 days:     (Max = 6 cycles) TMZ:  200m</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>A5</code>
+                <description>Concomitant Treatment Cycle = 6 weeks: CCI-779:  250mg/wk IV over 30 min weekly RT:  200cGy 5 days a wk, starting 7-10 days after first CCI-779 dose TMZ:   75mg/m2 PO QD with RT  Adjuvant Treatment      Cycle = 28 days:     (Max = 6 cycles) TMZ:  200mg/m2</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>B1</code>
+                <description>Concomitant Treatment Cycle = 6 weeks: RT:  200cGy 5 days a wk TMZ:   75mg/m2 PO QD   Adjuvant Treatment      Cycle = 28 days:     (Max = 6 cycles) TMZ:  200mg/m2 PO on days 1-5</description>
+            </ns2:treatmentAssignment>
+        </treatmentAssignments>
+        <studyAgents>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>CCI-779 (temsirolimus, Torisel)</name>
+                </ns2:agent>
+                <indType>CTEP_IND</indType>
+                <partOfLeadIND>true</partOfLeadIND>
+                <studyAgentINDAssociations>
+                    <ns2:studyAgentINDAssociation>
+                        <ns2:investigationalNewDrug>
+                            <indNumber>-111</indNumber>
+                        </ns2:investigationalNewDrug>
+                    </ns2:studyAgentINDAssociation>
+                </studyAgentINDAssociations>
+            </ns2:studyAgent>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>Temozolomide</name>
+                </ns2:agent>
+                <indType>NA_COMMERCIAL</indType>
+            </ns2:studyAgent>
+        </studyAgents>
+        <ctepStudyDiseases>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Glioblastoma multiforme</term>
+                </ns2:diseaseTerm>
+                <leadDisease>true</leadDisease>
+            </ns2:ctepStudyDisease>
+        </ctepStudyDiseases>
+        <evaluationPeriods>
+            <ns2:evaluationPeriod>
+                <name>Baseline</name>
+                <epochOrder>0</epochOrder>
+                <solicitedAdverseEvents>
+                    <ns2:solicitedAdverseEvent>
+                        <ctepCode>10059095</ctepCode>
+                    </ns2:solicitedAdverseEvent>
+                    <ns2:solicitedAdverseEvent>
+                        <ctepCode>10063190</ctepCode>
+                    </ns2:solicitedAdverseEvent>
+                </solicitedAdverseEvents>
+            </ns2:evaluationPeriod>
+            <ns2:evaluationPeriod>
+                <name>Treatment</name>
+                <epochOrder>1</epochOrder>
+                <solicitedAdverseEvents>
+                    <ns2:solicitedAdverseEvent>
+                        <ctepCode>10063190</ctepCode>
+                    </ns2:solicitedAdverseEvent>
+                    <ns2:solicitedAdverseEvent>
+                        <ctepCode>10015453</ctepCode>
+                    </ns2:solicitedAdverseEvent>
+                </solicitedAdverseEvents>
+            </ns2:evaluationPeriod>
+            <ns2:evaluationPeriod>
+                <name>Post-treatment</name>
+                <epochOrder>2</epochOrder>
+                <solicitedAdverseEvents>
+                    <ns2:solicitedAdverseEvent>
+                        <ctepCode>10059095</ctepCode>
+                    </ns2:solicitedAdverseEvent>
+                    <ns2:solicitedAdverseEvent>
+                        <ctepCode>10015453</ctepCode>
+                    </ns2:solicitedAdverseEvent>
+                </solicitedAdverseEvents>
+            </ns2:evaluationPeriod>
+        </evaluationPeriods>
+        <expectedAECtcTerms>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10010774</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10050857</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10012727</ctepCode>
+            </ns2:expectedAECtcTerm>
+        </expectedAECtcTerms>
+    </ns2:study>
+</ns2:studies>

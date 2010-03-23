@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:staff xmlns:p="http://schema.integration.caaers.cabig.nci.nih.gov/researchstaff" xmlns:p1="http://schema.integration.caaers.cabig.nci.nih.gov/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.integration.caaers.cabig.nci.nih.gov/researchstaff ResearchStaff.xsd ">
+	<p:researchStaff>
+		<firstName>robert</firstName>
+		<lastName>rs1</lastName>
+		<middleName>f</middleName>
+		<emailAddress>caaers.app11@gmail.com</emailAddress>
+		<faxNumber>77777</faxNumber>
+		<nciIdentifier>rs-5876-v1</nciIdentifier>
+		<phoneNumber>0101010101</phoneNumber>
+		<loginId>rs-5876-v1</loginId>
+		<street>some street</street>
+		<city>some city</city>
+		<state>VA</state>
+		<zip>30202</zip>
+		<siteResearchStaffs>
+			<p:siteResearchStaff>
+				<emailAddress>caaers.app11@gmail.com</emailAddress>
+				<phoneNumber>0101010101</phoneNumber>
+				<faxNumber>0101010101</faxNumber>
+				<street>some street</street>
+				<city>some city</city>
+				<state>VA</state>
+				<zip>30101</zip>
+				<p1:organizationRef>
+					<nciInstituteCode>37007</nciInstituteCode>
+				</p1:organizationRef>
+				<siteResearchStaffRoles>
+					<p:siteResearchStaffRole>
+						<role>caaers_participant_cd</role>
+						<startDate>2010-03-05</startDate>
+						<endDate>2011-02-01</endDate>
+					</p:siteResearchStaffRole>
+				</siteResearchStaffRoles>
+				<associateAllStudies>true</associateAllStudies>
+			</p:siteResearchStaff>
+		</siteResearchStaffs>
+	</p:researchStaff>
+</p:staff>
+

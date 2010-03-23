@@ -1,0 +1,25 @@
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.1.6.1440 (http://www.liquid-technologies.com) -->
+<inv:staff xmlns:inv="http://schema.integration.caaers.cabig.nci.nih.gov/investigator" xmlns:com="http://schema.integration.caaers.cabig.nci.nih.gov/common">
+	<inv:investigator>
+		<firstName>robert</firstName>
+		<lastName>inv1</lastName>
+		<!--Optional:-->
+		<middleName>yyyy</middleName>
+		<emailAddress>caaers.app6@gmail.com</emailAddress>
+		<!--Optional:-->
+		<faxNumber>7777777777</faxNumber>
+		<nciIdentifier>inv-5876-v1</nciIdentifier>
+		<phoneNumber>1111111111</phoneNumber>
+		<allowedToLogin>false</allowedToLogin>
+		<loginId>inv-5876-v1</loginId>
+		<!--1 or more repetitions:-->
+		<inv:siteInvestigator>
+			<emailAddress>caaers.app6@gmail.com</emailAddress>
+			<statusCode>ACT</statusCode>
+			<com:organizationRef>
+				<nciInstituteCode>37007</nciInstituteCode>
+			</com:organizationRef>
+			<startDate>2011-02-26</startDate>
+		</inv:siteInvestigator>
+	</inv:investigator>
+</inv:staff>

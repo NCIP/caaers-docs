@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:studies xmlns:ns2="http://webservice.caaers.cabig.nci.nih.gov">
+    <ns2:study>
+        <shortTitle>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan, Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel Adenocarcinoma</shortTitle>
+        <longTitle>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan, Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel Adenocarcinoma</longTitle>
+        <description>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan, Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel Adenocarcinoma</description>
+        <phaseCode>Phase II Trial</phaseCode>
+        <status>Active - Trial is open to accrual</status>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <adeersReporting>true</adeersReporting>
+        <otherMeddra>MedDRA v9</otherMeddra>
+        <ns2:aeTerminology>
+            <ns2:ctcVersion>
+                <name>3</name>
+            </ns2:ctcVersion>
+        </ns2:aeTerminology>
+        <ns2:diseaseTerminology>
+            <diseaseCodeTerm>CTEP</diseaseCodeTerm>
+        </ns2:diseaseTerminology>
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>false</deviceTherapyType>
+        <radiationTherapyType>false</radiationTherapyType>
+        <surgeryTherapyType>false</surgeryTherapyType>
+        <behavioralTherapyType>false</behavioralTherapyType>
+        <biologicalTherapyType>false</biologicalTherapyType>
+        <geneticTherapyType>false</geneticTherapyType>
+        <dietarySupplementTherapyType>false</dietarySupplementTherapyType>
+        <otherTherapyType>false</otherTherapyType>
+        <reportTypeCaaersXML>true</reportTypeCaaersXML>
+        <reportTypeAdeersPDF>true</reportTypeAdeersPDF>
+        <reportTypeMedwatchPDF>true</reportTypeMedwatchPDF>
+        <reportTypeDCPSAEForm>false</reportTypeDCPSAEForm>
+        <reportTypeCIOMSForm>false</reportTypeCIOMSForm>
+        <reportTypeCIOMSAEForm>false</reportTypeCIOMSAEForm>
+        <fundingSponsor>
+            <organizationAssignedIdentifier>
+                <value>N0543</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyFundingSponsor>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode>CTEP</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyFundingSponsor>
+        </fundingSponsor>
+        <coordinatingCenter>
+            <organizationAssignedIdentifier>
+                <value>N0543</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyCoordinatingCenter>
+                <ns2:organization>
+                    <name>North Central Cancer Treatment Group</name>
+                    <nciInstituteCode>NCCTG</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyCoordinatingCenter>
+        </coordinatingCenter>
+        <studyOrganizations>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Mayo Clinic Rochester</name>
+                    <nciInstituteCode>MN026</nciInstituteCode>
+                </ns2:organization>
+                <studyPersonnels>
+                    <ns2:studyPersonnel>
+                        <roleCode>caaers_participant_cd</roleCode>
+                        <startDate>2011-01-26</startDate>
+                        <endDate>2011-03-26</endDate>
+                        <ns2:researchStaff>
+                            <firstName>Smoke</firstName>
+                            <lastName>Tester1</lastName>
+                            <nciIdentifier>SMOKE_RS_1</nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                    <ns2:studyPersonnel>
+                        <roleCode>caaers_participant_cd</roleCode>
+                        <startDate>2010-02-26</startDate>
+                        <endDate>2011-03-01</endDate>
+                        <ns2:researchStaff>
+                            <firstName>research</firstName>
+                            <lastName>staff-ws</lastName>
+                            <nciIdentifier>ws-rs1</nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                    <ns2:studyPersonnel>
+                        <roleCode>caaers_site_cd</roleCode>
+                        <startDate>2010-02-26</startDate>
+                        <endDate>2011-03-02</endDate>
+                        <ns2:researchStaff>
+                            <firstName>research</firstName>
+                            <lastName>staff-ws</lastName>
+                            <nciIdentifier>ws-rs1</nciIdentifier>
+                        </ns2:researchStaff>
+                    </ns2:studyPersonnel>
+                </studyPersonnels>
+            </ns2:studySite>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>North Central Cancer Treatment Group</name>
+                    <nciInstituteCode>NCCTG</nciInstituteCode>
+                </ns2:organization>
+                <startDate>2009-10-01</startDate>
+                <endDate>2020-10-01</endDate>
+            </ns2:studySite>
+        </studyOrganizations>
+        <identifiers/>
+        <studyAgents>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>Capecitabine (Xeloda)</name>
+                </ns2:agent>
+                <indType>NA_COMMERCIAL</indType>
+            </ns2:studyAgent>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>Irinotecan (CPT-11, Camptosar)</name>
+                </ns2:agent>
+                <indType>NA_COMMERCIAL</indType>
+            </ns2:studyAgent>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>OXALIplatin (Eloxatin)</name>
+                </ns2:agent>
+                <indType>NA_COMMERCIAL</indType>
+            </ns2:studyAgent>
+        </studyAgents>
+        <ctepStudyDiseases>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Adenocarcinoma - small intest.</term>
+                </ns2:diseaseTerm>
+                <leadDisease>true</leadDisease>
+            </ns2:ctepStudyDisease>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Hematopoietic malignancy, NOS</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Solid tumor, NOS</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+        </ctepStudyDiseases>
+        <evaluationPeriods>
+            <ns2:evaluationPeriod>
+                <name>Baseline</name>
+                <epochOrder>0</epochOrder>
+            </ns2:evaluationPeriod>
+            <ns2:evaluationPeriod>
+                <name>Treatment</name>
+                <epochOrder>1</epochOrder>
+            </ns2:evaluationPeriod>
+            <ns2:evaluationPeriod>
+                <name>Post-treatment</name>
+                <epochOrder>2</epochOrder>
+            </ns2:evaluationPeriod>
+        </evaluationPeriods>
+    </ns2:study>
+</ns2:studies>

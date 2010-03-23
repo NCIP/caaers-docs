@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:participants xmlns:p="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://webservice.caaers.cabig.nci.nih.gov/participant ParticipantSchema.xsd ">
+  <p:participant>
+    <firstName>john</firstName>
+    <lastName>pt_CALGB_50403</lastName>
+    <maidenName>xx</maidenName>
+    <middleName>yy</middleName>
+    <birthDate>2001-01-01</birthDate>
+    <gender>Male</gender>
+    <race>Asian</race>
+    <ethnicity>Hispanic or Latino</ethnicity>
+    <identifiers>
+      <p:organizationAssignedIdentifier>
+        <type>MRN</type>
+        <value>pt_CALGB_50403</value>
+        <primaryIndicator>true</primaryIndicator>
+        <p:organization>
+          <name>Cancer Therapy Evaluation Program</name>
+          <nciInstituteCode>CTEP</nciInstituteCode>
+        </p:organization>
+      </p:organizationAssignedIdentifier>
+      <p:systemAssignedIdentifier>
+        <type>MRN</type>
+        <value>pt_CALGB_50403</value>
+        <primaryIndicator>true</primaryIndicator>
+        <systemName>MY TEST SYTEM</systemName>
+      </p:systemAssignedIdentifier>
+    </identifiers>
+    <assignments>
+      <p:assignment>
+        <studySubjectIdentifier>ssi-pt-CALGB_50403</studySubjectIdentifier>
+        <p:studySite>
+          <p:study>
+            <identifiers>
+              <identifier>
+                <type>Protocol Authority Identifier</type>
+                <value>CALGB-50403</value>
+              </identifier>
+            </identifiers>
+          </p:study>
+          <p:organization>
+            <name>Karnataka Cancer Therapy and Research Institute</name>
+            <nciInstituteCode>37007</nciInstituteCode>
+          </p:organization>
+        </p:studySite>
+      </p:assignment>
+    </assignments>
+  </p:participant>
+</p:participants>
