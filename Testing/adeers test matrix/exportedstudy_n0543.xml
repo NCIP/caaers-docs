@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:studies xmlns:ns2="http://webservice.caaers.cabig.nci.nih.gov">
     <ns2:study>
-        <shortTitle>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan, Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel Adenocarcinoma</shortTitle>
-        <longTitle>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan, Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel Adenocarcinoma</longTitle>
-        <description>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan, Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel Adenocarcinoma</description>
+        <shortTitle>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan,
+            Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel
+            Adenocarcinoma</shortTitle>
+        <longTitle>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan,
+            Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel
+            Adenocarcinoma</longTitle>
+        <description>N0543, A Phase II Trial of Pharmacogenetic-Based Dosing of Irinotecan,
+            Oxaliplatin, and Capecitabine as First-Line Therapy for Advanced Small Bowel
+            Adenocarcinoma</description>
         <phaseCode>Phase II Trial</phaseCode>
         <status>Active - Trial is open to accrual</status>
         <multiInstitutionIndicator>true</multiInstitutionIndicator>
@@ -57,49 +63,43 @@
         <studyOrganizations>
             <ns2:studySite>
                 <ns2:organization>
-                    <name>Mayo Clinic Rochester</name>
-                    <nciInstituteCode>MN026</nciInstituteCode>
+                    <name>Karnataka Cancer Therapy and Research Institute</name>
+                    <nciInstituteCode>37007</nciInstituteCode>
                 </ns2:organization>
+                <studyInvestigators>
+                    <ns2:studyInvestigator>
+                        <roleCode>SI</roleCode>
+                        <startDate>2010-01-01</startDate>
+                        <ns2:siteInvestigator>
+                            <ns2:investigator>
+                                <firstName>John</firstName>
+                                <lastName>inv1</lastName>
+                                <nciIdentifier>inv-5876-v1</nciIdentifier>
+                            </ns2:investigator>
+                        </ns2:siteInvestigator>
+                    </ns2:studyInvestigator>
+                </studyInvestigators>
                 <studyPersonnels>
                     <ns2:studyPersonnel>
                         <roleCode>caaers_participant_cd</roleCode>
-                        <startDate>2011-01-26</startDate>
-                        <endDate>2011-03-26</endDate>
+                        <startDate>2009-08-31</startDate>
+                        <endDate>2011-02-01</endDate>
                         <ns2:researchStaff>
-                            <firstName>Smoke</firstName>
-                            <lastName>Tester1</lastName>
-                            <nciIdentifier>SMOKE_RS_1</nciIdentifier>
+                            <firstName>robert</firstName>
+                            <lastName>rs1</lastName>
+                            <nciIdentifier>rs-5876-v1</nciIdentifier>
                         </ns2:researchStaff>
                     </ns2:studyPersonnel>
                     <ns2:studyPersonnel>
-                        <roleCode>caaers_participant_cd</roleCode>
-                        <startDate>2010-02-26</startDate>
-                        <endDate>2011-03-01</endDate>
+                        <roleCode>caaers_ae_cd</roleCode>
+                        <startDate>2009-08-31</startDate>
                         <ns2:researchStaff>
-                            <firstName>research</firstName>
-                            <lastName>staff-ws</lastName>
-                            <nciIdentifier>ws-rs1</nciIdentifier>
-                        </ns2:researchStaff>
-                    </ns2:studyPersonnel>
-                    <ns2:studyPersonnel>
-                        <roleCode>caaers_site_cd</roleCode>
-                        <startDate>2010-02-26</startDate>
-                        <endDate>2011-03-02</endDate>
-                        <ns2:researchStaff>
-                            <firstName>research</firstName>
-                            <lastName>staff-ws</lastName>
-                            <nciIdentifier>ws-rs1</nciIdentifier>
+                            <firstName>robert</firstName>
+                            <lastName>rs1</lastName>
+                            <nciIdentifier>rs-5876-v1</nciIdentifier>
                         </ns2:researchStaff>
                     </ns2:studyPersonnel>
                 </studyPersonnels>
-            </ns2:studySite>
-            <ns2:studySite>
-                <ns2:organization>
-                    <name>North Central Cancer Treatment Group</name>
-                    <nciInstituteCode>NCCTG</nciInstituteCode>
-                </ns2:organization>
-                <startDate>2009-10-01</startDate>
-                <endDate>2020-10-01</endDate>
             </ns2:studySite>
         </studyOrganizations>
         <identifiers/>
