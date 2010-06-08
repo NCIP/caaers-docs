@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="particpantServiceTest" soapui-version="2.5" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@projectRoot">C:\Karthik\work\caaers\caaers-ws-tests</con:setting></con:settings><con:interface name="ParticipantServiceHttpBinding" bindingName="{http://webservice.caaers.cabig.nci.nih.gov/participant}ParticipantServiceHttpBinding" soapVersion="1_1" definition="https://oracle.qa.semanticbits.com/caaers/services/ParticipantService?wsdl" xsi:type="con:WsdlInterface" wsaVersion="NONE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://oracle.qa.semanticbits.com/caaers/services/ParticipantService?wsdl"><con:part><con:url>https://oracle.qa.semanticbits.com/caaers/services/ParticipantService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:tns="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://webservice.caaers.cabig.nci.nih.gov/participant">
+      <xs:element name="participants">
+        <xs:annotation>
+          <xs:documentation>The top level (typically root) element. Allows the definition of
+                default values for all nested bean definitions.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="participant"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="participant" type="ParticipantType"/>
+      <xs:complexType name="ParticipantType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="1" name="firstName" type="FirstAndLastNameType"/>
+              <xs:element maxOccurs="1" minOccurs="1" name="lastName" type="FirstAndLastNameType"/>
+              <xs:element minOccurs="0" name="maidenName" type="MiddleAndMaidenNameType"/>
+              <xs:element minOccurs="0" name="middleName" type="MiddleAndMaidenNameType"/>
+              <xs:choice>
+                <xs:element name="birthDate" type="xs:date"/>
+                <xs:sequence>
+                  <xs:element maxOccurs="1" minOccurs="1" name="birthMonth" type="CustomMonthType"/>
+                  <xs:element maxOccurs="1" minOccurs="1" name="birthYear" type="CustomDateType"/>
+                </xs:sequence>
+              </xs:choice>
+              <xs:element maxOccurs="1" minOccurs="1" name="gender" type="GenderType"/>
+              <xs:element maxOccurs="1" minOccurs="1" name="race" type="RaceType"/>
+              <xs:element maxOccurs="1" minOccurs="1" name="ethnicity" type="EthnicityType"/>
+              <xs:element maxOccurs="1" minOccurs="1" name="identifiers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="1" ref="organizationAssignedIdentifier"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" ref="systemAssignedIdentifier"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" name="assignments">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" ref="assignment"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="study" type="StudyType"/>
+      <xs:complexType name="StudyType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="1" name="identifiers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="identifier" type="ReducedIdentifierType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="assignment" type="AssignmentType"/>
+      <xs:complexType name="AssignmentType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="1" name="studySubjectIdentifier" type="xs:string"/>
+              <xs:element ref="studySite"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="studySite" type="StudySiteType"/>
+      <xs:complexType name="StudySiteType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="1" ref="study"/>
+              <xs:element maxOccurs="1" minOccurs="1" ref="organization"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="organization" type="OrganizationType"/>
+      <xs:complexType name="OrganizationType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element minOccurs="1" name="name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="nciInstituteCode" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="organizationAssignedIdentifier" type="OrganizationAssignedIdentifierType"/>
+      <xs:complexType name="OrganizationAssignedIdentifierType">
+        <xs:complexContent>
+          <xs:extension base="IdentifierType">
+            <xs:sequence>
+              <xs:element ref="organization"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="systemAssignedIdentifier" type="SystemAssignedIdentifierType"/>
+      <xs:complexType name="SystemAssignedIdentifierType">
+        <xs:complexContent>
+          <xs:extension base="IdentifierType">
+            <xs:sequence>
+              <xs:element name="systemName" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="IdentifierType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element name="type" type="ParticipantIdentifierType"/>
+              <xs:element name="value" type="CustomStringType"/>
+              <xs:element name="primaryIndicator" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ReducedIdentifierType">
+        <xs:complexContent>
+          <xs:extension base="MutableDomainObject">
+            <xs:sequence>
+              <xs:element name="type" type="StudyIdentifierType"/>
+              <xs:element name="value" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="DomainObject">
+        <xs:attribute name="id" type="xs:positiveInteger"/>
+      </xs:complexType>
+      <xs:complexType name="MutableDomainObject">
+        <xs:complexContent>
+          <xs:extension base="DomainObject">
+            <xs:attribute name="version" type="xs:positiveInteger"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:simpleType name="StudyIdentifierType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Site Identifier"/>
+          <xs:enumeration value="Site IRB Identifier"/>
+          <xs:enumeration value="ClinicalTrials.gov Identifier"/>
+          <xs:enumeration value="Grid Identifier"/>
+          <xs:enumeration value="C3D Identifier"/>
+          <xs:enumeration value="Protocol Authority Identifier"/>
+          <xs:enumeration value="Coordinating Center Identifier"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ParticipantIdentifierType">
+        <xs:annotation>
+          <xs:documentation>Medical Record Number - MRN, Cooperative Group Identifier - CC</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="MRN"/>
+          <xs:enumeration value="CC"/>
+          <xs:enumeration value="Other"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="GenderType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Male"/>
+          <xs:enumeration value="Female"/>
+          <xs:enumeration value="Not Reported"/>
+          <xs:enumeration value="Unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="EthnicityType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Hispanic or Latino"/>
+          <xs:enumeration value="Not Hispanic or Latino"/>
+          <xs:enumeration value="Not Reported"/>
+          <xs:enumeration value="Unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CustomDateType">
+        <xs:restriction base="xs:integer">
+          <xs:pattern value="[1-2][0-9][0-9][0-9]"/>
+          <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CustomMonthType">
+        <xs:restriction base="xs:integer">
+          <xs:pattern value="((0[1-9])|(1[0-2]))"/>
+          <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CustomStringType">
+        <xs:restriction base="xs:normalizedString">
+          <xs:minLength value="1"/>
+          <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="FirstAndLastNameType">
+        <xs:restriction base="xs:normalizedString">
+          <xs:minLength value="1"/>
+          <xs:pattern value="[a-zA-Z0-9_ ]*"/>
+          <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="MiddleAndMaidenNameType">
+        <xs:restriction base="xs:normalizedString">
+          <xs:pattern value="[a-zA-Z0-9_ ]*"/>
+          <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="RaceType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Asian"/>
+          <xs:enumeration value="White"/>
+          <xs:enumeration value="Black or African American"/>
+          <xs:enumeration value="American Indian or Alaska Native"/>
+          <xs:enumeration value="Native Hawaiian or Other PacificIslander"/>
+          <xs:enumeration value="Not Reported"/>
+          <xs:enumeration value="Unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ResponseCodeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="0"/>
+          <xs:enumeration value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="Response" type="Response"/>
+      <xs:complexType name="Response">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="description" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="responsecode" type="ResponseCodeType"/>
+      </xs:complexType>
+      <xs:element name="CaaersServiceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Response"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xsd:element name="updateParticipant">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:participants"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateParticipantResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:CaaersServiceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createParticipant">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:participants"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createParticipantResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:CaaersServiceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createParticipantRequest">
+    <wsdl:part name="parameters" element="tns:createParticipant"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createParticipantResponse">
+    <wsdl:part name="parameters" element="tns:createParticipantResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateParticipantResponse">
+    <wsdl:part name="parameters" element="tns:updateParticipantResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateParticipantRequest">
+    <wsdl:part name="parameters" element="tns:updateParticipant"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ParticipantServiceIntf">
+    <wsdl:operation name="updateParticipant">
+      <wsdl:input name="updateParticipantRequest" message="tns:updateParticipantRequest"></wsdl:input>
+      <wsdl:output name="updateParticipantResponse" message="tns:updateParticipantResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createParticipant">
+      <wsdl:input name="createParticipantRequest" message="tns:createParticipantRequest"></wsdl:input>
+      <wsdl:output name="createParticipantResponse" message="tns:createParticipantResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ParticipantServiceHttpBinding" type="tns:ParticipantServiceIntf">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateParticipant">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateParticipantRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateParticipantResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createParticipant">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="createParticipantRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createParticipantResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ParticipantService">
+    <wsdl:port name="ParticipantServiceHttpPort" binding="tns:ParticipantServiceHttpBinding">
+      <wsdlsoap:address location="https://oracle.qa.semanticbits.com/caaers/services/ParticipantService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://10.10.10.2:18031/caaers/services/ParticipantService</con:endpoint><con:endpoint>https://sbdev1000.semanticbits.com:18031/caaers/services/ParticipantService</con:endpoint><con:endpoint>https://oracle.qa.semanticbits.com/caaers/services/ParticipantService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="createParticipant" bindingOperationName="createParticipant" inputName="createParticipantRequest" outputName="createParticipantResponse" receivesAttachments="false" sendsAttachments="false" type="Request-Response" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://oracle.qa.semanticbits.com/caaers/services/ParticipantService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:p="http://webservice.caaers.cabig.nci.nih.gov/participant">
+  <soapenv:Header xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsse:Security>
+         <wsse:UsernameToken>
+            <wsse:Username>SYSTEM</wsse:Username>
+            <wsse:Password>system_admin</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <par:createParticipant>
+         <par:participants>
+         <!--1 or more repetitions:-->
+            <par:participant>
+            <firstName>ws</firstName>
+               <lastName>subject007</lastName>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <birthDate>2001-01-01</birthDate>
+               <gender>Male</gender>
+               <race>Asian</race>
+               <ethnicity>Hispanic or Latino</ethnicity>
+               <identifiers>
+               <!--1 or more repetitions:-->
+                  <par:organizationAssignedIdentifier>
+                  <type>MRN</type>
+                     <value>mrn-org-subject-007</value>
+                     <primaryIndicator>true</primaryIndicator>
+                     <par:organization>
+                     <name>Cancer Therapy Evaluation Program</name>
+                     </par:organization>
+                  </par:organizationAssignedIdentifier>
+               </identifiers>
+               <assignments>
+               <!--1 or more repetitions:-->
+                  <par:assignment>
+                  <studySubjectIdentifier>8</studySubjectIdentifier>
+                     <par:studySite>
+                     <par:study>
+                        <identifiers>
+                           <identifier>
+                              <type>Protocol Authority Identifier</type>
+                                 <value>SFS-karthik-ws-test-1</value>
+                              </identifier>
+                           </identifiers>
+                        </par:study>
+                        <par:organization>
+                        <name>Cancer Therapy Evaluation Program</name>
+                        </par:organization>
+                     </par:studySite>
+                  </par:assignment>
+               </assignments>
+            </par:participant>
+         </par:participants>
+      </par:createParticipant>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508"/></con:call><con:call name="Request 2"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.10.10.2:18031/caaers/services/ParticipantService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://webservice.caaers.cabig.nci.nih.gov/participant">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:createParticipant>
+         <par:participants>
+            <!--1 or more repetitions:-->
+            <par:participant id="?" version="?">
+               <firstName>?</firstName>
+               <lastName>?</lastName>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <birthDate>?</birthDate>
+               <birthMonth>?</birthMonth>
+               <birthYear>?</birthYear>
+               <gender>?</gender>
+               <race>?</race>
+               <ethnicity>?</ethnicity>
+               <identifiers>
+                  <!--1 or more repetitions:-->
+                  <par:organizationAssignedIdentifier id="?" version="?">
+                     <type>?</type>
+                     <value>?</value>
+                     <primaryIndicator>?</primaryIndicator>
+                     <par:organization id="?" version="?">
+                        <name>?</name>
+                     </par:organization>
+                  </par:organizationAssignedIdentifier>
+               </identifiers>
+               <assignments>
+                  <!--1 or more repetitions:-->
+                  <par:assignment id="?" version="?">
+                     <studySubjectIdentifier>?</studySubjectIdentifier>
+                     <par:studySite id="?" version="?">
+                        <par:study id="?" version="?">
+                           <identifiers>
+                              <identifier id="?" version="?">
+                                 <type>?</type>
+                                 <value>?</value>
+                              </identifier>
+                           </identifiers>
+                        </par:study>
+                        <par:organization id="?" version="?">
+                           <name>?</name>
+                        </par:organization>
+                     </par:studySite>
+                  </par:assignment>
+               </assignments>
+            </par:participant>
+         </par:participants>
+      </par:createParticipant>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508"/></con:call></con:operation><con:operation isOneWay="false" action="" name="updateParticipant" bindingOperationName="updateParticipant" inputName="updateParticipantRequest" outputName="updateParticipantResponse" receivesAttachments="false" sendsAttachments="false" type="Request-Response" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://oracle.qa.semanticbits.com/caaers/services/ParticipantService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:p="http://webservice.caaers.cabig.nci.nih.gov/participant">
+   <soapenv:Header xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsse:Security>
+         <wsse:UsernameToken>
+            <wsse:Username>SYSTEM</wsse:Username>
+            <wsse:Password>system_admin</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <par:updateParticipant>
+         <par:participants>
+            <!--1 or more repetitions:-->
+            <par:participant>
+               <firstName>ws</firstName>
+               <lastName>subject007</lastName>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <birthDate>2001-01-01</birthDate>
+               <gender>Male</gender>
+               <race>Asian</race>
+               <ethnicity>Hispanic or Latino</ethnicity>
+               <identifiers>
+                  <!--1 or more repetitions:-->
+                  <par:organizationAssignedIdentifier>
+                     <type>MRN</type>
+                     <value>mrn-org-subject-007</value>
+                     <primaryIndicator>true</primaryIndicator>
+                     <par:organization>
+                        <name>Cancer Therapy Evaluation Program</name>
+                     </par:organization>
+                  </par:organizationAssignedIdentifier>
+               </identifiers>
+               <assignments>
+                  <!--1 or more repetitions:-->
+                  <par:assignment>
+                     <studySubjectIdentifier>89237489234</studySubjectIdentifier>
+                     <par:studySite>
+                        <par:study>
+                           <identifiers>
+                              <identifier>
+                                 <type>Protocol Authority Identifier</type>
+                                 <value>SFS-karthik-ws-test-1</value>
+                              </identifier>
+                           </identifiers>
+                        </par:study>
+                        <par:organization>
+                           <name>Cancer Therapy Evaluation Program</name>
+                        </par:organization>
+                     </par:studySite>
+                  </par:assignment>
+               </assignments>
+            </par:participant>
+         </par:participants>
+      </par:updateParticipant>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

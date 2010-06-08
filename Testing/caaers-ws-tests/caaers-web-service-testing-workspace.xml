@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="caaers-web-service-testing" soapui-version="2.5" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="AE management service">C:/Karthik/work/caaers/caaers-ws-tests/AE management service-soapui-project.xml</con:project>
+  <con:project name="investigator-service">C:/Karthik/work/caaers/caaers-ws-tests/investigator-service-soapui-project.xml</con:project>
+  <con:project name="particpantServiceTest">C:/Karthik/work/caaers/caaers-ws-tests/particpantServiceTest-soapui-project.xml</con:project>
+  <con:project name="research staff WS">C:/Karthik/work/caaers/caaers-ws-tests/research staff WS-soapui-project.xml</con:project>
+  <con:project name="study-service">C:/Karthik/work/caaers/caaers-ws-tests/study-service-soapui-project.xml</con:project>
+</con:soapui-workspace>
