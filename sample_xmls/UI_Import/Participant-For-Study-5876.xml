@@ -1,40 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:participants xmlns:p="http://webservice.caaers.cabig.nci.nih.gov/participant" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://webservice.caaers.cabig.nci.nih.gov/participant ParticipantSchema.xsd ">
   <p:participant>
-    <firstName>Smoker</firstName>
-    <lastName>Tester</lastName>
-    <maidenName>NIL</maidenName>
-    <middleName>NIL</middleName>
-    <birthDate>2001-01-01</birthDate>
+    <firstName>Allan</firstName>
+    <lastName>Doe</lastName>
+    <maidenName>Eli</maidenName>
+    <middleName>K</middleName>
+    <birthDate>1970-01-01</birthDate>
     <gender>Male</gender>
     <race>Asian</race>
     <ethnicity>Hispanic or Latino</ethnicity>
     <identifiers>
       <p:organizationAssignedIdentifier>
         <type>MRN</type>
-        <value>838001</value>
+        <value>ALLAN-ELI-5876</value>
         <primaryIndicator>true</primaryIndicator>
         <p:organization>
-          <name>Mayo Clinic Rochester</name>
-          <nciInstituteCode>MN026</nciInstituteCode>
+          <name>Cancer Therapy Evaluation Program</name>
+          <nciInstituteCode>CTEP</nciInstituteCode>
         </p:organization>
       </p:organizationAssignedIdentifier>
-      <p:systemAssignedIdentifier>
-        <type>MRN</type>
-        <value>8383831</value>
-        <primaryIndicator>true</primaryIndicator>
-        <systemName>MY TEST SYTEM</systemName>
-      </p:systemAssignedIdentifier>
     </identifiers>
     <assignments>
       <p:assignment>
-        <studySubjectIdentifier>8281213101</studySubjectIdentifier>
+        <studySubjectIdentifier>SSI-ALLAN-5876</studySubjectIdentifier>
         <p:studySite>
           <p:study>
             <identifiers>
               <identifier>
-                <type>Coordinating Center Identifier</type>
-                <value>7351</value>
+                <type>Protocol Authority Identifier</type>
+                <value>5876-FS-ID</value>
               </identifier>
             </identifiers>
           </p:study>
