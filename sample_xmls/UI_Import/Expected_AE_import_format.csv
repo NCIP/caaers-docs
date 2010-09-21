@@ -1,0 +1,12 @@
+|NSC|NAME|CTCAE_VERSION|CTCAE_CATEGORY|OTHER_TOXICITY|AE_TERM|SELECT_AE|
+|Agent 1 ID|Agent 1 Name|CTCAE version #|Agent 1 AE 1 Category|Agent 1 AE 1 Verbatim|Agent 1 AE 1 CTCAE Term|Agent 1 AE 1 Select AE|
+|Agent 1 ID|Agent 1 Name|CTCAE version #|Agent 1 AE 2 Category|Agent 1 AE 2 Verbatim|Agent 1 AE 2 CTCAE Term|Agent 1 AE 2 Select AE|
+|Agent 2 ID|Agent 2 Name|CTCAE version #|Agent 2 AE 1 Category|Agent 2 AE 1 Verbatim|Agent 2 AE 1 CTCAE Term|Agent 2 AE 1 Select AE|
+etc...
+
+Important Notes:
+The order of columns does NOT matter.
+The name of the columns DOES matter and must match the column names provided above.
+The column names must be UPPERCASE.
+The file must be saved with a .csv extention.
+The values must be pipe (i.e. "|") delimited.
