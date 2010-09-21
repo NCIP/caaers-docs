@@ -10,3 +10,4 @@ The name of the columns DOES matter and must match the column names provided abo
 The column names must be UPPERCASE.
 The file must be saved with a .csv extention.
 The values must be pipe (i.e. "|") delimited.
+Quotes should not be used to surround text.
