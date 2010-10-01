@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+      <title>PORX_RM000001US - Hierarchical Message Description</title>
+      <meta name="Entry" content="Provider Details Query Response" />
+      <meta name="Identifier" content="PORX_RM000001US" /><style type="text/css">table {empty-cells: show}</style><script language="JavaScript1.2" type="text/javascript">
+
+var isNew=0;
+var isNS4=0;
+var isIE4=0;
+
+var brow=((navigator.appName) + (parseInt(navigator.appVersion)));
+
+//alert(brow);
+if (parseInt(navigator.appVersion)&gt;=5)
+{
+	isNew=1
+}
+else
+{
+	if(brow=="Netscape4")
+	{
+		isNS4=1;
+		document.captureEvents(Event.ONMOUSEOVER);
+	}
+	else
+	{
+		if(brow=="Microsoft Internet Explorer4")
+		{
+			isIE4=1;
+		}
+	}
+		
+}
+
+// thats ok
+
+
+if(isNS4||isIE4||isNew)
+{
+	docObj=(isNS4) ? 'document' : 'document.all';
+	
+	styleObj=(isNS4) ? ' ' : '.style';
+}
+
+function checkDOM(elementName)
+{
+	if(isNS4||isIE4||isNew)
+	{
+		dom=eval(docObj + '.' + elementName + styleObj);
+		//alert('This browser uses the ' + dom + 'Document Object Model.');
+		dom.left =0;
+		dom.top =0;
+	}
+}
+
+function popUp(evt,currElem)
+{
+
+	if((isNS4 &amp;&amp; currElem !=0) || (isIE4 &amp;&amp; currElem !=0))
+	{
+		dom =eval(docObj +'.' +currElem+styleObj);
+		state=dom.visibility;
+		if ((state == "visible") || (state=="show"))
+		{
+			dom.visibility="hidden";
+		}
+		else
+		{
+			if(isNS4)
+			{
+				topVal=eval(evt.pageY);
+				leftVal=eval(evt.pageX);
+				/*if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}*/
+
+			}
+			if(isIE4)
+			{
+				topVal=eval(event.clientY)  + document.body.scrollTop+20;
+				leftVal=eval(event.clientX) + document.body.scrollLeft;
+				
+				if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}
+			}
+			if(leftVal &lt; 2)
+			{
+				leftVal=2;
+			}
+			dom.top=topVal;
+			dom.left=leftVal;
+			dom.visibility="visible";
+		}
+	}
+}
+</script><style type="text/css">
+#ds
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+#cwe
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+#cne
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+.hypertext
+{
+position: absolute;
+	background-color: white;
+	layer-background-colour: cornflowerblue;
+	padding: 3px;
+	border: 3px solid blue;
+	width: 150px;
+	font:normal 10pt/13pt helvetica, sans-serif;
+	text-align: left;
+	color: blue;
+
+	
+}
+td {font-family: verdana,arial; text-align: left; font-size: 8pt;border-style:solid;border-width=1pt;}
+				</style></head>
+   <body onload="checkDOM('ds')"><span id="ds" class="hypertext">No Current Link To Vocabulary</span><span id="cwe" class="hypertext">Coded With Extensions</span><span id="cne" class="hypertext">Coded No Extensions</span><table border="3" frame="vsides" rules="cols" cellpadding="2" cellspacing="0"
+             style="border-width: 2px;border-style: solid">
+         <tr valign="top">
+            <td height="35"><b><font size="+1">PORX_RM000001US</font><br />Substance Administration Event</b></td>
+            <td height="35" class="lightBoundary"><br /><a href="PORX_RM000001US.xls">(Link to Excel View)</a><br />Derived from RMIM: <a href="_.htm">_</a></td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="SubstanceAdministrationEvent">SubstanceAdministrationEvent</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Design Comments: </i></b>PerformedSubstanceAdministration
+                  </p>
+                  <p>-inherit from PerformedProcedure model and add these attributes and associations</p>
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#SBADM"><b>SBADM</b></a>, fixed value= "SBADM"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>routeCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#RouteOfAdministration"><b>RouteOfAdministration</b></a>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.routeOfAdministrationCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>doseCheckQuantity<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-RTO">RTO</a>&lt;<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-PQ">PQ</a>,<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-PQ.TIME">PQ.TIME</a>&gt;)
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>UsageNotes: </i></b>periodDoseCode must be expressed in UCUM units of time. Denominator quantity must be "1".
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.periodDoseTotal (numerator)
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.dosePeriodCode (denomerator)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">component1<font color="green"> [0..1]</font><font color="gray"> (<a href="#Component2">Component2</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">component2<font color="green"> [0..1]</font><font color="gray"> (<a href="#Component">Component</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Component2">Component2</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#COMP"><b>COMP</b></a>, fixed value= "COMP"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">substitutionEvent<font color="green"> [1..1]</font><font color="gray"> (<a href="#SubstitutionEvent">SubstitutionEvent</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="SubstitutionEvent">SubstitutionEvent</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#SUBST"><b>SUBST</b></a>, fixed value= "SUBST"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>code<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<b>DrugTherapyChangeReason</b>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.changeTypeCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>reasonCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#SubstanceAdminSubstitutionReason"><b>SubstanceAdminSubstitutionReason</b></a>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.changeReason (originalText)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td bgcolor="lightgrey"><b>inFulfillmentOf<font color="green"> [1..1]</font><font color="gray"> (<a href="#InFulfillmentOf">InFulfillmentOf</a>)</font></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="InFulfillmentOf">InFulfillmentOf</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#FLFS"><b>FLFS</b></a>, fixed value= "FLFS"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>negationInd<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-BL">BL</a>)
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.plannedChangeIndicator (if association is present then true, otherwise false)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td bgcolor="lightgrey"><b>substitutionIntent<font color="green"> [1..1]</font><font color="gray"> (<a href="#SubstitutionIntent">SubstitutionIntent</a>)</font></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="SubstitutionIntent">SubstitutionIntent</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#SUBST"><b>SUBST</b></a>, fixed value= "SUBST"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#INT"><b>INT</b></a>, fixed value= "INT"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Component">Component</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#COMP"><b>COMP</b></a>, fixed value= "COMP"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">substanceAdministrationFullDoseEvent<font color="green"> [1..1]</font><font color="gray"> (<a href="#SubstanceAdministrationFullDoseEvent">SubstanceAdministrationFullDoseEvent</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="SubstanceAdministrationFullDoseEvent">SubstanceAdministrationFullDoseEvent</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#SBADM"><b>SBADM</b></a>, fixed value= "SBADM"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>text<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-ST">ST</a>)
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.doseDescription
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>effectiveTime<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-QSC">QSC</a>&lt;<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-TS">TS</a>&gt;)
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.doseFrequencyCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>doseQuantity<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#SubstanceAdministration-cls">SubstanceAdministration</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-PQ">PQ</a>)
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSubstanceAdministration.dose
+                  </p>
+               </div>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

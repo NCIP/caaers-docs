@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+      <title>POOO_RM000001US - Hierarchical Message Description</title>
+      <meta name="Entry" content="Provider Details Query Response" />
+      <meta name="Identifier" content="POOO_RM000001US" /><style type="text/css">table {empty-cells: show}</style><script language="JavaScript1.2" type="text/javascript">
+
+var isNew=0;
+var isNS4=0;
+var isIE4=0;
+
+var brow=((navigator.appName) + (parseInt(navigator.appVersion)));
+
+//alert(brow);
+if (parseInt(navigator.appVersion)&gt;=5)
+{
+	isNew=1
+}
+else
+{
+	if(brow=="Netscape4")
+	{
+		isNS4=1;
+		document.captureEvents(Event.ONMOUSEOVER);
+	}
+	else
+	{
+		if(brow=="Microsoft Internet Explorer4")
+		{
+			isIE4=1;
+		}
+	}
+		
+}
+
+// thats ok
+
+
+if(isNS4||isIE4||isNew)
+{
+	docObj=(isNS4) ? 'document' : 'document.all';
+	
+	styleObj=(isNS4) ? ' ' : '.style';
+}
+
+function checkDOM(elementName)
+{
+	if(isNS4||isIE4||isNew)
+	{
+		dom=eval(docObj + '.' + elementName + styleObj);
+		//alert('This browser uses the ' + dom + 'Document Object Model.');
+		dom.left =0;
+		dom.top =0;
+	}
+}
+
+function popUp(evt,currElem)
+{
+
+	if((isNS4 &amp;&amp; currElem !=0) || (isIE4 &amp;&amp; currElem !=0))
+	{
+		dom =eval(docObj +'.' +currElem+styleObj);
+		state=dom.visibility;
+		if ((state == "visible") || (state=="show"))
+		{
+			dom.visibility="hidden";
+		}
+		else
+		{
+			if(isNS4)
+			{
+				topVal=eval(evt.pageY);
+				leftVal=eval(evt.pageX);
+				/*if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}*/
+
+			}
+			if(isIE4)
+			{
+				topVal=eval(event.clientY)  + document.body.scrollTop+20;
+				leftVal=eval(event.clientX) + document.body.scrollLeft;
+				
+				if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}
+			}
+			if(leftVal &lt; 2)
+			{
+				leftVal=2;
+			}
+			dom.top=topVal;
+			dom.left=leftVal;
+			dom.visibility="visible";
+		}
+	}
+}
+</script><style type="text/css">
+#ds
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+#cwe
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+#cne
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+.hypertext
+{
+position: absolute;
+	background-color: white;
+	layer-background-colour: cornflowerblue;
+	padding: 3px;
+	border: 3px solid blue;
+	width: 150px;
+	font:normal 10pt/13pt helvetica, sans-serif;
+	text-align: left;
+	color: blue;
+
+	
+}
+td {font-family: verdana,arial; text-align: left; font-size: 8pt;border-style:solid;border-width=1pt;}
+				</style></head>
+   <body onload="checkDOM('ds')"><span id="ds" class="hypertext">No Current Link To Vocabulary</span><span id="cwe" class="hypertext">Coded With Extensions</span><span id="cne" class="hypertext">Coded No Extensions</span><table border="3" frame="vsides" rules="cols" cellpadding="2" cellspacing="0"
+             style="border-width: 2px;border-style: solid">
+         <tr valign="top">
+            <td height="35"><b><font size="+1">POOO_RM000001US</font><br />Procedure Event</b></td>
+            <td height="35" class="lightBoundary"><br /><a href="POOO_RM000001US.xls">(Link to Excel View)</a><br />Derived from RMIM: <a href="_.htm">_</a></td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="ProcedureEvent">ProcedureEvent</a></b><br /><span style="margin-left:5pt">[Constraint: "
+                  <p>Performer, product and Component FastingObservationEvent Are only permitted if classCode Is SPECCOLL</p>"]</span></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Design Comments: </i></b>PerformedProcedure
+                  </p>
+                  <p>PerformedSpecimenCollection</p>
+                  <p>-inherit from PerformedActivity model and add the following attributes and associations</p>
+                  <p><b><i>Mapping: </i></b>PerformedProcedure
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSpecimenCollection
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Procedure-cls">Procedure</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:V:<a href="../../../infrastructure/vocabulary/vs_ActClass.htm#ActClassProcedure"><b>ActClassProcedure</b></a>, root= "PROC"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>UsageNotes: </i></b>Must be PROC for PerformedProcedure and SPECCOL for PerformedSpecimenCollection
+                  </p>
+                  <p><b><i>Open Issues: </i></b>Need to change this to a value set of PROC + SPECCOL
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Procedure-cls">Procedure</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>methodCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Procedure-cls">Procedure</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ProcedureMethod"><b>ProcedureMethod</b></a>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.methodCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>approachSiteCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Procedure-cls">Procedure</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ActSite"><b>ActSite</b></a>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.approachAnatomicSiteCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>targetSiteCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Procedure-cls">Procedure</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ActSite"><b>ActSite</b></a>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.targetAnatomicSiteCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">consumable<font color="green"> [0..*]</font><font color="gray"> (<a href="#Consumable">Consumable</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Design Comments: </i></b>StudyAgent ConcomitantAgent
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent
+                  </p>
+                  <p><b><i>Mapping: </i></b>ConcomitantAgent (when indicated by functionCode)
+                  </p>
+                  <p><b><i>Mapping: </i></b>ConcomitantAgent.using[PerformedProcedure]
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.used[ConcomitantAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>ConcomitantAgent.performing[Product](R_ProductListedUniversal)
+                  </p>
+                  <p><b><i>Mapping: </i></b>Product(R_ProductListedUniversal).performed[ConcomitantAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>Product(R_ProductListedUniversal).performed[StudyAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent.performing[Product](R_ProductListedUniversal)
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.used[StudyAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent.using[PerformedProcedure]
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">product<font color="green"> [0..*]</font><font color="gray"> (<a href="#Product">Product</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>BiologicSpecimen(R_SpecimenUniversal).producing[PerformedSpecimenCollection]
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSpecimenCollection.produced[BiologicSpecimen](R_SpecimenUniversal)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">performer<font color="green"> [0..1]</font><font color="gray"> (<a href="#Performer">Performer</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>CollectingLaboratory(R_LaboratoryUniversal).performed[PerformedSpecimenCollection]
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSpecimenCollection.performing[CollectingLaboratory](R_LaboratoryUniversal)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">component1<font color="green"> [0..1]</font><font color="gray"> (<a href="#Component2">Component2</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">component2<font color="green"> [0..1]</font><font color="gray"> (<a href="#Component">Component</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">subjectOf1<font color="green"> [0..1]</font><font color="gray"> (<a href="#Subject2">Subject2</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">subjectOf2<font color="green"> [0..1]</font><font color="gray"> (<a href="#Subject">Subject</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Consumable">Consumable</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Design Comments: </i></b>StudyAgent ConcomitantAgent
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent
+                  </p>
+                  <p><b><i>Mapping: </i></b>ConcomitantAgent (when indicated by functionCode)
+                  </p>
+                  <p><b><i>Mapping: </i></b>ConcomitantAgent.using[PerformedProcedure]
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.used[ConcomitantAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>ConcomitantAgent.performing[Product](R_ProductListedUniversal)
+                  </p>
+                  <p><b><i>Mapping: </i></b>Product(R_ProductListedUniversal).performed[ConcomitantAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>Product(R_ProductListedUniversal).performed[StudyAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent.performing[Product](R_ProductListedUniversal)
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.used[StudyAgent]
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent.using[PerformedProcedure]
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ManagedParticipation-cls">ManagedParticipation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationType.htm"><b>ParticipationType</b></a>:<a href="../../../infrastructure/vocabulary/ParticipationType.htm#CSM"><b>CSM</b></a>, fixed value= "CSM"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>functionCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ManagedParticipation-cls">ManagedParticipation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<b>StudyAgentFunction</b>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>StudyAgent.functionCode (one of the codes will also indicate this is a concomitant agent rather than a study agent)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>statusCode<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ManagedParticipation-cls">ManagedParticipation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-HXIT">HXIT</a>&lt;<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>&gt;) {CNE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ManagedParticipationStatus"><b>ManagedParticipationStatus</b></a>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Open Issues: </i></b>statusCode and statusDateRange need to be dropped and replaced with an effectiveDateRange
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent.statusCode
+                  </p>
+                  <p><b><i>Mapping: </i></b>StudyAgent.statusDate (validTime)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">lifeCycleRole<font color="green"> [1..1]</font><font color="gray"> (<a href="../../uscp/editable/POCP_MT010100US-NoEdit.htm">R_ProductListedUniversal</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Product">Product</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>BiologicSpecimen(R_SpecimenUniversal).producing[PerformedSpecimenCollection]
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSpecimenCollection.produced[BiologicSpecimen](R_SpecimenUniversal)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationType.htm"><b>ParticipationType</b></a>:<a href="../../../infrastructure/vocabulary/ParticipationType.htm#PRD"><b>PRD</b></a>, fixed value= "PRD"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">specimen<font color="green"> [1..1]</font><font color="gray"> (<a href="../../usct/editable/COCT_MT080000US-NoEdit.htm">R_SpecimenUniversal</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Performer">Performer</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>CollectingLaboratory(R_LaboratoryUniversal).performed[PerformedSpecimenCollection]
+                  </p>
+                  <p><b><i>Mapping: </i></b>PerformedSpecimenCollection.performing[CollectingLaboratory](R_LaboratoryUniversal)
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationType.htm"><b>ParticipationType</b></a>:<a href="../../../infrastructure/vocabulary/ParticipationType.htm#PRF"><b>PRF</b></a>, fixed value= "PRF"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">assignedEntity<font color="green"> [1..1]</font><font color="gray"> (<a href="../../usct/editable/COCT_MT000019US-NoEdit.htm">R_LaboratoryUniversal</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Component2">Component2</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#COMP"><b>COMP</b></a>, fixed value= "COMP"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">fastingObservationEvent<font color="green"> [1..1]</font><font color="gray"> (<a href="#FastingObservationEvent">FastingObservationEvent</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="FastingObservationEvent">FastingObservationEvent</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#OBS"><b>OBS</b></a>, fixed value= "OBS"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>code</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CV">CV</a>) {CNE:C:<b>TBD</b>, fixed value= "SubjectFasted"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>value</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-BL">BL</a>)
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedSpecimenCollection.fastingStatusIndicator
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Component">Component</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#COMP"><b>COMP</b></a>, fixed value= "COMP"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">observationEvent<font color="green"> [1..1]</font><font color="gray"> (<a href="#ObservationEvent">ObservationEvent</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="ObservationEvent">ObservationEvent</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#OBS"><b>OBS</b></a>, fixed value= "OBS"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>code</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CV">CV</a>) {CNE:C:<b>TBD</b>, fixed value= "TargetSiteObservation"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td>value<font color="green"> [0..1]</font><br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<b>TargetSiteConditionObservationValue</b>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.targetAnatomicSiteConditionCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Subject2">Subject2</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#SUBJ"><b>SUBJ</b></a>, fixed value= "SUBJ"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">observationEvent<font color="green"> [1..1]</font><font color="gray"> (<a href="#ObservationEvent3">ObservationEvent3</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="ObservationEvent3">ObservationEvent3</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#OBS"><b>OBS</b></a>, fixed value= "OBS"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>code</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CV">CV</a>) {CWE:C:<b>TBD</b>, fixed value= "TargetSiteLaterality"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>value</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<b>BodySiteLaterality</b>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.targetAnatomicSiteLateralityCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="Subject">Subject</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#SUBJ"><b>SUBJ</b></a>, fixed value= "SUBJ"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="Confomance">
+            <td bgcolor="lightgrey">observationEvent<font color="green"> [1..1]</font><font color="gray"> (<a href="#ObservationEvent2">ObservationEvent2</a>)</font></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr>
+            <td height="3" colspan="10" style="font-size=4pt;"> </td>
+         </tr>
+         <tr class="hmd" valign="top">
+            <td bgcolor="lightblue"><b><a name="ObservationEvent2">ObservationEvent2</a></b></td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>classCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#OBS"><b>OBS</b></a>, fixed value= "OBS"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>, fixed value= "EVN"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>code</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CV">CV</a>) {CWE:C:<b>TBD</b>, fixed value= "ApproachSiteLaterality"}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;"></div>
+            </td>
+         </tr>
+         <tr valign="top" class="ConfomanceR">
+            <td><b>value</b><font color="green"> [1..1]</font> (M)<br /><span style="margin-left:20pt"></span><a href="../../../infrastructure/rim/rim.htm#Observation-cls">Observation</a> (<a href="../../../infrastructure/datatypes_r2/datatypes_r2.htm#dt-CD">CD</a>) {CWE:D:<b>BodySiteLaterality</b>}
+            </td>
+            <td>
+               <div style="height: 100%; width: 100%;">
+                  <p><b><i>Mapping: </i></b>PerformedProcedure.approachAnatomicSiteLateralityCode
+                  </p>
+               </div>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>
