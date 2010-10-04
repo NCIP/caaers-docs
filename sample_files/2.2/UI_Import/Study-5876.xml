@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.1.6.1440 (http://www.liquid-technologies.com) -->
+<ns2:studies xmlns:ns2="http://webservice.caaers.cabig.nci.nih.gov">
+	<ns2:study>
+		<shortTitle>Phase II Trial of Flavopiridol and Cisplatin in Advanced Epithelial Ovarian and Primary Peritoneal Carcinomas</shortTitle>
+		<longTitle>Phase II Trial of Flavopiridol and Cisplatin in Advanced Epithelial Ovarian and Primary Peritoneal Carcinomas</longTitle>
+		<description>Phase II Trial of Flavopiridol and Cisplatin in Advanced Epithelial Ovarian and Primary Peritoneal Carcinomasxxxx</description>
+		<phaseCode>Phase II Trial</phaseCode>
+		<status>Active - Trial is open to accrual</status>
+		<multiInstitutionIndicator>true</multiInstitutionIndicator>
+		<adeersReporting>true</adeersReporting>
+		<otherMeddra>MedDRA v9</otherMeddra>
+		<ns2:aeTerminology>
+			<ns2:ctcVersion>
+				<name>3</name>
+			</ns2:ctcVersion>
+		</ns2:aeTerminology>
+		<ns2:diseaseTerminology>
+			<diseaseCodeTerm>CTEP</diseaseCodeTerm>
+		</ns2:diseaseTerminology>
+		<drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+		<deviceTherapyType>false</deviceTherapyType>
+		<radiationTherapyType>false</radiationTherapyType>
+		<surgeryTherapyType>false</surgeryTherapyType>
+		<behavioralTherapyType>false</behavioralTherapyType>
+		<biologicalTherapyType>false</biologicalTherapyType>
+		<geneticTherapyType>false</geneticTherapyType>
+		<dietarySupplementTherapyType>false</dietarySupplementTherapyType>
+		<otherTherapyType>false</otherTherapyType>
+		<reportTypeCaaersXML>true</reportTypeCaaersXML>
+		<reportTypeAdeersPDF>true</reportTypeAdeersPDF>
+		<reportTypeMedwatchPDF>false</reportTypeMedwatchPDF>
+		<reportTypeDCPSAEForm>false</reportTypeDCPSAEForm>
+		<reportTypeCIOMSForm>false</reportTypeCIOMSForm>
+		<reportTypeCIOMSAEForm>false</reportTypeCIOMSAEForm>
+		<fundingSponsor>
+			<organizationAssignedIdentifier>
+				<value>5876-FS-ID</value>
+			</organizationAssignedIdentifier>
+			<ns2:studyFundingSponsor>
+				<ns2:organization>
+					<name>Cancer Therapy Evaluation Program</name>
+					<nciInstituteCode>CTEP</nciInstituteCode>
+				</ns2:organization>
+			</ns2:studyFundingSponsor>
+		</fundingSponsor>
+		<coordinatingCenter>
+			<organizationAssignedIdentifier>
+				<value>CALGB-CC-ID</value>
+			</organizationAssignedIdentifier>
+			<ns2:studyCoordinatingCenter>
+				<ns2:organization>
+					<name>Cancer and Leukemia Group B</name>
+					<nciInstituteCode>CALGB</nciInstituteCode>
+				</ns2:organization>
+			</ns2:studyCoordinatingCenter>
+		</coordinatingCenter>
+		<studyOrganizations>
+			<ns2:studySite>
+				<ns2:organization>
+					<name>Mayo Clinic Rochester</name>
+					<nciInstituteCode>MN026</nciInstituteCode>
+				</ns2:organization>
+				<studyInvestigators>
+					<ns2:studyInvestigator>
+						<roleCode>SI</roleCode>
+						<startDate>2010-01-01</startDate>
+						<ns2:siteInvestigator>
+							<ns2:investigator>
+								<firstName>Jake</firstName>
+								<lastName>Doe</lastName>
+								<nciIdentifier>JAKE-DOE-5876</nciIdentifier>
+							</ns2:investigator>
+						</ns2:siteInvestigator>
+					</ns2:studyInvestigator>
+				</studyInvestigators>
+				<studyPersonnels>
+					<ns2:studyPersonnel>
+						<roleCode>subject_manager</roleCode>
+						<startDate>2009-08-31</startDate>
+						<endDate>2011-02-01</endDate>
+						<ns2:researchStaff>
+							<firstName>Richard</firstName>
+							<lastName>Doe</lastName>
+							<nciIdentifier>RICHARD-DOE-5876</nciIdentifier>
+						</ns2:researchStaff>
+					</ns2:studyPersonnel>
+					</studyPersonnels>
+			</ns2:studySite>
+		</studyOrganizations>
+		<identifiers />
+		<treatmentAssignments>
+			<ns2:treatmentAssignment>
+				<code>A</code>
+				<description>(Cycle= 3 Weeks): Cisplatin 60 mg/m2 IV on day 1 Flavopiridol 100 mg/m2 CIV over 24 hours on day 1</description>
+			</ns2:treatmentAssignment>
+		</treatmentAssignments>
+		<studyAgents>
+			<ns2:studyAgent>
+				<ns2:agent>
+					<name>Alvocidib (flavopiridol)</name>
+				</ns2:agent>
+				<indType>CTEP_IND</indType>
+				<partOfLeadIND>true</partOfLeadIND>
+				<studyAgentINDAssociations>
+					<ns2:studyAgentINDAssociation>
+						<ns2:investigationalNewDrug>
+							<indNumber>-111</indNumber>
+						</ns2:investigationalNewDrug>
+					</ns2:studyAgentINDAssociation>
+				</studyAgentINDAssociations>
+			</ns2:studyAgent>
+			<ns2:studyAgent>
+				<ns2:agent>
+					<name>CISplatin</name>
+				</ns2:agent>
+				<indType>NA_COMMERCIAL</indType>
+			</ns2:studyAgent>
+		</studyAgents>
+		<ctepStudyDiseases>
+			<ns2:ctepStudyDisease>
+				<ns2:diseaseTerm>
+					<term>Ovarian epithelial cancer</term>
+				</ns2:diseaseTerm>
+				<leadDisease>true</leadDisease>
+			</ns2:ctepStudyDisease>
+			<ns2:ctepStudyDisease>
+				<ns2:diseaseTerm>
+					<term>Primary peritoneal carcinoma</term>
+				</ns2:diseaseTerm>
+				<leadDisease>false</leadDisease>
+			</ns2:ctepStudyDisease>
+		</ctepStudyDiseases>
+		<evaluationPeriods>
+			<ns2:evaluationPeriod>
+				<name>Baseline</name>
+				<epochOrder>0</epochOrder>
+				<solicitedAdverseEvents>
+					<ns2:solicitedAdverseEvent>
+						<ctepCode>10056848</ctepCode>
+					</ns2:solicitedAdverseEvent>
+					<ns2:solicitedAdverseEvent>
+						<ctepCode>10019692</ctepCode>
+					</ns2:solicitedAdverseEvent>
+				</solicitedAdverseEvents>
+			</ns2:evaluationPeriod>
+			<ns2:evaluationPeriod>
+				<name>Treatment</name>
+				<epochOrder>1</epochOrder>
+				<solicitedAdverseEvents>
+					<ns2:solicitedAdverseEvent>
+						<ctepCode>10019692</ctepCode>
+					</ns2:solicitedAdverseEvent>
+					<ns2:solicitedAdverseEvent>
+						<ctepCode>10063190</ctepCode>
+					</ns2:solicitedAdverseEvent>
+				</solicitedAdverseEvents>
+			</ns2:evaluationPeriod>
+			<ns2:evaluationPeriod>
+				<name>Post-treatment</name>
+				<epochOrder>2</epochOrder>
+				<solicitedAdverseEvents>
+					<ns2:solicitedAdverseEvent>
+						<ctepCode>10056848</ctepCode>
+					</ns2:solicitedAdverseEvent>
+					<ns2:solicitedAdverseEvent>
+						<ctepCode>10063190</ctepCode>
+					</ns2:solicitedAdverseEvent>
+				</solicitedAdverseEvents>
+			</ns2:evaluationPeriod>
+		</evaluationPeriods>
+		<expectedAECtcTerms>
+			<ns2:expectedAECtcTerm>
+				<ctepCode>10065708</ctepCode>
+			</ns2:expectedAECtcTerm>
+			<ns2:expectedAECtcTerm>
+				<ctepCode>10060640</ctepCode>
+			</ns2:expectedAECtcTerm>
+			<ns2:expectedAECtcTerm>
+				<ctepCode>10060602</ctepCode>
+			</ns2:expectedAECtcTerm>
+		</expectedAECtcTerms>
+	</ns2:study>
+</ns2:studies>

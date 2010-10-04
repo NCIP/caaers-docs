@@ -1,0 +1,8 @@
+Line 1 - ignored
+Line 2 - ignored
+Line 3 - ignored
+Line 4 - ignored
+Line 5 - ignored
+"Organization 1 ID","Organization 1 Name","City","State or Province","Country"
+"Organization 2 ID","Organization 2 Name","City","State or Province","Country"
+etc...
