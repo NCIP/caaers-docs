@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd" xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:gtwsdl1="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" xmlns:wsrbfw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.wsdl" xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wns1="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wns0="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity" xmlns:ns8="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/types" xmlns:ns4="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata" xmlns:ns1="uri:iso.org:21090" xmlns:ns9="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/types" xmlns:ns12="http://enterpriseservices.nci.nih.gov/AdverseEventService/Review/types" xmlns:ns3="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.security" xmlns:ns6="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common" xmlns:ns5="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.service" xmlns:ns14="http://enterpriseservices.nci.nih.gov/AdverseEventService/Evaluate/types" xmlns:ns10="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/types" xmlns:ns11="http://enterpriseservices.nci.nih.gov/AdverseEventService/Notification/types" xmlns:ns7="http://enterpriseservices.nci.nih.gov/AdverseEventService/Query/types" xmlns:ns13="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/types" xmlns:ns0="http://ess.caaers.nci.nih.gov" xmlns:ns2="http://enterpriseservices.nci.nih.gov/AdverseEventService/types" name="Protocol" targetNamespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol">
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.wsdl" location="../wsrf/faults/WS-BaseFaults.wsdl" />
+  <import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" location="../wsrf/notification/WS-BaseN.wsdl" />
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="./../wsrf/properties/WS-ResourceProperties.wsdl" />
+  <import namespace="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity" location="./ServiceSecurity.wsdl" />
+  <!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsrbf="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" targetNamespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" schemaLocation="../wsrf/faults/WS-BaseFaults.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/types" schemaLocation="./AdvancedQueryTypes.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata" schemaLocation="./xsd/cagrid/types/caGridMetadata.xsd" />
+      <import namespace="uri:iso.org:21090" schemaLocation="./ISO_datatypes_Narrative.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/types" schemaLocation="./ManagementTypes.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Review/types" schemaLocation="./ReviewTypes.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.security" schemaLocation="./xsd/cagrid/types/security/security.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common" schemaLocation="./xsd/cagrid/types/common/common.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.service" schemaLocation="./xsd/cagrid/types/service/servicemodel.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Evaluate/types" schemaLocation="./EvaluateTypes.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/types" schemaLocation="./AssociateTypes.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Notification/types" schemaLocation="./NotificationTypes.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Query/types" schemaLocation="./QueryTypes.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/types" schemaLocation="./ProtocolTypes.xsd" />
+      <import namespace="http://ess.caaers.nci.nih.gov" schemaLocation="./AE-PSM.xsd" />
+      <import namespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/types" schemaLocation="./AdverseEventServiceTypes.xsd" />
+      <element name="UpdateCodingTerminologyForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="aeCodingSystem">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Oid" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateCodingTerminologyForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:StudyProtocolVersion" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCodingTerminologyForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCodingTerminologyForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Oid" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateDataRequirementsForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="dataRequirement">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:DataRequirement" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateDataRequirementsForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:StudyProtocolVersion" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetDataRequirementsForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetDataRequirementsForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:DataRequirement" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateExpeditedAdverseEventsForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="aeTerms">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:ANY" minOccurs="1" maxOccurs="unbounded" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="codingTerminology">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Oid" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateExpeditedAdverseEventsForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:StudyProtocolVersion" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetExpeditedAdverseEventsForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetExpeditedAdverseEventsForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:AdverseEvent" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSolicitedAdverseEventsForStudyEpochRequest">
+        <complexType>
+          <sequence>
+            <element name="aeTerms">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:ANY" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="epochName" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSolicitedAdverseEventsForStudyEpochResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:StudyProtocolVersion" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetSolicitedAdverseEventsForStudyEpochRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="epochName" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetSolicitedAdverseEventsForStudyEpochResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:ANY" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateAdverseEventRecordingRulesForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="caaersRule">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:CaaersRule" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateAdverseEventRecordingRulesForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAdverseEventRecordingRulesForStudyRequest">
+        <complexType>
+          <sequence>
+            <element name="studyIdentifier">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Id" minOccurs="1" maxOccurs="1" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAdverseEventRecordingRulesForStudyResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:CaaersRule" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ProtocolResourceProperties">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <!--  place service messages here -->
+  <message name="UpdateCodingTerminologyForStudyRequest">
+    <part name="parameters" element="tns:UpdateCodingTerminologyForStudyRequest" />
+  </message>
+  <message name="UpdateCodingTerminologyForStudyResponse">
+    <part name="parameters" element="tns:UpdateCodingTerminologyForStudyResponse" />
+  </message>
+  <message name="GetCodingTerminologyForStudyRequest">
+    <part name="parameters" element="tns:GetCodingTerminologyForStudyRequest" />
+  </message>
+  <message name="GetCodingTerminologyForStudyResponse">
+    <part name="parameters" element="tns:GetCodingTerminologyForStudyResponse" />
+  </message>
+  <message name="UpdateDataRequirementsForStudyRequest">
+    <part name="parameters" element="tns:UpdateDataRequirementsForStudyRequest" />
+  </message>
+  <message name="UpdateDataRequirementsForStudyResponse">
+    <part name="parameters" element="tns:UpdateDataRequirementsForStudyResponse" />
+  </message>
+  <message name="GetDataRequirementsForStudyRequest">
+    <part name="parameters" element="tns:GetDataRequirementsForStudyRequest" />
+  </message>
+  <message name="GetDataRequirementsForStudyResponse">
+    <part name="parameters" element="tns:GetDataRequirementsForStudyResponse" />
+  </message>
+  <message name="UpdateExpeditedAdverseEventsForStudyRequest">
+    <part name="parameters" element="tns:UpdateExpeditedAdverseEventsForStudyRequest" />
+  </message>
+  <message name="UpdateExpeditedAdverseEventsForStudyResponse">
+    <part name="parameters" element="tns:UpdateExpeditedAdverseEventsForStudyResponse" />
+  </message>
+  <message name="GetExpeditedAdverseEventsForStudyRequest">
+    <part name="parameters" element="tns:GetExpeditedAdverseEventsForStudyRequest" />
+  </message>
+  <message name="GetExpeditedAdverseEventsForStudyResponse">
+    <part name="parameters" element="tns:GetExpeditedAdverseEventsForStudyResponse" />
+  </message>
+  <message name="UpdateSolicitedAdverseEventsForStudyEpochRequest">
+    <part name="parameters" element="tns:UpdateSolicitedAdverseEventsForStudyEpochRequest" />
+  </message>
+  <message name="UpdateSolicitedAdverseEventsForStudyEpochResponse">
+    <part name="parameters" element="tns:UpdateSolicitedAdverseEventsForStudyEpochResponse" />
+  </message>
+  <message name="GetSolicitedAdverseEventsForStudyEpochRequest">
+    <part name="parameters" element="tns:GetSolicitedAdverseEventsForStudyEpochRequest" />
+  </message>
+  <message name="GetSolicitedAdverseEventsForStudyEpochResponse">
+    <part name="parameters" element="tns:GetSolicitedAdverseEventsForStudyEpochResponse" />
+  </message>
+  <message name="UpdateAdverseEventRecordingRulesForStudyRequest">
+    <part name="parameters" element="tns:UpdateAdverseEventRecordingRulesForStudyRequest" />
+  </message>
+  <message name="UpdateAdverseEventRecordingRulesForStudyResponse">
+    <part name="parameters" element="tns:UpdateAdverseEventRecordingRulesForStudyResponse" />
+  </message>
+  <message name="GetAdverseEventRecordingRulesForStudyRequest">
+    <part name="parameters" element="tns:GetAdverseEventRecordingRulesForStudyRequest" />
+  </message>
+  <message name="GetAdverseEventRecordingRulesForStudyResponse">
+    <part name="parameters" element="tns:GetAdverseEventRecordingRulesForStudyResponse" />
+  </message>
+  <!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+  <portType name="ProtocolPortType" wsrp:ResourceProperties="tns:ProtocolResourceProperties">
+    <operation name="updateCodingTerminologyForStudy">
+      <input message="tns:UpdateCodingTerminologyForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateCodingTerminologyForStudyRequest" />
+      <output message="tns:UpdateCodingTerminologyForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateCodingTerminologyForStudyResponse" />
+    </operation>
+    <operation name="getCodingTerminologyForStudy">
+      <input message="tns:GetCodingTerminologyForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetCodingTerminologyForStudyRequest" />
+      <output message="tns:GetCodingTerminologyForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetCodingTerminologyForStudyResponse" />
+    </operation>
+    <operation name="updateDataRequirementsForStudy">
+      <input message="tns:UpdateDataRequirementsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateDataRequirementsForStudyRequest" />
+      <output message="tns:UpdateDataRequirementsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateDataRequirementsForStudyResponse" />
+    </operation>
+    <operation name="getDataRequirementsForStudy">
+      <input message="tns:GetDataRequirementsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetDataRequirementsForStudyRequest" />
+      <output message="tns:GetDataRequirementsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetDataRequirementsForStudyResponse" />
+    </operation>
+    <operation name="updateExpeditedAdverseEventsForStudy">
+      <input message="tns:UpdateExpeditedAdverseEventsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateExpeditedAdverseEventsForStudyRequest" />
+      <output message="tns:UpdateExpeditedAdverseEventsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateExpeditedAdverseEventsForStudyResponse" />
+    </operation>
+    <operation name="getExpeditedAdverseEventsForStudy">
+      <input message="tns:GetExpeditedAdverseEventsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetExpeditedAdverseEventsForStudyRequest" />
+      <output message="tns:GetExpeditedAdverseEventsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetExpeditedAdverseEventsForStudyResponse" />
+    </operation>
+    <operation name="updateSolicitedAdverseEventsForStudyEpoch">
+      <input message="tns:UpdateSolicitedAdverseEventsForStudyEpochRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateSolicitedAdverseEventsForStudyEpochRequest" />
+      <output message="tns:UpdateSolicitedAdverseEventsForStudyEpochResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateSolicitedAdverseEventsForStudyEpochResponse" />
+    </operation>
+    <operation name="getSolicitedAdverseEventsForStudyEpoch">
+      <input message="tns:GetSolicitedAdverseEventsForStudyEpochRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetSolicitedAdverseEventsForStudyEpochRequest" />
+      <output message="tns:GetSolicitedAdverseEventsForStudyEpochResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetSolicitedAdverseEventsForStudyEpochResponse" />
+    </operation>
+    <operation name="updateAdverseEventRecordingRulesForStudy">
+      <input message="tns:UpdateAdverseEventRecordingRulesForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateAdverseEventRecordingRulesForStudyRequest" />
+      <output message="tns:UpdateAdverseEventRecordingRulesForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateAdverseEventRecordingRulesForStudyResponse" />
+    </operation>
+    <operation name="getAdverseEventRecordingRulesForStudy">
+      <input message="tns:GetAdverseEventRecordingRulesForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetAdverseEventRecordingRulesForStudyRequest" />
+      <output message="tns:GetAdverseEventRecordingRulesForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetAdverseEventRecordingRulesForStudyResponse" />
+    </operation>
+    <operation name="getServiceSecurityMetadata">
+      <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />
+      <output message="wns0:GetServiceSecurityMetadataResponse" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataResponse" />
+    </operation>
+    <wsdl:operation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="GetMultipleResourceProperties">
+      <wsdl:input name="GetMultipleResourcePropertiesRequest" message="wsrpw:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties" />
+      <wsdl:output name="GetMultipleResourcePropertiesResponse" message="wsrpw:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse" />
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault" />
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault" />
+    </wsdl:operation>
+    <wsdl:operation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="GetResourceProperty">
+      <wsdl:input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty" />
+      <wsdl:output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse" />
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault" />
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault" />
+    </wsdl:operation>
+    <wsdl:operation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="QueryResourceProperties">
+      <wsdl:input name="QueryResourcePropertiesRequest" message="wsrpw:QueryResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourceProperties" />
+      <wsdl:output name="QueryResourcePropertiesResponse" message="wsrpw:QueryResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourcePropertiesResponse" />
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault" />
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault" />
+      <wsdl:fault name="UnknownQueryExpressionDialectFault" message="wsrpw:UnknownQueryExpressionDialectFault" />
+      <wsdl:fault name="InvalidQueryExpressionFault" message="wsrpw:InvalidQueryExpressionFault" />
+      <wsdl:fault name="QueryEvaluationErrorFault" message="wsrpw:QueryEvaluationErrorFault" />
+    </wsdl:operation>
+  </portType>
+</definitions>
+
