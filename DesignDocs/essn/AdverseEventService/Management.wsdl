@@ -121,6 +121,12 @@
   <message name="DeactivateAdverseEventResponse">
     <part name="parameters" element="tns:DeactivateAdverseEventResponse" />
   </message>
+  <message name="NoSuchAdverseEventExceptionFaultMessage">
+    <part name="fault" element="ns9:NoSuchAdverseEventException" />
+  </message>
+  <message name="NoSuchStudySubjectExceptionFaultMessage">
+    <part name="fault" element="ns9:NoSuchStudySubjectException" />
+  </message>
   <!--============================================================
 
                        P O R T T Y P E
@@ -130,14 +136,18 @@
     <operation name="initiateAdverseEvent">
       <input message="tns:InitiateAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/InitiateAdverseEventRequest" />
       <output message="tns:InitiateAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/InitiateAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/NoSuchAdverseEventExceptionFaultMessage" />
+      <fault name="NoSuchStudySubjectException" message="tns:NoSuchStudySubjectExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/NoSuchStudySubjectExceptionFaultMessage" />
     </operation>
     <operation name="updateAdverseEvent">
       <input message="tns:UpdateAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/UpdateAdverseEventRequest" />
       <output message="tns:UpdateAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/UpdateAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="deactivateAdverseEvent">
       <input message="tns:DeactivateAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/DeactivateAdverseEventRequest" />
       <output message="tns:DeactivateAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/DeactivateAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Management/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="getServiceSecurityMetadata">
       <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />

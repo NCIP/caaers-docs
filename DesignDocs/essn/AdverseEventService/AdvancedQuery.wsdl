@@ -161,6 +161,9 @@
   <message name="GetAdditionalInformationForAdverseEventResponse">
     <part name="parameters" element="tns:GetAdditionalInformationForAdverseEventResponse" />
   </message>
+  <message name="NoSuchAdverseEventExceptionFaultMessage">
+    <part name="fault" element="ns8:NoSuchAdverseEventException" />
+  </message>
   <!--============================================================
 
                        P O R T T Y P E
@@ -174,6 +177,7 @@
     <operation name="getAuditTrialOfAdverseEvent">
       <input message="tns:GetAuditTrialOfAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/GetAuditTrialOfAdverseEventRequest" />
       <output message="tns:GetAuditTrialOfAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/GetAuditTrialOfAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="getAdverseEventSummary">
       <input message="tns:GetAdverseEventSummaryRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/GetAdverseEventSummaryRequest" />
@@ -182,6 +186,7 @@
     <operation name="getAdditionalInformationForAdverseEvent">
       <input message="tns:GetAdditionalInformationForAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/GetAdditionalInformationForAdverseEventRequest" />
       <output message="tns:GetAdditionalInformationForAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/GetAdditionalInformationForAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/AdvancedQuery/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="getServiceSecurityMetadata">
       <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />

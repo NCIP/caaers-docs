@@ -95,6 +95,9 @@
   <message name="GetAdverseEventDataResponse">
     <part name="parameters" element="tns:GetAdverseEventDataResponse" />
   </message>
+  <message name="NoSuchAdverseEventExceptionFaultMessage">
+    <part name="fault" element="ns7:NoSuchAdverseEventException" />
+  </message>
   <!--============================================================
 
                        P O R T T Y P E
@@ -108,6 +111,7 @@
     <operation name="getAdverseEventData">
       <input message="tns:GetAdverseEventDataRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Query/GetAdverseEventDataRequest" />
       <output message="tns:GetAdverseEventDataResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Query/GetAdverseEventDataResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Query/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="getServiceSecurityMetadata">
       <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />

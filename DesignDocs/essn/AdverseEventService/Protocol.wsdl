@@ -340,6 +340,12 @@
   <message name="GetAdverseEventRecordingRulesForStudyResponse">
     <part name="parameters" element="tns:GetAdverseEventRecordingRulesForStudyResponse" />
   </message>
+  <message name="NoSuchStudyExceptionFaultMessage">
+    <part name="fault" element="ns13:NoSuchStudyException" />
+  </message>
+  <message name="NoSuchCodingTerminologyExceptionFaultMessage">
+    <part name="fault" element="ns13:NoSuchCodingTerminologyException" />
+  </message>
   <!--============================================================
 
                        P O R T T Y P E
@@ -349,42 +355,54 @@
     <operation name="updateCodingTerminologyForStudy">
       <input message="tns:UpdateCodingTerminologyForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateCodingTerminologyForStudyRequest" />
       <output message="tns:UpdateCodingTerminologyForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateCodingTerminologyForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
+      <fault name="NoSuchCodingTerminologyException" message="tns:NoSuchCodingTerminologyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchCodingTerminologyExceptionFaultMessage" />
     </operation>
     <operation name="getCodingTerminologyForStudy">
       <input message="tns:GetCodingTerminologyForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetCodingTerminologyForStudyRequest" />
       <output message="tns:GetCodingTerminologyForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetCodingTerminologyForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="updateDataRequirementsForStudy">
       <input message="tns:UpdateDataRequirementsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateDataRequirementsForStudyRequest" />
       <output message="tns:UpdateDataRequirementsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateDataRequirementsForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="getDataRequirementsForStudy">
       <input message="tns:GetDataRequirementsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetDataRequirementsForStudyRequest" />
       <output message="tns:GetDataRequirementsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetDataRequirementsForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="updateExpeditedAdverseEventsForStudy">
       <input message="tns:UpdateExpeditedAdverseEventsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateExpeditedAdverseEventsForStudyRequest" />
       <output message="tns:UpdateExpeditedAdverseEventsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateExpeditedAdverseEventsForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
+      <fault name="NoSuchCodingTerminologyException" message="tns:NoSuchCodingTerminologyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchCodingTerminologyExceptionFaultMessage" />
     </operation>
     <operation name="getExpeditedAdverseEventsForStudy">
       <input message="tns:GetExpeditedAdverseEventsForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetExpeditedAdverseEventsForStudyRequest" />
       <output message="tns:GetExpeditedAdverseEventsForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetExpeditedAdverseEventsForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="updateSolicitedAdverseEventsForStudyEpoch">
       <input message="tns:UpdateSolicitedAdverseEventsForStudyEpochRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateSolicitedAdverseEventsForStudyEpochRequest" />
       <output message="tns:UpdateSolicitedAdverseEventsForStudyEpochResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateSolicitedAdverseEventsForStudyEpochResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="getSolicitedAdverseEventsForStudyEpoch">
       <input message="tns:GetSolicitedAdverseEventsForStudyEpochRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetSolicitedAdverseEventsForStudyEpochRequest" />
       <output message="tns:GetSolicitedAdverseEventsForStudyEpochResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetSolicitedAdverseEventsForStudyEpochResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="updateAdverseEventRecordingRulesForStudy">
       <input message="tns:UpdateAdverseEventRecordingRulesForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateAdverseEventRecordingRulesForStudyRequest" />
       <output message="tns:UpdateAdverseEventRecordingRulesForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/UpdateAdverseEventRecordingRulesForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="getAdverseEventRecordingRulesForStudy">
       <input message="tns:GetAdverseEventRecordingRulesForStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetAdverseEventRecordingRulesForStudyRequest" />
       <output message="tns:GetAdverseEventRecordingRulesForStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/GetAdverseEventRecordingRulesForStudyResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Protocol/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="getServiceSecurityMetadata">
       <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />

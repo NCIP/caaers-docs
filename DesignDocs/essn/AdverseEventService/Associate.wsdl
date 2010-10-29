@@ -234,6 +234,21 @@
   <message name="DisassociateTreatmentInformationFromAdverseEventResponse">
     <part name="parameters" element="tns:DisassociateTreatmentInformationFromAdverseEventResponse" />
   </message>
+  <message name="NoSuchAdverseEventExceptionFaultMessage">
+    <part name="fault" element="ns10:NoSuchAdverseEventException" />
+  </message>
+  <message name="NoSuchStudyExceptionFaultMessage">
+    <part name="fault" element="ns10:NoSuchStudyException" />
+  </message>
+  <message name="NoSuchAdditionalInformationExceptionFaultMessage">
+    <part name="fault" element="ns10:NoSuchAdditionalInformationException" />
+  </message>
+  <message name="NoSuchAssociationExceptionFaultMessage">
+    <part name="fault" element="ns10:NoSuchAssociationException" />
+  </message>
+  <message name="NoSuchPerformedActivityExceptionFaultMessage">
+    <part name="fault" element="ns10:NoSuchPerformedActivityException" />
+  </message>
   <!--============================================================
 
                        P O R T T Y P E
@@ -243,26 +258,40 @@
     <operation name="associateAdverseEventToStudy">
       <input message="tns:AssociateAdverseEventToStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/AssociateAdverseEventToStudyRequest" />
       <output message="tns:AssociateAdverseEventToStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/AssociateAdverseEventToStudyResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdverseEventExceptionFaultMessage" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchStudyExceptionFaultMessage" />
     </operation>
     <operation name="dissociateAdverseEventFromStudy">
       <input message="tns:DissociateAdverseEventFromStudyRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/DissociateAdverseEventFromStudyRequest" />
       <output message="tns:DissociateAdverseEventFromStudyResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/DissociateAdverseEventFromStudyResponse" />
+      <fault name="NoSuchAdditionalInformationException" message="tns:NoSuchAdditionalInformationExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdditionalInformationExceptionFaultMessage" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchStudyExceptionFaultMessage" />
+      <fault name="NoSuchAssociationException" message="tns:NoSuchAssociationExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAssociationExceptionFaultMessage" />
     </operation>
     <operation name="associateAdditionalInformationToAdverseEvent">
       <input message="tns:AssociateAdditionalInformationToAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/AssociateAdditionalInformationToAdverseEventRequest" />
       <output message="tns:AssociateAdditionalInformationToAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/AssociateAdditionalInformationToAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="dissociateAdditionalInformationFromAdverseEvent">
       <input message="tns:DissociateAdditionalInformationFromAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/DissociateAdditionalInformationFromAdverseEventRequest" />
       <output message="tns:DissociateAdditionalInformationFromAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/DissociateAdditionalInformationFromAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdverseEventExceptionFaultMessage" />
+      <fault name="NoSuchAdditionalInformationException" message="tns:NoSuchAdditionalInformationExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdditionalInformationExceptionFaultMessage" />
+      <fault name="NoSuchAssociationException" message="tns:NoSuchAssociationExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAssociationExceptionFaultMessage" />
     </operation>
     <operation name="associateTreatmentInformationToAdverseEvent">
       <input message="tns:AssociateTreatmentInformationToAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/AssociateTreatmentInformationToAdverseEventRequest" />
       <output message="tns:AssociateTreatmentInformationToAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/AssociateTreatmentInformationToAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdverseEventExceptionFaultMessage" />
+      <fault name="NoSuchPerformedActivityException" message="tns:NoSuchPerformedActivityExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchPerformedActivityExceptionFaultMessage" />
     </operation>
     <operation name="disassociateTreatmentInformationFromAdverseEvent">
       <input message="tns:DisassociateTreatmentInformationFromAdverseEventRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/DisassociateTreatmentInformationFromAdverseEventRequest" />
       <output message="tns:DisassociateTreatmentInformationFromAdverseEventResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/DisassociateTreatmentInformationFromAdverseEventResponse" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAdverseEventExceptionFaultMessage" />
+      <fault name="NoSuchPerformedActivityException" message="tns:NoSuchPerformedActivityExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchPerformedActivityExceptionFaultMessage" />
+      <fault name="NoSuchAssociationException" message="tns:NoSuchAssociationExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Associate/NoSuchAssociationExceptionFaultMessage" />
     </operation>
     <operation name="getServiceSecurityMetadata">
       <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />

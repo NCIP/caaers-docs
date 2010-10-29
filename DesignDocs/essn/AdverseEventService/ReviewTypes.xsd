@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema targetNamespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Review/types"
-            xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:tns="http://enterpriseservices.nci.nih.gov/AdverseEventService/Review/types" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsrbf="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd"></import>
-  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" schemaLocation="../wsrf/faults/WS-BaseFaults.xsd"></import>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:tns="http://enterpriseservices.nci.nih.gov/AdverseEventService/Review/types" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsrbf="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" targetNamespace="http://enterpriseservices.nci.nih.gov/AdverseEventService/Review/types" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" schemaLocation="../wsrf/faults/WS-BaseFaults.xsd" />
   <element name="ReviewReference">
     <complexType>
-      <sequence >
-        <element ref="wsa:EndpointReference"></element>
+      <sequence>
+        <element ref="wsa:EndpointReference" />
       </sequence>
     </complexType>
   </element>
-
+  <element name="NoSuchStudyException" type="tns:NoSuchStudyException" />
+  <complexType name="NoSuchStudyException">
+    <complexContent>
+      <extension base="wsrbf:BaseFaultType" />
+    </complexContent>
+  </complexType>
+  <element name="NoSuchAdverseEventException" type="tns:NoSuchAdverseEventException" />
+  <complexType name="NoSuchAdverseEventException">
+    <complexContent>
+      <extension base="wsrbf:BaseFaultType" />
+    </complexContent>
+  </complexType>
 </schema>
+

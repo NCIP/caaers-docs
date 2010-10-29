@@ -69,6 +69,12 @@
   <message name="EvaluateAdverseEventsResponse">
     <part name="parameters" element="tns:EvaluateAdverseEventsResponse" />
   </message>
+  <message name="NoSuchStudyExceptionFaultMessage">
+    <part name="fault" element="ns14:NoSuchStudyException" />
+  </message>
+  <message name="NoSuchAdverseEventExceptionFaultMessage">
+    <part name="fault" element="ns14:NoSuchAdverseEventException" />
+  </message>
   <!--============================================================
 
                        P O R T T Y P E
@@ -78,6 +84,8 @@
     <operation name="evaluateAdverseEvents">
       <input message="tns:EvaluateAdverseEventsRequest" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Evaluate/EvaluateAdverseEventsRequest" />
       <output message="tns:EvaluateAdverseEventsResponse" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Evaluate/EvaluateAdverseEventsResponse" />
+      <fault name="NoSuchStudyException" message="tns:NoSuchStudyExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Evaluate/NoSuchStudyExceptionFaultMessage" />
+      <fault name="NoSuchAdverseEventException" message="tns:NoSuchAdverseEventExceptionFaultMessage" wsa:Action="http://enterpriseservices.nci.nih.gov/AdverseEventService/Evaluate/NoSuchAdverseEventExceptionFaultMessage" />
     </operation>
     <operation name="getServiceSecurityMetadata">
       <input message="wns0:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />

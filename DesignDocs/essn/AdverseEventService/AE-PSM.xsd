@@ -570,6 +570,7 @@
 
 
 <xs:element name="ANY" type="ISO:ANY"/>
+<xs:element name="ST" type="ISO:ST"/>
 
 	
 </xs:schema>
