@@ -155,6 +155,11 @@
 							<xs:documentation>The date (and time) on which an adverse event began.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="reportedDate" type="ISO:TS.DateTime">
+						<xs:annotation>
+							<xs:documentation>The date (and time) on which an adverse event reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
 					<xs:element name="postReportUpdateDate" type="ISO:TS.DateTime">
 						<xs:annotation>
 							<xs:documentation>The date (and time) on which the adverse event was updated after it had been submitted.</xs:documentation>
@@ -170,10 +175,9 @@
 							<xs:documentation>A coded value specifying the intensity of the event.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="subcategoryCode" type="ISO:CD">
+					<xs:element name="probabilityCode" type="ISO:CD">
 						<xs:annotation>
-							<xs:documentation>A coded value specifying a subdivision within a larger category of 
-							an adverse event.</xs:documentation>
+							<xs:documentation>The likelihood that an adverse event is related to a given thing in terms of "not related", "unlikely", "possible", "probable", or "definite"..</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="summary" type="ISO:ST">
@@ -181,17 +185,32 @@
 							<xs:documentation>A description of the adverse event and the treatment of the event.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="comment" type="ISO:ST">
+						<xs:annotation>
+							<xs:documentation>comment</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
 					<xs:element name="unexpectedReasonCode" type="ISO:DSET_CD">
 						<xs:annotation>
 							<xs:documentation>A coded value specifying the representation of the criteria for
 							 determining whether an adverse event (experience or reaction) is considered unanticipated.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="result" type="ISO:CD">
+						<xs:annotation>
+							<xs:documentation> used to capture the AE term code, code system, display name, original text, etc.</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
 					<xs:element maxOccurs="unbounded" minOccurs="0" name="adverseEventSeriousness" type="ESS-AE:AdverseEventSeriousness">
 						<xs:annotation>
 							<xs:documentation>Degree or extent of the consequence suffered by the subject.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="0" name="adverseEventCtcTerm" type="ESS-AE:CtcTerm"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="otherMeddra" type="ESS-AE:LowLevelTerm" />
+					
+					
+					
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -430,7 +449,43 @@
 			<xs:element name="referralLetters" type="ISO:BL"/>
 		</xs:sequence>
 	</xs:complexType>
-	
+	<xs:complexType name="CtcTerm">
+		<xs:annotation>
+			<xs:documentation>An adverse event as described by the CTCAE..</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ctepCode" type="ISO:CD">
+				<xs:annotation>
+					<xs:documentation>A unique identifier within the CTCAE vocabulary that is assigned to a particular adverse event.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ctepTerm" type="ISO:CD">
+				<xs:annotation>
+					<xs:documentation>The brief, written description of each adverse event listed in the CTCAE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="LowLevelTerm">
+		<xs:annotation>
+			<xs:documentation>Lowest level term (LLT) of the terminology, related to a single preferred term (PT) as a synonym, lexical variant, or quasi-synonym (Note: All PTs have an identical LLT).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="meddraCode" type="ISO:ST">
+				<xs:annotation>
+					<xs:documentation>.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="meddraTerm" type="ISO:ST">
+				<xs:annotation>
+					<xs:documentation>.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+			
 <xs:element name="AdditionalInformation" type="ESS-AE:AdditionalInformation"/>
 	<xs:complexType name="TreatmentInformation">
 		<xs:sequence>
