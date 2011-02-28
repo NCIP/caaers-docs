@@ -1,0 +1,220 @@
+<xml xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+ xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+ <x:PivotCache>
+  <x:CacheIndex>1</x:CacheIndex>
+  <s:Schema id="RowsetSchema">
+   <s:ElementType name="row" content="eltOnly">
+    <s:attribute type="Col1"/>
+    <s:attribute type="Col2"/>
+    <s:attribute type="Col3"/>
+    <s:attribute type="Col4"/>
+    <s:attribute type="Col5"/>
+    <s:attribute type="Col6"/>
+    <s:attribute type="Col7"/>
+    <s:attribute type="Col8"/>
+    <s:extends type="rs:rowbase"/>
+   </s:ElementType>
+   <s:AttributeType name="Col1" rs:name="Key">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col2" rs:name="Summary">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col3" rs:name="Issue Type">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col4" rs:name="Status">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col5" rs:name="Priority">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col6" rs:name="Created">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col7" rs:name="Component/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col8" rs:name="Resolution Date">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+  </s:Schema>
+  <rs:data>
+   <z:row Col1="CAAERS-158"
+    Col2="Skipping Attribution Tab causes errror in AdEERS" Col3="Bug"
+    Col4="Closed" Col5="Critical" Col6="2008-05-01T18:01:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-02T14:36:00"/>
+   <z:row Col1="CAAERS-142"
+    Col2="Use StudySubjectIdentifier as Participant Identifier , in AdEERS communication"
+    Col3="Bug" Col4="Closed" Col5="Major" Col6="2008-04-28T11:10:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-02T08:39:00"/>
+   <z:row Col1="CAAERS-78"
+    Col2="Remove - applicationContext-web-notification.xml" Col3="Bug"
+    Col4="Closed" Col5="Blocker" Col6="2008-04-18T15:32:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-01T15:56:00"/>
+   <z:row Col1="CAAERS-166"
+    Col2="Caaers-Adeers Service Assembly Message Exchange Flow."
+    Col3="Improvement" Col4="Closed" Col5="Minor" Col6="2008-05-05T10:58:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-15T13:41:00"/>
+   <z:row Col1="CAAERS-184"
+    Col2="CAAERS-139&#10;Fix the mapping (one-to-one) of the meddra concepts and delete functionality"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-08T23:18:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-23T15:10:00"/>
+   <z:row Col1="CAAERS-183" Col2="CAAERS-139&#10;New version import"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-08T23:15:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-23T15:08:00"/>
+   <z:row Col1="CAAERS-168" Col2="CAAERS-84&#10;Merge 1.1-stable to trunk"
+    Col3="Sub-task" Col4="Closed" Col5="Major" Col6="2008-05-05T11:00:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-07T08:00:00"/>
+   <z:row Col1="CAAERS-167" Col2="CAAERS-84&#10;Backup the trunk"
+    Col3="Sub-task" Col4="Closed" Col5="Major" Col6="2008-05-05T11:00:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-05T11:04:00"/>
+   <z:row Col1="CAAERS-127"
+    Col2="CAAERS-88&#10;Cobertura - code coverage task in ant file"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-04-25T12:25:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-08T22:01:00"/>
+   <z:row Col1="CAAERS-89"
+    Col2="CAAERS-88&#10;JBI (service mix) module ivy enabling" Col3="Sub-task"
+    Col4="Closed" Col5="Major" Col6="2008-04-21T08:43:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-23T15:28:00"/>
+   <z:row Col1="CAAERS-85" Col2="CAAERS-84&#10;Tag the trunk" Col3="Sub-task"
+    Col4="Closed" Col5="Major" Col6="2008-04-21T08:35:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-05T10:53:00"/>
+   <z:row Col1="CAAERS-84" Col2="Merge 1.1-stable branch to trunk" Col3="Task"
+    Col4="Closed" Col5="Major" Col6="2008-04-21T08:33:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-08T22:04:00"/>
+   <z:row Col1="CAAERS-187" Col2="CAAERS-139&#10;Fix the ripple effect"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-08T23:25:00"
+    Col7="Core Development (Middle Layer and BackEnd)"
+    Col8="2008-05-23T15:12:00"/>
+   <z:row Col1="CAAERS-189"
+    Col2="Fix caaERS.EAP with all directionalities , cardinalities , associations etc"
+    Col3="Bug" Col4="Closed" Col5="Major" Col6="2008-05-11T19:17:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-28T10:12:00"/>
+   <z:row Col1="CAAERS-193"
+    Col2="Study Consumer Service - extend Study object in ccts xsd based on studyXSD"
+    Col3="New Feature" Col4="Closed" Col5="Major" Col6="2008-05-15T14:41:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-28T13:54:00"/>
+   <z:row Col1="CAAERS-171" Col2="test task" Col3="New Feature" Col4="Closed"
+    Col5="Major" Col6="2008-05-06T13:40:00" Col7="Data Sharing / Grid Services"
+    Col8="2008-05-06T13:46:00"/>
+   <z:row Col1="CAAERS-222" Col2="CAAERS-139&#10;Add the changes to domain model"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-21T12:26:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-28T12:23:00"/>
+   <z:row Col1="CAAERS-188" Col2="CAAERS-88&#10;PMD code review target"
+    Col3="Sub-task" Col4="Closed" Col5="Major" Col6="2008-05-09T10:15:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-23T15:26:00"/>
+   <z:row Col1="CAAERS-181" Col2="CAAERS-88&#10;dependency report generation target"
+    Col3="Sub-task" Col4="Closed" Col5="Major" Col6="2008-05-08T16:48:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-09T09:54:00"/>
+   <z:row Col1="CAAERS-90"
+    Col2="CAAERS-88&#10;caAERS DataService module ivy enabling" Col3="Sub-task"
+    Col4="Closed" Col5="Major" Col6="2008-04-21T08:43:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-23T15:29:00"/>
+   <z:row Col1="CAAERS-191" Col2="Check through caaers UML model for errors"
+    Col3="Task" Col4="Closed" Col5="Major" Col6="2008-05-13T10:06:00"
+    Col7="Data Sharing / Grid Services" Col8="2008-05-27T14:06:00"/>
+   <z:row Col1="CAAERS-218"
+    Col2="CAAERS-217&#10;Clear Tomcat work directory and restart"
+    Col3="Sub-task" Col4="Closed" Col5="Major" Col6="2008-05-16T17:35:00"
+    Col7="Deployment Support" Col8="2008-06-02T14:15:00"/>
+   <z:row Col1="CAAERS-170" Col2="CAAERS-88&#10;Hot deployment of caaers WAR"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-06T10:48:00"
+    Col7="Deployment Support" Col8="2008-05-09T17:01:00"/>
+   <z:row Col1="CAAERS-217" Col2="Support Mayo's installation of caAERS v1.1.2"
+    Col3="Task" Col4="Closed" Col5="Critical" Col6="2008-05-16T16:56:00"
+    Col7="Deployment Support" Col8="2008-05-20T14:41:00"/>
+   <z:row Col1="CAAERS-179" Col2="caAERS 1.1-stable - Release notes" Col3="Task"
+    Col4="Resolved" Col5="Major" Col6="2008-05-08T10:26:00" Col7="Documentation"
+    Col8="2008-05-08T10:50:00"/>
+   <z:row Col1="CAAERS-165"
+    Col2="check through caAERS-caDSR model integration in sandbox" Col3="Task"
+    Col4="Closed" Col5="Major" Col6="2008-05-05T10:37:00" Col7="Documentation"
+    Col8="2008-05-06T10:25:00"/>
+   <z:row Col1="CAAERS-154"
+    Col2="Installer requires websso files even when not using websso" Col3="Bug"
+    Col4="Resolved" Col5="Major" Col6="2008-05-01T15:58:00" Col7="Installer"
+    Col8="2008-05-01T17:02:00"/>
+   <z:row Col1="CAAERS-216"
+    Col2="Trouble shoot installer for Zhiqiang Cheng [steven] at wake forest"
+    Col3="Bug" Col4="Closed" Col5="Major" Col6="2008-05-16T12:51:00"
+    Col7="Deployment Support" Col8="2008-05-20T10:05:00"/>
+   <z:row Col1="CAAERS-192" Col2="Create poster for caAERS rules engine"
+    Col3="Task" Col4="Closed" Col5="Major" Col6="2008-05-15T10:54:00"
+    Col7="Documentation" Col8="2008-05-28T10:11:00"/>
+   <z:row Col1="CAAERS-204" Col2="CAAERS-195&#10;Code unit test cases"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-16T12:06:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-28T12:15:00"/>
+   <z:row Col1="CAAERS-203" Col2="CAAERS-195&#10;Code classes" Col3="Sub-task"
+    Col4="Resolved" Col5="Major" Col6="2008-05-16T12:06:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-28T12:13:00"/>
+   <z:row Col1="CAAERS-201" Col2="CAAERS-195&#10;Create DB scripts (groovy)"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-15T16:49:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-28T12:11:00"/>
+   <z:row Col1="CAAERS-197" Col2="CAAERS-195&#10;Identify appropriate classes"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-15T16:34:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-28T12:16:00"/>
+   <z:row Col1="CAAERS-196" Col2="CAAERS-195&#10;Update domain model"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-15T16:32:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-15T17:08:00"/>
+   <z:row Col1="CAAERS-185"
+    Col2="CAAERS-139&#10;Groovy scripts to fix relationship and existing ids."
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-08T23:21:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-23T15:11:00"/>
+   <z:row Col1="CAAERS-199" Col2="CAAERS-198&#10;Update domain model"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-15T16:41:00"
+    Col7="Module 1: Adverse Event Data Capture" Col8="2008-05-23T15:16:00"/>
+   <z:row Col1="CAAERS-173" Col2="CAAERS-84&#10;Deploy the merged code into QA"
+    Col3="Sub-task" Col4="Closed" Col5="Major" Col6="2008-05-06T14:12:00"
+    Col7="Testing" Col8="2008-05-07T07:57:00"/>
+   <z:row Col1="CAAERS-229"
+    Col2="Mayo pre-pilot support - test import of some participant XMLs against caaers v1.1.2"
+    Col3="Task" Col4="Closed" Col5="Major" Col6="2008-05-28T10:23:00"
+    Col7="Testing" Col8="2008-06-04T13:07:00"/>
+   <z:row Col1="CAAERS-123"
+    Col2="Create ECOG study in caaers and implement protocol specific rules"
+    Col3="Task" Col4="Closed" Col5="Major" Col6="2008-04-24T17:35:00"
+    Col7="Testing" Col8="2008-05-01T16:24:00"/>
+   <z:row Col1="CAAERS-149"
+    Col2="Move up, Move down buttons are not appearing for Medra." Col3="Bug"
+    Col4="Resolved" Col5="Major" Col6="2008-04-30T11:45:00"
+    Col7="User Interface" Col8="2008-05-01T14:38:00"/>
+   <z:row Col1="CAAERS-130"
+    Col2="Alert confirmation should be shown for all deletes" Col3="Bug"
+    Col4="Closed" Col5="Major" Col6="2008-04-25T14:50:00" Col7="User Interface"
+    Col8="2008-05-02T13:17:00"/>
+   <z:row Col1="CAAERS-129"
+    Col2="Incorrect instructions in Assign subject to study" Col3="Bug"
+    Col4="Closed" Col5="Major" Col6="2008-04-25T14:21:00" Col7="User Interface"
+    Col8="2008-05-02T14:50:00"/>
+   <z:row Col1="CAAERS-119"
+    Col2="Autosuggest in Enter AEs&gt;&gt;prior therapies functions improperly"
+    Col3="Bug" Col4="Closed" Col5="Major" Col6="2008-04-24T16:04:00"
+    Col7="User Interface" Col8="2008-05-02T10:10:00"/>
+   <z:row Col1="CAAERS-105" Col2="Bug in attribution in caaers" Col3="Bug"
+    Col4="Closed" Col5="Major" Col6="2008-04-23T14:44:00" Col7="User Interface"
+    Col8="2008-05-02T14:29:00"/>
+   <z:row Col1="CAAERS-22"
+    Col2="Provide the ability to choose what kind of report formats"
+    Col3="New Feature" Col4="Resolved" Col5="Major" Col6="2008-02-04T17:14:00"
+    Col7="User Interface" Col8="2008-05-01T16:31:00"/>
+   <z:row Col1="CAAERS-182" Col2="CAAERS-139&#10;Create front-end for the feature"
+    Col3="Sub-task" Col4="Resolved" Col5="Major" Col6="2008-05-08T23:13:00"
+    Col7="User Interface" Col8="2008-05-23T15:08:00"/>
+  </rs:data>
+ </x:PivotCache>
+</xml>
