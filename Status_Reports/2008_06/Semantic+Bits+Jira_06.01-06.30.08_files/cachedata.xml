@@ -1,0 +1,320 @@
+<xml xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+ xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+ <x:PivotCache>
+  <x:CacheIndex>1</x:CacheIndex>
+  <s:Schema id="RowsetSchema">
+   <s:ElementType name="row" content="eltOnly">
+    <s:attribute type="Col1"/>
+    <s:attribute type="Col2"/>
+    <s:attribute type="Col3"/>
+    <s:attribute type="Col4"/>
+    <s:attribute type="Col5"/>
+    <s:attribute type="Col6"/>
+    <s:attribute type="Col7"/>
+    <s:attribute type="Col8"/>
+    <s:attribute type="Col9"/>
+    <s:attribute type="Col10"/>
+    <s:attribute type="Col11"/>
+    <s:attribute type="Col12"/>
+    <s:attribute type="Col13"/>
+    <s:attribute type="Col14"/>
+    <s:attribute type="Col15"/>
+    <s:attribute type="Col16"/>
+    <s:attribute type="Col17"/>
+    <s:extends type="rs:rowbase"/>
+   </s:ElementType>
+   <s:AttributeType name="Col1" rs:name="Project">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col2" rs:name="Key">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col3" rs:name="Summary">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col4" rs:name="Issue Type">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col5" rs:name="Status">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col6" rs:name="Priority">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col7" rs:name="Resolution">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col8" rs:name="Created">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col9" rs:name="Affects Version/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col10" rs:name="Fix Version/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col11" rs:name="Component/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col12" rs:name="Due Date">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col13" rs:name="Votes">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col14" rs:name="Images">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col15" rs:name="Environment">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col16" rs:name="Description">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col17" rs:name="Resolution Date">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+  </s:Schema>
+  <rs:data>
+   <z:row Col1="caAERS" Col2="CAAERS-308"
+    Col3="Unable to access Edit Study&gt;&gt; SOlicited AEs" Col4="Bug"
+    Col5="Closed" Col6="Critical" Col7="Fixed" Col8="2008-06-27T15:07:00"
+    Col9="Version 1.5" Col10="Version 1.5"
+    Col11="Module 1: Adverse Event Data Capture &#10;User Interface"
+    Col12="2008-07-04T00:00:00" Col13="0"
+    Col15="caAERS v. 1.2.1.SNAPSHOT (2008-06-27 10:50:35)"
+    Col16="'-- User is editing an existing study.&#10;-- He clicks on SolictedAEs tab&#10;-- The following error page is shown.&#10;&#10;Detailed Error&#10;&#10;325: 326:&#10;Status Code 500&#10;Exception Type class javax.servlet.ServletException&#10;Message Exception in JSP: /WEB-INF/views/study/soli"
+    Col17="2008-06-30T15:49:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-301"
+    Col3="Adeers error encountered when submitting expedited report for a study with radiation"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-26T14:42:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.5" Col11="User Interface" Col12="2008-07-31T00:00:00"
+    Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- User has entered radiation in Enter AEs&gt;&gt;Radiation.&#10;-- Caaers does not report any errors.&#10;-- On adeers submission the following error message comes back:&#10;-- caaers.xml is attached&#10;&#10;Report # 63 was NOT successfully submitted to AdEERS&#10;The following pro"
+    Col17="2008-06-30T16:16:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-297"
+    Col3="Adeers error when submitting AE report with radiation information"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-25T17:42:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1" Col11="User Interface" Col12="2008-07-31T00:00:00"
+    Col13="0" Col14="10097_screenshot-1.jpg " Col15="caAERS v. 1.1.3"
+    Col16="'-- User is submitting an AE with radiation information [ in the 'radiation' tab]&#10;-- user submits the report to adeers.&#10;-- The following error message is returned:&#10;-- See screen shot&#10;&#10;-----------------------------------------------------------&#10;&#10;&#10;TYPE_OF_R"
+    Col17="2008-06-30T15:42:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-296"
+    Col3="Caaers error during business rules evaluation" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="2008-06-25T17:32:00"
+    Col9="Version 1.1" Col11="User Interface" Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- user fills all relevant details for creating and AE and clicks on the last 'submit' tab.&#10;-- The following error page is shown:&#10;-- Link to AE: https://10.10.10.220:9443/caaers/pages/ae/edit?aeReport=59&#10;&#10;-------------------------------------------------"
+    Col17="2008-06-25T18:28:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-290"
+    Col3="caaers allows future date in Enter AEs&gt;&gt; [various tabs]"
+    Col4="Bug" Col5="Reopened" Col6="Major" Col7="UNRESOLVED"
+    Col8="2008-06-20T15:10:00" Col9="Version 1.1" Col11="User Interface"
+    Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- Caaers allows user to enter future dates in many places. They are listed below:&#10;-- Enter expedited report &gt;&gt; Enter AEs&gt;&gt; start date&#10;-- Enter expedited report &gt;&gt; Enter AEs&gt;&gt; end date&#10;-- Enter expedited report &gt;&gt; Course and agent &gt;&gt; Start date of first "/>
+   <z:row Col1="caAERS" Col2="CAAERS-284"
+    Col3="Caaers error encountered in Enter AEs&gt;&gt; Course and agent"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-19T12:02:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5" Col11="User Interface"
+    Col12="2008-06-26T00:00:00" Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- User has entered a grade 4 AE in Enter AEs flow.&#10;-- User fills in valid information in Enter AEs&gt;&gt; Course And agent tab.&#10;-- User clicks continue.&#10;---------- update -----------------------------------&#10;If expectedness is set to 'Please select' , the err"
+    Col17="2008-06-30T16:18:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-283"
+    Col3="Caaers error encountered in Enter AEs flow" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="2008-06-18T17:05:00" Col9="Version 1.1"
+    Col11="User Interface" Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- User is in Enter AE flow.&#10;-- In tab 1&gt; ENter AEs&#10;-- user does not specify any fields in in Enter AE flow and clicks on 5&gt; Describe event page.&#10;-- The following caaers error page is shown.&#10;&#10;Related to JIRA issue: http://10.10.10.220:8060/browse/CAAERS-"
+    Col17="2008-06-19T15:43:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-282"
+    Col3="Adeers error encountered when submitting expedited report" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="2008-06-18T17:00:00"
+    Col9="Version 1.1" Col11="User Interface" Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- User submits a report to Adeers [link: https://10.10.10.220:9443/caaers/pages/ae/edit?aeReport=57]&#10;-- The following adeers failed error message is received:&#10;&#10;Report # 57 was NOT successfully submitted to AdEERS&#10;The following problem was encountered:&#10;c"
+    Col17="2008-06-19T15:31:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-281"
+    Col3="Javascript error in Enter AEs&gt;&gt; Prior therpaies" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="2008-06-18T16:24:00"
+    Col9="Version 1.1" Col11="User Interface" Col13="0"
+    Col14="10092_screenshot-1.jpg " Col15="caAERS v. 1.1.3"
+    Col16="'-- User is in Enter AEs&gt;&gt; prior therapies.&#10;-- User clicks 'Add a therapy' &#10;-- A javascript pop-up error message is thrown, see screen shot.&#10;-- User clicks OK and clicks save and continue.&#10;-- The following error page comes up.&#10;&#10;---------------------------"
+    Col17="2008-06-19T15:33:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-280"
+    Col3="Invalid dates allowed in Enter AEs&gt;&gt;Patient details #2"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-18T16:12:00" Col9="Version 1.1" Col11="User Interface"
+    Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- user is in Enter AEs &gt;&gt; Patient details.&#10;-- For 'Date of initial diagnosis' user enter the following values for MM /DD / YYYY : 12 / 99 / 2008&#10;-- User clicks continue&#10;-- Caaers does not throw error for invalid day"
+    Col17="2008-06-19T15:44:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-279"
+    Col3="Invalid dates allowed in Enter AEs&gt;&gt;Patient details #1"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-18T16:04:00" Col9="Version 1.1" Col11="User Interface"
+    Col13="0" Col15="caAERS v. 1.1.3"
+    Col16="'-- user is in Enter AEs &gt;&gt; Patient details.&#10;-- For 'Date of initial diagnosis' user enter the following values for MM /DD / YYYY : 22 / -- / 2008&#10;-- User clicks continue&#10;-- Caaers does not throw error for invalid month"
+    Col17="2008-06-19T15:46:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-275" Col3="Expedited AE workflow error"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-18T15:38:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.5" Col11="Module 1: Adverse Event Data Capture"
+    Col12="2008-06-20T00:00:00" Col13="0"
+    Col14="10090_caAERS_expedited_workflow_error_06.18.08.jpg "
+    Col15="v1.1.2; Firefox 2.0"
+    Col16="Select the Enter Expedited AE flow -&gt;&#10;&#10;Enter Subject and Study-&gt;&#10;&#10;DON'T enter any AE's, but instead click on any tab 3-18.&#10;&#10;&quot;Error, contact system admin&quot; is displayed. &#10;&#10;We need to assess if this is the appropriate behavior of the system. If it is, we sho"
+    Col17="2008-06-19T15:35:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-274"
+    Col3="caaers throws error in Enter AE flow" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="2008-06-18T15:36:00" Col9="Version 1.1"
+    Col11="User Interface" Col13="0" Col14="10089_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.3"
+    Col16="'-- User chooses a subject and study and begins the Enter AE flow.&#10;-- User proceeds through 2&gt; Enter AEs and 3&gt; Course and Agent tab. &#10;-- User then clicks on 1&gt; begin tab.&#10;-- The previously selected subject and study are shown. User clicks continue.&#10;-- He"
+    Col17="2008-06-30T16:15:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-273"
+    Col3="For CTEP sponsored trials, remove Expedited AE Flow -&gt; Describe Event -&gt; Details"
+    Col4="Improvement" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-06-18T15:23:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5"
+    Col11="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture &#10;Module 4: External Agency Reporting &#10;User Interface"
+    Col12="2008-06-18T00:00:00" Col13="0"
+    Col14="10088_Event Details to remove for CTEP sponsored trials.jpg "
+    Col15="v1.1.2"
+    Col16="The details section of the &quot;Describe Event&quot; tab in the Expedited AE flow, should be removed for CTEP sponsored trials. Alternatively, this section could be just added for DCP sponsored trials. See the attached screenshot."
+    Col17="2008-06-19T16:35:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-270"
+    Col3="Changes to &quot;Submit Report&quot; screen." Col4="Improvement"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="2008-06-18T12:11:00"
+    Col9="Version 1.1 &#10;Version 1.5" Col10="Version 1.1 &#10;Version 1.5"
+    Col11="User Interface" Col12="2008-06-18T00:00:00" Col13="0"
+    Col14="10085_Submit report screen shot.jpg "
+    Col16="NCI has requested that the url for submitting a report be hidden or &quot;beautified&quot; within the user interface. Either hiding the url or providing a synonym, such as &quot;AdEERS staging system&quot; would be satisfactory. &#10;&#10;Additionally, the header should be renamed f"
+    Col17="2008-06-18T14:02:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-266"
+    Col3="Test caAERS data service from caGrid Portal" Col4="Task" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="2008-06-10T16:33:00" Col13="0"
+    Col17="2008-06-11T10:14:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-264"
+    Col3="Record Hospitalization information only if grade &gt; 2 in Enter AEs tab"
+    Col4="Bug" Col5="Closed" Col6="Blocker" Col7="Fixed"
+    Col8="2008-06-09T15:24:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5"
+    Col11="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture"
+    Col12="2008-06-11T00:00:00" Col13="0" Col14="10062_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="'-- Currently if User enter a grade 3 (or greater) the user is forced to choose 'Hospitalization' as one of 'Hospitalization' or 'Prolonged Hospitalization'.&#10;-- It should be 'Hospitalization/ Prolonged Hospitalization' ? Yes or No. [refer http://10.10.10."
+    Col17="2008-06-30T15:47:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-263"
+    Col3="Remove / hide Expectedness for CTEP Ind reporting in Enter AEs tab"
+    Col4="Improvement" Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="2008-06-09T14:47:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5"
+    Col11="Module 1: Adverse Event Data Capture" Col12="2008-06-12T00:00:00"
+    Col13="0" Col14="10061_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="'-- user is in enter AEs tab.&#10;-- User should not be able to see the 'Expected' drop down menu item if the study has a CTEP IND.&#10;-- See screen shot"
+    Col17="2008-06-19T09:48:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-260"
+    Col3="CAAERS-251&#10;-- MM/YYYY date formats should be acceptable in Enter AEs&gt;&gt;prior therapies"
+    Col4="Sub-task" Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="2008-06-09T11:28:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5"
+    Col11="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture"
+    Col13="0" Col14="10058_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="'-- User is in Enter AEs&gt;&gt;prior therapies.&#10;-- For 'Therapy start Date' user should be able to add date in MM/YYYY format.&#10;-- See screen shot&#10;"
+    Col17="2008-06-30T15:52:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-259"
+    Col3="Simplify error messages in Enter AEs &gt;. patient details"
+    Col4="Improvement" Col5="Closed" Col6="Minor" Col7="Fixed"
+    Col8="2008-06-09T11:22:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.5"
+    Col11="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture &#10;User Interface"
+    Col13="0" Col14="10057_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="'-- User is in Enter AEs &gt;. patient details&#10;-- User enters incorrect date format for 'Date of initial diagnosis'&#10;-- The error message is quite technical and should be simplified.&#10;&#10;Failed to convert property value of type [java.lang.String] to required typ"
+    Col17="2008-06-30T16:20:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-258"
+    Col3="CAAERS-251&#10;Change acceptable date format In Enter AEs&gt;&gt;Patient details"
+    Col4="Sub-task" Col5="Closed" Col6="Blocker" Col7="Fixed"
+    Col8="2008-06-09T11:10:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5"
+    Col11="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture"
+    Col12="2008-06-11T00:00:00" Col13="0" Col14="10056_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="'-- User is in Enter AEs&gt;&gt;Patient details.&#10;-- user should be able to enter 'Date of initial diagnosis' in MM/YYYY format instead of forcing user to enter in DD/MM/YYYY&#10;-- See screen shot"
+    Col17="2008-06-30T15:53:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-256"
+    Col3="Incorrect error message in Enter AEs&gt;&gt; Course and agent [setser]"
+    Col4="Bug" Col5="Reopened" Col6="Major" Col7="UNRESOLVED"
+    Col8="2008-06-09T10:44:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.5" Col11="Module 1: Adverse Event Data Capture" Col13="0"
+    Col14="10053_screenshot-1.jpg "
+    Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="'-- In Enter AEs&gt;&gt; Course and Agent:&#10;Couple of issues exist&#10;1&gt; User enters UOM but does not enter any value for 'Total dose administered this course'. And clicks save and continue: no error message is thrown for blank 'Total dose administered this course'"/>
+   <z:row Col1="caAERS" Col2="CAAERS-254"
+    Col3="[#14659]: User entered an expedited AE but could not submit the 10 day report"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Duplicate"
+    Col8="2008-06-06T17:26:00" Col9="Version 1.1" Col11="User Interface"
+    Col13="0" Col15="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col16="link to gforge: https://gforge.nci.nih.gov/tracker/?func=detail&amp;aid=14659&amp;group_id=249&amp;atid=1099&#10;&#10;-- I am unable to reproduce this error. Unfortunately adopters have not copy pasted the error message. So unable to determine the bug"
+    Col17="2008-06-09T16:12:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-251"
+    Col3="][14671] caAERS Requires a complete date for prior therapy and date of diagnosis"
+    Col4="Improvement" Col5="Closed" Col6="Blocker" Col7="Fixed"
+    Col8="2008-06-06T09:32:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5"
+    Col11="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture"
+    Col12="2008-06-11T00:00:00" Col13="0" Col15="Browser: IE 7&#10;"
+    Col16="http://gforge.nci.nih.gov/tracker/?func=detail&amp;atid=1099&amp;aid=14671&amp;group_id=249&#10;&#10;Submitted By: Sonja Hamilton (hamilton)&#10;Summary: caAERS Requires a complete date for prior therapy, AdEERS only requires mm/yy &#10;Source: Adopter&#10;&#10;caAERS Requires a complete da"
+    Col17="2008-06-30T16:00:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-228"
+    Col3="Create QA environment for testing caaers production release. caAERS v1.1.2"
+    Col4="Task" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-05-28T10:14:00" Col11="Deployment Support" Col13="0"
+    Col15="caAERS v1.1.2" Col17="2008-06-30T18:09:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-226"
+    Col3="create data model for caaers DB and fix foreign key constraints in DB"
+    Col4="Task" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-05-23T10:23:00"
+    Col11="Core Development (Middle Layer and BackEnd" Col13="0"
+    Col16="'-- Reverse engineer caAERS data model from DB.&#10;-- Fix all foreign key associations.&#10;-- Create groovy scripts to alter tables and adding foreign keys."
+    Col17="2008-06-30T16:11:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-219"
+    Col3="caAERS - Installer - Should use different logic to identify caaers-core jar"
+    Col4="Improvement" Col5="Resolved" Col6="Minor" Col7="Fixed"
+    Col8="2008-05-19T10:32:00" Col9="Version 1.1 &#10;Version 1.5"
+    Col10="Version 1.1 &#10;Version 1.5" Col11="Installer"
+    Col12="2008-05-30T00:00:00" Col13="0"
+    Col16="Problem:&#10;-------------&#10;I uploaded new version of caaers.war. I forgot to update the caaers-core jar version in the online properties file, that the installer uses to correctly identify caaers core jar. &#10;&#10;Solution: &#10;------------&#10;To improve the installation"
+    Col17="2008-06-20T14:48:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-218"
+    Col3="CAAERS-217&#10;Clear Tomcat work directory and restart"
+    Col4="Sub-task" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="2008-05-16T17:35:00" Col9="Version 1.1" Col10="Version 1.1"
+    Col11="Deployment Support" Col12="2008-05-19T00:00:00" Col13="0"
+    Col16="If this doesn't fix, compare work directory at Mayo with SemanticBits tomcat work directory"
+    Col17="2008-06-02T14:15:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-210"
+    Col3="CAAERS-195&#10;Test the UI layer in the web application"
+    Col4="Sub-task" Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="2008-05-16T12:14:00" Col9="Version 1.5" Col10="Version 1.5"
+    Col11="Module 1: Adverse Event Data Capture" Col13="0"
+    Col17="2008-06-30T15:48:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-176"
+    Col3="Change the label for hospitalization to &quot;Hospitalization or Prolongation of Hospitalization?&quot; and change responses to &quot;yes&quot; or &quot;no&quot;?"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Duplicate"
+    Col8="2008-05-07T12:14:00" Col9="Version 1.1" Col10="Version 1.1"
+    Col11="User Interface" Col12="2008-05-15T00:00:00" Col13="0"
+    Col16="Module 1 - Phase 2:&#10;&#10;Change the label for hospitalization to &quot;Hospitalization or Prolongation of Hospitalization?&quot; &#10;And change responses to &quot;yes&quot; or &quot;no&quot;?&#10;---&#10;&#10;Questions :&#10;1. This should happen in both Routine AE and Expedited AE screens ?&#10;2. We at presen"
+    Col17="2008-06-09T21:31:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-174"
+    Col3="caAERS certificate is invalid (expired)" Col4="Task" Col5="Reopened"
+    Col6="Major" Col7="UNRESOLVED" Col8="2008-05-07T08:12:00" Col9="Version 1.1"
+    Col10="Version 1.1" Col11="Installer" Col12="2008-05-08T00:00:00" Col13="0"
+    Col15="DEMO , QA, Installer , DEV"
+    Col16="The certificate for SSL is expired. This is causing a browser popup, that asks for confirmation from user to view and certify the certificate. &#10;1. We need to recreate a valid certificate, and configure it so that the tomcat @ DEMO, DEV and QA use it.&#10;2. I"/>
+  </rs:data>
+ </x:PivotCache>
+</xml>

@@ -1,0 +1,549 @@
+<xml xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+ xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+ <x:PivotCache>
+  <x:CacheIndex>1</x:CacheIndex>
+  <s:Schema id="RowsetSchema">
+   <s:ElementType name="row" content="eltOnly">
+    <s:attribute type="Col1"/>
+    <s:attribute type="Col2"/>
+    <s:attribute type="Col3"/>
+    <s:attribute type="Col4"/>
+    <s:attribute type="Col5"/>
+    <s:attribute type="Col6"/>
+    <s:attribute type="Col7"/>
+    <s:attribute type="Col8"/>
+    <s:attribute type="Col9"/>
+    <s:attribute type="Col10"/>
+    <s:attribute type="Col11"/>
+    <s:attribute type="Col12"/>
+    <s:attribute type="Col13"/>
+    <s:attribute type="Col14"/>
+    <s:attribute type="Col15"/>
+    <s:attribute type="Col16"/>
+    <s:attribute type="Col17"/>
+    <s:attribute type="Col18"/>
+    <s:attribute type="Col19"/>
+    <s:attribute type="Col20"/>
+    <s:attribute type="Col21"/>
+    <s:attribute type="Col22"/>
+    <s:attribute type="Col23"/>
+    <s:attribute type="Col24"/>
+    <s:attribute type="Col25"/>
+    <s:attribute type="Col26"/>
+    <s:attribute type="Col27"/>
+    <s:attribute type="Col28"/>
+    <s:attribute type="Col29"/>
+    <s:attribute type="Col30"/>
+    <s:attribute type="Col31"/>
+    <s:attribute type="Col32"/>
+    <s:extends type="rs:rowbase"/>
+   </s:ElementType>
+   <s:AttributeType name="Col1" rs:name="Project">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col2" rs:name="Key">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col3" rs:name="Summary">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col4" rs:name="Issue Type">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col5" rs:name="Status">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col6" rs:name="Priority">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col7" rs:name="Resolution">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col8" rs:name="Assignee">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col9" rs:name="Reporter">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col10" rs:name="Created">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col11" rs:name="Updated">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col12" rs:name="Affects Version/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col13" rs:name="Fix Version/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col14" rs:name="Component/s">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col15" rs:name="Due Date">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col16" rs:name="Votes">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col17" rs:name="Images">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col18" rs:name="Original Estimate">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col19" rs:name="Remaining Estimate">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col20" rs:name="Time Spent">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col21" rs:name="Work Ratio">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col22" rs:name="Sub-Tasks">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col23" rs:name="Issue Links">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col24" rs:name="Environment">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col25" rs:name="Description">
+    <s:datatype dt:maxLength="255"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col26" rs:name="Progress">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col27" rs:name="Σ Progress">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col28" rs:name="Σ Time Spent">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col29" rs:name="Σ Remaining Estimate">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col30" rs:name="Σ Original Estimate">
+    <s:datatype dt:type="int"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col31" rs:name="Date of First Response">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+   <s:AttributeType name="Col32" rs:name="Resolution Date">
+    <s:datatype dt:type="dateTime"/>
+   </s:AttributeType>
+  </s:Schema>
+  <rs:data>
+   <z:row Col1="caAERS" Col2="CAAERS-417"
+    Col3="CAAERS-409&#10;AE term truncated in display" Col4="Sub-task"
+    Col5="Resolved" Col6="Critical" Col7="Fixed" Col8="Arun Kumar Kandregula"
+    Col9="paul.baumgartner" Col10="2008-07-29T14:31:00"
+    Col11="2008-07-30T12:11:00" Col12="Version 1.5" Col13="Version 1.5"
+    Col14="Module 1: Adverse Event Data Capture" Col15="2008-07-30T00:00:00"
+    Col16="0"
+    Col17="10171_Correct AE term display.jpg 10174_Enter AE page - incorrect display (truncated).jpg 10172_Incorrect (truncated) AE term display after adding new Reporting Period Type.jpg 10173_Overview page - incorrect (truncated) display.jpg "
+    Col24="v1.2.1; firefox"
+    Col25="After a solicited AE term is added it displays the entire term (correct), however, if a new reporting period type is added, then the AE term text gets truncated. This is a problem as some AE's will appear to be duplicates, when, in-fact, they are unique t"
+    Col32="2008-07-30T12:11:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-415"
+    Col3="CAAERS-409&#10;Position of Sol. AEs tab wrong on Enter Study flow"
+    Col4="Sub-task" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="Arun Kumar Kandregula" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-07-29T14:15:00" Col11="2008-07-30T12:09:00" Col12="Version 1.5"
+    Col13="Version 1.5" Col14="Module 1: Adverse Event Data Capture"
+    Col15="2008-07-30T00:00:00" Col16="0"
+    Col24="caAERS v. 1.2.1.SNAPSHOT (2008-07-29 10:57:33)"
+    Col25="'-- User is in Enter Study flow.&#10;-- Sol. AEs tab is ninth &#10;-- The Sol. AEs tab should be place after 'disease' tab."
+    Col31="2008-07-30T12:03:00" Col32="2008-07-30T12:03:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-412"
+    Col3="CAAERS-409&#10;Solicited AEs removed if user removes reporting period type in Enter Study&gt;&gt;Sol. AE"
+    Col4="Sub-task" Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="Arun Kumar Kandregula" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-07-29T13:46:00" Col11="2008-07-30T12:10:00" Col12="Version 1.5"
+    Col13="Version 1.5" Col14="Module 1: Adverse Event Data Capture"
+    Col15="2008-07-30T00:00:00" Col16="0"
+    Col17="10168_after.jpg 10167_before.jpg "
+    Col24="caAERS v. 1.2.1.SNAPSHOT (2008-07-29 10:57:33)"
+    Col25="'-- User is in Enter Study&gt;&gt;Sol. AE.&#10;-- User adds a couple of solicited Ae terms.&#10;-- There are two reporting period types [see before screen shot]&#10;-- User then deletes one of the reporting period types.&#10;-- The list of solicited AEs submitted by the user h"
+    Col32="2008-07-29T17:49:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-410"
+    Col3="CAAERS-409&#10;scroll bar not visible in Enter Study&gt;&gt; Sol. AE"
+    Col4="Sub-task" Col5="Resolved" Col6="Critical" Col7="Fixed"
+    Col8="Arun Kumar Kandregula" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-07-29T13:37:00" Col11="2008-07-30T13:30:00" Col12="Version 1.5"
+    Col13="Version 1.5" Col14="Module 1: Adverse Event Data Capture"
+    Col15="2008-07-30T00:00:00" Col16="0"
+    Col17="10182_IE 7 - double scroll bars.jpg "
+    Col24="caAERS v. 1.2.1.SNAPSHOT (2008-07-29 10:57:33)"
+    Col25="'-- User is in Enter Study&gt;&gt; Sol. AE.&#10;-- User clicks 'Add multiple button'&#10;-- The pop up that is shown has a multi-select list for CTC categories:&#10;-- There are two errors:&#10;1&gt; Spelling mistake on label 'CTC categorie(s)' - change to &quot;CTC category(s)&#10;2&gt; The"
+    Col31="2008-07-30T12:11:00" Col32="2008-07-30T13:30:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-397"
+    Col3="Capture Solicited AE Page - Create Study Flow" Col4="Bug"
+    Col5="Resolved" Col6="Major" Col7="Fixed" Col8="Arun Kumar Kandregula"
+    Col9="biju.joseph@semanticbits.com" Col10="2008-07-24T11:49:00"
+    Col11="2008-07-24T19:23:00" Col12="Version 1.5" Col13="Version 1.5"
+    Col14="User Interface" Col16="0"
+    Col25="1. Go to create study flow&#10;2. Key in details on Study Details page (select AE coding terminology as CTC v3.0).&#10;3. Go to Therapy tab and select Agent&#10;4. Go to Solicited AE Tab &#10;&#10;I get the below error :-&#10;&#10;2008-07-24 10:44:34,106 [http-8443-Processor23] DEBU"
+    Col32="2008-07-24T19:23:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-396"
+    Col3="Capture Solicited AE Page - Deselect an AE term should deselect (select all)"
+    Col4="Bug" Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="Arun Kumar Kandregula" Col9="biju.joseph@semanticbits.com"
+    Col10="2008-07-24T11:18:00" Col11="2008-07-24T19:24:00" Col12="Version 1.5"
+    Col13="Version 1.5" Col14="Module 1: Adverse Event Data Capture" Col16="0"
+    Col25="1. Go to SolicitedAE tab (study flow)&#10;2. Add term(s)&#10;3. Click on select all (under any of the reporting period type)&#10;- This selects all the terms under the reporting period type&#10;4. Deselect the 'a' term/ae under the same reproting period type&#10;&#10;This should"
+    Col32="2008-07-24T19:24:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-395"
+    Col3="Capture Solicited AE Page - check box displayed below the column where the add button is"
+    Col4="Bug" Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="Arun Kumar Kandregula" Col9="biju.joseph@semanticbits.com"
+    Col10="2008-07-24T11:14:00" Col11="2008-07-24T19:24:00" Col12="Version 1.5"
+    Col13="Version 1.5" Col14="Module 1: Adverse Event Data Capture" Col16="0"
+    Col17="10154_Screenshot.png "
+    Col25="&#10;NOTE --- See attached screenshot&#10;&#10;1. Go to Solicited AE page&#10;2. Delete a Reporting Period Type&#10;3. Add a new term &#10;4. Check box is displayed below the ADD button column (see screenshot)&#10;"
+    Col32="2008-07-24T19:24:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-392"
+    Col3="CAAERS-391&#10;MouseOver issue (colors)" Col4="Sub-task"
+    Col5="Resolved" Col6="Major" Col7="Fixed" Col8="Ion Olaru" Col9="Ion Olaru"
+    Col10="2008-07-23T11:33:00" Col11="2008-07-28T13:45:00"
+    Col12="Version 1.1 &#10;Version 1.5" Col13="Version 1.1 &#10;Version 1.5"
+    Col14="User Interface" Col16="0" Col32="2008-07-23T13:51:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-391" Col3="LabViewer bar"
+    Col4="New Feature" Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="Ion Olaru" Col9="Ion Olaru" Col10="2008-07-23T10:37:00"
+    Col11="2008-07-23T13:50:00" Col16="0" Col22="CAAERS-392"
+    Col32="2008-07-23T13:50:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-388"
+    Col3="Javascript error messages not shown in various tabs" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-07-18T17:19:00"
+    Col11="2008-07-21T16:31:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5" Col14="User Interface" Col16="0"
+    Col24="caAERS v. 1.1.3"
+    Col25="'-- The javascript error messages for various required fields is not being displayed in various tabs of AE flow.&#10;-- For ex: user is in Enter AEs&gt;&gt; Patient details.&#10;--"
+    Col32="2008-07-21T16:31:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-368"
+    Col3="create a document on security architecture" Col4="Task"
+    Col5="Resolved" Col6="Critical" Col7="Fixed" Col8="Vinay Kumar"
+    Col9="Saurabh Agrawal" Col10="2008-07-10T11:28:00"
+    Col11="2008-07-10T16:11:00" Col12="Version 1.5" Col13="Version 1.5"
+    Col14="Documentation" Col15="2008-07-10T00:00:00" Col16="0" Col18="10800"
+    Col19="0" Col20="10800" Col21="1" Col26="1" Col27="1" Col28="10800"
+    Col29="0" Col30="10800" Col32="2008-07-10T16:11:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-366"
+    Col3="Wrong error message in Enter AEs&gt;&gt; Describe events" Col4="Bug"
+    Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="biju.joseph@semanticbits.com" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-07-09T15:32:00" Col11="2008-07-11T18:15:00" Col12="Version 1.1"
+    Col14="User Interface" Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="'-- User is in Enter AEs&gt;&gt; Describe events.&#10;-- For 'Present status' user enters 'Not recovered/Not resolved'&#10;-- User adds values for:&#10;Date of recovery or death&#10;Date removed from protocol&#10;-- user clicks continue&#10;-- The following error message is shown:&#10;&#10;&#10;&#10;"
+    Col31="2008-07-11T15:00:00" Col32="2008-07-11T15:00:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-362"
+    Col3="hospitalization bug is not firing for DCP" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="jennifer.reed@semanticbits.com" Col10="2008-07-09T13:18:00"
+    Col11="2008-07-11T11:53:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.5" Col14="Module 1: Adverse Event Data Capture" Col16="0"
+    Col24="Windows XP, Firefox 2.0"
+    Col25="DCP report (pamela obrien, Phase II Trial of Esomeprazole, hypertension AE). If you choose Yes for hospitalization in an expedited report flow, it marks the &quot;outcome&quot; field &quot;hospitalization - initial or prolonged&quot; but the rule does not fire saying the rep"
+    Col31="2008-07-10T19:30:00" Col32="2008-07-10T19:30:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-361"
+    Col3="Unable to add report CC: recipients" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="paul.baumgartner" Col10="2008-07-09T12:20:00"
+    Col11="2008-07-11T17:30:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.5"
+    Col14="Module 4: External Agency Reporting &#10;Module 5: Internal Routing and Review"
+    Col15="2008-07-31T00:00:00" Col16="0" Col17="10142_screenshot-1.jpg "
+    Col24="v1.1.3; Firefox 2.0" Col25="Error when adding a 2nd recipient"
+    Col31="2008-07-10T13:30:00" Col32="2008-07-11T14:27:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-359"
+    Col3="Wrong UI behavior in Enter AEs&gt;&gt; Patient details" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-07-09T11:11:00"
+    Col11="2008-07-10T16:42:00" Col12="Version 1.1" Col14="User Interface"
+    Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="'-- User is in Enter AEs&gt;&gt; Patient details&#10;-- For 'Primary site of disease' user mentions 'Other, specify'&#10;-- A text box appears for 'Other (site of primary disease)' and user enters some arbitrary text.&#10;-- User then changes the 'Primary site of disease' "
+    Col31="2008-07-10T13:14:00" Col32="2008-07-10T13:14:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-358"
+    Col3="Wrong error message in Enter AEs&gt;&gt; Patient details" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-07-09T11:04:00"
+    Col11="2008-07-10T16:48:00" Col12="Version 1.1" Col14="User Interface"
+    Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="'-- User is in Enter AEs&gt;&gt; Patient details&#10;-- For 'Primary site of disease' user mentions 'Other, specify'&#10;-- A text box appears for 'Other (site of primary disease)' and user enters some arbitrary text and clicks continue.&#10;-- The following error message "
+    Col31="2008-07-10T12:05:00" Col32="2008-07-10T12:05:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-353"
+    Col3="[IE 7] Invalid radiation information sent to adeers" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-07-07T15:20:00"
+    Col11="2008-07-11T18:01:00" Col12="Version 1.1" Col14="User Interface"
+    Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="'-- User is entering an AE for a study with radiation pathway [ study: rtog-0330]&#10;-- In the Enter AEs&gt;&gt; radiation tab, user leaves 'Adjustment' as 'Please select' and submits the report to adeers.&#10;-- The following error message is reported back by adeers:"
+    Col31="2008-07-11T15:24:00" Col32="2008-07-11T18:01:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-349"
+    Col3="adeers throws errors for past dates in prior therapies" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-07-03T14:24:00"
+    Col11="2008-07-08T16:54:00" Col12="Version 1.1" Col14="User Interface"
+    Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="Report # 2 was NOT successfully submitted to AdEERS&#10;-- User enters past dates for prior therapy in Enter AEs&gt;&gt;Prior therapy.&#10;-- No error is thrown by caaers for future dates.&#10;-- The report is submitted to adeers and the following error message is received"
+    Col31="2008-07-07T15:58:00" Col32="2008-07-07T15:58:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-336" Col3="Test caaers 1.1.3 against IE 7"
+    Col4="Task" Col5="Closed" Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-07-02T17:27:00"
+    Col11="2008-07-08T16:33:00" Col12="Version 1.1" Col14="User Interface"
+    Col16="0" Col24="caaers v1.1.3"
+    Col25="Test caaers application against v1.1.3" Col32="2008-07-08T16:33:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-321" Col3="Associating Grades with CTCv2.0"
+    Col4="Improvement" Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="karthik.iyer@semanticbits.com" Col9="paul.baumgartner"
+    Col10="2008-07-01T17:25:00" Col11="2008-07-11T17:41:00"
+    Col12="Version 1.1 &#10;Version 1.5" Col13="Version 1.1 &#10;Version 1.5"
+    Col14="Core Development (Middle Layer and BackEnd &#10;Module 3: Vocabulary Mapping Service"
+    Col15="2008-07-03T00:00:00" Col16="0"
+    Col25="The following link contains the grades for CTCv2.0: http://ctep.cancer.gov/forms/MappingGrades2-3.xls"
+    Col31="2008-07-11T14:21:00" Col32="2008-07-11T14:21:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-312"
+    Col3="Mismatch of values sent by caAERS and required by AdEERS" Col4="Bug"
+    Col5="Closed" Col6="Blocker" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="paul.baumgartner" Col10="2008-07-01T09:17:00"
+    Col11="2008-07-10T16:35:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5"
+    Col14="Module 4: External Agency Reporting" Col15="2008-07-01T00:00:00"
+    Col16="0"
+    Col25="As discussed over the past couple days, there are some inconsistencies between the values caAERS sends and the values that AdEERS requires. An example of this is regarding Subject Ethnicity where &quot;Non Hispanic or Latino&quot; is the value sent by caAERS and &quot;N"
+    Col31="2008-07-01T11:34:00" Col32="2008-07-09T10:49:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-308"
+    Col3="Unable to access Edit Study&gt;&gt; SOlicited AEs" Col4="Bug"
+    Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="biju.joseph@semanticbits.com" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-06-27T15:07:00" Col11="2008-07-02T14:12:00" Col12="Version 1.5"
+    Col13="Version 1.5"
+    Col14="Module 1: Adverse Event Data Capture &#10;User Interface"
+    Col15="2008-07-04T00:00:00" Col16="0"
+    Col24="caAERS v. 1.2.1.SNAPSHOT (2008-06-27 10:50:35)"
+    Col25="'-- User is editing an existing study.&#10;-- He clicks on SolictedAEs tab&#10;-- The following error page is shown.&#10;&#10;Detailed Error&#10;&#10;325: 326:&#10;Status Code 500&#10;Exception Type class javax.servlet.ServletException&#10;Message Exception in JSP: /WEB-INF/views/study/soli"
+    Col31="2008-06-30T15:49:00" Col32="2008-06-30T15:49:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-301"
+    Col3="Adeers error encountered when submitting expedited report for a study with radiation"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-06-26T14:42:00"
+    Col11="2008-07-10T10:29:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.5" Col14="User Interface" Col15="2008-07-31T00:00:00"
+    Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="'-- User has entered radiation in Enter AEs&gt;&gt;Radiation.&#10;-- Caaers does not report any errors.&#10;-- On adeers submission the following error message comes back:&#10;-- caaers.xml is attached&#10;&#10;Report # 63 was NOT successfully submitted to AdEERS&#10;The following pro"
+    Col31="2008-06-26T14:49:00" Col32="2008-06-30T16:16:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-296"
+    Col3="Caaers error during business rules evaluation" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-06-25T17:32:00"
+    Col11="2008-07-08T17:08:00" Col12="Version 1.1" Col14="User Interface"
+    Col16="0" Col24="caAERS v. 1.1.3"
+    Col25="'-- user fills all relevant details for creating and AE and clicks on the last 'submit' tab.&#10;-- The following error page is shown:&#10;-- Link to AE: https://10.10.10.220:9443/caaers/pages/ae/edit?aeReport=59&#10;&#10;-------------------------------------------------"
+    Col31="2008-06-25T18:28:00" Col32="2008-06-25T18:28:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-292"
+    Col3="expected is required in routine AE entry" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="biju.joseph@semanticbits.com"
+    Col9="jennifer.reed@semanticbits.com" Col10="2008-06-20T17:05:00"
+    Col11="2008-07-09T15:47:00" Col12="Version 1.1" Col13="Version 1.1"
+    Col16="0" Col17="10096_screenshot-1.jpg "
+    Col25="expected is required. screenshot attached"
+    Col32="2008-07-09T15:47:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-285"
+    Col3="Java script pop up error in Edit rules flow" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="biju.joseph@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-06-19T12:31:00"
+    Col11="2008-07-09T15:49:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5" Col14="User Interface" Col16="0"
+    Col17="10093_screenshot-1.jpg " Col24="caAERS v. 1.1.3"
+    Col25="'-- User is editing CTEP sponsor rules.&#10;-- Due to updates to the domain model regarding 'expectedness' information, any rule regarding expectedness in the ruleset is reset to 'Please select'&#10;-- When user attempts to select 'Expected' in the rules UI the f"
+    Col31="2008-06-26T15:13:00" Col32="2008-07-09T15:49:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-273"
+    Col3="For CTEP sponsored trials, remove Expedited AE Flow -&gt; Describe Event -&gt; Details"
+    Col4="Improvement" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="paul.baumgartner" Col9="paul.baumgartner" Col10="2008-06-18T15:23:00"
+    Col11="2008-07-08T17:12:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5"
+    Col14="Core Development (Middle Layer and BackEnd &#10;Module 1: Adverse Event Data Capture &#10;Module 4: External Agency Reporting &#10;User Interface"
+    Col15="2008-06-18T00:00:00" Col16="0"
+    Col17="10088_Event Details to remove for CTEP sponsored trials.jpg "
+    Col24="v1.1.2"
+    Col25="The details section of the &quot;Describe Event&quot; tab in the Expedited AE flow, should be removed for CTEP sponsored trials. Alternatively, this section could be just added for DCP sponsored trials. See the attached screenshot."
+    Col31="2008-06-19T16:35:00" Col32="2008-06-19T16:35:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-272"
+    Col3="caAERS UI Spelling/Grammer fixes" Col4="Bug" Col5="Resolved"
+    Col6="Critical" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="paul.baumgartner" Col10="2008-06-18T14:49:00"
+    Col11="2008-07-11T14:22:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5" Col14="User Interface"
+    Col15="2008-06-18T00:00:00" Col16="0" Col17="10101_screenshot-1.jpg "
+    Col31="2008-06-19T10:35:00" Col32="2008-07-11T14:22:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-270"
+    Col3="Changes to &quot;Submit Report&quot; screen." Col4="Improvement"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="paul.baumgartner" Col10="2008-06-18T12:11:00"
+    Col11="2008-07-08T17:13:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5" Col14="User Interface"
+    Col15="2008-06-18T00:00:00" Col16="0"
+    Col17="10085_Submit report screen shot.jpg "
+    Col25="NCI has requested that the url for submitting a report be hidden or &quot;beautified&quot; within the user interface. Either hiding the url or providing a synonym, such as &quot;AdEERS staging system&quot; would be satisfactory. &#10;&#10;Additionally, the header should be renamed f"
+    Col31="2008-06-18T14:02:00" Col32="2008-06-18T14:02:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-263"
+    Col3="Remove / hide Expectedness for CTEP Ind reporting in Enter AEs tab"
+    Col4="Improvement" Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="biju.joseph@semanticbits.com" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-06-09T14:47:00" Col11="2008-07-09T10:45:00"
+    Col12="Version 1.1 &#10;Version 1.5" Col13="Version 1.1 &#10;Version 1.5"
+    Col14="Module 1: Adverse Event Data Capture" Col15="2008-06-12T00:00:00"
+    Col16="0" Col17="10061_screenshot-1.jpg "
+    Col24="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col25="'-- user is in enter AEs tab.&#10;-- User should not be able to see the 'Expected' drop down menu item if the study has a CTEP IND.&#10;-- See screen shot"
+    Col31="2008-06-09T15:03:00" Col32="2008-06-19T09:48:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-262"
+    Col3="Hospitalization should be yes/no answer is Enter AEs tab."
+    Col4="Improvement" Col5="Closed" Col6="Critical" Col7="Fixed"
+    Col8="srini.akkala@semanticbits.com" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-06-09T13:57:00" Col11="2008-07-09T15:59:00"
+    Col12="Version 1.1 &#10;Version 1.5" Col13="Version 1.1 &#10;Version 1.5"
+    Col14="User Interface" Col15="2008-06-11T00:00:00" Col16="0"
+    Col17="10060_screenshot-1.jpg "
+    Col24="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col25="'-- User is in Enter AEs tab.&#10;-- User should only be allowed to mention hospitalization as follows:&#10;&#10;Hospitalization/Prolongation of Hospitalization? Yes / No&#10;-- See screen shot.&#10;&#10;Question: The hospitalization field is currently mandatory. Is this suppose"
+    Col31="2008-06-09T14:49:00" Col32="2008-07-09T15:59:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-255"
+    Col3="[#14670] User can not submit AdEERS Report" Col4="Bug" Col5="Closed"
+    Col6="Critical" Col7="Fixed" Col8="biju.joseph@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-06-06T17:30:00"
+    Col11="2008-07-09T10:48:00" Col12="Version 1.1 &#10;Version 1.5"
+    Col13="Version 1.1 &#10;Version 1.5"
+    Col14="Module 1: Adverse Event Data Capture" Col15="2008-07-01T00:00:00"
+    Col16="0" Col24="caAERS v. 1.1.2-SNAPSHOT (2008-05-02 17:08:13)"
+    Col25="link: https://gforge.nci.nih.gov/tracker/?func=detail&amp;aid=14670&amp;group_id=249&amp;atid=1099&#10;-- I have not been able to reproduce error. &#10;-- User doc is attached."
+    Col31="2008-06-09T16:18:00" Col32="2008-07-07T15:42:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-225"
+    Col3="show audit history for individual adverse event" Col4="New Feature"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="Saurabh Agrawal"
+    Col9="Saurabh Agrawal" Col10="2008-05-22T17:57:00"
+    Col11="2008-07-02T11:26:00" Col12="Version 1.5" Col13="Version 1.5"
+    Col14="Core Development (Middle Layer and BackEnd" Col16="0"
+    Col32="2008-07-02T11:26:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-221" Col3="Create Inplace Editor Component"
+    Col4="New Feature" Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="Arun Kumar Kandregula" Col9="biju.joseph@semanticbits.com"
+    Col10="2008-05-20T18:19:00" Col11="2008-07-11T14:27:00" Col12="Version 1.5"
+    Col13="Version 1.5" Col14="User Interface" Col16="0"
+    Col25="Create the inplace editor component." Col32="2008-07-11T14:27:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-212"
+    Col3="CAAERS-195&#10;Read and Understand Use Case" Col4="Sub-task"
+    Col5="Resolved" Col6="Major" Col7="Fixed" Col8="Arun Kumar Kandregula"
+    Col9="jennifer.reed@semanticbits.com" Col10="2008-05-16T12:17:00"
+    Col11="2008-07-08T17:54:00" Col12="Version 1.5" Col13="Version 1.5"
+    Col14="Documentation" Col15="2008-05-16T00:00:00" Col16="0"
+    Col25="https://wiki.nci.nih.gov/display/CTMS/1.2.1+Associate+Solicited+AEs+to+a+study+-+caAERS+UC&#10;&#10;If you reviewed prior to 5/15 at 6 pm, please check the history to see the changes"
+    Col32="2008-07-08T17:54:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-179"
+    Col3="caAERS 1.1-stable - Release notes" Col4="Task" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="biju.joseph@semanticbits.com" Col10="2008-05-08T10:26:00"
+    Col11="2008-07-10T10:06:00" Col12="Version 1.1" Col13="Version 1.1"
+    Col14="Documentation" Col16="0" Col18="3600" Col19="3600" Col21="0"
+    Col25="Fetch the release notes for 1.1.2 release" Col26="0" Col27="0"
+    Col29="3600" Col30="3600" Col32="2008-05-08T10:50:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-177"
+    Col3="Show Roles and email address on submit page" Col4="Improvement"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="biju.joseph@semanticbits.com"
+    Col9="biju.joseph@semanticbits.com" Col10="2008-05-07T13:30:00"
+    Col11="2008-07-09T16:07:00" Col12="Version 1.1" Col13="Version 1.1"
+    Col14="Core Development (Middle Layer and BackEnd &#10;User Interface"
+    Col15="2008-05-13T00:00:00" Col16="0"
+    Col25="Module 1 : Phase 2&#10;&#10;Show Roles and email address on submit page&#10;&#10;----- Steps to recreate -----&#10;=====================&#10;1. Go to Edit or Enter Expedited Report page. &#10;2. Fill in details from Basic Details to Attachment tabs.&#10;3 At check point tab, make sure t"
+    Col32="2008-07-09T16:07:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-154"
+    Col3="Installer requires websso files even when not using websso" Col4="Bug"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="paul.baumgartner"
+    Col9="jennifer.reed@semanticbits.com" Col10="2008-05-01T15:58:00"
+    Col11="2008-07-09T14:08:00" Col14="Installer" Col16="0"
+    Col25="From email thread: For a standalone version of caAERS, you do not need to install WebSSO, however the installer requires you to select files before you can continue."
+    Col31="2008-05-01T17:02:00" Col32="2008-05-01T17:02:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-149"
+    Col3="Move up, Move down buttons are not appearing for Medra." Col4="Bug"
+    Col5="Resolved" Col6="Major" Col7="Fixed"
+    Col8="biju.joseph@semanticbits.com" Col9="Arun Kumar Kandregula"
+    Col10="2008-04-30T11:45:00" Col11="2008-07-11T18:17:00"
+    Col14="User Interface" Col16="0" Col24="XP"
+    Col25="For Medra flow, in Create Expedited report, tab 2 , when we add secondary AEs to primary AE, currently move up, move down etc icons are not appearing on top right corner of the AE block. This is clearly a bug."
+    Col31="2008-05-01T14:35:00" Col32="2008-05-01T14:38:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-147"
+    Col3="Identical Other Causes gives Adeers error" Col4="Bug" Col5="Resolved"
+    Col6="Major" Col7="Fixed" Col8="biju.joseph@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-04-28T15:44:00"
+    Col11="2008-07-11T18:11:00" Col14="User Interface" Col16="0"
+    Col24="caAERS v. 1.1.2-SNAPSHOT (2008-04-28 12:31:30)"
+    Col25="'-- User is in edit AE flow&gt;&gt; other causes&#10;-- User adds two other causes, with identical text description.&#10;-- Caaers does not throw error for duplicate other causes.&#10;-- User submits report to adeers and the following error message is received:&#10;&#10;----------"
+    Col31="2008-07-11T14:49:00" Col32="2008-07-11T14:49:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-135"
+    Col3="Reporter role name is not shown correctly" Col4="Bug" Col5="Closed"
+    Col6="Minor" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="karthik.iyer@semanticbits.com" Col10="2008-04-26T20:07:00"
+    Col11="2008-07-11T18:15:00" Col12="Version 1.1" Col14="User Interface"
+    Col15="2008-05-30T00:00:00" Col16="0"
+    Col25="SAE submit flow 2nd page, the Reporter is shown as REP."
+    Col31="2008-07-11T14:59:00" Col32="2008-07-11T14:59:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-117"
+    Col3="adding/removing panels in Enter AEs&gt;&gt;Pre-Existing Conditions is incorrect"
+    Col4="Bug" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="biju.joseph@semanticbits.com" Col9="karthik.iyer@semanticbits.com"
+    Col10="2008-04-24T14:55:00" Col11="2008-07-09T14:07:00" Col13="Version 1.0"
+    Col14="User Interface" Col15="2008-04-24T00:00:00" Col16="0" Col18="180"
+    Col19="180" Col21="0" Col24="caAERS v. 1.1.2-SNAPSHOT (2008-04-23 18:08:40)"
+    Col25="Biju,&#10;Try the following set of actions:&#10;1&gt; Go to edit AE&gt; Pre-Existing Conditions&#10;2&gt; Click 'add a pre-existing conidition' twice&#10;3&gt; Delete Pre-existing condition 1&#10;4&gt; The next condition will be named &quot;SAEReportPreExistingCondition 1&quot;&#10;5&gt; Now Click 'add a p"
+    Col26="0" Col27="0" Col29="180" Col30="180" Col31="2008-04-24T16:09:00"
+    Col32="2008-04-24T16:09:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-111"
+    Col3="Need to load an ECOG study into caAERS for purpose of demo at CTMS meeting"
+    Col4="Task" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="srini.akkala@semanticbits.com" Col9="paul.baumgartner"
+    Col10="2008-04-24T10:28:00" Col11="2008-07-10T10:06:00" Col12="Version 1.0"
+    Col15="2008-04-25T00:00:00" Col16="0" Col32="2008-06-09T21:39:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-97"
+    Col3="Instructions on Routine AE page incorrect" Col4="Improvement"
+    Col5="Closed" Col6="Major" Col7="Fixed" Col8="karthik.iyer@semanticbits.com"
+    Col9="biju.joseph@semanticbits.com" Col10="2008-04-21T10:57:00"
+    Col11="2008-07-11T18:13:00" Col12="Version 1.0" Col13="Version 1.0"
+    Col14="Documentation &#10;User Interface" Col15="2008-04-24T00:00:00"
+    Col16="0" Col18="10800" Col19="10800" Col21="0"
+    Col25="On 2nd page of routine AE flow, instructions should be corrected."
+    Col26="0" Col27="0" Col29="10800" Col30="10800" Col31="2008-04-21T12:46:00"
+    Col32="2008-04-23T14:34:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-72"
+    Col3="Create a new tab simlar to organization named as &quot;Site&quot;"
+    Col4="Task" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="biju.joseph@semanticbits.com" Col9="Saurabh Agrawal"
+    Col10="2008-04-10T16:31:00" Col11="2008-07-09T14:14:00" Col12="Version 1.1"
+    Col14="Core Development (Middle Layer and BackEnd" Col16="0"
+    Col31="2008-04-25T12:10:00" Col32="2008-04-25T12:10:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-21"
+    Col3="Validation of date field in AE flow" Col4="Bug" Col5="Closed"
+    Col6="Major" Col7="Fixed" Col8="biju.joseph@semanticbits.com"
+    Col9="Vinay Kumar" Col10="2008-02-04T17:06:00" Col11="2008-07-09T14:17:00"
+    Col12="Version 1.0" Col13="Version 1.0" Col14="User Interface"
+    Col15="2008-02-07T00:00:00" Col16="0" Col18="14400" Col19="14400" Col21="0"
+    Col26="0" Col27="0" Col29="14400" Col30="14400" Col31="2008-02-05T12:39:00"
+    Col32="2008-02-05T12:39:00"/>
+   <z:row Col1="caAERS" Col2="CAAERS-1" Col3="add popup screen for ctc term"
+    Col4="Improvement" Col5="Closed" Col6="Major" Col7="Fixed"
+    Col8="ram.chilukuri@semanticbits.com" Col9="Saurabh Agrawal"
+    Col10="2008-01-17T11:32:00" Col11="2008-07-09T12:29:00" Col12="Version 1.0"
+    Col13="Version 1.0" Col14="User Interface" Col15="2008-01-18T00:00:00"
+    Col16="0" Col17="10001_screenshot-1.jpg " Col31="2008-01-25T16:10:00"
+    Col32="2008-01-23T15:07:00"/>
+   <z:row
+    Col1="Generated at Mon Aug 11 20:33:10 EDT 2008 by paul.baumgartner using JIRA Professional Edition, Version: 3.12.1-#299. "/>
+  </rs:data>
+ </x:PivotCache>
+</xml>
