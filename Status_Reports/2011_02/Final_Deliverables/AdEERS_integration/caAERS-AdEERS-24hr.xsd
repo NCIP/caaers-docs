@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Kumar Chandran (CTIS) -->
+<!--W3C Schema caAERS - AdEERS Integration -->
+<!--Please add namespace attributes, a targetNamespace attribute and import elements according to your requirements-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xs:element name="AE_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="REPORT_TYPE"/>
+        <xs:element ref="TICKET_NUMBER" minOccurs="0"/>
+        <xs:element ref="AMENDMENT_NUMBER" minOccurs="0"/>          
+        <xs:element ref="REPORTER_INFORMATION"/>
+        <xs:element ref="PHYSICIAN_INFORMATION"/>
+        <xs:element ref="SUBMITTER_INFORMATION" minOccurs="0"/>
+        <xs:element ref="INSTITUTION_INFORMATION"/>
+        <xs:element ref="PROTOCOL_INFORMATION"/>
+        <xs:element ref="TREATMENT_ASSIGNMENT_INFORMATION"/>
+        <xs:element ref="COURSE_INFORMATION" minOccurs="0"/>
+        <xs:element ref="RADIATION_INTERVENTION" minOccurs="0"/>
+        <xs:element ref="SURGERY_INTERVENTION" minOccurs="0"/>
+        <xs:element ref="SUSPECT_MEDICAL_DEVICE" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="DESCRIPTION_OF_EVENT" minOccurs="0" />
+        <xs:element ref="PATIENT_INFORMATION"/>
+        <xs:element ref="PRIOR_THERAPY" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="PRE_EXISTING_CONDITION" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="SITE_OF_METASTATIC_DISEASE" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="PROTOCOL_AGENT" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="CONCOMITANT_MEDICATION" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="OTHER_CONTRIBUTING_CAUSE" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="ADVERSE_EVENT_CTC" maxOccurs="unbounded"/>
+        <xs:element ref="LAB_RESULT" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="ADDITIONAL_INFORMATION" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="EMAIL_RECIPIENTS" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMAIL_RECIPIENTS" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TICKET_NUMBER" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="30"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AMENDMENT_NUMBER" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:totalDigits value="3"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+  <xs:element name="REPORT_TYPE" nillable="false">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="30"/>
+              <xs:enumeration value="Regular report"/>
+              <xs:enumeration value="24-hr notification"/>
+              <xs:enumeration value="24-hr notification complete"/>
+              <xs:enumeration value="24-hr amendment"/>
+              <xs:enumeration value="24-hr amendment complete"/>
+              <xs:enumeration value="Regular amendment"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+  <!--  BEGIN REPORTER_INFORMATION  -->
+    <xs:element name="REPORTER_INFORMATION" nillable="false">
+    <xs:complexType>
+      <xs:attribute name="FIRST_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="LAST_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="MIDDLE_NAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="15"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="PHONE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="EMAIL" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="240"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="FAX" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--  BEGIN PHYSICIAN_INFORMATION  -->
+  <xs:element name="PHYSICIAN_INFORMATION" nillable="false">
+    <xs:complexType>
+      <xs:attribute name="FIRST_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="LAST_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="MIDDLE_NAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="15"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="PHONE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="EMAIL" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="240"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--  BEGIN SUBMITTER_INFORMATION  -->
+  <xs:element name="SUBMITTER_INFORMATION" nillable="true">
+    <xs:complexType>
+      <xs:attribute name="FIRST_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="LAST_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="MIDDLE_NAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="15"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="PHONE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="EMAIL" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="240"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="FAX">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--  BEGIN INSTITUTION_INFORMATION  -->
+  <!--  INSTITUTION_NAME might not be required  -->
+  <xs:element name="INSTITUTION_INFORMATION" nillable="false">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="INSTITUTION_NAME"/>
+        <!--  INSTITUTION_NAME might not be required  -->
+      </xs:sequence>
+      <xs:attribute name="CTEP_ID" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="25"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSTITUTION_NAME" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  BEGIN PROTOCOL_INFORMATION  -->
+  <xs:element name="PROTOCOL_INFORMATION" nillable="false">
+    <xs:complexType>
+      <xs:attribute name="NCI_PROTOCOL_NUMBER" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="35"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--  END PROTOCOL_INFORMATION  -->
+  <!--  BEGIN TREATMENT_ASSIGNMENT_INFORMATION  -->
+  <xs:element name="TREATMENT_ASSIGNMENT_INFORMATION" nillable="false">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TREATMENT_ASSIGNMENT_CODE" minOccurs="0" />
+        <xs:element ref="OTHER_TREATMENT_ASSIGNMENT" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TREATMENT_ASSIGNMENT_CODE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>     
+        <xs:minLength value="1"/>
+        <xs:maxLength value="10"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OTHER_TREATMENT_ASSIGNMENT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="4000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  BEGIN COURSE_INFORMATION  -->
+  <xs:element name="COURSE_INFORMATION" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="START_DATE_OF_FIRST_COURSE"/>
+        <xs:element ref="START_DATE_OF_AE_COURSE" minOccurs="0"/>
+        <xs:element ref="COURSE_NUMBER_OF_AE" minOccurs="0"/>
+        <xs:element ref="TOTAL_NUMBER_OF_COURSES" minOccurs="0"/>
+        <xs:element ref="INV_AGENT_ADMIN" minOccurs="0"/>
+        <xs:element ref="INV_DEVICE_ADMIN" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="START_DATE_OF_FIRST_COURSE" type="xs:date" nillable="false"/>
+  <xs:element name="START_DATE_OF_AE_COURSE" type="xs:date" nillable="true"/>
+  <xs:element name="COURSE_NUMBER_OF_AE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+	<xs:maxLength value="10"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TOTAL_NUMBER_OF_COURSES" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="INV_AGENT_ADMIN" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="INV_DEVICE_ADMIN" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <!--  BEGIN RADIATION_INTERVENTION  -->
+  <xs:element name="RADIATION_INTERVENTION" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TYPE_OF_RADIATION_ADMINISTRATION"/>
+        <xs:element ref="TOTAL_DOSE_TO_DATE"/>
+        <xs:element ref="DATE_OF_LAST_TREATMENT"/>
+        <xs:element ref="SCHEDULE_NUMBER_OF_FRACTIONS"/>
+        <xs:element ref="SCHEDULE_NUMBER_OF_ELAPSED_DAYS"/>
+        <xs:element ref="UNIT_OF_MEASURE"/>
+        <xs:element ref="ADJUSTMENT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TYPE_OF_RADIATION_ADMINISTRATION" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TOTAL_DOSE_TO_DATE" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,14}([.][0-9]{1,6})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DATE_OF_LAST_TREATMENT" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="SCHEDULE_NUMBER_OF_FRACTIONS" type="xs:int" nillable="false"/>
+  <xs:element name="SCHEDULE_NUMBER_OF_ELAPSED_DAYS" type="xs:int" nillable="false"/>
+  <xs:element name="UNIT_OF_MEASURE" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="240"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ADJUSTMENT" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="240"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  BEGIN SURGERY_INTERVENTION  -->
+  <xs:element name="SURGERY_INTERVENTION" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SITE_OF_INTERVENTION"/>
+        <xs:element ref="DATE_OF_INTERVENTION"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SITE_OF_INTERVENTION" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DATE_OF_INTERVENTION" type="xs:date" nillable="false"/>
+  <!--  BEGIN SUSPECT_MEDICAL_DEVICE  -->
+  <xs:element name="SUSPECT_MEDICAL_DEVICE" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BRAND_NAME" minOccurs="0"/>
+        <xs:element ref="COMMON_NAME"/>
+        <xs:element ref="TYPE_OF_DEVICE" minOccurs="0"/>
+        <xs:element ref="MANUFACTURER_NAME" minOccurs="0"/>
+        <xs:element ref="MANUFACTURER_CITY" minOccurs="0"/>
+        <xs:element ref="MANUFACTURER_STATE" minOccurs="0"/>
+        <xs:element ref="MODEL_NUMBER" minOccurs="0"/>
+        <xs:element name="LOT_NUMBER" minOccurs="0" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:whiteSpace value="collapse"/>
+              <xs:minLength value="1"/>
+              <xs:maxLength value="250"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element ref="CATALOG_NUMBER" minOccurs="0"/>
+        <xs:element ref="EXPIRATION_DATE" minOccurs="0"/>
+        <xs:element ref="SERIAL_NUMBER" minOccurs="0" />
+        <xs:element ref="OTHER_NUMBER" minOccurs="0" />
+        <xs:element ref="AE_DEVICE_OPERATOR" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="IMPLANTED_DATE" minOccurs="0"/>
+        <xs:element ref="EXPLANTED_DATE" minOccurs="0"/>
+        <xs:element ref="IS_SINGLE_USE_DEVICE" minOccurs="0"/>
+        <xs:element ref="REPROCESSOR_NAME" minOccurs="0"/>
+        <xs:element ref="REPROCESSOR_ADDRESS" minOccurs="0"/>
+        <xs:element ref="EVAL_DEVICE" minOccurs="0"/>
+        <xs:element ref="RETURNED_DATE" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BRAND_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="COMMON_NAME" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TYPE_OF_DEVICE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="MANUFACTURER_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="MANUFACTURER_CITY" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="MANUFACTURER_STATE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="MODEL_NUMBER" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CATALOG_NUMBER" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="EXPIRATION_DATE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="SERIAL_NUMBER" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OTHER_NUMBER" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AE_DEVICE_OPERATOR" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DEVICE_OPERATOR"/>
+        <xs:element ref="DEVICE_OPERATOR_OTHER" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEVICE_OPERATOR" nillable="false">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:whiteSpace value="collapse"/>
+              <xs:minLength value="1"/>
+              <xs:maxLength value="50"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="DEVICE_OPERATOR_OTHER" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:whiteSpace value="collapse"/>
+              <xs:minLength value="1"/>
+              <xs:maxLength value="500"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+  <xs:element name="IMPLANTED_DATE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="EXPLANTED_DATE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="IS_SINGLE_USE_DEVICE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="10"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="REPROCESSOR_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="REPROCESSOR_ADDRESS" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="EVAL_DEVICE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RETURNED_DATE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+  </xs:element>
+  <!--  BEGIN DESCRIPTION_OF_EVENT  -->
+  <xs:element name="DESCRIPTION_OF_EVENT" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EVENT_DESCRIPTION"/>
+        <xs:element ref="PRESENT_STATUS"/>
+        <xs:element ref="DATE_OF_RECOVERY_OR_DEATH" minOccurs="0"/>
+        <xs:element ref="RETREATED" minOccurs="0"/>
+        <xs:element ref="REMOVED_FROM_PROTOCOL_TRT" minOccurs="0"/>
+        <xs:element ref="REMOVED_FROM_PROTOCOL_TRT_DATE" minOccurs="0"/>
+        <xs:element ref="DEATH_DATE" minOccurs="0"/>
+        <xs:element ref="AUTOPSY_PERFORMED" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EVENT_DESCRIPTION" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="4000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="PRESENT_STATUS" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DATE_OF_RECOVERY_OR_DEATH" type="xs:date" nillable="true"/>
+  <xs:element name="RETREATED" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="REMOVED_FROM_PROTOCOL_TRT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="25"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="REMOVED_FROM_PROTOCOL_TRT_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="DEATH_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="AUTOPSY_PERFORMED" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  BEGIN PATIENT_INFORMATION  -->
+  <xs:element name="PATIENT_INFORMATION" nillable="false">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BIRTH_DATE"/>
+        <xs:element ref="RACE"/>
+        <xs:element ref="ETHNICITY"/>
+        <xs:element ref="GENDER"/>
+        <xs:element ref="HEIGHT" minOccurs="0"/>
+        <xs:element ref="WEIGHT" minOccurs="0"/>
+        <xs:element ref="BASELINE_PERFORMANCE_STATUS" minOccurs="0"/>
+        <xs:element ref="DISEASE_NAME"/>
+        <xs:element ref="PRIMARY_SITE_OF_DISEASE" minOccurs="0"/>
+        <xs:element ref="PRIMARY_ANATOMIC_SITE" minOccurs="0"/>
+        <xs:element ref="DISEASE_NAME_NOT_LISTED" minOccurs="0"/>
+        <xs:element ref="DATE_OF_INITIAL_DIAGNOSIS" minOccurs="0"/>
+        <xs:element ref="OTHER_PRIMARY_SITE_OF_DISEASE" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="PATIENT_ID" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BIRTH_DATE" type="xs:gYearMonth" nillable="false"/>
+  <xs:element name="RACE" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ETHNICITY" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="GENDER" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="15"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="HEIGHT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,5}([.][0-9]{1,2})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="WEIGHT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,5}([.][0-9]{1,2})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="BASELINE_PERFORMANCE_STATUS" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DISEASE_NAME" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="PRIMARY_SITE_OF_DISEASE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="PRIMARY_ANATOMIC_SITE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DISEASE_NAME_NOT_LISTED" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DATE_OF_INITIAL_DIAGNOSIS" type="xs:gYearMonth" nillable="true"/>
+  <xs:element name="OTHER_PRIMARY_SITE_OF_DISEASE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  BEGIN PRIOR_THERAPY  -->
+  <xs:element name="PRIOR_THERAPY" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="THERAPY_NAME"/>
+        <xs:element ref="THERAPY_START_DATE" minOccurs="0"/>
+        <xs:element ref="THERAPY_END_DATE" minOccurs="0"/>
+        <xs:element ref="THERAPY_COMMENTS" minOccurs="0"/>
+        <xs:element ref="CHEMO_AGENT_NAME" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THERAPY_NAME" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="THERAPY_START_DATE" type="xs:gYearMonth" nillable="true"/>
+  <xs:element name="THERAPY_END_DATE" type="xs:gYearMonth" nillable="true"/>
+  <xs:element name="THERAPY_COMMENTS" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CHEMO_AGENT_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  END PRIOR_THERAPY  -->
+  <!--  BEGIN PRE_EXISTING_CONDITION  -->
+  <xs:element name="PRE_EXISTING_CONDITION" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CONDITION_NAME" minOccurs="0"/>
+        <xs:element ref="OTHER_CONDITION_NAME" minOccurs="0"/>
+        <!--  Either Condition_name or Other_Condition_Name has to be supplied -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONDITION_NAME" nillable="true"> 
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OTHER_CONDITION_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="SITE_OF_METASTATIC_DISEASE" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SITE_NAME" minOccurs="0"/>
+        <xs:element ref="OTHER_SITE_NAME" minOccurs="0"/>
+        <!--  Either SITE_NAME or OTHER_SITE_NAME has to be supplied -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SITE_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OTHER_SITE_NAME" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="PROTOCOL_AGENT" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AGENT_START_DATE" minOccurs="0"/>
+        <xs:element ref="AGENT_END_DATE" minOccurs="0"/>
+        <xs:element ref="TOTAL_DOSE_ADMINISTERED"/>
+        <xs:element ref="LAST_ADMINISTERED_DATE" minOccurs="0"/>
+        <xs:element ref="DOSE_UOM"/>
+        <xs:element ref="PROTOCOL_AGENT_COMMENTS" minOccurs="0"/>
+        <xs:element ref="AGENT_ADJUSTMENT" minOccurs="0"/>
+        <xs:element ref="AGENT_DELAYED" minOccurs="0"/>
+        <xs:element ref="DELAY" minOccurs="0"/>
+        <xs:element ref="DELAY_UOM" minOccurs="0"/>
+        <xs:element ref="LOT_NUMBER" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="AGENT_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+	    <xs:minLength value="1"/>
+            <xs:maxLength value="75"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="NSC_NUMBER" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+	    <xs:minLength value="1"/>
+            <xs:maxLength value="8"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LOT_NUMBER" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+	<xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AGENT_START_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="AGENT_END_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="TOTAL_DOSE_ADMINISTERED" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,14}([.][0-9]{1,6})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="LAST_ADMINISTERED_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="DOSE_UOM" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="12"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="PROTOCOL_AGENT_COMMENTS" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AGENT_ADJUSTMENT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="20"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AGENT_DELAYED" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DELAY" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DELAY_UOM" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="8"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!-- BEGIN  CONCOMITANT_MEDICATION_NAME -->
+  <xs:element name="CONCOMITANT_MEDICATION" nillable="true">
+    <xs:complexType>
+      <xs:attribute name="CONCOMITANT_MEDICATION_NAME" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!-- BEGIN OTHER_CAUSE -->
+  <xs:element name="OTHER_CONTRIBUTING_CAUSE" nillable="true">
+    <xs:complexType>
+      <xs:attribute name="OTHER_CAUSE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--  BEGIN ADVERSE_EVENT_CTC -->
+  <xs:element name="ADVERSE_EVENT_CTC" nillable="false">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IS_PRIMARY_AE"/>
+        <xs:element ref="CATEGORY"/>
+        <xs:element ref="AE_TERM"/>
+        <xs:element ref="SELECT_AE" minOccurs="0"/>
+        <xs:element ref="OTHER_ADVERSE_EVENT" minOccurs="0"/>
+        <xs:element ref="AE_START_DATE" minOccurs="0"/>
+        <xs:element ref="AE_END_DATE" minOccurs="0"/>
+        <xs:element ref="HOSPITALIZATION" minOccurs="0"/>
+        <xs:element ref="AE_COMMENTS" minOccurs="0"/>
+        <xs:element ref="ATTRIBUTION_FOR_AE" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="GRADE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+		<xs:minLength value="1"/>
+            <xs:maxLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <!--<xs:attribute name="MEDRA_CODE" type="xs:anySimpleType" use="required"/>-->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IS_PRIMARY_AE" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CATEGORY" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="250"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AE_TERM" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="SELECT_AE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OTHER_ADVERSE_EVENT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AE_START_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="AE_END_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="HOSPITALIZATION" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AE_COMMENTS" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  END ADVERSE_EVENT_CTC  -->
+  <!--  BEGIN ATTRIBUTION_FOR_AE  -->
+  <xs:element name="ATTRIBUTION_FOR_AE" nillable="false">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CAUSE_NAME"/>
+        <xs:element ref="TYPE_OF_CAUSE"/>
+        <xs:element ref="ATTRIBUTION"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CAUSE_NAME" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TYPE_OF_CAUSE" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ATTRIBUTION" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="10"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!--  END ATTRIBUTION_FOR_AE  -->
+  <!--  BEGIN LAB_RESULT  -->
+  <xs:element name="LAB_RESULT" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LAB_CATEGORY" minOccurs="0"/>
+        <xs:element ref="OTHER_LAB" minOccurs="0"/>
+        <xs:element ref="BASELINE_DATE" minOccurs="0"/>
+        <xs:element ref="BASELINE_VALUE" minOccurs="0"/>
+        <xs:element ref="BASELINE_UOM" minOccurs="0"/>
+        <xs:element ref="RECOVERY_LATEST_DATE" minOccurs="0"/>
+        <xs:element ref="RECOVERY_LATEST_VALUE" minOccurs="0"/>
+        <xs:element ref="RECOVERY_LATEST_UOM" minOccurs="0"/>
+        <xs:element ref="WORST_DATE" minOccurs="0"/>
+        <xs:element ref="WORST_VALUE" minOccurs="0"/>
+        <xs:element ref="WORST_UOM" minOccurs="0"/>
+        <xs:element ref="MICROBIOLOGY_SITE" minOccurs="0"/>
+        <xs:element ref="MICROBIOLOGY_DATE" minOccurs="0"/>
+        <xs:element ref="INFECTIOUS_AGENT" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="LAB_NAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LAB_CATEGORY" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="40"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OTHER_LAB" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="BASELINE_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="BASELINE_VALUE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,6}([.][0-9]{1,4})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="BASELINE_UOM" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="15"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RECOVERY_LATEST_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="RECOVERY_LATEST_VALUE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,6}([.][0-9]{1,4})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RECOVERY_LATEST_UOM" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="15"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="WORST_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="WORST_VALUE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:pattern value="[0-9]{1,6}([.][0-9]{1,4})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="WORST_UOM" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="15"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="MICROBIOLOGY_SITE" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="25"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="MICROBIOLOGY_DATE" type="xs:date" nillable="true"/>
+  <xs:element name="INFECTIOUS_AGENT" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ADDITIONAL_INFORMATION" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ADDITIONAL_INFO_NAME"/>
+        <xs:element ref="ADDITIONAL_INFO_OTHER" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADDITIONAL_INFO_NAME" nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:minLength value="1"/>
+        <xs:maxLength value="40"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ADDITIONAL_INFO_OTHER" nillable="true">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
