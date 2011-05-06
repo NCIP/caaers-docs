@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:studies xmlns:ns2="http://webservice.caaers.cabig.nci.nih.gov">
+    <ns2:study>
+        <shortTitle>A Phase 1 Study and Pharmacological Trial of Once Weekly Aminoflavone Prodrug (AFP464) Administered 3 Out of Every 4 Weeks in Solid Tumor Patients</shortTitle>
+        <longTitle>A Phase 1 Study and Pharmacological Trial of Once Weekly Aminoflavone Prodrug (AFP464) Administered 3 Out of Every 4 Weeks in Solid Tumor Patients</longTitle>
+        <description>A Phase 1 Study and Pharmacological Trial of Once Weekly Aminoflavone Prodrug (AFP464) Administered 3 Out of Every 4 Weeks in Solid Tumor Patients</description>
+        <phaseCode>Phase I Trial</phaseCode>
+        <status>Active - Trial is open to accrual</status>
+        <multiInstitutionIndicator>true</multiInstitutionIndicator>
+        <adeersReporting>true</adeersReporting>
+        <ns2:aeTerminology>
+            <ns2:ctcVersion>
+                <name>4</name>
+            </ns2:ctcVersion>
+        </ns2:aeTerminology>
+        <ns2:diseaseTerminology>
+            <diseaseCodeTerm>CTEP</diseaseCodeTerm>
+        </ns2:diseaseTerminology>
+        <drugAdministrationTherapyType>true</drugAdministrationTherapyType>
+        <deviceTherapyType>false</deviceTherapyType>
+        <radiationTherapyType>false</radiationTherapyType>
+        <surgeryTherapyType>false</surgeryTherapyType>
+        <behavioralTherapyType>false</behavioralTherapyType>
+        <biologicalTherapyType>false</biologicalTherapyType>
+        <geneticTherapyType>false</geneticTherapyType>
+        <dietarySupplementTherapyType>false</dietarySupplementTherapyType>
+        <otherTherapyType>false</otherTherapyType>
+        <reportTypeCaaersXML>true</reportTypeCaaersXML>
+        <reportTypeAdeersPDF>true</reportTypeAdeersPDF>
+        <reportTypeMedwatchPDF>false</reportTypeMedwatchPDF>
+        <reportTypeDCPSAEForm>false</reportTypeDCPSAEForm>
+        <reportTypeCIOMSForm>false</reportTypeCIOMSForm>
+        <reportTypeCIOMSAEForm>false</reportTypeCIOMSAEForm>
+        <fundingSponsor>
+            <organizationAssignedIdentifier>
+                <value>7380</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyFundingSponsor>
+                <ns2:organization>
+                    <name>Cancer Therapy Evaluation Program</name>
+                    <nciInstituteCode>CTEP</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyFundingSponsor>
+        </fundingSponsor>
+        <coordinatingCenter>
+            <organizationAssignedIdentifier>
+                <value>MC0513</value>
+            </organizationAssignedIdentifier>
+            <ns2:studyCoordinatingCenter>
+                <ns2:organization>
+                    <name>Mayo Clinic Rochester</name>
+                    <nciInstituteCode>MN026</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studyCoordinatingCenter>
+        </coordinatingCenter>
+        <studyOrganizations>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Mayo Clinic Rochester</name>
+                    <nciInstituteCode>MN026</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studySite>
+            <ns2:studySite>
+                <ns2:organization>
+                    <name>Wake Forest University Health Sciences</name>
+                    <nciInstituteCode>NC002</nciInstituteCode>
+                </ns2:organization>
+            </ns2:studySite>
+        </studyOrganizations>
+        <identifiers/>
+        <treatmentAssignments>
+            <ns2:treatmentAssignment>
+                <code>-1</code>
+                <description>Cycle = 28 days: AFP464: 7mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>-2</code>
+                <description>Cycle = 28 days: AFP464: 5mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>1</code>
+                <description>Cycle = 28 days: AFP464: 10mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>10</code>
+                <description>Cycle = 28 days: AFP464: 201mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>2</code>
+                <description>Cycle = 28 days: AFP464: 14mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>3</code>
+                <description>Cycle = 28 days: AFP464: 19mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>4</code>
+                <description>Cycle = 28 days: AFP464: 27mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>5</code>
+                <description>Cycle = 28 days: AFP464: 38mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>6</code>
+                <description>Cycle = 28 days: AFP464: 53mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>7</code>
+                <description>Cycle = 28 days: AFP464: 74mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>8</code>
+                <description>Cycle = 28 days: AFP464: 103mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+            <ns2:treatmentAssignment>
+                <code>9</code>
+                <description>Cycle = 28 days: AFP464: 144mg/m2 IV over 3 hrs on days 1, 8, and 15</description>
+            </ns2:treatmentAssignment>
+        </treatmentAssignments>
+        <studyAgents>
+            <ns2:studyAgent>
+                <ns2:agent>
+                    <name>AFP464 (aminoflavone prodrug)</name>
+                </ns2:agent>
+                <indType>CTEP_IND</indType>
+                <partOfLeadIND>true</partOfLeadIND>
+                <studyAgentINDAssociations>
+                    <ns2:studyAgentINDAssociation>
+                        <ns2:investigationalNewDrug>
+                            <indNumber>-111</indNumber>
+                        </ns2:investigationalNewDrug>
+                    </ns2:studyAgentINDAssociation>
+                </studyAgentINDAssociations>
+            </ns2:studyAgent>
+        </studyAgents>
+        <ctepStudyDiseases>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Solid tumor, NOS</term>
+                </ns2:diseaseTerm>
+                <leadDisease>true</leadDisease>
+            </ns2:ctepStudyDisease>
+            <ns2:ctepStudyDisease>
+                <ns2:diseaseTerm>
+                    <term>Hematopoietic malignancy, NOS</term>
+                </ns2:diseaseTerm>
+                <leadDisease>false</leadDisease>
+            </ns2:ctepStudyDisease>
+        </ctepStudyDiseases>
+        <evaluationPeriods>
+            <ns2:evaluationPeriod>
+                <name>Baseline</name>
+                <epochOrder>0</epochOrder>
+            </ns2:evaluationPeriod>
+            <ns2:evaluationPeriod>
+                <name>Treatment</name>
+                <epochOrder>1</epochOrder>
+            </ns2:evaluationPeriod>
+            <ns2:evaluationPeriod>
+                <name>Post-treatment</name>
+                <epochOrder>2</epochOrder>
+            </ns2:evaluationPeriod>
+        </evaluationPeriods>
+        <expectedAECtcTerms>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10021425</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10016256</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10016558</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10002646</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10028813</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10047700</ctepCode>
+            </ns2:expectedAECtcTerm>
+            <ns2:expectedAECtcTerm>
+                <ctepCode>10001675</ctepCode>
+            </ns2:expectedAECtcTerm>
+        </expectedAECtcTerms>
+    </ns2:study>
+</ns2:studies>

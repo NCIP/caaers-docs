@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<study xmlns="gme://ccts.cabig/1.0/
+gov.nih.nci.cabig.ccts.domain"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c3pr="gme://ccts.cabig/1.0/gov.nih.nci.cabig.ccts.domain"
+    gridId="774e1520-17c6-4260-a092-b952b5919ab5">
+    <blindedIndicator>true</blindedIndicator>
+    <multiInstitutionIndicator>true</multiInstitutionIndicator>
+    <randomizedIndicator>true</randomizedIndicator>
+    <shortTitleText>
+        Gemcitabine and Docetaxel With Or Without Bevacizumab in
+        Leiomyosarcoma, Malignant Fibrous Histiocytoma and Angiosarcoma
+    </shortTitleText>
+    <longTitleText>
+        Gemcitabine and Docetaxel With Or Without Bevacizumab in
+        Leiomyosarcoma, Malignant Fibrous Histiocytoma and Angiosarcoma
+    </longTitleText>
+    <descriptionText>
+        The purpose of this study is to test whether an experimental
+        drug called bevacizumab given together with gemcitabine and
+        docetaxel, a standard chemotherapy regimen for sarcoma, can help
+        sarcoma patients. This trial will compare gemcitabine,
+        docetaxeland bevacizumab with gemcitabine and docetaxel alone.
+        The investigators want to find out whether bevacizumab given
+        with gemcitabine and docetaxel is better than gemcitabine and
+        docetaxel alone as treatment for sarcoma.
+    </descriptionText>
+    <precisText />
+    <phaseCode>Phase II/III Trial</phaseCode>
+    <coordinatingCenterStudyStatus>
+        ACTIVE
+    </coordinatingCenterStudyStatus>
+    <type>N/A</type>
+    <targetAccrualNumber>10</targetAccrualNumber>
+    <identifier xsi:type="OrganizationAssignedIdentifierType">
+        <type>Coordinating Center Identifier</type>
+        <value>NCI-2009-00008</value>
+        <primaryIndicator>true</primaryIndicator>
+        <healthcareSite>
+            <name>National Cancer Institute</name>
+            <address>
+                <streetAddress>6116 Executive Boulevard</streetAddress>
+                <city>Bethesda</city>
+                <stateCode>MD</stateCode>
+                <postalCode>20892</postalCode>
+                <countryCode>USA</countryCode>
+            </address>
+            <nciInstituteCode>NCI</nciInstituteCode>
+        </healthcareSite>
+    </identifier>
+    <identifier xsi:type="SystemAssignedIdentifierType">
+        <type>COPPA Identifier</type>
+        <value>27656</value>
+        <systemName>COPPA</systemName>
+    </identifier>
+    <epoch xsi:type="TreatmentEpochType"
+        gridId="15033d3d-6e08-4e08-85b7-42b92a54a5ef">
+        <name>Epoch 1</name>
+        <descriptionText />
+        <arm gridId="09f0c44e-ff3e-4b8c-964b-11893d2cd7f2">
+            <name>Arm A</name>
+            <descriptionText />
+        </arm>
+        <arm gridId="73fbf6a5-3595-40e3-8ae6-b2c6a100ce2f">
+            <name>Arm B</name>
+            <descriptionText />
+        </arm>
+    </epoch>
+    <studyOrganization xsi:type="StudyCoordinatingCenterType">
+        <healthcareSite>
+            <name>Maricopa Medical Center</name>
+            <address>
+                <city>Phoenix</city>
+                <stateCode>AZ</stateCode>
+                <countryCode>USA</countryCode>
+            </address>
+            <nciInstituteCode>AZ005</nciInstituteCode>
+        </healthcareSite>
+        <studyInvestigator>
+            <roleCode>Principal Investigator</roleCode>
+            <statusCode>AC</statusCode>
+            <healthcareSiteInvestigator>
+                <investigator>
+                    <nciIdentifier>164997</nciIdentifier>
+                    <fullName>Kathleen Loviscek</fullName>
+                </investigator>
+            </healthcareSiteInvestigator>
+        </studyInvestigator>
+    </studyOrganization>
+    <studyOrganization xsi:type="StudyFundingSponsorType">
+        <healthcareSite>
+            <name>Louisiana State University Medical Center CCOP</name>
+            <address>
+                <city>New Orleans</city>
+                <stateCode>LA</stateCode>
+                <countryCode>USA</countryCode>
+            </address>
+            <nciInstituteCode>LA047</nciInstituteCode>
+        </healthcareSite>
+    </studyOrganization>
+    <studyOrganization xsi:type="StudySiteType">
+        <healthcareSite>
+            <name>San Francisco General</name>
+            <address>
+                <city>San Francisco</city>
+                <stateCode>CA</stateCode>
+                <countryCode>USA</countryCode>
+            </address>
+            <nciInstituteCode>CA125</nciInstituteCode>
+        </healthcareSite>
+        <studyInvestigator>
+            <roleCode>Site Investigator</roleCode>
+            <statusCode>AC</statusCode>
+            <healthcareSiteInvestigator>
+                <investigator>
+                    <nciIdentifier>146122</nciIdentifier>
+                    <fullName>Sidney Pinkus</fullName>
+                </investigator>
+            </healthcareSiteInvestigator>
+        </studyInvestigator>
+        <siteStudyStatus>ACTIVE</siteStudyStatus>
+    </studyOrganization>
+</study>
