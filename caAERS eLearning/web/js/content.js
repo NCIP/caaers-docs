@@ -20,6 +20,7 @@ roles = [
 		    	icon: "images/icons/new.png",
 				title: "Report Creation",
 				description: "Create and submit an adverse event report.",
+				swfUri: "lessons/ae_coordinator/new/new.swf",
 			},
 			{ 
 		    	icon: "images/icons/new_expidited.png",
