@@ -1,0 +1,49 @@
+<project name="caAERS eLearning" basedir="." default="main">
+
+	<property name="build.dir" location="build"/>
+	<property name="web.dir" location="web"/>
+	<property name="captivate.dir" location="captivate"/>
+	<property name="release.dir" location="release"/>
+	<property name="release.notes" value="RELEASE_NOTES.txt"/>
+	<property name="version" value="0.1"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+		<delete>
+			<fileset dir="${captivate.dir}" includes="**/*.cptx_lock"/>
+			<fileset dir="${captivate.dir}" includes="**/standard.js"/>
+			<fileset dir="${web.dir}" includes="**/.tmp_*" defaultexcludes="false"/>
+		</delete>
+    </target>
+
+    <target name="build">
+    	<mkdir dir="${build.dir}"/>
+		
+		<copy file="${release.notes}" todir="${build.dir}"/>
+		<replace file="${build.dir}/${release.notes}">
+			<replacefilter token="@VERSION@" value="${version}"/>
+		</replace>
+		
+        <zip destfile="${build.dir}/caAERS eLearning ${version}.zip">
+        	<fileset dir="${web.dir}"/>
+    	</zip>
+        <zip destfile="${build.dir}/caAERS eLearning ${version}-src.zip">
+        	<zipfileset dir="${web.dir}" prefix="web"/>
+        	<zipfileset dir="${captivate.dir}" prefix="captivate"/>
+        	<zipfileset file="${build.dir}/${release.notes}" prefix=""/>
+        	<zipfileset file="${build.dir}/build.xml" prefix=""/>
+    	</zip>
+    </target>
+	
+    <target name="release" depends="clean,build">
+    	<mkdir dir="${release.dir}"/>
+		<copy todir="${release.dir}">
+			<fileset dir="${build.dir}">
+				<include name="*.zip"/>
+			</fileset>
+		</copy>    	
+    </target>
+	
+	<target name="main" depends="clean,build"/>
+
+</project>

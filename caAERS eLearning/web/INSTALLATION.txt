@@ -1,0 +1,22 @@
+#################
+# CONFIGURATION #
+#################
+
+The application may optionally be configured to link to an instance of caAERS.  Simply edit the config.js file and 
+enter the URL in between the single quotes, e.g.:
+
+  caaersUrl = 'http://www.myorganization.com/caaers';
+
+If you are planning to run the training materially locally, this step is entirely optional. It will not effect the 
+viewing of any of the training.  The links above are simply conveniences.
+
+################
+# INSTALLATION #
+################
+
+This web application can be run either locally without an Internet connection or installed into a web server.
+
+To run locally, simply open the index.html file using your web browser.  All functionality should be available.
+
+To install in a web server, simply copy all files and sub-directories into a directory that is accessible through
+your web server.  All files are loaded statically, so there are no additional installation steps.

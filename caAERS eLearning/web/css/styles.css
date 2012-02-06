@@ -1,0 +1,137 @@
+body { 
+	background: #02307F;
+	color: white;
+	font-family: "Lucida Grande", sans-serif;
+	margin: 0 auto;
+}
+
+#main, body { height: 660px; }
+
+#main, body, #footer { width: 979px;  }
+
+#main { 
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-color: #8A60A6;
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 4px;
+	padding: 5px 5px 5px 5px;
+}
+
+#left {
+	float: left;
+	border-right-color: #8A60A6;
+	border-right-style: solid;
+	border-right-width: 2px;
+	margin-right: 10px;
+}
+
+#content, #left {
+	height: 660px;
+}
+
+#content {
+	margin-left: 5px;
+}
+
+#left, #logo, #logo_image, #role_breadcrumb, #lesson_breadcrumb {
+	width: 330px;
+}
+
+#role_breadcrumb, #lesson_breadcrumb { 
+	text-align: center;
+	margin-top: 5px; 
+}
+
+#role_breadcrumb {
+	height: 144px;
+}
+
+#lesson_breadcrumb {
+	height: 82px;
+}
+
+#logo { 
+	height: 213px; 
+}
+
+#logo_image {
+	height: 173px;
+	margin: 0px auto; 
+	border: none;	
+}
+
+h2, #logo a:active, #logo a:hover, #logo a:active, #logo a:hover {
+	color: white;
+	font-size: 30px;
+	font-weight: normal;
+	margin: 5px 0;
+	text-shadow: 0 2px 1px black;
+	text-align: center;
+	text-decoration: none;
+}
+
+.breadcrumb, .main_link, .role_link, .lesson_link, .caaers_link, .elearning_link { }
+
+ .role_link {
+	font-weight: bold;
+}
+
+.headshot, .icon_breadcrumb {
+	width: 128px;
+	height: 128px;
+	border: none;
+}
+
+.headshot_breadcrumb, .icon_breadcrumb {
+	margin: 0px auto;
+	display: block;
+}
+
+.icon {
+	width: 48px;
+	height: 48px;
+	border: none;
+}
+
+.lesson_table {
+	margin-top: 5px;
+}
+
+#content_lessons, #content_lesson, #role_breadcrumb, #lesson_breadcrumb {
+	display: none;
+}
+
+#footer {
+	text-align: center; 
+	top: 657px;
+	position: absolute;
+	width: 640px;
+	left: 50%;
+	margin-left: -137px;
+}
+
+#logo a:link, #logo a:visited {
+	color: #BDD1FF;
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #BDD1FF;
+	text-decoration: none;
+}
+
+a:active, a:hover {
+	color: #8A60A6;
+	text-decoration: none;
+}
+
+#CaptivateContent {
+	position: absolute;
+	width: 640px;
+	height: 400px;
+	left: 50%;
+	margin-left: -145px;
+	margin-top: -6px;
+}

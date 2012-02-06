@@ -1,0 +1,57 @@
+###########
+# PRODUCT #
+###########
+
+caAERS eLearning System @VERSION@
+
+################
+# INTRODUCTION #
+################
+
+The caAERS eLearning System is a web-based set of video tutorials.  The content of the system is driven by
+JavaScript objects defined in web/js/content.js.  The lessons themselves are built using Adobe Captivate.
+The source Captivate projects can be found in the captivate directory, and the flash swf files are found
+in the web/lessons directory.  The System does not require any external resources or a web container to 
+run.  Therefore, it can be run locally or remotely via web browser.  You can run the System directory from
+source by opening web/index.html in your web browser.
+
+For more information on running the caAERS eLearning System, see web/README.txt.
+
+For more information on installing the caAERS eLearning System, see web/INSTALLATION.
+
+################
+# MODIFICATION #
+################
+
+There 
+
+################
+# DISTRIBUTION #
+################
+
+Run 'ant main' to build the output zip files, which can be found in the build directory.
+
+Change the version number in the build.xml file and run 'ant release' to create release zip files in the 
+release directory.  
+
+##############
+# REFERENCES #
+##############
+
+Icons are taken from the following sources that allow commercial use:
+
+  - http://www.iconarchive.com/show/vista-people-icons-by-icons-land.html
+  - http://www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org.html 
+
+Background training material is taken from the caAERS and Suite documentation:
+
+  - https://wiki.nci.nih.gov/display/caAERS/caAERS+AE+Coordinator+Training+Guide
+  - https://wiki.nci.nih.gov/display/Suite/3+-+The+Unified+Suite+User+Roles+v2.3
+  
+The caAERS instance used for developing the training videos is at:
+
+  - https://demo.semanticbits.com/caaers/public/login
+  
+Version 5.5 of Adobe Captivate was used to create the video lessons:
+
+  - http://www.adobe.com/products/captivate.html
