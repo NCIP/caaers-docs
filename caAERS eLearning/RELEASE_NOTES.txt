@@ -12,7 +12,7 @@ The caAERS eLearning System is a web-based set of video tutorials.  The content 
 JavaScript objects defined in web/js/content.js.  The lessons themselves are built using Adobe Captivate.
 The source Captivate projects can be found in the captivate directory, and the flash swf files are found
 in the web/lessons directory.  The System does not require any external resources or a web container to 
-run.  Therefore, it can be run locally or remotely via web browser.  You can run the System directory from
+run.  Therefore, it can be run locally or remotely via web browser.  You can run the System directly from
 source by opening web/index.html in your web browser.
 
 For more information on running the caAERS eLearning System, see web/README.txt.

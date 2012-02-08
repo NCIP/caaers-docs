@@ -17,13 +17,13 @@ roles = [
 		lessons: [
 		    caersIntro,
 			{ 
-		    	icon: "images/icons/new.png",
-				title: "Report Creation",
-				description: "Create and submit an adverse event report.",
-				swfUri: "lessons/ae_coordinator/new/new.swf",
+		    	icon: "images/icons/create.png",
+				title: "Enter Adverse Events",
+				description: "Enter AE details for an adverse event report.",
+				swfUri: "lessons/ae_coordinator/create/create.swf",
 			},
 			{ 
-		    	icon: "images/icons/new_expidited.png",
+		    	icon: "images/icons/report.png",
 				title: "Expidited Report Creation",
 				description: "Create and submit an expidited adverse event report."
 			},

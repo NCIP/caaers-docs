@@ -16,6 +16,7 @@ function bindConfiguredUrls() {
 	$('.elearning_link').bind('click', function(event) {
 		event.preventDefault();
 		switchContent($(this).attr('href'));
+		updateURL();
 	});
 
 	if (caaersUrl != '') {
@@ -111,8 +112,12 @@ function populateFooter(roleIndex, lessonIndex) {
  * @return undefined
  */
 function updateURL(roleIndex, lessonIndex) {
-	var role = roles[roleIndex];
-	var anchor = role.title;
+	var anchor = "";
+	var role = null;
+	if (roleIndex != undefined) {
+		role = roles[roleIndex];
+		anchor = role.title;
+	}
 	if (lessonIndex != undefined) {
 		anchor = role.lessons[lessonIndex].title;
 	}

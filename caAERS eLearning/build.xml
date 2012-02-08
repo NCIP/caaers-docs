@@ -5,13 +5,16 @@
 	<property name="captivate.dir" location="captivate"/>
 	<property name="release.dir" location="release"/>
 	<property name="release.notes" value="RELEASE_NOTES.txt"/>
-	<property name="version" value="0.1"/>
+	<property name="version" value="0.2"/>
 
     <target name="clean">
         <delete dir="${build.dir}"/>
 		<delete>
 			<fileset dir="${captivate.dir}" includes="**/*.cptx_lock"/>
 			<fileset dir="${captivate.dir}" includes="**/standard.js"/>
+			<fileset dir="${captivate.dir}" includes="**/*.htm"/>
+			<fileset dir="${web.dir}/lessons" includes="**/standard.js"/>
+			<fileset dir="${web.dir}/lessons" includes="**/*.htm"/>
 			<fileset dir="${web.dir}" includes="**/.tmp_*" defaultexcludes="false"/>
 		</delete>
     </target>
