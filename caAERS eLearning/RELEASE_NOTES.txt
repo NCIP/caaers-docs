@@ -23,7 +23,65 @@ For more information on installing the caAERS eLearning System, see web/INSTALLA
 # MODIFICATION #
 ################
 
-There 
+The content for the eLearning System is driven entirely by JavaScript objects defined in content.js.  The
+structure of these objects is as follows:
+
+roles = [ // root level array
+	{ // contains details about the role and all of the lessons associated with that role
+  		// the full title of the role
+  		title: "Adverse Events Coordinator", 
+		// a shorter title for the role that will be displayed with the headshot
+		shortTitle: "AE Coordinator", 
+		// a textual description of the role
+		description: "Creates and updates information about an adverse event that needs to be reported and 
+		              submits the report(s) to appropriate parties per the report definition.",
+		// the local path from web to an image of the role 
+		headshot: "images/headshots/ae_coordinator.png",
+		lessons: [ // array of lessons for this role
+			{ // contains the details about this lesson
+				// the local path from web to an image for the lesson
+		    	icon: "images/icons/create.png",
+				// the title of the lesson
+				title: "Enter Adverse Events",
+				// a textual description of the lesson
+				description: "Enter AE details for an adverse event report.",
+				// the local path from web to the Adobe movie tutorial in SWF format
+				swfUri: "lessons/ae_coordinator/create/create.swf",
+			},			
+		],
+	},
+]
+
+The directory structure loosely mimics the object structure:
+
+web: the root
+	css: contains style sheets included into index.html
+	images: contains all images
+		headshots: the images for the roles
+		icons: the images for the lessons
+	js:
+		captivate.js: standard Adobe JavaScript for displaying movie content
+		config.js: global configuration variables
+		content.js: contains all the data for displaying the content of the system
+		jquery.min.js: standard library
+		logic.js: contains all the JavaScript for displaying and interacting with the system
+	lessons: contains all the adobe SWF files subdivided by role and lesson name
+	index.html: contains all the display containers that get populated by logic.js
+	INSTALLATION.txt: installation instructions
+	README.txt: base level details for the distribution
+	
+In addition, there are a number of supporting files:
+
+build: temporary directory for bundling the release
+captivate: source Adobe Captivate files for the video tutorials.
+release: contains released eLearning system files
+build.xml: logic for bundling the release
+RELEASE_NOTES.txt: this file
+
+The Adobe Captivate files are created at resolution 1024x768.  Before release, they are down-sampled
+in a separate project to 640x480 for inclusion in the eLearning system.  Both source files can be found
+in the captivate directory and use the convention lesson.swf and lesson_640.swf, e.g. report.swf and 
+report_640.swf.
 
 ################
 # DISTRIBUTION #
@@ -31,8 +89,9 @@ There
 
 Run 'ant main' to build the output zip files, which can be found in the build directory.
 
-Change the version number in the build.xml file and run 'ant release' to create release zip files in the 
-release directory.  
+Before creating a new release, the version number should be modified in build.xml.  It gets
+injected into the RELEASE_NOTES.txt via the @VERSION@ pattern.  Run 'ant release' to create 
+release zip files in the release directory.  
 
 ##############
 # REFERENCES #
