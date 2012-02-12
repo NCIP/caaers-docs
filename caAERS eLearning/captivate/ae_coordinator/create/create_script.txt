@@ -1,0 +1,33 @@
+[ introduction ]
+
+This session will guide you through process of creating and entering a new adverse event.
+
+[ initiate ]
+
+Once logged into caAERS, there are multiple ways to initiate a new adverse event report. This guide will walk you through initiating a new adverse event report from the Dashboard page. To get started, I will need you to click on the Report Adverse Events link in the Quick links on the right-hand side of the window.
+
+The first step is to select the study, subject, and course or cycle.  In the auto-completers below, you can enter any part of the study and subject name or identifier.
+
+I will enter F L A V O into the study field, which is part of the study name, and you select the study with identifier 5 8 7 6 from the auto-completer drop-down menu.
+
+I will then enter 9 9 8 9 into the subject field, and you select the subject with initials P B.
+
+In the course/cycle menu, all existing reporting periods are displayed.  This allows you to enter adverse events that are needed for those reporting periods.  In this case, you can  simply select the appropriate reporting period and Continue.  However, we will create a new reporting period, so please select Create New from the Course/Cycle menu.
+
+In this window, you will need to enter the details of the new Course or Cycle with which the the adverse event is associated. All fields with a red asterisk are required, and the red shading of the field will disappear once you enter a valid value.  I will enter the start date of the course/cycle, the course/cycle number, and you click the Save button in the bottom right-hand corner of the window.
+
+caAERS indicates to us that the Course/Cycle was create successfully, so you click the Continue button to bring us to the next screen.
+
+[ details ]
+
+The next step is to enter the details of the Adverse Events.  Note the blue box at the top of the screen that contains the details that we entered in the previous screen.
+
+Now, I will add the Adverse Event Details for you.  We know that the subject threw up, so I will add that verbatim and create a new adverse event.  You'll see that the adverse event has been added and more details need to be entered.  I will first add the term vomiting.  This is an auto-completer - as I type, you can see that the term appears.  Once the term is selected, the appropriate grade descriptions will be displayed.  This is grade 3, meaning that there were greater than or equal to six episodes.  The start date was shortly after the treatment.  You should notice lack of red asterisk, meaning that the end date is not required, so we will leave it blank.  It was possibly related to study intervention.  I will leave the default value for expectedness, and the adverse event did result in hospitalization.  Now I will add a second adverse event here: sick to stomach.  Once added, the rest of the details must be entered.  Nausea is the AE term.  This one is Grade 2 and started slightly before the other.  Now that we are finished finished with this page, you  click Save and Report to bring us to the next screen.  
+
+[ review ]
+
+On this last page, we have an opportunity to review reporting recommendations.  As you can see, caAERS has notified us that an action is recommended.  It is important to carefully review these recommendations before taking action.  As I scroll down, we see that an expedited report is required.  You click on the Report button to continue.
+
+[ conclusion ]
+
+Now you would continue to the Reporter page and add all the information necessary to generate and submit the selected report.  However, that is a lesson for a separate tutorial.  In this session, you have learned how to successfully create an adverse event report.  In the next session, you will learn how to complete the steps necessary to submit an expedited adverse event report.
