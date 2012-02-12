@@ -25,7 +25,8 @@ roles = [
 			{ 
 		    	icon: "images/icons/report.png",
 				title: "Expidited Report Creation",
-				description: "Create and submit an expidited adverse event report."
+				description: "Create and submit an expidited adverse event report.",
+					swfUri: "lessons/ae_coordinator/report/report.swf",
 			},
 			{ 
 		    	icon: "images/icons/edit.png",
