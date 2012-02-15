@@ -15,7 +15,7 @@ roles = [
 		description: "Creates and updates information about an adverse event that needs to be reported and submits the report(s) to appropriate parties per the report definition.",
 		headshot: "images/headshots/ae_coordinator.png",
 		lessons: [
-		    caersIntro,
+		    jQuery.extend({}, caersIntro),
 			{ 
 		    	icon: "images/icons/create.png",
 				title: "Enter Adverse Events",
@@ -46,7 +46,7 @@ roles = [
 		description: "Performs read-only adverse event reviews and provides comments through the adverse event workflow.",
 		headshot: "images/headshots/data_coordinator.png",
 		lessons: [
-		    caersIntro,
+		    jQuery.extend({}, caersIntro),
 		],
 		
 	},

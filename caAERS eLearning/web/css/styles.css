@@ -35,21 +35,8 @@ body {
 	margin-left: 5px;
 }
 
-#left, #logo, #logo_image, #role_breadcrumb, #lesson_breadcrumb {
+#left, #logo, #logo_image {
 	width: 330px;
-}
-
-#role_breadcrumb, #lesson_breadcrumb { 
-	text-align: center;
-	margin-top: 5px; 
-}
-
-#role_breadcrumb {
-	height: 144px;
-}
-
-#lesson_breadcrumb {
-	height: 82px;
 }
 
 #logo { 
@@ -72,21 +59,16 @@ h2, #logo a:active, #logo a:hover, #logo a:active, #logo a:hover {
 	text-decoration: none;
 }
 
-.breadcrumb, .main_link, .role_link, .lesson_link, .caaers_link, .elearning_link { }
+.main_link, .role_link, .lesson_link, .caaers_link, .elearning_link { }
 
  .role_link {
 	font-weight: bold;
 }
 
-.headshot, .icon_breadcrumb {
+.headshot {
 	width: 128px;
 	height: 128px;
 	border: none;
-}
-
-.headshot_breadcrumb, .icon_breadcrumb {
-	margin: 0px auto;
-	display: block;
 }
 
 .icon {
@@ -99,7 +81,21 @@ h2, #logo a:active, #logo a:hover, #logo a:active, #logo a:hover {
 	margin-top: 5px;
 }
 
-#content_lessons, #content_lesson, #role_breadcrumb, #lesson_breadcrumb {
+#tree { width: 320px; }
+.tree_roles, .tree_role, .tree_lessons, .tree_lesson { display: block; }
+.tree_role_img, .tree_lesson_img { width: 32px; height: 32px; }
+.tree_lessons { margin-left: 24px; display: none; }
+.tree_link_text { top: -8px; position: relative; }
+.tree_role, .tree_lesson { padding: 1px 1px 1px 1px; }
+.tree_lesson_selected { 	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-color: #8A60A6;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#content_lessons, #content_lesson {
 	display: none;
 }
 
