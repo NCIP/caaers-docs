@@ -4,13 +4,9 @@ caAERS is used to report adverse events that occur during clinical trials.  Once
 
 [ reporter ]
 
-The first step is to enter the contact information for the person reporting the adverse event and the treating physician.  These individuals can be selected from drop-down menus, which will fill in the details for you.
+The first step is to enter the contact information for the person reporting the adverse event and the treating physician.  These individuals can be selected from drop-down menus, which will fill in the details for you.  Select Susan Sutherland as the Reporter.
 
-Select Paul Baumgartner as the Reporter.
-
-Next, select Site Physician as the Treating Physician.
-
-Finally, click Save and Continue to bring us to the next page.
+For the treating physician, you will notice that none are available.  Therefore, I will enter the details manually.  Finally, click Save and Continue to bring us to the next page.
 
 [ adverse events ]
 
