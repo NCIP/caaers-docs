@@ -1,73 +1,52 @@
-<project name="Conquer Club Browser Extension" basedir="." default="main">
+<project name="caAERS eLearning" basedir="." default="main">
 
-	<property name="version" value="0.1"/>
-
-	<property name="base.dir" location="${basedir}"/>
 	<property name="build.dir" location="build"/>
-	<property name="html.dir" location="web"/>
-	<property name="images.dir" location="images"/>
-	<property name="js.dir" location="js"/>
-	<property name="css.dir" location="css"/>
-	<property name="lib.dir" location="css"/>
+	<property name="web.dir" location="web"/>
+	<property name="captivate.dir" location="captivate"/>
 	<property name="release.dir" location="release"/>
-
-	<property name="release_notes.file" location="RELEASE_NOTES.txt"/>
-	<property name="build.release_notes.file" location="${build.dir}/RELEASE_NOTES.txt"/>
-
-	<property name="chrome.dir" location="chrome"/>
-	<property name="chrome.js.dir" location="${chrome.dir}/js"/>
-	<property name="build.chrome.dir" location="${build.dir}/chrome"/>
-	<property name="chrome.manifest.file" location="${chrome.dir}/manifest.json"/>
-	<property name="build.chrome.manifest.file" location="${build.chrome.dir}/manifest.json"/>
-	<property name="build.chrome.file" location="${build.dir}/conqer_club_chrome_${version}.zip"/>
-	<property name="release.chrome.file" location="${release.dir}/conqer_club_chrome_${version}.zip"/>
+	<property name="release.notes" value="RELEASE_NOTES.txt"/>
+	<property name="version" value="0.4"/>
 
     <target name="clean">
         <delete dir="${build.dir}"/>
+		<delete>
+			<fileset dir="${captivate.dir}" includes="**/*.cptx_lock"/>
+			<fileset dir="${captivate.dir}" includes="**/standard.js"/>
+			<fileset dir="${captivate.dir}" includes="**/*.htm"/>
+			<fileset dir="${captivate.dir}" includes="**/*(Autosaved).txt"/>
+			<fileset dir="${web.dir}/lessons" includes="**/standard.js"/>
+			<fileset dir="${web.dir}/lessons" includes="**/*.htm"/>
+			<fileset dir="${web.dir}" includes="**/.tmp_*" defaultexcludes="false"/>
+		</delete>
     </target>
 
     <target name="build">
     	<mkdir dir="${build.dir}"/>
 		
-		<copy file="${release_notes.file}" tofile="${build.release_notes.file}"/>
-		<replace file="${build.release_notes.file}">
+		<copy file="${release.notes}" todir="${build.dir}"/>
+		<replace file="${build.dir}/${release.notes}">
 			<replacefilter token="@VERSION@" value="${version}"/>
 		</replace>
 		
-		<antcall target="build-chrome"/>
-    </target>
-	
-	<target name="build-chrome">
-		<mkdir dir="${build.chrome.dir}"/>
-		
-		<copy file="${chrome.manifest.file}" tofile="${build.chrome.manifest.file}"/>
-		<replace file="${build.chrome.manifest.file}">
-			<replacefilter token="@VERSION@" value="${version}"/>
-		</replace>
-
-        <zip destfile="${chrome.release.file}">
-        	<fileset file="${build.chrome.manifest.file"/>
-        	<fileset file="${build.release_notes.file}"/>
-        	<zipfileset dir="${html.dir}" prefix="html"/>
-        	<zipfileset dir="${images.dir}" prefix="images"/>
-        	<zipfileset dir="${js.dir}" prefix="js"/>
-        	<zipfileset dir="${lib.dir}" prefix="lib"/>
-        	<zipfileset dir="${css.dir}" previs="css"/>
-        	<zipfileset dir="${chrome.js.dir}" prefix="js"/>
+        <zip destfile="${build.dir}/caAERS eLearning ${version}.zip">
+        	<fileset dir="${web.dir}"/>
     	</zip>
-	</target>
+        <zip destfile="${build.dir}/caAERS eLearning ${version}-src.zip">
+        	<zipfileset dir="${web.dir}" prefix="web"/>
+        	<zipfileset dir="${captivate.dir}" prefix="captivate"/>
+        	<zipfileset file="${build.dir}/${release.notes}" prefix=""/>
+        	<zipfileset file="${build.dir}/build.xml" prefix=""/>
+    	</zip>
+    </target>
 	
     <target name="release" depends="clean,build">
     	<mkdir dir="${release.dir}"/>
-		
-		<antcall target="build-chrome"/>		
-    </target>
-	
-	<target name="release-chrome">
 		<copy todir="${release.dir}">
-			<fileset file="${release.chrome.file}"/>
+			<fileset dir="${build.dir}">
+				<include name="*.zip"/>
+			</fileset>
 		</copy>    	
-	</target>
+    </target>
 	
 	<target name="main" depends="clean,build"/>
 
