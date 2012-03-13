@@ -2,12 +2,47 @@
  * Bind handlers
  */
 $(document).ready(function() {
+	loadStyles();
 	enhanceContent();
 	buildTreeNavigation();
 	buildRoles();
 	bindConfiguredUrls();
 	loadAnchor();
 });
+
+function loadStyles() {
+	var size = $.getUrlVar('size');
+	if (size == undefined || size == null || size == "") {
+		size = $.cookie('size');
+	}
+	if (size == undefined || size == null || size == "") {
+		size = "small";
+	}
+	$.cookie('size', size);
+	
+	$('#size').data('size', size);
+	
+	if (size == 'small') {
+		$('#size').text('Make site larger');
+	} else {
+		$('#size').text('Make site smaller');
+	}
+
+	$('#size').bind('click', function(event) {
+		event.preventDefault();
+
+		var url = '' + window.location;
+		var index = url.indexOf('?');
+		if (index != -1) { url = url.substring(0, index); }
+		if (size == 'large') { url += '?size=' + 'small'; }
+		else { url += '?size=' + 'large'; }
+
+		window.location.href = url;
+		window.location.reload(true);
+	});
+	
+	$('head').append('<link rel="stylesheet" href="css/' + size + '.css" type="text/css" />');
+}
 
 /**
  * Adds points within role and lesson objects to next, parent, prev, index, etc.
@@ -47,10 +82,15 @@ function enhanceContent() {
  */
 function loadAnchor() {
 	var anchor = "" + window.location;
-	var index = anchor.indexOf('#');
+	
+	var index = anchor.indexOf('?');
+	if (index != -1) { anchor = anchor.substring(0,index); }
+	
+	index = anchor.indexOf('#');
 	if (index == -1 || index == anchor.length-1) {
 		return false;
 	}
+	
 	anchor = decodeURIComponent(anchor.substring(index+1));
 	for (var roleIndex = 0; roleIndex < roles.length; roleIndex++) {
 		var role = roles[roleIndex];
@@ -383,8 +423,18 @@ function showLesson(lesson) {
 
 	switchContent(lesson);
 	
-	if (lesson['swfUri']) {
-		loadCaptivateContent(lesson.swfUri);
+	var url = undefined;
+	var size = $('#size').data('size', size);
+	var width = "641"; var height = "512";
+	if (size == "small") {
+		url = lesson['swfUriSmall'];
+	} else {
+		width = "1025"; var height = "800";
+		url = lesson['swfUriLarge'];
+	}
+	
+	if (url) {
+		loadCaptivateContent(url, width, height);
 	} else {
 		$('#CaptivateContent').html('<p align="center">No tutorial available yet for this lesson</p>');
 	}
@@ -396,8 +446,8 @@ function showLesson(lesson) {
  * @param swfUri The relative or absolute path to the SWF file to load
  * @return undefined
  */
-function loadCaptivateContent(swfUri) {
-	var so = new SWFObject(swfUri, "Captivate", "641", "512", "10", "#CCCCCC");
+function loadCaptivateContent(swfUri, width, height) {
+	var so = new SWFObject(swfUri, "Captivate", width, height, "10", "#CCCCCC");
 	so.addParam("quality", "high");
 	so.addParam("name", "Captivate");
 	so.addParam("id", "Captivate");

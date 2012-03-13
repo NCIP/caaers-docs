@@ -6,7 +6,8 @@ caersIntro = {
     icon: "images/icons/intro.png",
 	title: "Introduction to caAERS",
 	description: "Brief overview of the caAERS application.",
-	swfUri: "lessons/intro/intro.swf",
+	swfUriLarge: "lessons/intro/intro.swf",
+	swfUriSmall: "lessons/intro/intro_640.swf",
 };
 
 roles = [
@@ -20,18 +21,22 @@ roles = [
 		    	icon: "images/icons/create.png",
 				title: "Enter Adverse Events",
 				description: "Enter AE details for an adverse event report.",
-				swfUri: "lessons/ae_coordinator/create/create.swf",
+				swfUriLarge: "lessons/ae_coordinator/create/create.swf",
+				swfUriSmall: "lessons/ae_coordinator/create/create_640.swf",
 			},
 			{ 
 		    	icon: "images/icons/report.png",
 				title: "Expidited Report Creation",
 				description: "Create and submit an expidited adverse event report.",
-					swfUri: "lessons/ae_coordinator/report/report.swf",
+				swfUriLarge: "lessons/ae_coordinator/report/report.swf",
+				swfUriSmall: "lessons/ae_coordinator/report/report_640.swf",
 			},
 			{ 
 		    	icon: "images/icons/edit.png",
 				title: "Report Editing",
-				description: "Edit an in-progress report."
+				description: "Edit an in-progress report.",
+				swfUriLarge: "lessons/ae_coordinator/edit/edit.swf",
+				swfUriSmall: "lessons/ae_coordinator/edit/edit_640.swf",
 			},
 			{ 
 		    	icon: "images/icons/amend.png",

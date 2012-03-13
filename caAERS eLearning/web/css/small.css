@@ -1,0 +1,18 @@
+#main, body, #footer { width: 979px;  }
+#main, body, #content, #left {
+	height: 660px;
+}
+#footer, #CaptivateContent {
+	margin-left: -137px;
+	width: 640px;
+}
+#footer, #size_wrapper {
+	top: 657px;
+}
+#CaptivateContent {
+	height: 516px;
+	margin-top: -6px;
+}
+#size_wrapper {
+	margin-left: -485px;	
+}

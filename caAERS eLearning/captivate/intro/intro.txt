@@ -1,0 +1,47 @@
+User: jhalpert / JH1234@
+
+[ introduction ]
+
+The caBIG Adverse Events Reporting System is used to collect, process, and report adverse events that occur during clinical trials.  caAERS also supports service-based integration of data from other clinical trial management systems.  Before you start working in caAERS, you may want to become more familiar with the application workspace and interface features.  This tutorial will provide that overview.
+
+[ log in ]
+
+The first step is to login to caAERS.  I'll enter the use name and password. 
+
+Now, you click the enter button to login.
+
+[ dashboard ]
+
+Once logged in, you will see the caAERS dashboard.  The top right-hand portion of the page shows the name of the logged in user and a link to log out of caAERS.  If you see a name that is not yours here, you should immediately click log out and contact your administrator.
+
+Looking down the page, you will notice multiple sections that provide you a summarized view of data and tasks within caAERS.  Important notifications, such as data that needs to be reviewed, will appear in the Task Notifications section.  Safety reports provides a quick overview of recent reporting activity.  Subjects shows a list of newly entered patient data.  Finally, the Quick Links section on the right provides shortcuts to common tasks that you will be performing within caAERS.
+
+[ first level nav ]
+
+However, primary navigation elements for caAERS available at the top of the page will guide you through each task and any subsequent steps. The first level navigation allows you to access different tabs within the application.  Here we see Adverse Events and Subjects.  Click the Adverse Events tab.
+
+[ second level nav ]
+
+Each first level navigation tab may have multiple tasks associated with it.  We call these tasks second-level navigation.  We see here report adverse events, manage reports, and routing and review.  Click report adverse events.
+
+[ third level nav ]
+
+If a task has multiple steps, they are displayed below the task, which we call third-level navigation.  The step that you are on here is highlighted: study, subject, and course/cycle.  Subsequent steps are listed next to that.  If you are required to provide additional information within any particular screen, you will see red asterisks next to the fields.  When you complete each step, click the Continue or Save and Continue button at the bottom of the page.
+
+[ fields ]
+
+In caAERS, pages have a number of different types of fields, including auto-completers, free text, and drop-down menus.  Here, the study field is an auto-completer, which means that as you type, matching records will begin to appear below the field.  I will start typing, and you click the first result that appears.
+
+The subject field is also an auto-completer.  I will start typing, and you select the first result that appears.
+
+Course/cycle is a drop-down menu.  You select the first cycle from the list.
+
+Now, click Continue to bring us to the next step.
+
+[ task nav ]
+
+As you progress through different steps, a running tally of the data that you have entered will often appear at the top of the screen.  Here, we see the subject, study, and course/cycle that we previously entered.  This provides us with a constant reminder of the important key data on which we are working.  As you complete different screens, you will see various buttons at the bottom of the screen for navigating between the tasks.  Here, Save and Back will save your work and move you to the previous task, Save will simply save all the data that you have entered thus far on this screen, and Save and Report will save your work and complete this task.
+
+[ conclusion ]
+
+This concludes the introduction to the caAERS web interface tutorial.  In this session, you learned how to log into caAERS, the different aspects of the dashboard, caAERS multi-level tabbed navigation, how to enter data into fields, and how to navigate between tasks.  In subsequent tutorials, you will learn specific workflows for your role in the caAERS application.

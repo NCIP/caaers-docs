@@ -5,10 +5,6 @@ body {
 	margin: 0 auto;
 }
 
-#main, body { height: 660px; }
-
-#main, body, #footer { width: 979px;  }
-
 #main { 
 	-moz-border-radius: 15px;
 	border-radius: 15px;
@@ -27,15 +23,11 @@ body {
 	margin-right: 10px;
 }
 
-#content, #left {
-	height: 660px;
-}
-
 #content {
 	margin-left: 5px;
 }
 
-#left, #logo, #logo_image {
+#left, #logo, #logo_image, #size_wrapper {
 	width: 330px;
 }
 
@@ -99,13 +91,10 @@ h2, #logo a:active, #logo a:hover, #logo a:active, #logo a:hover {
 	display: none;
 }
 
-#footer {
+#footer, #size_wrapper {
 	text-align: center; 
-	top: 657px;
 	position: absolute;
-	width: 640px;
 	left: 50%;
-	margin-left: -137px;
 }
 
 #logo a:link, #logo a:visited {
@@ -125,9 +114,5 @@ a:active, a:hover {
 
 #CaptivateContent {
 	position: absolute;
-	width: 640px;
-	height: 400px;
 	left: 50%;
-	margin-left: -145px;
-	margin-top: -6px;
 }

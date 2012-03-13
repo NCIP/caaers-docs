@@ -1,0 +1,39 @@
+User: jhalpert / JH1234@
+
+[ introduction ]
+
+caAERS is used to report adverse events that occur during clinical trials.  Once you have begun creating a report by entering additional details to the adverse events, caAERS saves your work as you proceed from screen to screen.  If you do not complete the report in one sitting, then you can return to your work and complete the report at a later time.  This session describes how to retrieve and edit an in-progress report.
+
+[ dashboard ]
+
+You can access in-progress and completed reports through the manage reports reports task under the adverse event tab.
+
+You click manage reports to bring us to that screen.
+
+[ subject and study ]
+
+To access the report, you must enter the study and subject for which the report was created using the auto-completers below.
+
+I will enter 8 2 3 1 into the study field, which is part of the study identifier, and you select the phase one study from the auto-completer drop-down menu.
+
+I will then enter S C O T T into the subject field, and you select the subject with identifier 1 2 3 2 1 2 3 9.
+
+Now click continue to bring us to that study subject's reports.
+
+[ courses ]
+
+The reports are organized by the course/cycle for which they were created.  To access the desired report, you must first select the correct cycle.
+
+The report we are looking for can be found in cycle 4, so please click the plus button next to cycle 4.
+
+Each report for that cycle can now be seen.  Here, the only report available is the CTEP 24 hour notification.  From here, you can access various reporting actions, such as exporting the report in a variety of formats and withdrawing the report.
+
+However, we are interested in editing the report, which is accessible simply by clicking the report name.  Please click the link for CTEP 24 hour notification.
+
+[ report ]
+
+The report link brings you to the data entry workflow.  Each step can be seen at the top with check marks next to those steps that are not missing any required data.  From here, you can jump to any step directly or use the save and continue buttons to step through the workflow.
+
+[ conclusion ]
+
+That concludes the caAERS AE Coordinator editing an in-progress report tutorial.  In this session, you learned how to find a report by subject, study, and course/cycle and then edit that report.  In the upcoming lesson, you will learn how to amend an adverse event report.
