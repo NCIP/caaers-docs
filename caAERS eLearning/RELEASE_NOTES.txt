@@ -4,6 +4,24 @@
 
 caAERS eLearning System @VERSION@
 
+== 0.8 Enhancements ==
+
+- Fixed spelling of expedited
+- Intro Tutorial
+  - Fixed popping
+  - Resolved ambiguity with course/cycle drop-down
+- Create AEs tutorial
+  - Reworked content
+
+== 0.7 Enhancements ==
+
+- IE 7 and IE 8 compatibility  
+
+== 0.6 Enhancements ==
+
+- Large view
+- AE coordinator report and edit tutorials added
+
 ################
 # INTRODUCTION #
 ################

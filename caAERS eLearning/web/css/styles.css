@@ -53,7 +53,7 @@ h2, #logo a:active, #logo a:hover, #logo a:active, #logo a:hover {
 
 .main_link, .role_link, .lesson_link, .caaers_link, .elearning_link { }
 
- .role_link {
+.main_link, .role_link, .lesson_link, .tree_role_link, .tree_lesson_link, #size {
 	font-weight: bold;
 }
 
@@ -75,7 +75,7 @@ h2, #logo a:active, #logo a:hover, #logo a:active, #logo a:hover {
 
 #tree { width: 320px; }
 .tree_roles, .tree_role, .tree_lessons, .tree_lesson { display: block; }
-.tree_role_img, .tree_lesson_img { width: 32px; height: 32px; }
+.tree_role_img, .tree_lesson_img { width: 32px; height: 32px; border: none; }
 .tree_lessons { margin-left: 24px; display: none; }
 .tree_link_text { top: -8px; position: relative; }
 .tree_role, .tree_lesson { padding: 1px 1px 1px 1px; }

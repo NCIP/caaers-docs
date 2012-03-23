@@ -41,7 +41,12 @@ function loadStyles() {
 		window.location.reload(true);
 	});
 	
-	$('head').append('<link rel="stylesheet" href="css/' + size + '.css" type="text/css" />');
+	var href = 'css/' + size + '.css';
+	if ($.browser.msie) {
+		document.createStyleSheet(href);
+	} else {
+		$('head').append('<link rel="stylesheet" href="' + href + '" type="text/css" />');
+	}
 }
 
 /**
@@ -117,9 +122,18 @@ function loadAnchor() {
  */
 function getRole(roleIndex) {
 	if (jQuery.type(roleIndex) == 'string') {
+		roleIndex = stripLeadingURL(roleIndex);
 		roleIndex = parseInt(roleIndex);
 	}
 	return roles[roleIndex];
+}
+
+function stripLeadingURL(href) {
+	var index = href.lastIndexOf('/');
+	if (index != -1) {
+		href = href.substring(index+1);
+	}
+	return href;
 }
 
 /**
@@ -132,6 +146,7 @@ function getRole(roleIndex) {
 function getLesson(roleIndex, lessonIndex) {
 	var role = getRole(roleIndex);
 	if (jQuery.type(lessonIndex) == 'string') {
+		lessonIndex = stripLeadingURL(lessonIndex);
 		lessonIndex = parseInt(lessonIndex);
 	}
 	return role.lessons[lessonIndex];
@@ -255,6 +270,8 @@ function switchContent(obj) {
 	updateTree(obj);
 	updateFooter(obj);
 	updateURL(obj);
+	
+	$('#CaptivateContent').empty();
 }
 
 /**
@@ -458,6 +475,8 @@ function loadCaptivateContent(swfUri, width, height) {
 	so.setAttribute("redirectUrl", "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash");
 	so.write("CaptivateContent");
 
-	document.getElementById('Captivate').focus();
-	document.Captivate.focus();
+	setTimeout(function() {
+		document.getElementById('Captivate').focus();
+		document.Captivate.focus();
+	}, 500);
 }
