@@ -34,7 +34,7 @@ In caAERS, pages have a number of different types of fields, including auto-comp
 
 The subject field is also an auto-completer.  I will start typing, and you select the first result that appears.
 
-Course/cycle is a drop-down menu.  You select the first cycle from the list.
+Course/cycle is a drop-down menu.  You select Cycle 1 from the list.
 
 Now, click Continue to bring us to the next step.
 
