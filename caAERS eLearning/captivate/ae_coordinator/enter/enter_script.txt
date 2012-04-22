@@ -1,0 +1,73 @@
+User: jhalpert / JH1234@
+
+[ introduction ]
+
+This session will guide you through process of entering new adverse event details and utilize caAERS to determine the appropriate way to report the adverse events.
+
+[ dashboard ]
+
+Once logged into caAERS, there are multiple ways to initiate a new adverse event report. For starters, you can use the Report Adverse Events task under the Adverse Events tab. To learn more about the dashboard page, please review the caAERS introduction tutorial. 
+
+This guide will walk you through initiating a new adverse event report from the Quick Links panel. You will see a number of useful actions within this panel on the right-hand side of the page.  
+
+To get started, I will need you to click on the Report Adverse Events link.
+
+[ initiate ]
+
+The first step is to select the study, subject, and course or cycle.  In the auto-completers below, you can enter any part of the study and subject name or identifier.
+
+I will enter 8 2 3 1 into the study field, which is part of the study identifier, and you select the phase one study from the auto-completer drop-down menu.
+
+Now, when entering part of the subject name or identifier, you will only be searching for subjects within the selected study.  I will  enter S C O T T into the subject field, and you select the first subject that appears.  It is important that you validate that you selected the appropriate subject by looking at the subject identifier in parentheses to the left.
+
+In the course/cycle menu, all existing courses are displayed, allowing you to enter adverse events that occurred during those courses.  In that case, you can  simply select the appropriate cycle and continue.  However, we will be entering advere events for a new course/cycle, so please select Create New from the menu.
+
+[ course ]
+
+In this window, you will need to enter the details of the new Course or Cycle with which the the adverse event is associated. All fields with a red asterisk are required, and the red shading of the field will disappear once you enter a valid value.  Furthermore, you will see some details pre-filled for you.  This is a key aspect of caAERS that will help save you time as you enter data.  In this case, the start date of the first course is already entered for you because it was previously entered for this subject.
+
+I will enter the start date of this new treatment cycle and the course number.  
+
+You will notice that the correct teatment assignment has already been made for us because it was entered for a previous course.  It is important that you validate all automatically selected data before continuing.  
+
+Now, you click the Save button in the bottom right-hand corner of the window.
+
+caAERS indicates to us that the Course/Cycle was created successfully, so you click the Continue button to bring us to the next screen.
+
+[ details ]
+
+The next step is to enter the details of the adverse events.  Note the blue box at the top of the screen that contains the details that we entered in the previous screen.  This information will follow us through the workflow to remind us of the subject, study, and course on which we are working.  Now, I will add the adverse event Details with some help from you.  
+
+The first step is to add a description of the adverse event details as described by the patient into the verbatim field.  I will enter maculapapular rash on face, scalp, back, and chest area.  You click the add button to add this adverse event.
+
+You will see that caAERS has recorded the adverse event and is prompting us for additional details.  It is necessary that we enter the fields with a red asterisk because they are required on any subsequent AE report.
+
+The AE term must be coded using the CTCAE based upon the verbatim from the subject.  This field is also an auto-completer.  Having looked at my notes on the patient, I know to code this as Stevens-Johnson Syndrome.  As I type, you will see the CTCAE terms appear below.  You click Stevens-Johnson Syndrome from the list.
+
+The descriptions of the grades are specific to each AE term.  You must read the descriptions and appropriately select the grade that matches the experienced adverse event.  This step is critical in determining whether subsequent reporting is necessary, so special care should be taken to ensure that it is performed correctly.  In this case, the Stevens-Johnson syndrome occurred at grade 4, so please select grade 4 from the list.
+
+I'll enter the start date for you.
+
+The end date is unknown, so we will leave it blank.
+
+Attribution to study intervention provides an indication on the probability that the adverse event was due specifically to the study intervention itself.  It is also a critical field for determining reporting.  In this case, we are absolutely sure that the Stevens-Johnson syndrome was due to the study intervention, so please select definite from the drop-down menu.
+
+Hospitalization is also a field important to determining reporting of this adverse event.  Select no from the drop-down menu.
+
+Now, I will enter the rest of the adverse events for you.
+
+You can see that I entered all the adverse events in a similar way to how we entered Stevens-Johnson syndrome.  Now that we are finished with this page, you click Save and Report to bring us to the next screen.  
+
+[ review ]
+
+When we clicked Save and Report, caAERS used a set of rules to determine for us the reporting requirements for these adverse events.  The results of the rules engine are shown on this page, and it is extremely important that we carefully review all of the recommendations.
+
+The first thing that we see is that an action is recommended.  As I scroll down, you can see that it is recommended that we create and submit a CTEP 24 Hour Notification.  Any other recommendations would also be listed in this table.
+
+As I scroll further, we can see a detailed report of each adverse event and whether reporting is required.  The first column allows us to select the adverse events to include in the report, and the second column shows us which adverse events must be reported.  The adverse event term, grade, and start date can be found in the next three columns.  Finally, we must select the adverse event that will be marked as primary in the report.
+
+If you notice any mistakes or other issues, you can click the back button to resolve them.  Since our data is correct, please click the Report button to create the CTEP 24 Hour Notification.
+
+[ conclusion ]
+
+Now you would continue to the Reporter page and add all the information necessary to generate and submit the selected report.  However, that is a lesson for a separate tutorial.  In this session, you have learned how to successfully enter adverse events.  In the next session, you will learn how to complete the steps necessary to submit the selected report.
