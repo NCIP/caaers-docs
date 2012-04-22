@@ -32,52 +32,58 @@ Select Medical Record Number from the Identifier Type drop-down menu.
 
 I'll enter Duke into the organization, and you select Duke University Medical Center from the drop-down list.
 
-[ basic details ]
+You can add any number of organization and system assigned identifiers, and you can use the X icon tok remove them.
 
-This screen contains all of the fields necessary to create new personnel.
+Please click Continue to bring us to the next screen.
 
-The first set of information needed are basic details, such as the personnel's name and email address.  I will fill these details in for you.
+[ choose study ]
 
-There are two additional options in this section: create as person and create as user.  A person is involved in the clinical study in some way and will be searchable through the appropriate fields throughout caAERS.  A user has access to caAERS and can perform the actions that they are privileged to perform based on their role.  In this case, let's create a personnel that is both a person and a user.  Since both of these boxes are already checked, we can continue.
+Please note that the subject name above the search criteria panel that follows us through the subsequent screens to remind us of the subject that we are currently creating.
 
-[ person details ]
+The choose study screen optionally allows us to register a subject to a study.  If you do not wish to register the subject at this time, you can skip this step by clicking the Continue button.  However, let's register the subject to a study.  I'll enter GDC into the search field, and you click the search button.  
 
-Now that we've selected our basic details, we need to add additional information.  If this personnel is a person, we need to enter the type of person, the person's identifier, and any organizations with which that person is to be associated within caAERS.  For type of person, select research staff.
+The results can be found under the search criteria panel.  Select the option selector next to the resulting study identifier.
 
-I will enter the person's identifier, which will uniquely identify the person within caAERS.
+All subjects registerd to a study in caAERS must have an identifier on that study.  I'll enter this for you.
 
-Now, let's enter an organization for this person.  Please click the Add Organization button.
+Now, click continue to bring us to the next screen.
 
-The organization field is an autocompleter.  I'll begin typing Duke, and you select Duke University Medical Center at the end of the list.  
+[ subject medical history ]
 
-Selecting the correct organizations for the person is important because it will help caAERS suggest the appropriate personnel in auto-completers throughout the application.
+The Subject Medical History page is extremely important in caAERS because this information is reused throughout the adverse event entry and reporting workflows.  Entering it once here can safe time and reduce errors later on.
 
-[ user details ]
+The first step is to enter the subject's baseline performance.  Please select Symptomatic, Fully Ambulatory from the drop-down menu.
 
-The user details section allows us to enter a user name and select roles that give the user access to various actions within caAERS.
+Now we will enter the primary disease information.  Select Solid Tumor, NOS for not otherwise specified.
 
-I'll enter the user name for you.
+I will enter intracranial tumor into the other field.
 
-Explaining each of the roles that are available is outside the scope of this tutorial - please see the caAERS user guide for this.  
+Now I'll type B R A I N into the primary site field, and you select brainstem.
 
-Let's create a user that can enter adverse events and create adverse event reports.  The AE Reporter role appears to be what we want.  Please click the plus button.
+I'll enter the date of initial diagnosis.
 
-Under each role is a description of the privileges that the role bestows upon the user.  In this case, an AE reporter can create and update information about adverse events, submit reports, and enter required adverse events that need to be assessed.  Click the checkbox to grant this user the AE reporter role.
+Now, let's add colon to the metastatic disease sites.  Click the Add button.
 
-caAERS divides privileges in the system by organization and study.  In this way, you can allow users to perform actions for only a specific organizations and/or only specific studies.  This is critical for multi-site studies, especially when caAERS is being used by multiple different organizations.  However, there is also the option to grant a user the role across all sites and all studies.
+After I type colon into the site name, you select colon.
 
-In this case, it is appropriate to grant the user the AE Reporter role for all studies at Duke.  I'll enter Duke and you select Duke University Medical Center.
+Greg Mason has a pre-existing condition of hypertension.  Click the add button.
 
-It is necessary to click Add Organization in order to apply the selected organization.  Please click Add Organization.
+Select Hypertension from the drop-down menu.
 
-Now, select all study access.
+Concomittant medications are non-protocol medications that may have contributed to the disease.  In this case, we have none.
 
-[ Save ]
+The Prior Therapies field can include both therapies for the current study disease, as well as for other diseases if the therapies are relavent to reporting on for the study.  In this case, we do no have any prior therapy.
 
-Once you save a user, she will be emailed instructions to create a password for her account.  
+Please click continue to bring us to the next screen.
 
-Please click the Save button to continue.
+[ summary ]
+
+The final screen in the workflow gives us an opportunity to review all of the information that we have entered thus far.  
+
+Click the plus symbol next to medical history in order to review the medical history for the study to which we registered the subject.
+
+Now that everything looks correct, please click Save to enter this subject and registration into the system.
 
 [ conclusion ]
 
-In this session, you have learned how to successfully create personnel that is both a user and a person within caAERS.  In the next session, you will learn how to edit personnel.
+In this session, you have learned how to successfully enter and register a new subject.  In the next session, you will learn how to edit subject details.
