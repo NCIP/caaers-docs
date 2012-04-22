@@ -1,0 +1,83 @@
+User: hshort / Steelers_1
+
+[ introduction ]
+
+This session will guide you through the process of adding new subject to caAERS.  In caAERS subjects are participants in clinical studies and can incur adverse events that can be added to caAERS and reported.  A subject can be assigned to more than one study.  Subject data entered into caAERS is reused as much as possible throughout all appropriate caAERS workflows. 
+
+[ dashboard ]
+
+Once logged into caAERS, enter subject workflow can be accessed via the Subjects tab at the top of the screen or the Quick Links to the right.  
+
+Please click Enter Subject under the Quick Links on the right-hand side of the window.
+
+[ details ]
+
+The first step in the enter subject workflow is to enter basic details, such as the site the subject belongs to, the subjects name, and identifiers assigned to the subject.
+
+Let's first select the organization to which the subject belongs.  Please select Duke University Medical Center from the drop-down list.
+
+Now we must enter the demographic information.  I'll enter the name, subject identifier, and date of birth for your.  
+
+Select Male from the Gender menu.  
+
+Select Not Hispanic or Latino from the Ethnicity menu.  
+
+Select White from the Race menu.
+
+Next, we have an opportunity to add additional identifiers for the subject.  For example, an organization may assign a medical record number, or a system may assign a unique identifier.  Let's add an organizational identifier.  Please click the add identifier button.
+
+I'll enter the identifier for you.
+
+Select Medical Record Number from the Identifier Type drop-down menu.
+
+I'll enter Duke into the organization, and you select Duke University Medical Center from the drop-down list.
+
+[ basic details ]
+
+This screen contains all of the fields necessary to create new personnel.
+
+The first set of information needed are basic details, such as the personnel's name and email address.  I will fill these details in for you.
+
+There are two additional options in this section: create as person and create as user.  A person is involved in the clinical study in some way and will be searchable through the appropriate fields throughout caAERS.  A user has access to caAERS and can perform the actions that they are privileged to perform based on their role.  In this case, let's create a personnel that is both a person and a user.  Since both of these boxes are already checked, we can continue.
+
+[ person details ]
+
+Now that we've selected our basic details, we need to add additional information.  If this personnel is a person, we need to enter the type of person, the person's identifier, and any organizations with which that person is to be associated within caAERS.  For type of person, select research staff.
+
+I will enter the person's identifier, which will uniquely identify the person within caAERS.
+
+Now, let's enter an organization for this person.  Please click the Add Organization button.
+
+The organization field is an autocompleter.  I'll begin typing Duke, and you select Duke University Medical Center at the end of the list.  
+
+Selecting the correct organizations for the person is important because it will help caAERS suggest the appropriate personnel in auto-completers throughout the application.
+
+[ user details ]
+
+The user details section allows us to enter a user name and select roles that give the user access to various actions within caAERS.
+
+I'll enter the user name for you.
+
+Explaining each of the roles that are available is outside the scope of this tutorial - please see the caAERS user guide for this.  
+
+Let's create a user that can enter adverse events and create adverse event reports.  The AE Reporter role appears to be what we want.  Please click the plus button.
+
+Under each role is a description of the privileges that the role bestows upon the user.  In this case, an AE reporter can create and update information about adverse events, submit reports, and enter required adverse events that need to be assessed.  Click the checkbox to grant this user the AE reporter role.
+
+caAERS divides privileges in the system by organization and study.  In this way, you can allow users to perform actions for only a specific organizations and/or only specific studies.  This is critical for multi-site studies, especially when caAERS is being used by multiple different organizations.  However, there is also the option to grant a user the role across all sites and all studies.
+
+In this case, it is appropriate to grant the user the AE Reporter role for all studies at Duke.  I'll enter Duke and you select Duke University Medical Center.
+
+It is necessary to click Add Organization in order to apply the selected organization.  Please click Add Organization.
+
+Now, select all study access.
+
+[ Save ]
+
+Once you save a user, she will be emailed instructions to create a password for her account.  
+
+Please click the Save button to continue.
+
+[ conclusion ]
+
+In this session, you have learned how to successfully create personnel that is both a user and a person within caAERS.  In the next session, you will learn how to edit personnel.
