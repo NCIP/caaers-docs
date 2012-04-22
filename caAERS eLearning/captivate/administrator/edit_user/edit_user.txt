@@ -1,0 +1,41 @@
+User: SYSTEM_ADMIN / system_admin
+
+[ introduction ]
+
+This session will guide you through the process of searching for and editing personnel in caAERS.  In caAERS Personnel represent people involved in a clinical study, such as a clinical research assistant or a physician.  These personnel can also be users of caAERS, but this is not required.  You can have personnel that are not users as well as users that are not personnel. 
+
+[ dashboard ]
+
+Once logged into caAERS, the personnel workflow can be found under the Administration tab.  
+
+Please click Personnel under the Administration tab.
+
+[ search personnel ]
+
+From here, we can either search for personnel by a variety of criteria such as name, identifier, and organization, or we can create or edit personnel.  Since we are already in the Search Personnel task, I will enter the search details for you.
+
+Now, please click the Search button.
+
+The search results appear below the search criteria box.
+
+We have found the personnel that we would like to edit: Paula Kent.  Please click the link under the Person Identifier column.
+
+[ edit ]
+
+We have now moved into the Edit Personnel task.  All of the details that we entered in the previous lesson can be found here, and they are all editable.
+
+To modify the privileges that a user has to perform actions in caAERS, you will need to look under the User Details section.
+
+As is indicated by the green checkmark, this user as the AE Reporter role.  Next to that, you can see that the user has this role at one site within caAERS and all Studies.  Click the plus symbol next to AE Reporter to see the site.
+
+From here, you can make mofications to the privileges that this user has for this role.  Now, let us scroll back up to the top of the screen.
+
+We see a button called Deactivate Person.  Once clicked, this person will no longer be findable by auto-completers throughout caAERS and will not be able to login to caAERS.  Please click the deactivate person button.
+
+You will notice that nothing has yet happened.  You must click save in order for any changes on this page to take effect.
+
+Please click Save to continue.
+
+[ conclusion ]
+
+In this session, you have learned how to successfully find and edit personnel, deactivate a user, and save that deactivation.
