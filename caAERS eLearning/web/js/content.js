@@ -58,6 +58,22 @@ var roles = [
 		]
 		
 	},
+	{ title: "Subject Manager",
+		shortTitle: "Subject Manager",
+		description: "Adds, edits, and registers new subject within caAERS and to studies.",
+		headshot: "images/headshots/subject_manager.png",
+		lessons: [
+		    jQuery.extend({}, caersIntro),
+			{ 
+		    	icon: "images/icons/add_subject.png",
+				title: "Add Subject",
+				description: "Add a new subject to caAERS and register it to a study.",
+				swfUriLarge: "lessons/study_manager/add_subject/add_subject.swf",
+				swfUriSmall: "lessons/study_manager/add_subject/add_subject_640.swf"
+			}
+		]
+		
+	},
 	{ title: "Adverse Events Data Coordinator",
 		shortTitle: "Data Coordinator",
 		description: "Performs read-only adverse event reviews and provides comments through the adverse event workflow.",

@@ -6,7 +6,7 @@ This session will guide you through the process of adding new subject to caAERS.
 
 [ dashboard ]
 
-Once logged into caAERS, enter subject workflow can be accessed via the Subjects tab at the top of the screen or the Quick Links to the right.  
+Once logged into caAERS, the enter subject workflow can be accessed via the Subjects tab at the top of the screen or the Quick Links to the right.  
 
 Please click Enter Subject under the Quick Links on the right-hand side of the window.
 
