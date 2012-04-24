@@ -1,0 +1,73 @@
+User: jhalpert / JH1234@
+
+[ introduction ]
+
+caAERS is used to report adverse events that occur during clinical trials.  In the previous sessions you learned how to create and submit a 24 hour notification and a five day expedited report.  Once submitted, it is sometimes necessary to make changes to these reports when the condition or treatment of the patient changes or when erroneous data is submitted.  In this session, you will learn how to amend a five day expedited report.
+
+[ dashboard ]
+
+To begin, we need to see the list of reports that are completed for our subject.  You can find this out through the Manage Reports workflow under the Adverse Events tab.  
+
+Please click Manage Reports.
+
+[ manage reports search ]
+
+Let's search for our reports by entering the study and subject into the auto-completers.  I'll enter 8 2 3 1 into the study field, you select the Phase I study that appears.
+
+I'll enter S C O T T into the subject field, and you select Michael Scott. 
+
+Now click continue to bring us to the next screen.
+
+[ manage reports ]
+
+This page contains all of the completed and in-progress reports for the subject.  It is organized by course.  You can see the course in the first column, number of reports and adverse events in the next two colums, and the status in the second to last column.  This status is particularly important because it let's us know whether for that cycle there are any reports, they are due, or they are complete.  The last column let's us edit the adverse events for that cycle.  Please click the plus button next to cycle five.
+
+Now we have a listing of each of the reports for cycle 5.  You can see that both the CTEP 24 hour notification and the CTEP Expedited Reprot are complete.  If you recall, we submitted these reports in the previous lessons.  The Actions button can be used to export the report to a variety of formats, as well as Amend the report.
+
+Click Amend under the Actions menu.
+
+Click OK.
+
+[ reporter ]
+
+We have now entered a workflow that should be familiar to you.  It is has the same set of steps as the create 24 hour notification and expedited reports workflows.  We are seeing an exact reproduction of the data that we entered in the five day expedited report, so it is not necessary to validate all of the data in this report.  Therefore, we can skip directly to the data items that we need to modify.  This is accomplished by clicking on the correct workflow step in the gray bar at the top.  You can see that there is a check-box next to each step, which indicates that data entry is complete.  This is true because we have already entered this data when creating the expedited report.  The data item that we need to enter for this report is the event description.  Thefore, please click step 3: describe event.
+
+[ describe event ]
+
+-- text entry --
+He was given a prescription for Baciofen, the longest period of hiccups that he experience was 26 hrs. 
+-- end text entry --
+
+As you know, describing the event is one of the most critical sections of the report.  The change that we need to make is to modify the description to reflect that the longest period of hiccups experienced is 36 hours, not 26 hours.  As you can imagine, this could change because the patient experienced additional symptoms or due to a tyographical error. I'll make the change for you.
+
+Now, please click Save to apply this change.
+
+[ describe event 2 ]
+
+You can see the green information box notifying us that our modification was saved successfully.  Since this is the only change that needs to be made, we can jump straight to the review and submit step.  Please click step 11: review and submit in the gray workflow bar.
+
+[ review and submit ]
+
+You will see that ad amendment to the expedited report requires sign-off by a physician.  The check box towards the top of the screen reminds us of this, as well as the information to be completed box below.  You can access the preview functionality by clicking the Actions button.  From here, you can export the draft amendment in a variety of formats.  Since a physician has reviewed and approved this amendment, please click the checkbox indicating this.  
+
+Now the amendment is ready to be submitted. Click the submit action to continue.
+
+[ submitter ]
+
+We are now in the final workflow to submit the created amendment.  By now, this part of the workflow should look very familiar.  Therefore, I will complete the submitter information and bring us to the next screen. 
+
+[ recipients ]
+
+We do not have any additional recipients, so please click the Submit button to submit the amendment. 
+
+[ submission status ]
+
+The final screen shows us the status of our submitted amendment.  From here, we can also export the amended report to a variety of formats.  Click the Submission Status task in the gray workflow bar to recheck the status.
+
+[ submission status recheck ] 
+
+The information was saved successfully, and the submission went through without a problem.  We can click view server response to get further details for debugging purposes.
+
+[ conclusion ]
+
+That concludes the caAERS AE Coordinator amend expedited report tutorial.  In this session, you learned how to find amend and amend a five day expedited report.
