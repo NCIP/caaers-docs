@@ -142,11 +142,11 @@ We do not have any additional recipients, so please click the Submit button to s
 
 [ submission status ]
 
-The final screen shows us the status of our submitted report.  From here, we can also export the report to a variety of formats.  We can check back to this screen later to determine whether the report submitted to AdEERS  successfully.
+The final screen shows us the status of our submitted report.  From here, we can also export the report to a variety of formats.  We can check the status of the submission by clicking the Submission Status task at the top to refresh the screen.  Please click the Submission Status task.
 
-[ submission status recheck ] 
+[ submission complete ] 
 
-It has been a couple minutes, and we have checked back to see if the status of our submission has changed.  And, it indeed has.  The information was saved successfully, and the submission went through without a problem.  We can click view server response to get further details for debugging purposes.
+The information was saved successfully, and the submission went through without a problem.  We can click view server response to get further details for debugging purposes.
 
 [ conclusion ]
 

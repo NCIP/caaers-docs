@@ -136,4 +136,4 @@ The information was saved successfully, and the submission went through without 
 
 [ conclusion ]
 
-That concludes the caAERS AE Coordinator creating and submitting an expedited report tutorial.  In this session, you learned how to create an expedited report from an already entered set of adverse events, as well as submitted that report.  In the upcoming lessons, you will learn how to edit and amend an adverse event report.
+That concludes the caAERS AE Coordinator creating and submitting a 24 hour notification tutorial.  In this session, you learned how to create a 24 hour notification from an already entered set of adverse events, as well as submit that report.  In the upcoming lesson, you will learn how to create and submit a five day expedited report.
