@@ -1,0 +1,62 @@
+User: jhalpert / JH1234@
+
+[ introduction ]
+
+caAERS is used to report adverse events that occur during clinical trials.  Critical to the success of clinical studies is the ability to colate and report on data of scientific and clinical interest.  caAERS supports a flexible way for users to find data and export it for further analysis.  This tutorial will show you how to search for and export data.
+
+[ dashboard ]
+
+Searching for and generating a report on adverse events requires that a user has the Data Reader role within caAERS.  I have already requested this role from the system administrator because the biostatistics department has requested me to export some adverse events data for them.  You access the search and export functionality through the advanced search tab.  Please click the search task under Advanced Search.
+
+[ enter criteria ]
+
+Reporting on adverse events is a three step process.  First, we select the criteria upon which we want to base our search.  Next, we select the data that we want to export.  And, finally, we generate the report.  First, let's base our search on adverse events.  Our other options are studies, subjects, and reports.  Selecting one of these options would result in different types of data being exported.  Select adverse event from the search for menu.
+
+Now we have the option to filter the data results by a variety of criteria.  These fall in the categories of adverse events, study, and subject.  Within these criteria, you can select an data element to filter on, the operator to use, such as equal to or greather than, and the value to use to filter.  We are looking for all adverse events in a particular study, so please click the plus button next to the study search criteria.
+
+Since we are looking for a specific study, select Study from the attribute column.
+
+Now, select Equal To from the operator.
+
+I will enter 8 2 3 1 into the value auto-completer, and you select the Phase I trial from the menu.
+
+Since we want all adverse events from this study, we don't need to add any more filter criteria.  Please click Continue to bring us to the next screen.
+
+[ select view ]
+
+This sceen allows us to select the fields that we want to export.  The fields are categorized by Adverse Event, Study, and Subject.  Our biostatistics department is interested in doing analysis on a number of adverse events related fields and sent me a list.  I will go ahead and make sure the correct fields are selected.
+
+-- fields --
+id
+grade
+hospitalization
+expected
+attribution
+start date
+end date
+CTCAE term
+course name
+other treatment assignment description
+course/cycle number
+treatment assignment code
+study subject identifier
+outcome
+-- fields --
+
+Now that the correct fields are selected for export, please click the Search button to initiate the search.
+
+[ search results ]
+
+The report is presented to us directly in our window.  You can see that the fields we selected make up the columns across the top.  I can scroll right to see all of the fields.
+
+Also, I can page using the numbered links at the top and bottom of the search results, as well as skip to the last page.  However, the biostatistics department asked for an Excel spreadsheet, so we need to export this report.  This is accomplished by clicking the Export search results link above the search results panel on the right-hand side.  Please click the Export search results link.
+
+[ excel ]
+
+I saved the file to my desktop and opened it in Excel to insure that everything looks correct.
+
+Everything looks good.  We can now email this to the biostatics department.
+
+[ conclusion ]
+
+That concludes the caAERS AE Coordinator exporting adverse events data tutorial.  In this session, you learned how to search for data of clinical or scientific interest, select fields to export, and generate a report in Excel.
