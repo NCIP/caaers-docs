@@ -2,87 +2,73 @@ User: jhalpert / JH1234@
 
 [ introduction ]
 
-caAERS is used to report adverse events that occur during clinical trials.  Once you have added the adverse events to the selected course or cycle, and caAERS determines the appropriate expedited reports to submit, you must supply additional information needed to complete the reports.  This session describes that process.
+caAERS is used to report adverse events that occur during clinical trials.  Once you have added the adverse events to the selected course or cycle, and caAERS determines the appropriate expedited reports to submit, you must supply additional information needed to complete the reports.  A five day expedited report is required when certain adverse event and protocol conditions are met.  caAERS looks at various fields, such as grade, hospitalization, and protocol phase.  In the previous session, you learned how to create and submit a 24 hour expedited report.  In this session, you will learn how to create and submit a 5 day expedited report.
+
+[ dashboard ]
+
+To begin, we need to see the list of reports that are still outstanding for our subject.  You can find this out through the Manage Reports workflow under the Adverse Events tab.  
+
+Please click Manager Reports.
+
+[ manage reports search ]
+
+Let's search for our reports by entering the study and subject into the auto-completers.  I'll enter 8 2 3 1 into the study field, you select the Phase I study that appears.
+
+I'll enter S C O T T into the subject field, and you select Michael Scott. 
+
+Now click continue to bring us to the next screen.
+
+[ manage reports ]
+
+This page contains all of the completed and in-progress reports for the subject.  It is organized by course.  You can see the course in the first column, number of reports and adverse events in the next two colums, and the status in the second to last column.  This status is particularly important because it let's us know whether for that cycle there are any reports, they are due, or they are complete.  The last column let's us edit the adverse events for that cycle.  Please click the plus button next to cycle five.
+
+Now we have a listing of each of the completed and in-progress reports for cycle 5.  You can see that the CTEP 24 hour notification is complete.  If you recall, we submitted this report in the previous lesson.  We also see that a CTEP expedited report is due in five days.  Please click the link for CTEP Expedited Report so that we can get started on it.
 
 [ reporter ]
 
-The first step is to enter the contact information for the person reporting the adverse event and the treating physician.  These individuals can be selected from drop-down menus, which will fill in the details for you.  Select Susan Sutherland as the Reporter.
+We have now entered a workflow that should be familiar to you.  It is has the same set of steps as the 24 hour notification.  caAERS has saved us time and effort by copying all of the data from the 24 hour notification into the five day expedited report.  However, we still need to validate that all of the data is still accurate, update any data that has changed, and enter any additional relavent information.
 
-For the treating physician, you will notice that none are available.  Therefore, I will enter the details manually.  Now, click Save and Continue to bring us to the next page.
+It appears that the reporter information is the same.  The reporter still has not changed, nor has the treating physician.  Therefore, please click save and continue to bring us to the next screen.
 
 [ adverse events ]
 
-You will notice a check mark appeared next to the Reporter step in the grey task bar towards the top of the page.  Furthermore, you can also see yellow asterisks next to the steps that are required.  Finally, you will also see that there is no check mark next to Step 2: Adverse Events, which is the step that we currently are on.  As I scroll down the page, you can see that these are the details that we already entered in the previous lesson.  You can also see that some of the fields are highlighted red, meaning that they are incomplete.  We must fill in the attribution to study intervention for each adverse event.  I will get your help on the first couple.
+Before reviewing the adverse events, note that you can jump to any specific task my clicking on it in the gray bar at the top.  For example, if there are specific data items that you would like to edit before reviewing each page, you can skip directly to them.  However, I will continue going through the workflow page-by-page.  Now, I will carefully review the adverse events to insure they are correct.
 
-Select definite for the attribution of Stevens-Johnson syndrome.
-
-Now, select probable for the attribution of hiccups.
-
-I will fill in the rest of the attributions.
-
--- break --
-
-Now, click Save and Continue to move to the next screen.
+Everything looks correct, so please click save and continue.
 
 [ describe event ]
 
 -- text entry --
-Patient developed severe maculapapular rash on his face, scalp, back and chest areas after 1 cycle of therapy. It formed large scabs that bled. On day 27, patient called and reported problems with hiccups. He was given a prescription for Baciofen, the longest period of hiccups that he experience was 26 hrs. Patient received IV fluids outpatient for nausea, vomiting, anorexia, and dehydration. Pt had grade 2 alk phos at baseline, the health care provider felt agents were helping the alk phos. Abd pain is improperly treated. A prescription for OxyContin has been given in addition to the Oxycodone as needed for break through pain Patient decided not to stay on the study because of poor tolerance to the chemotherapy.
+Events began resolving 48 hours after patient was removed from therapy.
 -- end text entry --
 
-Describing the event is one of the most critical sections of the report.  You must provide detailed information about the event including the presentation of the event, the treatment of the event, clinical findings, and the timing of the event in relation to study interventions. The goal is to be as complete as possible.  I will enter this into the description field.  
+As you know, describing the event is one of the most critical sections of the report.  Therefore, we should update the description based upon additional notes that we received from the physician.  I'll edit the description field to reflect that the events are resolving.  
 
-Now, mark the present status as not recovered/not resolved.
-
-Next, select No for whether the subject has been retreated.
-
-Finally, I will enter the date the subject was removed from the protocol.
+Now, you change the present status from Not recovered/Not resolved to Recovering/Resolving.
 
 Please click Save and Continue to navigate to the next screen.
 
 [ course ]
 
-If you recall from the previous lesson, we already entered the details of the Course.  However, we have an opportunity to review and make modifications.  Please click Save and Continue.
+The course looks correct.
+
+Please click Save and Continue to navigate to the next screen.
 
 [ study interventions ]
 
-On the next screen, we must enter the study agents.  The dose and unit of measurement are required, while the rest of the fields are optional.
+Let's review the study interventions.
 
-Please select G D C - 0 4 4 9 from the study agent list.
-
-I'll enter the dose of 3750.
-
-You select mg for milligrams from the unit of measure list.
-
-I'll enter the date last administered.  
-
-Now, since a second investigational agent was administered, click Add.
-
-I'll enter the details of O S I - 7 7 4 for you.
-
--- break --
-
-Please click Save and Continue.
+There are no changes to the study interventions.  Please click Save and Continue.
 
 [ subject details ]
 
-The Subject Details page contains several sections regarding the subject's relevant medical history.  It is necessary that you verify all information that already exists on this page and make any necessary changes or additions.
+Let's review the subject details.
 
-I will enter the height and weight as 174.5 centimeters and 79.3 kilograms.  Notice that the body surface area is automatically calculated for us.  
-
-I verified that the disease information is correct: solid tumor, adenocarcinoma, with primary site in teh colon.  
-
-The metastatic sites of liver and lymph node are correct.  If you needed to add additional sites, you could use the add button, and sites can be removed with the red trash button.
- 
-The pre-existing conditions and concomitant medications are both correctly empty.  If needed, you can add these with the add buttons.
-
-Now, we must review the prior therapies to see if the details are correct.
-
-Since the prior therapies all looked correct, please click Save and Continue to bring us to the next screen.
+Everything is correct, so please click Save and Continue.
 
 [ other causes ]
 
-This screen allows you to enter information regarding other circumstances that might have been related to the event or contributed to the event being reported.  Click add a cause.
+If you recall, we skipped this task when entering the 24 hour notification.  Therefore, let's make sure to complete it for the expedited report.  This screen allows you to enter information regarding other circumstances that might have been related to the event or contributed to the event being reported.  Click add a cause.
 
 Now, I will enter dehydration as a possible cause.
 
@@ -90,7 +76,7 @@ Finally, please click Save and Continue.
 
 [ labs ]
 
-This page allows you to enter any lab tests that are relevant to the adverse event.  There are two labs relavent for this case.  
+We also skipped the labs task when entering the 24 hour notification.  This page allows you to enter any lab tests that are relevant to the adverse event.  There are two labs relavent for this case.  
 
 Please click add a lab.
 
@@ -116,17 +102,13 @@ Now that we are finished, please click Save and Continue to bring us to the next
 
 [ attribution ]
 
-The attribution screen allows you to attribute the level of relatedness to each potential cause.
+As you know, the attribution screen allows you to attribute the level of relatedness to each potential cause.  You will notice that there is not a check mark next to the attribution task at in the top gray bar.  This is because we must attribute new other cause that we added: dehydration.  In addition, we must confirm that all of the other attributions are correct.
 
 You can help me attribute the primary AE, Stevens-Johnson syndrome, and I will do the rest.
 
-Select unlikely for the solid tumor.
-
-Select definite for G D C - 0 4 4 9.
-
-Select definite for O S I - 7 7 4.
-
 Select unlikely for dehydration.
+
+The rest of the attributions for Stevens-Johnson syndrome are correct, so I will go ahead and complete the attribution of dehydration.
 
 -- break --
 
@@ -134,17 +116,17 @@ Now that all the attribution is complete, please click Save and Continue.
 
 [ additional info ]
 
-This screen allows you to select any additional information to include with the expedited report, such as an autopsy report or discharge summary.  Since we have no additional information to include, please click Save and Continue.
+Since we have no additional information to include, please click Save and Continue.
 
 [ review and submit ]
 
-The review and submit screen allows us to make any additional changes to the report, as well as preview the report.  You can access the preview functionality by clicking the Actions button.  Furthermore, caAERS will provide notifications of any missing data that is necessary to complete the report.  
+You will see that the five day expedited report requires sign-off by a physician.  The check box in the middle of the screen reminds us of this, as well as the information to be completed box below.  You can access the preview functionality by clicking the Actions button.  From here, you can export the draft report in a variety of formats.  Since a physician has reviewed and approved this report, please click the checkbox indicating this.  
 
-In this case, data entry is complete, and the report is ready to be submitted. Click the submit action to continue.
+Now the report is ready to be submitted. Click the submit action to continue.
 
 [ submitter ]
 
-We are now in the final workflow to submit the created report.  The first screen let's us enter different submitter details from the reporter.  
+We are now in the final workflow to submit the created report.  The first screen let's us enter different submitter details from the reporter. 
 
 In this case, the submitter is different, so please uncheck that the submitter is the same as the report.
 
@@ -156,7 +138,7 @@ Now that the submitter details are correct please click Save and Continue.
 
 [ recipients ]
 
-This screen allows us to add additional recipients of the report.  You could enter emails in the Cc field.  However, we do not have any additional recipients, so please click the Submit button to submit the report. 
+We do not have any additional recipients, so please click the Submit button to submit the report. 
 
 [ submission status ]
 
@@ -168,4 +150,4 @@ It has been a couple minutes, and we have checked back to see if the status of o
 
 [ conclusion ]
 
-That concludes the caAERS AE Coordinator creating and submitting an expedited report tutorial.  In this session, you learned how to create an expedited report from an already entered set of adverse events, as well as submitted that report.  In the upcoming lessons, you will learn how to edit and amend an adverse event report.
+That concludes the caAERS AE Coordinator creating and submitting a five day expedited report tutorial.  In this session, you learned how to create an expedited report from an already entered set of adverse events, as well as submitted that report.  In the upcoming lessons, you will learn how to edit and amend an adverse event report.
