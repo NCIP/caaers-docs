@@ -48,12 +48,9 @@ var roles = [
 			{ 
 		    	icon: "images/icons/amend.png",
 				title: "Amend Report",
-				description: "Amend an already submitted report."
-			},
-			{ 
-		    	icon: "images/icons/export.png",
-				title: "Export Data",
-				description: "Export adverse events data for further research."
+				description: "Amend an already submitted report.",
+				swfUriLarge: "lessons/ae_coordinator/amend/amend.swf",
+				swfUriSmall: "lessons/ae_coordinator/amend/amend_640.swf"
 			}
 		]
 		
@@ -70,16 +67,31 @@ var roles = [
 				description: "Add a new subject to caAERS and register it to a study.",
 				swfUriLarge: "lessons/study_manager/add_subject/add_subject.swf",
 				swfUriSmall: "lessons/study_manager/add_subject/add_subject_640.swf"
+			},
+			{ 
+		    	icon: "images/icons/edit_subject.png",
+				title: "Edit Subject",
+				description: "Find and edit an existing subject in caAERS.",
+				swfUriLarge: "lessons/study_manager/edit_subject/edit_subject.swf",
+				swfUriSmall: "lessons/study_manager/edit_subject/edit_subject_640.swf"
 			}
 		]
 		
 	},
-	{ title: "Adverse Events Data Coordinator",
-		shortTitle: "Data Coordinator",
-		description: "Performs read-only adverse event reviews and provides comments through the adverse event workflow.",
-		headshot: "images/headshots/data_coordinator.png",
+	{ title: "Data Analyst",
+		shortTitle: "Data Analyst",
+		description: "Generates reports across subjects and studies for further analysis.",
+		headshot: "images/headshots/data_analyst.png",
 		lessons: [
-		    jQuery.extend({}, caersIntro)
+		    jQuery.extend({}, caersIntro),
+			{ 
+		    	icon: "images/icons/export.png",
+				title: "Export Data",
+				description: "Export adverse events data for further research.",
+				swfUriLarge: "lessons/data_analyst/export/export.swf",
+				swfUriSmall: "lessons/data_analyst/export/export_640.swf"
+			}
+		    
 		]
 		
 	},
