@@ -1,0 +1,49 @@
+User: hshort / Steelers_1
+
+[ introduction ]
+
+This session will guide you through the process of editing an existing subject in caAERS.  In caAERS subjects are participants in clinical studies and can incur adverse events that can be added to caAERS and be reported.  A subject can be assigned to more than one study.  Subject data entered into caAERS is reused as much as possible throughout all appropriate caAERS workflows. 
+
+[ dashboard ]
+
+Once logged into caAERS, the edit subject workflow can be accessed via the Subjects tab at the top of the screen or the Quick Links to the right.  
+
+Please click Manage Subjects under the Quick Links on the right-hand side of the window.
+
+[ manage subjects ]
+
+To find a subject in caAERS we must enter one or more of the subject's identifier, first name, or last name.  I'll enter George Mason into the search criteria for you.
+
+Now, please click Search to find this subject.
+
+One subject has been returned.  Click the subject's identifier, which is a link to view and edit the details of that subject.
+
+[ summary ]
+
+We have now entered the edit subject workflow.  This first screen shows us a summary of all of the details for the subject, including demographic information, identifiers, and medical history.  
+
+Study registrations can be found under the medical history section.  Click the plus button next to the Phase I trials to review the details.
+
+As you may have noticed, all of the data on this summary screen is non-editable.  To edit the subject's details, you need to move to the subsequent screens.  Click Continue to bring us to the next screen.
+
+[ details ]
+
+This next screen should look somewhat familiar to you since it is quite similar to the create subject workflow.  From here, we can edit the basic details of the subject, such as the subject's demographic information and identifiers.
+
+Let's add a new identifer for the subject that would link him to our internal financial system.  Click the Add System identifier button.
+
+I'll enter the identifier.
+
+Please select other from the identifier type since cooperative group identifier and medical record number are not applicable.
+
+Finally I will enter the system name.
+
+Now, please click Save and Continue to save our changes and bring us to the next screen.
+
+[ subject medical history ]
+
+The subject medical history page shows us the details for this subject on the study identified in the blue box at the top of the screen.  In order to assign a subject to another study, you would use the Assign Subject to Study task at the top of the screen.  You would then walk through a similar workflow to when you entered the medical history in the create subject workflow.  However, we have already completed the only change that we needed to make to this subject.
+
+[ conclusion ]
+
+In this session, you have learned how to successfully find and edit an existing subject.
