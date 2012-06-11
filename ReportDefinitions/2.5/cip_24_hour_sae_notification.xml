@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ReportDefinitions xmlns:ns2="http://schema.integration.caaers.cabig.nci.nih.gov/reportdefinition">
     <ns2:reportDefinition>
-        <name>CTEP 5 Calendar Day SAE Report</name>
-        <label>CTEP Expedited Report</label>
-        <amendable>true</amendable>
-        <duration>5</duration>
-        <timeScaleUnit>DAY</timeScaleUnit>
+        <name>CIP 24 Hour SAE Notification</name>
+        <label>CTEP 24 Hour Notification</label>
+        <amendable>false</amendable>
+        <duration>24</duration>
+        <timeScaleUnit>HOUR</timeScaleUnit>
         <organization>
-            <name>Cancer Therapy Evaluation Program</name>
-            <nciInstituteCode>CTEP</nciInstituteCode>
+            <name>Cancer Imaging Program</name>
+            <nciInstituteCode>CIP</nciInstituteCode>
         </organization>
         <attributionRequired>true</attributionRequired>
-        <physicianSignOff>true</physicianSignOff>
+        <physicianSignOff>false</physicianSignOff>
         <group>
             <code>RT_AdEERS</code>
             <configType>REPORT_GROUP</configType>
         </group>
-        <reportType>REPORT</reportType>
-        <expectedDisplayDueDate>Due in 5 days</expectedDisplayDueDate>
+        <reportType>NOTIFICATION</reportType>
+        <expectedDisplayDueDate>Due in 24 hours</expectedDisplayDueDate>
         <reportFormat>ADEERSPDF</reportFormat>
-        <parent>
-            <name>CTEP 24 Hour SAE Notification</name>
-        </parent>
         <workflowEnabled>false</workflowEnabled>
         <enabled>true</enabled>
+        <deliveryDefinition>
+            <format>PDF</format>
+            <entityName>SUB</entityName>
+            <entityType>3</entityType>
+            <endPointType>email</endPointType>
+            <endPoint>SUB</endPoint>
+        </deliveryDefinition>
         <deliveryDefinition>
             <format>XML</format>
             <entityName>AdEERS Beta System</entityName>
@@ -33,38 +37,59 @@
             <userName>iaminternal</userName>
             <password>ecmwsdev_1</password>
         </deliveryDefinition>
-        <deliveryDefinition>
-            <format>PDF</format>
-            <entityName>REP</entityName>
-            <entityType>3</entityType>
-            <endPointType>email</endPointType>
-            <endPoint>REP</endPoint>
-        </deliveryDefinition>
-        <deliveryDefinition>
-            <format>PDF</format>
-            <entityName>PI</entityName>
-            <entityType>3</entityType>
-            <endPointType>email</endPointType>
-            <endPoint>PI</endPoint>
-        </deliveryDefinition>
         <mandatoryField>
-            <fieldPath>physician.middleName</fieldPath>
+            <fieldPath>physician</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <fieldPath>concomitantMedications[].endDate.month</fieldPath>
+            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>labs[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <fieldPath>reporter.contactMechanisms[phone]</fieldPath>
+            <mandatory>MANDATORY</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>reporter.address</fieldPath>
             <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].catalogNumber</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].expirationDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[].serialNumber</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.address</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.firstName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.contactMechanisms[phone]</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address.city</fieldPath>
+            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -77,11 +102,6 @@
             <mandatory>RULE</mandatory>
             <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
             <ruleName>Rule-2</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -191,11 +211,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>physician.contactMechanisms[e-mail]</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.contactMechanisms[phone]</fieldPath>
             <mandatory>MANDATORY</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
@@ -329,11 +344,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>labs[].labDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].dose</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
@@ -508,11 +518,6 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter.address.city</fieldPath>
-            <mandatory>NA</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>concomitantMedications[].endDate.day</fieldPath>
             <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -565,6 +570,11 @@
         <mandatoryField>
             <fieldPath>physician.firstName</fieldPath>
             <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.middleName</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -647,70 +657,6 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>responseDescription.causeOfDeath</fieldPath>
-            <mandatory>NA</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.eventAbate</fieldPath>
-            <mandatory>NA</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.eventReappear</fieldPath>
-            <mandatory>NA</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.treatmentAssignment</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>diseaseHistory.diagnosisDate.day</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-2</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.referralLetters</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-2</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>behavioralInterventions[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>biologicalInterventions[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>geneticInterventions[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.courseAgents[].studyAgent</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline.date</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>additionalInformation.flowCharts</fieldPath>
             <mandatory>RULE</mandatory>
             <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
@@ -732,16 +678,6 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].startDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>adverseEvents[].endDate</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -749,6 +685,11 @@
         <mandatoryField>
             <fieldPath>physician.address.city</fieldPath>
             <mandatory>NA</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -787,23 +728,44 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>medicalDevices[].catalogNumber</fieldPath>
+            <fieldPath>labs[].recovery.date</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>medicalDevices[].expirationDate</fieldPath>
+            <fieldPath>radiationInterventions[].fractionNumber</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>radiationInterventions[].daysElapsed</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.firstCourseDate</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-6,Rule-16,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>medicalDevices[].serialNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-6,Rule-17,Rule-16</ruleName>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>medicalDevices[].otherNumber</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
+            <fieldPath>treatmentInformation.adverseEventCourse.number</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-31,Rule-32,Rule-28,Rule-41,Rule-42,Rule-43,Rule-44</ruleName>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -942,6 +904,11 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>medicalDevices[].otherNumber</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>responseDescription.studyDrugInterrupted</fieldPath>
             <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -984,6 +951,11 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>treatmentInformation.courseAgents[].dose</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>concomitantMedications[].startDate.year</fieldPath>
             <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -994,95 +966,83 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>concomitantMedications[].endDate.month</fieldPath>
+            <fieldPath>adverseEvents[].startDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.causeOfDeath</fieldPath>
             <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter.contactMechanisms[phone]</fieldPath>
+            <fieldPath>responseDescription.eventAbate</fieldPath>
+            <mandatory>NA</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.eventReappear</fieldPath>
+            <mandatory>NA</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.treatmentAssignment</fieldPath>
             <mandatory>MANDATORY</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>reporter.firstName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <fieldPath>diseaseHistory.diagnosisDate.day</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-2</ruleName>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>physician.address</fieldPath>
+            <fieldPath>additionalInformation.referralLetters</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-2</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>behavioralInterventions[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>labs[].recovery.date</fieldPath>
+            <fieldPath>biologicalInterventions[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>radiationInterventions[].fractionNumber</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].daysElapsed</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.firstCourseDate</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-6,Rule-16,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
+            <fieldPath>geneticInterventions[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-6,Rule-17,Rule-16</ruleName>
+            <fieldPath>treatmentInformation.courseAgents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.number</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-31,Rule-32,Rule-28,Rule-41,Rule-42,Rule-43,Rule-44</ruleName>
+            <fieldPath>treatmentInformation.courseAgents[].studyAgent</fieldPath>
+            <mandatory>MANDATORY</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
-        <plannedNotificaiton>
-            <indexOnTimeScale>0</indexOnTimeScale>
-            <recipients>
-                <type>ROLE</type>
-                <value>REP</value>
-            </recipients>
-            <bodyContent>
-                <body>"**********************************************************************************
-This is a system generated email. Please do not respond to this email. 
-**********************************************************************************
-
-A 5 Calendar report has been initiated in caAERS.
-
-
-The 5 Calendar Day report must be completed and sent to NCI within 5 Calendar Days of knowledge of the AE. This report is accessible in caAERS via the 'Manage Reports' pathway.
-
-To retrieve the report enter the exact combination of the Study and Subject. It is very important to save this information for every report created. Print this page and keep it as a reference. 
-
-Subject Id: ${patientId}
-Study Short Title: ${study.shortTitle}
-Study primary Identifier: ${study.primaryIdentifier.value}
-
-To access caAERS, see https://sbdev1000.semanticbits.com:8031/caaers/public/login.
-
-Thank you,
-caAERS Notification System"</body>
-                <contentType>text/html</contentType>
-            </bodyContent>
-            <subject>5 Calendar Day Report for ${patientId} on  ${study.primaryIdentifier.value} initiated in caAERS</subject>
-        </plannedNotificaiton>
+        <mandatoryField>
+            <fieldPath>labs[].baseline.date</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.abstractStudyDisease</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
     </ns2:reportDefinition>
 </ns2:ReportDefinitions>
