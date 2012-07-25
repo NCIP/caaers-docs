@@ -246,11 +246,6 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>labs[].site</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>labs[]</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -572,7 +567,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].outcomes</fieldPath>
-            <mandatory>NA</mandatory>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -842,7 +837,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].attributionSummary</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -1073,6 +1068,11 @@
             <mandatory>RULE</mandatory>
             <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
             <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].site</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <plannedNotificaiton>

@@ -64,6 +64,42 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>adverseEvents[].eventApproximateTime.hourString</fieldPath>
+            <mandatory>NA</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.reducedDose</fieldPath>
+            <mandatory>NA</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>participantHistory</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.obaForm</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.other</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.otherInformation</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>labs[].site</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -162,11 +198,6 @@
             <mandatory>RULE</mandatory>
             <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
             <ruleName>Rule-1,Rule-2,Rule-4,Rule-5,Rule-30</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].eventApproximateTime.hourString</fieldPath>
-            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -572,7 +603,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].outcomes</fieldPath>
-            <mandatory>NA</mandatory>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -621,11 +652,6 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>responseDescription.studyDrugInterrupted</fieldPath>
-            <mandatory>NA</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.reducedDose</fieldPath>
             <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
@@ -810,39 +836,13 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>participantHistory</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.obaForm</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.other</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.otherInformation</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>saeReportPriorTherapies[].startDate.year</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].attributionSummary</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>

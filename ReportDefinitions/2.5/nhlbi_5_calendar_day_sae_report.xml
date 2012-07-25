@@ -62,112 +62,7 @@
             <password>ecmwsdev_1</password>
         </deliveryDefinition>
         <mandatoryField>
-            <fieldPath>medicalDevices[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>diseaseHistory.diagnosisDate.month</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-2,Rule-15,Rule-18,Rule-19</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].baseline</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.address</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>labs[].nadir.value</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.lastName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>otherAEInterventions[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.dischargeSummary</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.irbReport</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].endDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>reporter.firstName</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.autopsyReport</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>radiationInterventions[].dosageUnit</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>physician.address</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].adverseEventCtcTerm</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.primaryTreatmentApproximateTime.hourString</fieldPath>
-            <mandatory>NA</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[].startDate</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.presentStatus</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>responseDescription.recoveryDate</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-2,Rule-15,Rule-18,Rule-19</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>participantHistory.weight</fieldPath>
+            <fieldPath>additionalInformation</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
@@ -258,11 +153,6 @@
             <mandatory>RULE</mandatory>
             <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
             <ruleName>Rule-7,Rule-3,Rule-9,Rule-24,Rule-26,Rule-27</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -530,7 +420,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].outcomes</fieldPath>
-            <mandatory>NA</mandatory>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -790,7 +680,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].attributionSummary</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -1075,6 +965,116 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>labs[].nadir</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>medicalDevices[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>diseaseHistory.diagnosisDate.month</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-2,Rule-15,Rule-18,Rule-19</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].baseline</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.address</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir.value</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.lastName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>otherAEInterventions[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.dischargeSummary</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.irbReport</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].endDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>reporter.firstName</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.autopsyReport</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>radiationInterventions[].dosageUnit</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>physician.address</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].adverseEventCtcTerm</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.primaryTreatmentApproximateTime.hourString</fieldPath>
+            <mandatory>NA</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[].startDate</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.presentStatus</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>responseDescription.recoveryDate</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-2,Rule-15,Rule-18,Rule-19</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>participantHistory.weight</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>

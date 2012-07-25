@@ -59,11 +59,6 @@
             <password>ecmwsdev_1</password>
         </deliveryDefinition>
         <mandatoryField>
-            <fieldPath>labs[].nadir</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>treatmentInformation.courseAgents[].dose.amount</fieldPath>
             <mandatory>MANDATORY</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -626,7 +621,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].outcomes</fieldPath>
-            <mandatory>NA</mandatory>
+            <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -842,47 +837,6 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-3,Rule-9,Rule-10</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>otherCauses[].text</fieldPath>
-            <mandatory>MANDATORY</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>adverseEvents[]</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>participantHistory</fieldPath>
-            <mandatory>OPTIONAL</mandatory>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.obaForm</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
-            <fieldPath>additionalInformation.other</fieldPath>
-            <mandatory>RULE</mandatory>
-            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
-            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
-            <selfReferenced>false</selfReferenced>
-        </mandatoryField>
-        <mandatoryField>
             <fieldPath>additionalInformation.otherInformation</fieldPath>
             <mandatory>RULE</mandatory>
             <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
@@ -896,7 +850,7 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>adverseEvents[].attributionSummary</fieldPath>
-            <mandatory>MANDATORY</mandatory>
+            <mandatory>NA</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
@@ -998,6 +952,47 @@
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
         <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>treatmentInformation.adverseEventCourse.date</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-3,Rule-9,Rule-10</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>otherCauses[].text</fieldPath>
+            <mandatory>MANDATORY</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>adverseEvents[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>participantHistory</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.obaForm</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>additionalInformation.other</fieldPath>
+            <mandatory>RULE</mandatory>
+            <ruleBindURL>gov.nih.nci.cabig.caaers.rules.field_rules</ruleBindURL>
+            <ruleName>Rule-1,Rule-15,Rule-17</ruleName>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
             <fieldPath>medicalDevices[].returnedDate</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
@@ -1072,6 +1067,11 @@
         </mandatoryField>
         <mandatoryField>
             <fieldPath>dietaryInterventions[]</fieldPath>
+            <mandatory>OPTIONAL</mandatory>
+            <selfReferenced>false</selfReferenced>
+        </mandatoryField>
+        <mandatoryField>
+            <fieldPath>labs[].nadir</fieldPath>
             <mandatory>OPTIONAL</mandatory>
             <selfReferenced>false</selfReferenced>
         </mandatoryField>
