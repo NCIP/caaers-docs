@@ -1,0 +1,37 @@
+<lookup>
+    <phases>
+        <phase><code>0</code><value>Phase 0 Trial</value></phase>
+        <phase><code>I</code><value>Phase I Trial</value></phase>
+        <phase><code>I/II</code><value>Phase I/II Trial</value></phase>
+        <phase><code>II</code><value>Phase II Trial</value></phase>
+        <phase><code>II/III</code><value>Phase II/III Trial</value></phase>
+        <phase><code>III</code><value>Phase III Trial</value></phase>
+        <phase><code>IV</code><value>Phase IV Trial</value></phase>
+        <phase><code>Pilot</code><value>Pilot</value></phase>
+        <phase><code>Null</code><value>Null</value></phase>
+        <phase><code>Other</code><value>Other</value></phase>
+    </phases>
+    <statuses>
+         <status><code>Active</code><value>Active - Trial is open to accrual</value></status>
+         <status><code>Complete</code><value>Administratively Complete</value></status>
+    </statuses>
+    <studypurposes>
+        <purpose><code>Treatment</code><value>Treatment</value></purpose>
+        <purpose><code>Prevention</code><value>Prevention</value></purpose>
+    </studypurposes>
+    <indtypes>
+        <indtype><code>Investigational</code><value>OTHER</value></indtype>
+        <indtype><code>Commercial</code><value>NA_COMMERCIAL</value></indtype>
+    </indtypes>
+    <yesnos>
+        <yesno><code>Yes</code><value>true</value></yesno>
+        <yesno><code>No</code><value>false</value></yesno>
+    </yesnos>
+    <interventions>
+        <intervention><code>Radiation Therapy</code><value>RADIATION</value></intervention>
+        <intervention><code>Surgery</code><value>SURGERY</value></intervention>
+        <intervention><code>Gene Transfer</code><value>OTHER</value></intervention>
+        <intervention><code>Image Directed Local Therapy</code><value>OTHER</value></intervention>
+        <intervention><code>Hematopoietic Stem Cell Transplantation</code><value>OTHER</value></intervention>
+    </interventions>
+</lookup>

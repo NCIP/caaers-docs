@@ -1,0 +1,14 @@
+Instrutions to create/manage indicies on INDEX tables.
+
+1. Download all scripts from (https://ncisvn.nci.nih.gov/svn/caaersappdev/deliverables/Phase-3/2.4/index)
+
+
+
+   2. Login to caaers database with admin privilages .
+   3. POSTGRES database  :
+         1. execute create-index-postgres.sql
+         2. execute analyze-rebuild-index-postgres.sql 
+   4. ORACLE database :
+         1. execute create-index-oracle.sql
+         2. execute analyze-rebuild-index-oracle.sql 
+

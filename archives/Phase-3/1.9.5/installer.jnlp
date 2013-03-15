@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://arthur.herndon.semanticbits.com:8080/installer" >
+<information>
+<title>caAERS Installer</title>
+  <vendor>caBIG.</vendor>
+   <homepage href="docs/help.html"/>
+    <description>caAERS Installer</description>
+    <description kind="short">Installing caAERS using GUI</description>
+    <icon href="images/swingset2.jpg"/>
+    <icon kind="splash" href="images/splash.gif"/>
+    <offline-allowed/>
+  </information>
+   <security>
+      <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.5+"/>
+    <jar href="caAERSInstaller.jar"/>
+  </resources>
+  <application-desc main-class="org.tp23.antinstaller.selfextract.SelfExtractor"/>
+</jnlp>
