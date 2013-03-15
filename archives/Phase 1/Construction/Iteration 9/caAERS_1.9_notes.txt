@@ -1,0 +1,354 @@
+
+
+ 	                  Release Notes
+    
+                             caAERS
+                           Version 1.9
+                          January 9, 2008
+
+       
+
+================================================================
+                            Contents
+================================================================
+
+
+     1.0 caAERS Introduction and History
+     2.0 Release History
+     3.0 New Features and Updates
+     4.0 Bugs Fixed Since Last Release
+     5.0 Known Issues
+     6.0 Bug Reports and Support
+     7.0 Documentation 
+     8.0 caAERS GForge Sites
+
+
+================================================================
+                1.0 caAERS Introduction and History
+================================================================
+
+     
+    History:
+ 
+    The Cancer Adverse Event Reporting System (caAERS) 
+    application has completed development and is
+    currently in the transition phase. The target public launch
+    date for caAERS 1.0, as a stand-alone application, is 
+    March 3, 2008.
+
+    The caAERS application development project began on 
+    December 1, 2006. The goal of this project is to develop
+    and to deploy an adverse event reporting system that 
+    is nationally scalable with a robust architecture to meet 
+    the needs of the caBIG™ Community. The Developer Team will 
+    execute Elaboration, Construction and Transition Phase 
+    activities for this project. The project will be carried 
+    out using the Agile Unified Process Framework, emphasizing 
+    continuous integration, testing, and risk management. A new
+    release will be issued at the end of each iteration. The
+    current project is scheduled to end in the first quarter of
+    2008.
+
+    caAERS is a product of the NCI Center for Bioinformatics
+    and its partners. Visit the caAERS project web site for more
+    information:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+
+    Description of caAERS:
+
+    The Cancer Adverse Event Reporting System (caAERS) is an 
+    open source, web-based application for documenting, managing, 
+    reporting, and analyzing adverse events (AEs).  The system 
+    operates as both a repository for capturing and tracking 
+    routine and serious AEs and as a tool for preparing and 
+    submitting expedited AE reports to regulatory agencies.  
+    Currently, caAERS works with cancer prevention and therapeutic 
+    trials and can accommodate  a range of intervention types, 
+    including investigational and commercial agents, radiation, 
+    surgery, and medical devices. Adverse events can be coded in 
+    caAERS using either CTCAE or MedDRA.
+
+
+    To help organizations stay in compliance with AE reporting 
+    regulations, the caAERS application comes loaded with a full 
+    complement of industry-standard AE reports, including the FDA 
+    MedWatch 3500A form, the CTEP AdEERS reports, and the NCI-DCP 
+    SAE form. In addition, the caAERS system features a powerful, 
+    state-of-the-art rules engine, which can capture a range of 
+    sponsor, institution, and protocol-level reporting requirements.  
+    Using these rules, caAERS can automatically determine if an 
+    adverse event requires expedited reporting and when and to whom 
+    the report must be submitted -- for any of an organization's 
+    trials. The business rules used by caAERS can be authored within 
+    the application itself or imported from a library of approved 
+    rule sets.
+
+
+    caAERS also features an advanced email-based alert system that 
+    can be customized along a number of dimensions (message content, 
+    recipients, delivery times) to ensure that notifications and 
+    reminders are sent out as needed. Also included as part of 
+    caAERS is an easy-to-use report template generator, which 
+    allows users to build and customize reports.
+
+
+    caAERS can be deployed as a stand-alone application or as an 
+    integrated module within the caBIG Clinical Trials Suite (CCTS). 
+
+
+
+================================================================
+                2.0 caAERS Release History
+================================================================
+
+
+    caAERS 0.01
+
+    --  31 December 2006    
+
+    caAERS 0.05
+
+    --  01 January 2007
+
+    caAERS 0.1
+
+    --  28 February 2007
+
+    caAERS 0.2
+
+    --  31 March 2007  
+
+    caAERS 0.3
+
+    --  30 April 2007
+
+    caAERS 0.4
+
+    --  31 May 2007
+
+    caAERS 0.5
+
+    -- 13 July 2007
+
+    caAERS 0.6
+
+    -- 31 August 2007
+
+    caAERS 0.7
+
+    -- 15 October 2007
+
+    caAERS 0.8
+
+    -- 30 November 2007
+
+    caAERS 0.9
+
+    -- 4 January 2008
+
+
+    
+
+================================================================
+                3.0 New Features and Updates
+================================================================
+
+   The following new features have been implemented in this 
+   release:
+
+   
+   1. caAERS to AdEERS Integration. Completed 5-day or 10-day 
+      reports for CTEP sponsored trials can be submitted 
+      electronically to CTEP's AdEERS system. Upon successful
+      submission, an AdEERS Ticket Number will be generated and
+      sent to the reporter, along with a link to the report in
+      the AdEERS system. If the report is not accepted for
+      for submission, an email describing the problems will be
+      sent to the reporter. The caAERS system validates reports against
+      a set of 80 business rules to determine if the report meets
+      the criteria for submission to AdEERS.
+
+   2. Additional Reporting Pathways Added. DCP Non-CCOPS trials
+      are now supported. With DCP Non-CCOPS trials, AE's are 
+      reported to the NCI Medical Monitor and to a regulatory 
+      reviewer using the DCP Serious Adverse Event Form. In 
+      certain cases, an IND Safety Report is also sent to the FDA.
+     
+      To handle these additional reporting pathways, we have made 
+      three key changes: 
+      
+      a). In Study setup, we have added a new field on the Details 
+      page. The new field is "AdEERS Reporting Required?". It has 
+      two values: Yes and No. If No, caAERS will walk the reporter
+      down a different create Expedited AE flow than the current
+      AdEERS-compatible Expedited AE flow.
+      
+      b). We have added a new data field -- Outcome Indicator -- 
+      that appears only for Non-AdEERS reporting. This field 
+      corresponds to the Why Serious or Outcome Indictor field
+      specified in the FDA regulations governing Adverse Events. 
+      The field has the following 7 valid values:
+
+        - Death
+        - Life Threatening
+        - Hospitalization
+        - Disability or Permanent Damage
+        - Congenital Anomaly/Birth Defect
+        - Other Serious
+        - Required Intervention to Prevent Permanent 
+          Impairment/Damage (Devices)
+
+
+
+      c). We have added these two new attributes -- "AdEERS Reporting 
+      Required?" and "Outcome Indicator" -- to the Rules UI. This 
+      allows for the creation of rules based on these new attributes. 
+      For DCP Non-CCOPS, an expedited report is required, for example, 
+      if  any of the items in the Outcome Indicator field are checked.
+
+
+   3. Password Policy Configuration. From the Administration Tab, 
+      an Administrator can set the password policy to be enforced 
+      by caAERS. The policy can be configured along a number of 
+      dimensions, including maximum password age, number of failed
+      login attempts, lockout duration, minimum password age, password
+      history size, minimum password length, password history size, 
+      minimum password length, complexity requirements, largest
+      substring of username allowed, 
+
+   4. Forgot Password / Reset Password Feature. The Forgot Password
+      feature is now operational. The Forgot Password link is on the
+      Login page. An email will be sent to the user's email address, 
+      which will include a link to a secured page where the 
+      user will be able to create a new password for logging into
+      caAERS. The user can use this feature to reset his or her 
+      password. When a password is reset, the current password 
+      policy will be enforced.
+
+
+
+   The following enhancements are included in this release:
+
+   - Imports - Study, Participant, Routine AE. 
+
+     Minor changes to the XML schemas to accommodate ongoing 
+     development and subsequent model changes
+	
+     The latest versions of XSDs and sample XML files for Importing
+     Data into caAERS are located here:
+     https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/docs/
+     import/0.9/?root=caaersappdev
+
+
+
+   Expedited AE:
+ 
+   - 80+ Validations added to the Create Expedited Report flow. 
+     The user will be alerted on screen if a business rule has 
+     been violated, and will be prompted to correct the issue
+     before proceeding.
+   - New Home Page with full list of Tasks has been made the new
+     default page in caAERS. When a user logs in, they will land
+     on this new home page.
+   - Additional minor UI changes
+ 
+ 
+
+   Study:
+   - Added field to capture whether trial submits reports to
+     AdEERS.
+
+ 
+   Existing Features:
+
+   For a list of features currently implemented in caAERS, refer
+   to earlier versions of the Release Notes.
+
+
+
+================================================================
+                4.0 Bugs Fixed Since Last Release
+================================================================
+  A number of bugs were fixed as part of this iteration, including 
+  the following:
+  
+ 
+  - 10843: Study coordinator does not have access to the system
+  - 10826: Search study results difficult to use
+  - 10596: Error in importing participant xml
+  - 10595: Incomplete error message when importing participant xml
+  - 10228: User forced to choose report even if moving back
+  - 11033: Surgery, RT and Device show in attribution screen
+  - 10964: Certain MedDRA codes cannot be imported correctly
+  - 11043: Change True and False for Expectedness
+  - 11199: Exception when using Forgot Password
+
+
+
+
+================================================================
+                5.0 Known Issues
+================================================================
+   
+
+   1. In the 0.9 version, the system does not prevent future 
+   dates yet. This will be implemented during the transition phase.
+
+   2. The 0.9 release does not include the DCP SAE Form as a
+   PDF. This will be implemented during the transition phase.
+
+   3. The 0.9 release does not fully support Internet Explorer
+   v.7. Support for IE 7 will be implemented during the transition
+   phase.
+
+
+   
+================================================================
+                6.0 Bug Reports and Support
+================================================================
+
+    Bugs and enhancement requests can be viewed and entered using
+    the Tracker tool on the caAERS Gforge site.
+
+    http://gforge.nci.nih.gov/tracker/?group_id=249    
+    
+
+    In addition, mailing lists are used by the caAERS developer
+    and user community to exchange ideas and make announcements.
+    You can subscribe at these addresses:
+
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-domain
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-technical
+
+
+================================================================
+                7.0 Documentation
+================================================================
+
+    caAERS project documents are located on the caAERS GForge 
+    web site at the following address:
+    
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+    
+    For information about installing or updating caAERS, refer 
+    to the caAERS Installation Guide.
+    
+    --  https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/
+    docs/manuals/caaers_installation_guide_DRAFT.doc?root=
+    caaersappdev&view=log
+
+
+
+
+
+================================================================
+                8.0 Project Web Site (Gforge)
+================================================================
+
+    For more information, visit the caAERS Gforge web site at the
+    following address:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/

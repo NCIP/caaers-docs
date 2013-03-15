@@ -1,0 +1,284 @@
+
+
+ 	                  Release Notes
+    
+                             caAERS
+                           Version 1.5
+                          July 16, 2007
+
+       
+
+================================================================
+                            Contents
+================================================================
+
+
+     1.0 caAERS Introduction and History
+     2.0 Release History
+     3.0 New Features and Updates
+     4.0 Bugs Fixed Since Last Release
+     5.0 Known Issues
+     6.0 Bug Reports and Support
+     7.0 Documentation 
+     8.0 caAERS GForge Sites
+
+
+================================================================
+                1.0 caAERS Introduction and History
+================================================================
+
+     
+    The caAERS application is still in development. 
+
+    The caAERS application development project began on 
+    December 1, 2006. The goal of this project is to develop
+    and to deploy an adverse event reporting system that 
+    is nationally scalable with a robust architecture to meet 
+    the needs of the caBIG™ Community. The Developer Team will 
+    execute Elaboration, Construction and Transition Phase 
+    activities for this project. The project will be carried 
+    out using the Agile Unified Process Framework, emphasizing 
+    continuous integration, testing, and risk management. A new
+    release will be issued at the end of each iteration. The
+    current project is scheduled to end in December 2007.
+
+    caAERS is a product of the NCI Center for Bioinformatics
+    and its partners. Visit the caAERS project web site for more
+    information:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+
+================================================================
+                2.0 caAERS Release History
+================================================================
+
+
+    caAERS 0.5
+
+    --  31 December 2006    
+
+    caAERS 1.0
+
+    --  01 January 2007
+
+    caAERS 1.1
+
+    --  28 February 2007
+
+    caAERS 1.2
+
+    --  31 March 2007  
+
+    caAERS 1.3
+
+    --  30 April 2007
+
+    caAERS 1.4
+
+    --  31 May 2007
+
+    caAERS 1.5
+
+    -- 13 July 2007
+
+    
+    Note: The caAERS application is still in development. A new
+    release will be issued at the end of each iteration. 
+    
+
+
+
+================================================================
+                3.0 New Features and Updates
+================================================================
+
+   The following new features have been implemented in this 
+   release:
+
+   
+   -- The following new sections have been added to the Create
+      Expedited Report flow:
+	 
+	- Radiation Intervention
+        - Surgery Intervention
+        - Medical Device
+        - Additional Information
+
+      The Create Expedited Report flow in caAERS now captures most of the
+      data captured by AdEERS for the 10-day Expedited Report.
+
+      Some of the items we're currently not capturing include:
+
+       - TAC Code (A method for importing TAC codes from CTEP into
+         caAERS is being investigated.)
+       - Start and End Dates for all AEs on report. (We only capture dates
+         for primary AE. This will be fixed in future release.)
+       - Crossover Studies.
+
+ 
+   -- An Assessment page has been added to the Create Expedited Report 
+      Flow. The Assessment page appears after the user completes the 
+      Basic AE page and the Reporter page. The Assessment page
+      displays the results from the Rules Engine and informs the user
+      about the types of reports that need to be prepared and submitted
+      based on the information entered into caAERS up to that point.
+
+
+  --  Rules. A number of new features have been added to the Rules section
+      of caAERS. With this release, the rules engine has been integrated
+      with the AE data capture and reporting functionality and is now ready 
+      for preliminary testing.
+
+      Note: The use of the Rules section will be covered during a training 
+      session. Covering the use of these sections is beyond the scope of 
+      these release notes.
+
+      Rules includes two key features:
+
+      -> Create/Manage Rules. Rules can now be created at one of the following
+         levels:
+	- Sponsor Level
+        - Institution Level
+        - Sponsor Defined Study Level
+        - Institution Defined Study Level
+
+      -> Create Report Definition. This section allows users to create report
+         definitions that can then be associated with particular organizations
+         or studies. As part of the process of creating a Report Definition, 
+         a user will specify the following:
+
+       - Required Data.  The set of Required and Optional Data fields to be
+         captured as part of the report. (Not implemented in this release.)
+
+       - Report Delivery Configuration. To whom or to what service the report
+         should be submitted and the format of the submitted report.
+
+       - Notification Details. The text, recipients, and timing of notifications
+         to be sent out whenever a report is initiated.
+
+  --  Import Studies and Participants. The import studies and participants
+      feature has been updated to include recent changes to the caAERS
+      model. This feature allows users to import existing studies into caAERS.
+
+  --  Advanced Search. A new tab has been added (Advanced Search) to allow users
+      to search for Studies, Participants, Adverse Events, Routine AE's, and 
+      Expedited Reports.
+
+  --  Export AE data. A new feature has been added that allows users to export
+      data from caAERS as comma separated text (csv files). Data for export is 
+      selected by using the Advanced Search feature.
+
+  --  Online Help. The online help feature has been partially implemented as 
+      part of this release.  
+
+  
+   Existing Features:
+
+   For a list of features currently implemented in caAERS, refer
+   to earlier versions of the Release Notes (1.0, 1.2, 1.3, 1.4).
+
+
+
+================================================================
+                4.0 Bugs Fixed Since Last Release
+================================================================
+  The following bugs related to functionality have been fixed 
+  since the last release.
+  
+   -- Remove Grade 0 as a grading option for Expedited Reports.
+   -- Show CTC version as read only on Basics/AEs tab.
+   -- Disease has been added as a potential cause
+      to the Attributions section of Expedited Report.
+
+  Note: For this release, the developers focused primarily on new 
+  features rather than bug fixing. High-level, Sev 1 type bugs
+  have been addressed. Low to Mid level bugs, however, will be fixed 
+  as part of Iterations 6 and 7.
+
+
+================================================================
+                5.0 Known Issues
+================================================================
+   
+
+   1. The current version does not check for duplicates:
+   -- No system check for duplicate Subjects.
+   -- No system check for duplicate Studies.
+   -- No system check for duplicate AEs.
+
+   2. In the current version, the system does not check for
+   valid past or future dates yet. This will be implemented in a 
+   future release.
+
+   3. The current release does not specifically support Prevention 
+   Trials. The ability for users to create expedited AE reports for
+   DCP-Sponsored trials is currently being added.
+
+   4. The Prior Therapies tab currently does not prompt users
+   to list agents when users select an entry (e.g., chemotherapy)
+   for which a list of agents is required.
+
+   5. Radiation, Surgery, and Device currently appear by default
+   whenever a user is creating an expedited report. These sections
+   should appear only for certain studies. (This will be implemented
+   in future release.)
+
+   6. The Expedited Report flow does not clearly display on all
+   pages which fields are required and which fields are optional. 
+   (This will be implemented in future release.)
+
+   7. The Routine AE section allows users to create multiple
+   routine AEs. But after saving these, only one of the AEs is
+   actually saved and available for viewing. This will be fixed
+   in a later release.   
+
+   
+================================================================
+                6.0 Bug Reports and Support
+================================================================
+
+    Bugs and enhancement requests can be viewed and entered using
+    the Tracker tool on the caAERS Gforge site.
+
+    http://gforge.nci.nih.gov/tracker/?group_id=249    
+    
+
+    In addition, mailing lists are used by the caCORE developer
+    and user community to exchange ideas and make announcements.
+    You can subscribe at these addresses:
+
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-domain
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-technical
+
+
+================================================================
+                7.0 Documentation
+================================================================
+
+    caAERS project documents are located on the caAERS GForge 
+    web site at the following address:
+    
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+    
+    For information about installing or updatingg caAERS, refer 
+    to the caAERS Installation Guide.
+    
+    --  https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/
+        deliverables/Construction/Iteration%205/
+        caaers_installation_guide_draft_iteration5.doc?
+        root=caaersappdev&view=log
+
+
+
+
+
+================================================================
+                8.0 Project Web Site (Gforge)
+================================================================
+
+    For more information, visit the caAERS Gforge web site at the
+    following address:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/

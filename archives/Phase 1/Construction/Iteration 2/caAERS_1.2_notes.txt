@@ -1,0 +1,226 @@
+ 	                  Release Notes
+    
+                             caAERS
+                           Version 1.2
+                          March 31, 2007
+
+       
+
+================================================================
+                            Contents
+================================================================
+
+
+     1.0 caAERS Introduction and History
+     2.0 Release History
+     3.0 New Features and Updates
+     4.0 Bugs Fixed Since Last Release
+     5.0 Known Issues
+     6.0 Bug Reports and Support
+     7.0 Documentation 
+     8.0 caAERS GForge Sites
+
+
+================================================================
+                1.0 caAERS Introduction and History
+================================================================
+
+     
+    The caAERS application is still in development. 
+
+    The caAERS application development project began on 
+    December 1, 2006. The goal of this project is to develop
+    and to deploy an adverse event reporting system that 
+    is nationally scalable with a robust architecture to meet 
+    the needs of the caBIG™ Community. The Developer Team will 
+    execute Elaboration, Construction and Transition Phase 
+    activities for this project. The project will be carried 
+    out using the Agile Unified Process Framework, emphasizing 
+    continuous integration, testing, and risk management. A new
+    release will be issued at the end of each iteration. The
+    current project is scheduled to end in September 2007.
+
+    caAERS is a product of the NCI Center for Bioinformatics
+    and its partners. Visit the caAERS project web site for more
+    information:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+
+================================================================
+                2.0 caAERS Release History
+================================================================
+
+
+    caAERS 0.5
+
+    --  31 December 2006    
+
+    caAERS 1.0
+
+    --  01 January 2007
+
+    caAERS 1.1
+
+    --  28 February 2007
+
+    caAERS 1.2
+
+    --  31 March 2007  
+
+    
+    Note: The caAERS application is still in development. A new
+    release will be issued at the end of each iteration. 
+    
+
+
+
+================================================================
+                3.0 New Features and Updates
+================================================================
+
+   The following new features have been implemented in this 
+   release version:
+
+   
+   -- Ability to create multiple AEs. Users can now add multiple 
+      AEs to a report.
+
+   -- Ability to add multiple Labs. The application now supports
+      entry of multiple AE Labs.
+
+   -- AE Attribution. AE Attribution functionality has been added
+      This is an early version of this feature.  Users can assign
+      attribution to Agents and concomitant medications.  This 
+      feature will be updated in the next release to include ability
+      to assign attribution to Diseases, Devices, and Other 
+      Contributing Causes.
+
+   -- Protocol-Level Triggers and Notifications.  The rules engine
+      has been implemented in this release. Users can set up basic
+      rules and trigger basic actions using the Rules tab. The 
+      functionality associated with rules and triggers will be 
+      upgraded with each new release.
+
+   -- Study Diseases.Users can now assign diseases to study as part 
+      of the Study Abstraction set up. The CTEP list of diseases 
+      is currently available for use. MedDRA 9.0 will be added in 
+      the next release.
+
+   -- Study Personnel and Investigators. Users can now assign 
+      Study Personnel and Investigators to a Study as part of the 
+      Study Abstraction set up.
+
+   -- Data Import. Users can import Study and Participant data from 
+      an external CTMS using XML format. The import can be initiated
+      from UI or from command line.
+
+   -- Role-based Authorization. Authorization has been implemented
+      for two roles (Study Coordinator, Study Participant)
+
+
+  
+   Existing Features:
+
+   For a list of features currently implemented in caAERS, refer
+   to the following document on the caAERS GForge Site:
+
+   caAERS_HighLevelRoadMap_ConstructionPhase.xls
+  
+   http://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/docs/
+   Management/Project%20Plan/caAERS_HighLevelRoadMap_ConstructionPhase.xls?     
+   root=caaersappdev&view=log
+
+
+
+================================================================
+                4.0 Bugs Fixed Since Last Release
+================================================================
+  
+   -- 4233: Space search in term creates pretty spectacular error 
+            message.
+   -- 4280: The system never checks user input for required fields 
+            to create a new study.
+   -- 4291: Filter and Clear buttons do Not work on the summary 
+            page of AE
+   -- 4292: Notify link for AE does not work with warning message
+   -- 4325: Need dropdown or list boxes for selecting patients
+   -- 4327: Expected Y/N field should default to N
+   -- 4215: Multicenter checkbox cannot be a required field.
+   -- 4280: The system never checks user input for required fields 
+            to create a new study.
+   -- 5326: The CTC V2 box is too long and doesn't dispaly an arrow
+            for the drop down menu
+   -- 5333: Items 5 and 6 of 5333 have been fixed. 5- Nadir value - 
+            Nadir only makes sense for the low wbc, platelet etc. 
+            but not for all labs since some lab AEs are higher values
+            than normal. Nadir means the low point. The label for 
+            this variable should read "AE lab value". 6. Nadir value 
+            date should be labeled "AE lab value date" or "Date of 
+            lab value" and should not allow future dates.
+
+
+================================================================
+                5.0 Known Issues
+================================================================
+   
+   1. The current version of caAERS has not been optimized for use
+   on Internet Explorer 7. When using IE 7, some fields may be 
+   misaligned on the page.
+
+   2. The current version does not check for duplicates:
+   -- No system check for duplicate Subjects.
+   -- No system check for duplicate Studies.
+   -- No system check for duplicate AEs.
+
+   3. In the current version, the system does not check for
+   valid past or future dates yet. This will be implemented in a 
+   future release.
+
+   
+================================================================
+                6.0 Bug Reports and Support
+================================================================
+
+    Bugs and enhancement requests can be viewed and entered using
+    the Tracker tool on the caAERS Gforge site.
+
+    http://gforge.nci.nih.gov/tracker/?group_id=249    
+    
+
+    In addition, mailing lists are used by the caCORE developer
+    and user community to exchange ideas and make announcements.
+    You can subscribe at these addresses:
+
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-domain
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-technical
+
+
+================================================================
+                7.0 Documentation
+================================================================
+
+    caAERS project documents are located on the caAERS GForge 
+    web site at the following address:
+    
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+    
+    For information about installing or updatingg caAERS, refer 
+    to the caAERS Installation Guide.
+    
+    --  http://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/
+        docs/manuals/?root=caaersappdev
+
+
+
+
+
+================================================================
+                8.0 Project Web Site (Gforge)
+================================================================
+
+    For more information, visit the caAERS Gforge web site at the
+    following address:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/

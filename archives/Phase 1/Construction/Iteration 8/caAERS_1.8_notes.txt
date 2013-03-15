@@ -1,0 +1,340 @@
+
+
+ 	                  Release Notes
+    
+                             caAERS
+                           Version 1.8
+                          November 30, 2007
+
+       
+
+================================================================
+                            Contents
+================================================================
+
+
+     1.0 caAERS Introduction and History
+     2.0 Release History
+     3.0 New Features and Updates
+     4.0 Bugs Fixed Since Last Release
+     5.0 Known Issues
+     6.0 Bug Reports and Support
+     7.0 Documentation 
+     8.0 caAERS GForge Sites
+
+
+================================================================
+                1.0 caAERS Introduction and History
+================================================================
+
+     
+    The caAERS application is still in development. 
+
+    The caAERS application development project began on 
+    December 1, 2006. The goal of this project is to develop
+    and to deploy an adverse event reporting system that 
+    is nationally scalable with a robust architecture to meet 
+    the needs of the caBIG™ Community. The Developer Team will 
+    execute Elaboration, Construction and Transition Phase 
+    activities for this project. The project will be carried 
+    out using the Agile Unified Process Framework, emphasizing 
+    continuous integration, testing, and risk management. A new
+    release will be issued at the end of each iteration. The
+    current project is scheduled to end in January 2008.
+
+    caAERS is a product of the NCI Center for Bioinformatics
+    and its partners. Visit the caAERS project web site for more
+    information:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+
+================================================================
+                2.0 caAERS Release History
+================================================================
+
+
+    caAERS 0.5
+
+    --  31 December 2006    
+
+    caAERS 1.0
+
+    --  01 January 2007
+
+    caAERS 1.1
+
+    --  28 February 2007
+
+    caAERS 1.2
+
+    --  31 March 2007  
+
+    caAERS 1.3
+
+    --  30 April 2007
+
+    caAERS 1.4
+
+    --  31 May 2007
+
+    caAERS 1.5
+
+    -- 13 July 2007
+
+    caAERS 1.6
+
+    -- 31 August 2007
+
+    caAERS 1.7
+
+    -- 15 October 2007
+
+    caAERS 1.8
+
+    -- 30 November 2007
+
+
+    Note: The caAERS application is still in development. A new
+    release will be issued at the end of each iteration. 
+    
+
+
+
+================================================================
+                3.0 New Features and Updates
+================================================================
+
+   The following new features have been implemented in this 
+   release:
+
+   
+   1.  Import Routine AE Data. Users can import XML files with
+   routine AE data. caAERS accepts current routine AE data or 
+   legacy AE data. Current routine AE data will be checked against
+   the existing rules to assess whether any of the imported AEs
+   require expedited reporting.
+
+
+   Link to latest version of XSD and sample XML files for Importing
+   AE Data into caAERS:
+   https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/docs/
+   import/0.8/?root=caaersappdev
+
+
+   2.  The caGrid Data Service has been secured with the addition
+   of an authentication service. See the caAERS Install Guide for
+   additional information.
+
+
+   3.  A number of features for use within the CaBIG Clinical
+   Trials Suite have been added to this release, including
+   support for 
+
+   -- Sending Alerts to the Patient Study Calendar
+   application regarding possible schedule changes for AEs.
+   -- Study Creation (initiated in the C3PR application).
+   -- Patient Registration (initiated in the C3PR application).
+   
+
+
+
+   The following enhancements are included in this release:
+
+   Expedited AE:
+ 
+   - Moved Course/Agent section forward in flow. This section now 
+     appears right after the Enter AE section.
+   - Rules can be triggered based on treatment arm information now
+   - Removed Summary Panel for cleaner UI in Expedited Report flow.
+   - Added MedDRA auto-completer field as option when CTC term with
+     "Other, Specify" is selected.
+   - Ability to view AdEERS report as PDF
+   - Ability to view MedWatch 3500 report as PDF
+   - Ability to export report as XML file.
+   - Added Body Surface Area calculation on Patient Data page.
+ 
+ 
+   Routine AE:
+   - We now capture Treatment Assignment/Arm (TAC) information on 
+     the routine AE page.
+
+
+   Study:
+   - Added field to allow an IND to be flagged as the Lead IND.
+   - Added MedDRA auto-completer field for selecting Disease for 
+     study abstraction.
+
+
+ 
+   Existing Features:
+
+   For a list of features currently implemented in caAERS, refer
+   to earlier versions of the Release Notes (1.0, 1.2, 1.3, 1.4, 
+   1.5, 1.6, 1.7).
+
+
+
+================================================================
+                4.0 Bugs Fixed Since Last Release
+================================================================
+  A number of bugs were fixed as part of this iteration, including 
+  the following:
+  
+  6837-Reword other Cause in Create AE
+  6879-Adminstration - delete under investigator
+  6882-Create Study - Adding diseases
+  6883-Create Study - Button for confirmation page
+  7373-Ctc Version‚Äôs input auto cleared off when go back by clicking 
+       Back button in Studies > Details.
+  7557-Carry over info from creating a study to creating an expeditied 
+       AE report
+  7573-Create Epedited AE - need note on date of recovery to leave 
+       blank if not applicable
+  8254-Suggestions for the Labs Screen
+  8255-Other contributing causes suggestions
+  8278-Search participant or study by registered identifier does not 
+       work in Enter routine report >> Begin.
+  8284-After adding large numbers of patients, system is unable to 
+       accept SAE's
+  8344-When creating a new rule at sponsor study level the radio 
+       button is not labelled
+  8345-Back button in rule creation does not work correctly
+  8746-Need phase 2/3 for study domain level rule answer
+  8916-Participant must be selected before go to next page in Assign 
+       Participants to Studies >> Search Participant.
+  8928-Save & Back button crashes the system in Assign Participants 
+       to Studies >> Review and Submit.
+  8933-Study must be selected before go to next page in Assign 
+       Participants to Studies >> Search Study.
+  9034-Unknown run time error in Search Studies
+  9035-Error should occur if the end date is before the start 
+       date for observation period
+  9492-No success message is displayed after creating an 
+       investigator
+  9494-Change organization drop down to an auto completer in Research 
+       Staff and Investigator tabs
+  9495-Fix the field alignment
+  9498-Change tab label from Add/Edit Investigator to Create/Edit 
+       Investigator
+  9499-Atleast one organization must be specified when creating 
+       an investigator.
+  9500-Email address for Research Staff and Investigators should 
+       be unique
+  9501-Remove colon at the end of role names in the Research Staff 
+       tab
+  9502-Remove instructions on search Investigator and Research 
+       Staff pages.
+  9514-Do not allow creation of SAE's and routine AE's for studies 
+       that are complete
+  9516-Replace "+" image with "Select disease" button in diseases 
+       tab.
+  9517-Increase the size of MedDRA term field in diseases tab.
+  9518-Change the column heading from "IND type" to "IND indicator" 
+       in the study overview tab
+  9519-Display NCI institute code along with the name in the 
+       organization auto completer
+  9574-Add button/link on Submit page to allow user to see pdf 
+       version of report
+  9575-Add Link from Submit page directly to the Manage AE page
+  9739-Error message when attempting to delete secondary AE
+  9758-When adding a patient, the system crashes when you attempt to 
+       lookup a protocol by identifier
+  9772-Values in Organization auto completer are getting hidden in 
+       Create Participant page 
+  9805-2 reports show up as required
+  9916-Google auto search results for organization are partially at 
+       the back of another control in Create Participant
+  9919-Search study by Identifier breaks the system in Create 
+       Participant >> Choose Study.
+  9926-Error in trying to enter more than one AE
+  9956-Search study by Identifier get duplicate displayed in 
+       Assign Participants to Studies >> Search Study.
+  9968-Remove the summary panel from pages in the SAE flow
+  10015-Change "Cause" to "Hospitalization" on the Rules review 
+        page.
+  10016-On Enter AE page, move CTC Version field to right above 
+        CTC category field
+  10028-Basic AE not shown as needed expedited reporting even though 
+        it met the criteria.
+  10030-Change display of required reports on the "Is expedited 
+        reporting ncecssary" page
+  10034-Dosage field on Radiation page should be LOV
+  10138-Search/Edit Participant does not work
+  10585-Incomplete error message when important participant XML
+  10595-Incomplete error message when importing participant XML
+  10596-Error in importing participant xml
+
+
+
+
+================================================================
+                5.0 Known Issues
+================================================================
+   
+
+   1. In the current version, the system does not prevent unrealistic
+   past or future dates yet. This will be implemented in a 
+   future release.
+
+   2. The current release does not support electronic submission
+   of expedited reports to the AdEERS system. This will be implemented 
+   in a future release.
+
+   3. The current release does not fully support non-CCOPS
+   Prevention Trials. The ability for users to create expedited 
+   AE reports for these trials is currently being added.
+
+   4. The Forget Password features is not working fully in the
+   current release.
+
+
+
+   
+================================================================
+                6.0 Bug Reports and Support
+================================================================
+
+    Bugs and enhancement requests can be viewed and entered using
+    the Tracker tool on the caAERS Gforge site.
+
+    http://gforge.nci.nih.gov/tracker/?group_id=249    
+    
+
+    In addition, mailing lists are used by the caAERS developer
+    and user community to exchange ideas and make announcements.
+    You can subscribe at these addresses:
+
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-domain
+    http://gforge.nci.nih.gov/mailman/listinfo/caaersappdev-technical
+
+
+================================================================
+                7.0 Documentation
+================================================================
+
+    caAERS project documents are located on the caAERS GForge 
+    web site at the following address:
+    
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
+
+    
+    For information about installing or updatingg caAERS, refer 
+    to the caAERS Installation Guide.
+    
+    --  https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/
+    docs/manuals/caaers_installation_guide_DRAFT.doc?root=
+    caaersappdev&view=log
+
+
+
+
+
+================================================================
+                8.0 Project Web Site (Gforge)
+================================================================
+
+    For more information, visit the caAERS Gforge web site at the
+    following address:
+
+    --  http://gforge.nci.nih.gov/projects/caaersappdev/
