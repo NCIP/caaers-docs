@@ -1,0 +1,1 @@
+NOTE:  Guides with improved usability are available at the CTMS Knowledge Center: https://cabig-kc.nci.nih.gov/CTMS/KC/index.php/CaAERS

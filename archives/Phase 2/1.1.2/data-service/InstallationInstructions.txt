@@ -1,0 +1,49 @@
+	                                            ***************************************************************************
+                                                          Installation Instructions for caAERS data service
+                                                ***************************************************************************
+
+
+Assumptions: 
+                        A) It is assumed that the target machine has JDK 5.0 or higher installed on it.
+                        B) The environment variable CATALINA_HOME is pointing to the targeted tomcat in the machine.
+                        C) The environment variable GLOBUS_LOCATION is set and pointing to globus installation location. 
+
+ Please follow the following steps in order to install the caAERS data service. 
+
+          1.Download the zip file ( CaaersDataService.zip ) from the following location
+		https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/deliverables/Phase%202/1.1.2/?root=caaersappdev
+	
+	2. Unzip this file to any folder.
+	3.  Step 2 will create a folder named "CaaersDataService".
+	
+	4.  Edit CaaersDataService/service.properties  file to replace the following properties with appropriate values. 
+			cqlQueryProcessorConfig_gridGrouperUrl= <URL to GRID GROUPER>
+			cqlQueryProcessorConfig_gridGrouperGroup= <GROUP NAME>
+ 		
+ 	5.  Edit CaaersDataService/etc/serviceMetadata.xml file to enter the research center information  as shown below
+ 	
+ 		
+ 		
+                 <ns1:hostingResearchCenter>
+		  <ns9:ResearchCenter displayName="" shortName="" xmlns:ns9="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common">
+   		<ns9:Address country="" locality="" postalCode="" stateProvince="" street1="" street2=""/>
+  		 <ns9:pointOfContactCollection>
+   		 <ns9:PointOfContact affiliation="" email="" firstName="" lastName="" phoneNumber="" role=""/>
+  		 </ns9:pointOfContactCollection>
+  		</ns9:ResearchCenter>
+ 		</ns1:hostingResearchCenter>
+  
+			
+	6.	Open the command prompt and navigate to CaaersDataService folder.	
+	7.	On the command prompt type "ant all" and hit return.
+	8.	Once the above step is completed, type: "ant deployTomcat" and hit return.
+	9.	If you don't see any error message/s then it indicates that service has been successfully deployed in targeted tomcat.
+	10.   If you have already configured datasource.properties in $CATALINA_HOME/conf/caaers leave it like that . If not then
+			- download datasource.properties from https://gforge.nci.nih.gov/plugins/scmsvn/viewcvs.php/deliverables/Phase%202/1.1.2/?root=caaersappdev
+			- edit with right values
+			- and copy it to $CATALINA_HOME/conf/caaers. 
+	11.   Start tomcat
+	12.	To check if the caAERS data service is up and running , type the following URL in the web browser
+	
+	https://<<HOST_NAME>>:8443/wsrf/services/cagrid/Caaers?wsdl
+		This should show the wsdl for the caAERS data service ( it is just an xml ) in the web browser.
