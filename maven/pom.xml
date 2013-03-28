@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>gov.nih.nci.cabig.ctms</groupId>
+    <artifactId>m2-plugins</artifactId>
+    <packaging>pom</packaging>
+    <version>0.3-SNAPSHOT</version>
+    <name>caAERS maven plugins</name>
+    <scm>
+        <url>http://gforge.nci.nih.gov/svnroot/caaersappdev/trunk/maven</url>
+        <connection>scm:svn:http://gforge.nci.nih.gov/svnroot/caaersappdev/trunk/maven</connection>
+        <developerConnection>scm:svn:http://gforge.nci.nih.gov/svnroot/caaersappdev/trunk/maven</developerConnection>
+    </scm>
+    <repositories>
+        <repository>
+            <id>download.bioinformatics.northwestern.edu</id>
+            <name>Northwestern RHLCCC Bioinformatics</name>
+            <url>http://download.bioinformatics.northwestern.edu/maven2</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <!-- for log4j helper -->
+            <id>pyx4j.com</id>
+            <url>http://pyx4j.com/maven2</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>download.bioinformatics.northwestern.edu</id>
+            <name>Northwestern RHLCCC Bioinformatics</name>
+            <url>http://download.bioinformatics.northwestern.edu/maven2</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <!-- for log4j helper -->
+            <id>pyx4j.com</id>
+            <url>http://pyx4j.com/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <modules>
+        <module>xsd2jibx-maven-plugin</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-idea-plugin</artifactId>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <ideaVersion>6.x</ideaVersion>
+                    <jdkName>1.5</jdkName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <tagBase>http://gforge.nci.nih.gov/svnroot/caaersappdev/tags/releases/maven</tagBase>
+                </configuration>
+            </plugin>
+         </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>download.bioinformatics</id>
+            <name>Northwestern University RHLCCC Bioinformatics Core</name>
+            <url>scp://download.bioinformatics.northwestern.edu/var/www/html/download/maven2</url>
+        </repository>
+    </distributionManagement>
+</project>

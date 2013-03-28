@@ -1,0 +1,45 @@
+This directory is for tracking caAERS dependencies which are not available 
+from a public maven2 repo.
+
+To add a jar
+------------
+- Add the jar to the jar directory
+- Add a line containing the metadata to 3rd-party-maven-jars.tsv
+  Note that this file is a tab-separated plain text file.  There is a header
+  row describing the columns.
+
+To add a pom only
+-----------------
+- Add it to the pom directory  
+  (The metadata will be extracted from the pom.)
+
+Testing
+-------
+Please test out your changes before committing them. Use the provided ruby
+script:
+
+ $ ./sync-3rd-party.rb
+
+Without options, the script will install the deps into your local repository.
+Use the -h option for full usage directions.
+
+Deployment
+----------
+Additions and changes to this directory are automatically picked up by the 
+build server and deployed into the repository at 
+http://download.bioinformatics.northwestern.edu/maven2.  You can see the 
+output of the sync script at 
+
+https://buddy.bioinformatics.northwestern.edu/hudson/job/caAERS%20dependency%20deployer/lastBuild/console
+
+Things removed from this directory will not be automatically removed from the
+repository. If you need something removed, send an e-mail to 
+r-sutphin@northwestern.edu.
+
+Caveats
+-------
+Currently maven only supports the "classifier" option for deploy, not install.
+(See http://jira.codehaus.org/browse/MINSTALL-24 .)  For this reason, any 
+classified jars (sources, javadoc) should come _before_ the main jar in the
+TSV.  This will at least make sure that your local repo gets the main jar
+if you execute install.
