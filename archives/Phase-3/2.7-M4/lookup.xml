@@ -75,4 +75,59 @@
         <month><code>Nov</code><value>11</value></month>
         <month><code>Dec</code><value>12</value></month>
     </months>
+	<!-- E2B related lookup -->
+	<e2byesnos>
+        <yesno><code>1</code><value>true</value></yesno>
+        <yesno><code>2</code><value>false</value></yesno>
+        <yesno><code>3</code><value>false</value></yesno><!-- 3 is UNKNOWN will be mapped as false -->
+    </e2byesnos>
+    <delayuoms>
+    	<delayuom><code>804</code><value>DAYS</value></delayuom>
+		<delayuom><code>805</code><value>HOURS</value></delayuom>
+		<delayuom><code>806</code><value>MINUTES</value></delayuom>
+	</delayuoms>
+    <uoms>
+    	<uom><code>001</code><value>kg</value></uom>
+		<uom><code>002</code><value>g</value></uom>
+		<uom><code>003</code><value>mg</value></uom>
+		<uom><code>004</code><value>mcg</value></uom>
+		<uom><code>005</code><value>ng</value></uom>
+		<uom><code>006</code><value>pg</value></uom>
+		<uom><code>009</code><value>mg/m 2</value></uom>
+		<uom><code>010</code><value>mg/ m 2</value></uom>
+		<uom><code>011</code><value>l</value></uom>
+		<uom><code>012</code><value>ml</value></uom>
+		<uom><code>013</code><value>mcl</value></uom>
+		<uom><code>014</code><value>Bq</value></uom>
+		<uom><code>015</code><value>GBq</value></uom>
+		<uom><code>016</code><value>MBq</value></uom>
+		<uom><code>017</code><value>Kbq</value></uom>
+		<uom><code>018</code><value>Ci</value></uom>
+		<uom><code>019</code><value>mCi</value></uom>
+		<uom><code>020</code><value>mcCi</value></uom>
+		<uom><code>021</code><value>NCi</value></uom>
+		<uom><code>022</code><value>mol</value></uom>
+		<uom><code>023</code><value>mmol</value></uom>
+		<uom><code>024</code><value>mcmol</value></uom>
+		<uom><code>025</code><value>IU</value></uom>
+		<uom><code>026</code><value>Kiu</value></uom>
+		<uom><code>027</code><value>million iu</value></uom>
+		<uom><code>029</code><value>mEq/L</value></uom>
+		<uom><code>030</code><value>Percent</value></uom>
+		<uom><code>031</code><value>Gtt</value></uom>
+		<uom><code>032</code><value>DF</value></uom>    	
+    </uoms>
+    <adjustments>
+    	<adjustment><code>1</code><value>Discontinue Radiation</value></adjustment>
+    	<adjustment><code>2</code><value>Decrease Total Dose</value></adjustment>
+    	<adjustment><code>4</code><value>Continue Radiation as planned</value></adjustment>
+    </adjustments>
+    <aepresentstatuses>
+    	<presentstatus><code>1</code><value>RECOVERED_WITHOUT_SEQUELAE</value></presentstatus>
+    	<presentstatus><code>2</code><value>RECOVERING</value></presentstatus>
+    	<presentstatus><code>3</code><value>NOT_RECOVERED</value></presentstatus>
+    	<presentstatus><code>4</code><value>RECOVERED_WITH_SEQUELAE</value></presentstatus>
+    	<presentstatus><code>5</code><value>DEAD</value></presentstatus>
+    	<presentstatus><code>6</code><value>INTERVENTION_CONTINUES</value></presentstatus>
+    </aepresentstatuses>
 </lookup>
